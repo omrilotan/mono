@@ -1,0 +1,16 @@
+{
+  "attachments": [
+    {
+      "fallback": "$CIRCLE_PROJECT_REPONAME finished CI job",
+      "color": "#27ae60",
+      "author_name": "$CIRCLE_PROJECT_REPONAME",
+      "author_link": "$CIRCLE_REPOSITORY_URL",
+      "title": "CI workflow finished",
+      "text": "Automated operation triggered by *$CIRCLE_USERNAME*",
+      "mrkdwn_in": ["text"]
+    }
+  ],
+  "channel": "#events",
+  "username": "CircleCI",
+  "icon_emoji": ":robot_face:"
+}
