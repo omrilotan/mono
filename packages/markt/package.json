@@ -1,0 +1,35 @@
+{
+  "name": "markt",
+  "version": "1.0.1",
+  "description": "Generate pages from markdown",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/omrilotan/markt.git"
+  },
+  "homepage": "https://omrilotan.github.io/markt",
+  "author": "omri",
+  "license": "MIT",
+  "bin": {
+    "markt": "./bin/markt"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "mkdir -p docs; npm run html; npm run css",
+    "html": "./bin/markt README.md ./docs/index.html ./src/docs.template.html",
+    "css": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
+    "test": "mocha test.js",
+    "prepublishOnly": "npm t"
+  },
+  "publishConfig": {
+    "tag": "latest",
+    "tag-version-prefix": ""
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "marked": "^0.3.19"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

@@ -12,7 +12,7 @@ function search {
 }
 
 function execute {
-    echo -e '\033[1mExecuting ${1}\033[0m\n'
+    echo -e "\033[1mExecuting ${1}\033[0m\n"
     cd $1
     eval $ACTION
     cd -

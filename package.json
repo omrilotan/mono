@@ -10,7 +10,7 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "scripts": {
-    "test": "mocha spec.js **/spec.js --full-trace",
+    "test": "find . | grep spec.js | grep -v node_modules | xargs mocha --full-trace",
     "lint": "eslint -c .eslintrc *.js **/*.js --quiet",
     "postinstall": "./scripts/foreach.sh \"npm i\"",
     "prepublish-packages": "npm t; npm run lint",

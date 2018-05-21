@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const args = process.argv;
+args.splice(0, 2);
+
+const [
+    source = 'README.md',
+    destination = 'index.html',
+    template = null,
+] = args;
+
+const {promisify} = require('util');
+const fse = require('fs-extra');
+const read = promisify(require('fs').readFile);
+const markt = require('../');
+
+(async() => {
+    try {
+        const args = [
+            await read(source),
+        ];
+        template && args.push(await read(template));
+
+        const output = await markt(
+            ...args.map(arg => arg.toString())
+        );
+
+        await fse.outputFile(destination, output);
+
+        console.info(`written in ${process.cwd()}/${destination}`);
+    } catch (error) {
+        console.error(error);
+    }
+
+})();
