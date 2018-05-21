@@ -1,7 +1,7 @@
 require('colors');
 const boxed = require('./');
 
-const log = (...args) => console.log(boxed(...args));
+const log = (...args) => console.log(boxed(...args)); // eslint-disable-line no-console
 
 log('');
 

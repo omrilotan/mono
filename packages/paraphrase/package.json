@@ -1,9 +1,9 @@
 {
-  "name": "boxt",
-  "version": "0.3.0",
-  "description": "Create boxes around text",
+  "name": "paraphrase",
+  "version": "1.2.0",
   "author": "omrilotan",
   "license": "MIT",
+  "description": "Create flavoured string phraser",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
@@ -11,11 +11,6 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm t",
-    "start": "node examples",
     "test": "cd ../../; npm t"
-  },
-  "dependencies": {
-    "colors": "^1.3.0"
-  },
-  "devDependencies": {}
+  }
 }

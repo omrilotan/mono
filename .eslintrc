@@ -16,6 +16,9 @@
       "files": [ "**/spec.js" ],
       "env": {
         "mocha": true
+      },
+      "globals": {
+        "expect": true
       }
     }
   ]

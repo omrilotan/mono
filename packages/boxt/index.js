@@ -78,11 +78,9 @@ module.exports = function boxed(message, {
 
     if (!colors.hasOwnProperty(color)) {
         throw new Error(`colors does not support color "${color}"`);
-        return;
     }
     if (!themes.hasOwnProperty(theme)) {
         throw new Error(`themes do not include a "${theme}" theme`);
-        return;
     }
 
     const lines = message.split('\n');
@@ -124,8 +122,7 @@ module.exports = function boxed(message, {
                     return line.padStart(w, ' ');
                 case 'center':
                 default:
-                    const linePad = Math.ceil(w - (w - length(line)) / 2);
-                    return line.padEnd(linePad, ' ').padStart(w, ' ')
+                    return line.padEnd(Math.ceil(w - (w - length(line)) / 2), ' ').padStart(w, ' ')
             }
         })();
 

@@ -13,18 +13,12 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Set NPM user
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
           name: Install dependencies
           command: npm i
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
       - save_cache:
           key: build-cache-{{ .Revision }}
           paths:
@@ -35,7 +29,6 @@ jobs:
       - image: circleci/node:8
       - image: circleci/node:10
     steps:
-      - image: circleci/node:8
       - checkout
       - restore_cache:
           key: build-cache-{{ .Revision }}
@@ -64,11 +57,13 @@ workflows:
   version: 2
   ci-cd:
     jobs:
-      - install
+      - install:
+          context: globalenv
       - test:
           requires:
             - install
       - publish:
+          context: globalenv
           requires:
             - test
 

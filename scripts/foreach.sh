@@ -5,18 +5,17 @@ ACTION=$1
 function search {
     for FILE in `ls -l ${1}`
     do
-        if test -d "${1}/${FILE}"
-        then
+        if test -d "${1}/${FILE}"; then
             execute "${1}/${FILE}"
         fi
     done
 }
 
 function execute {
-    echo "Executing $1"
+    echo -e '\033[1mExecuting ${1}\033[0m\n'
     cd $1
     eval $ACTION
-    cd ../
+    cd -
 }
 
 
