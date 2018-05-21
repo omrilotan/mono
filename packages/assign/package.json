@@ -1,0 +1,19 @@
+{
+  "name": "@(._.)/assign",
+  "version": "1.0.0",
+  "description": "Deep assign",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "author": "omrilotan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omrilotan/mono/issues"
+  },
+  "homepage": "https://github.com/omrilotan/mono#readme"
+}

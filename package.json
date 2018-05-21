@@ -1,0 +1,26 @@
+{
+  "name": "@omrilotan/mono",
+  "version": "0.0.0",
+  "description": "Mono repo holding multiple packages",
+  "author": "omrilotan",
+  "homepage": "https://omrilotan.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "scripts": {
+    "test": "mocha spec.js **/spec.js --full-trace",
+    "lint": "eslint -c .eslintrc *.js **/*.js --quiet",
+    "postinstall": "./scripts/foreach.sh \"npm i\"",
+    "prepublish-packages": "npm t; npm run lint",
+    "publish-packages": "./scripts/foreach.sh \"npx published\""
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "dont-look-up": "^1.0.0",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
+  },
+  "private": true
+}
