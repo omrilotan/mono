@@ -1,6 +1,6 @@
 {
   "name": "markt",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generate pages from markdown",
   "repository": {
     "type": "git",
@@ -14,10 +14,11 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "mkdir -p docs; npm run html; npm run css",
-    "html": "./bin/markt README.md ./docs/index.html ./src/docs.template.html",
+    "demo": "npm start README.md --title=markt",
+    "start": "npm run html; npm run css",
+    "html": "./bin/markt --source README.md --destination ./docs/index.html --template ./src/docs.template.html",
     "css": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
-    "test": "mocha test.js",
+    "test": "cd ../../; npm t",
     "prepublishOnly": "npm t"
   },
   "publishConfig": {
@@ -27,7 +28,8 @@
   "preferGlobal": true,
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "marked": "^0.3.19"
+    "marked": "^0.3.19",
+    "paraphrase": "^1.2.0"
   },
   "devDependencies": {
     "node-sass": "^4.8.3"

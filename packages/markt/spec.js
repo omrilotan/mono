@@ -19,25 +19,23 @@ describe('markt', async () => {
         );
     });
 
-    it('pattern is a bit loose', async () => {
-        [
-            '{{ content }}',
-            '{{Content }}',
-            '{{    CONTENT    }}',
-        ].forEach(async template => {
-            const res = await markt('*Hello*', template);
-
-            assert.strictEqual(
-                res,
-                '<p><em>Hello</em></p>'
-            );
-        })
+    it('pattern can be padded with white space', async () => {
+        expect(
+            await markt('*Hello*', '{{ content }}')
+        ).to.equal(
+            '<p><em>Hello</em></p>'
+        );
     });
 
-    it('fills just first pattern in template', async () => {
-        const res = await markt('*Hello*', '{{content}} {{content}}');
+    it('test options object', async () => {
+        const res = await markt('*Hello*', {
+            template: '{{title}} {{content}}',
+            title: 'the title'
+        });
 
-        assert(res.includes('{{content}}'));
-        assert(res.includes('<p><em>Hello</em></p>'));
+        expect(res).to.include('<p><em>Hello</em></p>');
+        expect(res).to.include('the title');
+        expect(res).to.not.include('{{content}}');
+        expect(res).to.not.include('{{title}}');
     });
 });

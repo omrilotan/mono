@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-const args = process.argv;
-args.splice(0, 2);
+const args = require('../args');
 
-const [
-    source = 'README.md',
-    destination = 'index.html',
-    template = null,
-] = args;
+const defaults = {
+    source: './README.md',
+    destination: './index.html',
+};
 
 const {promisify} = require('util');
 const fse = require('fs-extra');
@@ -16,18 +14,35 @@ const markt = require('../');
 
 (async() => {
     try {
-        const args = [
-            await read(source),
-        ];
-        template && args.push(await read(template));
+        const {options, rest} = args(...process.argv)
 
-        const output = await markt(
-            ...args.map(arg => arg.toString())
+        // Legacy interface support
+        let [source, destination, template] = rest;
+
+        console.log(options);
+
+        options.source      = options.source      || source      || defaults.source;
+        options.destination = options.destination || destination || defaults.destination;
+        options.template    = options.template    || template    || defaults.template;
+
+        const content = (await read(options.source)).toString();
+
+        if (options.template) {
+            options.template = (await read(options.template)).toString();
+        }
+
+        Object.assign(
+            options,
         );
 
-        await fse.outputFile(destination, output);
+        const output = await markt(
+            content,
+            options
+        );
 
-        console.info(`written in ${process.cwd()}/${destination}`);
+        await fse.outputFile(options.destination, output);
+
+        console.info(`written in ${process.cwd()}/${options.destination}`);
     } catch (error) {
         console.error(error);
     }
