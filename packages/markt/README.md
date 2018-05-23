@@ -1,4 +1,4 @@
-# markt [![](https://nodei.co/npm/markt.png?compact=true)](https://www.npmjs.com/package/markt) [![](https://user-images.githubusercontent.com/516342/38551453-17b7e8ca-3cb1-11e8-9754-b70c6e0f316c.png)](https://github.com/omrilotan/markt)
+# markt
 
 Generate pages from markdown
 
@@ -37,7 +37,3 @@ For example, `--title My\ awesome\ package` will replace `{{ title }}` from a gi
     </body>
 </html>
 ```
-
----
-
-from the desk of [omrilotan <img style="height:32px; vertical-align:middle;" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
