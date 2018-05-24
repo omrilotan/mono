@@ -10,9 +10,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm t",
     "start": "node examples",
-    "test": "cd ../../; npm t"
+    "test": "cd ../../; npm t",
+    "prepublishOnly": "npm t",
+    "doc": "../../packages/markt/bin/markt --destination ../../docs/boxt/index.html --template ../../src/index.html --title boxt"
   },
   "dependencies": {
     "colors": "^1.3.0"

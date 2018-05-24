@@ -10,7 +10,8 @@
   },
   "main": "index.js",
   "scripts": {
+    "test": "cd ../../; npm t",
     "prepublishOnly": "npm t",
-    "test": "cd ../../; npm t"
+    "doc": "../../packages/markt/bin/markt --destination ../../docs/paraphrase/index.html --template ../../src/index.html --title paraphrase"
   }
 }

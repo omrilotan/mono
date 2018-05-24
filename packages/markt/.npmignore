@@ -1,4 +1,3 @@
 .*
 *.log
-test.js
-docs
+spec.js
