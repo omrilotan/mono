@@ -15,8 +15,9 @@
     "postinstall": "./scripts/foreach.sh \"npm i\"",
     "prepublish-packages": "npm t; npm run lint",
     "publish-packages": "./scripts/foreach.sh \"npx published\"",
-    "predoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
-    "doc": "./scripts/foreach.sh \"npm run doc\""
+    "predoc": "./scripts/foreach.sh \"npm run doc\"",
+    "doc": "node ./scripts/homepage.js",
+    "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css"
   },
   "devDependencies": {
     "chai": "^4.1.2",

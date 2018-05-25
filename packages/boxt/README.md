@@ -1,4 +1,4 @@
-# boxt [![Greenkeeper badge](https://badges.greenkeeper.io/omrilotan/boxt.svg)](https://greenkeeper.io/)
+# boxt
 
 <p align="center"><img width="363" alt="boxt" src="https://user-images.githubusercontent.com/516342/34468260-c7ab5682-ef0d-11e7-8a84-c9baa16cabaa.png"></p>
 

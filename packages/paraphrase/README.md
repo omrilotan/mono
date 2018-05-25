@@ -1,4 +1,4 @@
-# paraphrase [![npm version](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
+# paraphrase [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 
 ## String template interpolation
 
