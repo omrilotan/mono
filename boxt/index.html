@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>boxt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="boxt">boxt</h1>
+<p align="center"><img width="363" alt="boxt" src="https://user-images.githubusercontent.com/516342/34468260-c7ab5682-ef0d-11e7-8a84-c9baa16cabaa.png"></p>
+
+<p align="center"><img alt="boxt" src="https://user-images.githubusercontent.com/516342/35348313-5c858bf8-0140-11e8-9cee-a8336896f56a.png"></p>
+
+<h2 id="use">Use</h2>
+<p><code>npm i -S boxt</code></p>
+<pre><code class="lang-js">const boxt = require(&#39;boxt&#39;);
+
+boxt(`I have a message
+It might be multilined`);
+</code></pre>
+<h2 id="options">Options</h2>
+<pre><code class="lang-js">boxt(
+    &#39;Guests, like fish, begin to smell after three days.&#39;,
+    {
+        color: &#39;green&#39;,
+        theme: &#39;round&#39;,
+        padding: 4,
+    }
+);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+<th>values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>A title</td>
+<td>And string</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>border style</td>
+<td>&#39;single&#39; (default), &#39;double&#39;, &#39;round&#39;</td>
+</tr>
+<tr>
+<td>color</td>
+<td>border colour</td>
+<td>see <a href="https://www.npmjs.com/package/colors"><code>colors</code> on NPM</a></td>
+</tr>
+<tr>
+<td>padding</td>
+<td>space from borders to text</td>
+</tr>
+<tr>
+<td>align</td>
+<td>Where to align the lines</td>
+<td>&#39;center&#39; (default), &#39;left&#39;/&#39;start&#39;, &#39;right&#39;/&#39;end&#39;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>options</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>theme</strong>: <code>&#39;double&#39;</code><br><strong>color</strong>: <code>&#39;bgBlue&#39;</code></td>
+<td><img width="420" alt="example" src="https://user-images.githubusercontent.com/516342/34468263-dcb7e87e-ef0d-11e7-9ae6-1f44d144a1b1.png"></td>
+</tr>
+<tr>
+<td><strong>theme</strong>: <code>&#39;round&#39;</code><br><strong>color</strong>: <code>&#39;green&#39;</code></td>
+<td><img width="402" alt="example" src="https://user-images.githubusercontent.com/516342/34468268-f85f6d40-ef0d-11e7-9fc5-746cd20f4e25.png"></td>
+</tr>
+<tr>
+<td><strong>padding</strong>: <code>10</code><br><strong>align</strong>: <code>&#39;left&#39;</code></td>
+<td><img width="371" alt="example" src="https://user-images.githubusercontent.com/516342/35336411-01797bb2-0121-11e8-931f-03a7ff9df225.png"></td>
+</tr>
+<tr>
+<td><strong>title</strong> <code>&#39;I am the title&#39;.bold</code></td>
+<td><img width="167" alt="example" src="https://user-images.githubusercontent.com/516342/36678556-c1d0ead2-1b19-11e8-8fb5-1557e3cf907e.png"></td>
+</tr>
+</tbody>
+</table>
+    </body>
+</html>

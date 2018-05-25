@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>markt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="markt">markt</h1>
+<p>Generate pages from markdown</p>
+<h2 id="ci-cd-use">CI-CD use</h2>
+<pre><code class="lang-sh">npx markt --source README.md --destination ./docs/index.html --template ./scripts/docs.template.html
+</code></pre>
+<h4 id="arguments">arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>Markdown to be converted to HTML and replaced by {{ content }}</td>
+<td><code>./README.md</code></td>
+</tr>
+<tr>
+<td>destination</td>
+<td>Destination file</td>
+<td><code>./index.html</code></td>
+</tr>
+<tr>
+<td>Template</td>
+<td>File</td>
+<td><code>{{content}}</code></td>
+</tr>
+<tr>
+<td>Anything</td>
+<td>Any additional options will be a replacement †</td>
+</tr>
+</tbody>
+</table>
+<p>† Additional options exaple
+For example, <code>--title My\ awesome\ package</code> will replace <code>{{ title }}</code> from a given template with <code>My awesome package</code></p>
+<h2 id="example-template-optional-">Example Template (optional)</h2>
+<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge, chrome=1&quot;&gt;
+        &lt;title&gt;{{ title }}&lt;/title&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=yes&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://omrilotan.github.io/markt/styles.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {{ content }}
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </body>
+</html>
