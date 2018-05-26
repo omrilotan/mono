@@ -4,23 +4,35 @@ const phrase = require('../packages/paraphrase/double');
 const title = 'mono';
 
 (async () => {
-    const list = (await fs.readdir('packages'))
-        .reduce(
-            (content, item) => {
-                if (!item.startsWith('.')) {
-                    content.push(`<li><a href="${item}">${item}</a></li>`)
-                }
+    const promises = [];
+    (await fs.readdir('packages'))
+        .forEach(
+            (item) => {
+                if (item.startsWith('.')) { return }
 
-                return content;
-            },
-            []
-        ).join('')
+                const {
+                    name,
+                    description,
+                    version,
+                } = require(`../packages/${item}/package.json`);
 
-    const template = (await fs.readFile('src/homepage.html')).toString();
+                promises.push(`
+<tr>
+    <td><a href="${item}">${name}</a></td>
+    <td>${description}</td>
+    <td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
+</tr>
+`)
+            }
+        )
+
+    const content = (await Promise.all(promises)).join('')
+
+    const template = (await fs.readFile('src/homepage.html')).toString()
 
     const output = phrase(template, {
         title,
-        list,
+        content,
     });
 
     await fs.writeFile('docs/index.html', output)

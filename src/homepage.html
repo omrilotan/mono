@@ -8,10 +8,20 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>🚝 mono</h1>
-        <p>A "mono-repo" for several packages</p>
-        <ul>
-            {{ list }}
-        </ul>
+        <a href="../">↩︎</a>
+        <h1>🚝 mono <a href="https://github.com/omrilotan/mono"><img src="https://img.shields.io/badge/mono--000000.svg?logo=github&style=social"></a></h1>
+        <p>A "mono-repo" for these packages packages</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>version</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ content }}
+            </tbody>
+        <table>
     </body>
 </html>

@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/omrilotan/markt.git"
   },
-  "homepage": "https://omrilotan.github.io/markt",
+  "homepage": "https://omrilotan.github.io/mono/markt/",
   "author": "omri",
   "license": "MIT",
   "bin": {

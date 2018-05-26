@@ -1,4 +1,4 @@
-# Deep assign
+# Deep assign <a href="https://www.npmjs.com/package/@(._.)/assign"><img src="https://img.shields.io/npm/v/@(._.)/assign.svg"></a>
 
 ```js
 const assign = require('@(._.)/assign');

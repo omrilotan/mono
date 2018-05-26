@@ -1,4 +1,4 @@
-# markt
+# markt [![](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 
 Generate pages from markdown
 
