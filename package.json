@@ -15,7 +15,7 @@
     "postinstall": "./scripts/foreach.sh \"npm i\"",
     "prepublish-packages": "npm t; npm run lint",
     "publish-packages": "./scripts/foreach.sh \"npx published\"",
-    "predoc": "./scripts/foreach.sh \"npm run doc\"",
+    "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",
     "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css"
   },

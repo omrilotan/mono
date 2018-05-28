@@ -1,15 +1,12 @@
 defaults: &defaults
   working_directory: ~/app
   docker:
-    - image: circleci/node:8
     - image: circleci/node:10.2
 
 version: 2
 jobs:
   install:
     <<: *defaults
-    docker:
-      - image: circleci/node:10.2
     steps:
       - checkout
       - run:
@@ -24,9 +21,6 @@ jobs:
             - ../app
   test:
     <<: *defaults
-    docker:
-      - image: circleci/node:8
-      - image: circleci/node:10.2
     steps:
       - checkout
       - restore_cache:
@@ -39,8 +33,6 @@ jobs:
           command: npm run lint
   publish:
     <<: *defaults
-    docker:
-      - image: circleci/node:10.2
     steps:
       - checkout
       - restore_cache:
@@ -53,8 +45,6 @@ jobs:
           command: npm run publish-packages
   docs:
     <<: *defaults
-    docker:
-      - image: circleci/node:10.2
     steps:
       - checkout
       - restore_cache:
@@ -67,7 +57,7 @@ jobs:
           command: npm run doc
       - run:
           name: Set git use
-          command: curl ci-cd.net/v1/git/user | bash
+          command: curl ci-cd.net/v1/git/user | bash -s a1vy a01101100vy@gmail.com
       - run:
           name: Push to gh-pages
           command: curl ci-cd.net/v1/gh/pages | bash -s docs/.

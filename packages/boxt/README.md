@@ -1,4 +1,4 @@
-# boxt [![](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
+# boxt [![](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
 
 <p align="center"><img width="363" alt="boxt" src="https://user-images.githubusercontent.com/516342/34468260-c7ab5682-ef0d-11e7-8a84-c9baa16cabaa.png"></p>
 

@@ -15,8 +15,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t",
-    "prepublishOnly": "npm t",
-    "doc": "../../packages/markt/bin/markt --destination ../../docs/markt/index.html --template ../../src/index.html --title markt"
+    "prepublishOnly": "npm t"
   },
   "publishConfig": {
     "tag": "latest",

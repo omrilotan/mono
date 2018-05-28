@@ -1,0 +1,30 @@
+{
+  "name": "upgradable",
+  "version": "0.0.4",
+  "description": "Interactive upgrade machine for NPM CLI tools",
+  "author": "Omri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "main": "lib/start/index.js",
+  "scripts": {
+    "start": "./index.js"
+  },
+  "bin": {
+    "upgradable": "./index.js"
+  },
+  "publishConfig": {
+    "tag": "latest",
+    "tag-version-prefix": ""
+  },
+  "dependencies": {
+    "boxt": "^0.3.0",
+    "colors": "^1.1.2",
+    "npm": "^5.7.1",
+    "prompt-confirm": "^1.2.0",
+    "semver": "^5.5.0"
+  },
+  "devDependencies": {}
+}
