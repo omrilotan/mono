@@ -1,18 +1,18 @@
 {
-  "name": "@(._.)/assign",
+  "name": "@(._.)/execute",
   "version": "1.0.0",
-  "description": "Object deep assign",
+  "description": "Executes script in a child process",
+  "homepage": "https:///omrilotan.github.io/mono",
   "author": "omrilotan",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/assign/",
-  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
+  "main": "index.js",
   "scripts": {
     "prepublishOnly": "[ -z $CI ] && exit 1"
   }

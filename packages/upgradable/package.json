@@ -10,7 +10,8 @@
   },
   "main": "lib/start/index.js",
   "scripts": {
-    "start": "./index.js"
+    "start": "./index.js",
+    "prepublishOnly": "[ -z $CI ] && exit 1"
   },
   "bin": {
     "upgradable": "./index.js"

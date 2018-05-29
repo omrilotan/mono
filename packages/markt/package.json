@@ -14,8 +14,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "cd ../../; npm t",
-    "prepublishOnly": "npm t"
+    "prepublishOnly": "[ -z $CI ] && exit 1"
   },
   "publishConfig": {
     "tag": "latest",
