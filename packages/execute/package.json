@@ -9,11 +9,5 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "[ -z $CI ] && exit 1"
-  }
+  "main": "index.js"
 }

@@ -1,6 +1,6 @@
 {
   "name": "markt",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Generate pages from markdown",
   "repository": {
     "type": "git",
@@ -13,17 +13,10 @@
     "markt": "./bin/markt"
   },
   "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "[ -z $CI ] && exit 1"
-  },
-  "publishConfig": {
-    "tag": "latest",
-    "tag-version-prefix": ""
-  },
-  "preferGlobal": true,
   "dependencies": {
     "fs-extra": "^5.0.0",
     "marked": "^0.3.19",
     "paraphrase": "^1.2.0"
-  }
+  },
+  "preferGlobal": true
 }

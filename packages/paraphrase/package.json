@@ -1,6 +1,6 @@
 {
   "name": "paraphrase",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "omrilotan",
   "license": "MIT",
   "description": "Create flavoured string phraser",
@@ -9,8 +9,5 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "homepage": "https://omrilotan.github.io/mono/paraphrase/",
-  "main": "index.js",
-  "scripts": {
-    "prepublishOnly": "[ -z $CI ] && exit 1"
-  }
+  "main": "index.js"
 }
