@@ -26,5 +26,9 @@
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0"
   },
-  "private": true
+  "private": true,
+  "publishConfig": {
+    "tag": "after-next",
+    "tag-version-prefix": "next-tag"
+  }
 }
