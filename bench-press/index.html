@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>bench-press</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="prerender" href="../">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="bench-press">bench-press</h1>
+<p>Benchmark operations</p>
+<h2 id="use">Use</h2>
+<pre><code class="lang-js">import benchpress from &#39;bench-press&#39;;
+
+console.log(
+    benchpress(() =&gt; myFunction())
+);
+
+// Running 1000 times took 54ms
+</code></pre>
+<h2 id="options">Options</h2>
+<h3 id="message">Message</h3>
+<pre><code class="lang-js">console.log(
+    benchpress(
+        () =&gt; myFunction(),
+        {
+            message: &#39;myFunction ✖ ${iterations} = ${duration}&#39;,
+        }
+    )
+);
+
+// myFunction ✖ 1000 = 54
+</code></pre>
+<h3 id="iterations">Iterations</h3>
+<pre><code class="lang-js">console.log(
+    benchpress(
+        () =&gt; myFunction(),
+        {
+            iterations: 1e5,
+        }
+    )
+);
+
+// Running 100000 times took 54ms
+</code></pre>
+    </body>
+</html>
