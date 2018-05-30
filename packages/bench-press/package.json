@@ -1,0 +1,16 @@
+{
+  "name": "bench-press",
+  "version": "1.0.0",
+  "description": "Benchmark operations",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/bench-press/",
+  "main": "index.js",
+  "dependencies": {
+    "paraphrase": "^1.2.1"
+  }
+}

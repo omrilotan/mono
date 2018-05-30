@@ -1,9 +1,9 @@
 {
   "name": "paraphrase",
   "version": "1.2.1",
+  "description": "Create flavoured string phraser",
   "author": "omrilotan",
   "license": "MIT",
-  "description": "Create flavoured string phraser",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"

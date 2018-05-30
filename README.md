@@ -6,6 +6,7 @@
 | Name | Description | Link
 | --- | --- | ---
 | **`@(._.)/assign`** | [   Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/%40\(._.\)/assign.svg)](https://www.npmjs.com/package/%40\(._.\)/assign)
+| **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`@(._.)/execute`** | [Executes script in a child process](./packages/execute#readme) | [![](https://img.shields.io/npm/v/%40\(._.\)/execute.svg)](https://www.npmjs.com/package/%40\(._.\)/execute)
