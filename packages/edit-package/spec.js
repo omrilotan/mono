@@ -6,7 +6,7 @@ const {
 
 const packageJson = require('../../package.json')
 
-describe('package-editor', () => {
+describe('edit-package', () => {
     afterEach(async () => {
         await editor.reset();
     });

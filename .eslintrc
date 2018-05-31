@@ -19,7 +19,9 @@
       },
       "globals": {
         "expect": true,
-        "assert": true
+        "assert": true,
+        "sleep": true,
+        "freeze": true
       }
     }
   ]

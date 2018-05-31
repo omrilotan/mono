@@ -3,6 +3,10 @@ Object.assign(
     require('chai'),
     {
         sleep: (ttl = 80) => new Promise((resolve) => setTimeout(resolve, ttl)),
+        freeze: (ms = 0) => {
+            const start = Date.now();
+            while(Date.now() - start < ms) {} // eslint-disable-line no-empty
+        },
     }
 );
 

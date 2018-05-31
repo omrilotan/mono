@@ -1,0 +1,13 @@
+{
+  "name": "oh-my-gauge",
+  "version": "1.0.0",
+  "description": "Gauge and Benchmark - time Javascript operations",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/oh-my-gauge.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/oh-my-gauge/",
+  "main": "index.js"
+}
