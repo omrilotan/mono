@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>oh-my-gauge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="prerender" href="../">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="oh-my-gauge-">Oh My Gauge!</h1>
+<p>time Javascript operations</p>
+<pre><code class="lang-js">const { Gauge, Benchmark } = require(&#39;oh-my-gauge&#39;);
+</code></pre>
+<h2 id="gauge">Gauge</h2>
+<ol>
+<li>Create a gauge instance with the results reporting function.</li>
+<li>Wrap a function with the gauge. It will return a function that measures the operation, reports it, and returns the given functions&#39; return value.</li>
+</ol>
+<p>A gauge takes in a function</p>
+<pre><code class="lang-js">const Gauge = require(&#39;oh-my-gauge&#39;).Gauge;
+const gauge = new Gauge((res, name) =&gt; console.log(`${name} took ${res}ms`));
+//                        ^     ^         ^
+//              Milliseconds  String   report-method
+
+const myObj = {
+    name: &#39;My Obj&#39;,
+    sayName: function() {
+        return this.name;
+    }
+};
+
+myObj.sayName = gauge(myObj.sayName, &#39;sayName method&#39;);
+</code></pre>
+<h2 id="benchmark">Benchmark</h2>
+<p>Benchmark compares between multiple operations. It also scrambles the order so running it multiple times can yield more reliable results.</p>
+<pre><code class="lang-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;);
+
+const benchmark = new Benchmark(); // console.log with default format
+-- OR --
+const benchmark = new Benchmark(
+    sendMetricsToServer, // override the default console.log callback
+    (ms, name) =&gt; `Method: ${name}, Time: ${ms}` // override default formatter
+);
+
+benchmark(
+  100000,
+  [() =&gt; {/* Do thing one   */}, &#39;Thing 1 description&#39;],
+  [() =&gt; {/* Do thing two   */}, &#39;Thing 2 description&#39;],
+  [() =&gt; {/* Do thing three */}, &#39;Thing 3 description&#39;]
+);
+
+// Use a map, maps are fun
+const things = new Map();
+things.set(() =&gt; {/* Do thing one   */}, &#39;Thing 1 description&#39;);
+things.set(() =&gt; {/* Do thing two   */}, &#39;Thing 2 description&#39;);
+things.set(() =&gt; {/* Do thing three */}, &#39;Thing 3 description&#39;);
+
+benchmark(1e5, ...things);
+</code></pre>
+<h3 id="this-is-a-classic-optimisation-example">This is a classic optimisation example</h3>
+<pre><code class="lang-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;)
+
+const benchmark = new Benchmark()
+
+const numbers = (size, from = 0) =&gt; Array.from(Array(size)).map((i, n) =&gt; n + from)
+
+const tests = new Map()
+
+const option1 = () =&gt; (numbers(100, 1))
+  .map((i) =&gt; i * 3)
+  .filter((i) =&gt; i % 2)
+  .reduce((i, a) =&gt; i + a, 100)
+tests.set(option1, &#39;Option 1: A neat one liner&#39;)
+
+const option2 = () =&gt; (numbers(100, 1)).reduce((i, a) =&gt; {
+    const three = a * 3
+    return three % 2 ? three + i : three
+  }, 100)
+tests.set(option2, &#39;Option 2: A one loop reducer&#39;)
+
+
+benchmark(1e5, ...tests)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Option 1: A neat one liner took 1084ms</code><br><code>Option 2: A one loop reducer took 553ms</code></td>
+</tr>
+</tbody>
+</table>
+    </body>
+</html>
