@@ -13,4 +13,5 @@
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
+| **`twinsies`** | [Pluggable file copier](./packages/twinsies#readme) | [![](https://img.shields.io/npm/v/twinsies.svg)](https://www.npmjs.com/package/twinsies)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
