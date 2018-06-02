@@ -10,6 +10,9 @@
   },
   "homepage": "https://omrilotan.github.io/mono/twinsies/",
   "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t twinsies; cd -"
+  },
   "dependencies": {
     "fs-readfile-promise": "^3.0.0",
     "output-file": "^1.1.1",

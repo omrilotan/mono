@@ -9,5 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t execute; cd -"
+  }
 }

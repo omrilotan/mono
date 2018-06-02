@@ -10,6 +10,9 @@
   },
   "homepage": "https://omrilotan.github.io/mono/edit-package/",
   "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t edit-package; cd -"
+  },
   "dependencies": {
     "lodash.merge": "^4.6.1"
   },

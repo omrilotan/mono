@@ -17,6 +17,10 @@ const title = 'mono';
                     version,
                 } = require(`../packages/${item}/package.json`);
 
+                if (version.includes('alpha')) {
+                    return;
+                }
+
                 const link = `./${item}/`;
 
                 rows.push(`

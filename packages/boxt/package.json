@@ -11,7 +11,8 @@
   "homepage": "https://omrilotan.github.io/mono/boxt/",
   "main": "index.js",
   "scripts": {
-    "start": "node examples"
+    "start": "node examples",
+    "test": "cd ../../; npm t boxt; cd -"
   },
   "dependencies": {
     "colors": "^1.3.0"

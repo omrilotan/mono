@@ -10,6 +10,9 @@
   },
   "homepage": "https://omrilotan.github.io/mono/bench-press/",
   "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t bench-press; cd -"
+  },
   "dependencies": {
     "paraphrase": "^1.2.1"
   }

@@ -8,16 +8,14 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "main": "lib/start/index.js",
-  "scripts": {
-    "start": "./index.js"
-  },
+  "homepage": "https://omrilotan.github.io/mono/upgradable/",
   "bin": {
     "upgradable": "./index.js"
   },
-  "publishConfig": {
-    "tag": "latest",
-    "tag-version-prefix": ""
+  "main": "lib/start/index.js",
+  "scripts": {
+    "start": "./index.js",
+    "test": "cd ../../; npm t upgradable; cd -"
   },
   "dependencies": {
     "boxt": "^0.3.0",
@@ -25,6 +23,5 @@
     "npm": "^5.7.1",
     "prompt-confirm": "^1.2.0",
     "semver": "^5.5.0"
-  },
-  "devDependencies": {}
+  }
 }

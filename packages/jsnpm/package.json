@@ -1,0 +1,19 @@
+{
+  "name": "jsnpm",
+  "version": "0.1.0-alpha.1",
+  "description": "Use NPM in Javascript runtime",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/jsnpm/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t jsnpm; cd -"
+  },
+  "dependencies": {
+    "npm": "^5.6.0"
+  }
+}
