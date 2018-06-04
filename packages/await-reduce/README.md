@@ -15,20 +15,26 @@ const results = await reduce(
         fetch('two').then(res => res.json()),
         fetch('ten').then(res => res.json()),
     ],
-    (accumulator, item) => Object.assign(accumulator, {[item.key]: item.value}),
-    {}
+    (accumulator, item) => [...accumulator, item],
+    []
 )
 ```
 
-The callback matches the signature's 4 arguments, except the array is the array of Promise results
+The callback matches Array.prototype.reduce's 4 argument signature, except the 4th argument (`array`) are the results of the Promises, and the callback itself can be asynchronous as well.
 ```js
 const results = await reduce(
     [
-        fetch('one').then(res => res.json()),
-        fetch('two').then(res => res.json()),
-        fetch('ten').then(res => res.json()),
+        fetch('one'),
+        fetch('two'),
+        fetch('ten'),
     ],
-    (accumulator, item, index, array) => index % 2 ? [...accumulator, item] : accumulator,
-    []
+    async (accumulator, response, index, array) => {
+        if (!response.ok) {
+            return accumulator
+        }
+        const data = await response.json()
+        return Object.assign(accumulator, data)
+    },
+    {}
 )
 ```

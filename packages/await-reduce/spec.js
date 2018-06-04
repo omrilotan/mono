@@ -1,7 +1,7 @@
 const reduce = require('.');
 const result = () => new Promise((resolve) => setTimeout(() => resolve('A'), 40))
 
-describe('gitaliases/reduce', async() => {
+describe('gitaliases/await-reduce', async() => {
     let array;
     beforeEach(() => {
         array = [
@@ -20,6 +20,12 @@ describe('gitaliases/reduce', async() => {
     }
 
     it('Should reduce array to promises', verifyArray);
+
+    it('Should not mutate original array', async() => {
+        await reduce(array, () => null);
+
+        verifyArray();
+    });
 
     it('Should reduce array to promises results', async() =>
         assert(
@@ -105,7 +111,6 @@ describe('gitaliases/reduce', async() => {
             )
     );
 
-
     it('Works on a normal array as well', async() =>
             expect(await reduce(
                 ['B', 'B', 'B'],
@@ -113,10 +118,4 @@ describe('gitaliases/reduce', async() => {
                 []
             )).to.deep.equal(['B', 'B', 'B'])
     );
-
-    it('Should not mutate original array', async() => {
-        await reduce(array, () => null);
-
-        verifyArray();
-    });
 });
