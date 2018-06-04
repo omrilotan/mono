@@ -1,0 +1,16 @@
+{
+  "name": "await-reduce",
+  "version": "1.0.0",
+  "description": "Reduce array of Promises",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/await-reduce/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t await-reduce; cd -"
+  }
+}

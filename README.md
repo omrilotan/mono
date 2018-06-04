@@ -6,6 +6,7 @@ A "mono-repo" for several packages
 | Name | Description | Link
 | --- | --- | ---
 | **`@(._.)/assign`** | [   Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/%40\(._.\)/assign.svg)](https://www.npmjs.com/package/%40\(._.\)/assign)
+| **`await-reduce`** | [Reduce array of Promises](./packages/await-reduce#readme) | [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
