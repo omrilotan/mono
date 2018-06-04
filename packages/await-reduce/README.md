@@ -1,6 +1,6 @@
 # await-reduce [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
 
-Resolves and reduce an array of promises
+Resolve and reduce an array of promises
 
 ```js
 const reduce = require('await-reduce');
@@ -20,7 +20,7 @@ const results = await reduce(
 )
 ```
 
-The callback matches the signature's 4 arguments
+The callback matches the signature's 4 arguments, except the array is the array of Promise results
 ```js
 const results = await reduce(
     [

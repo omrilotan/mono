@@ -53,6 +53,22 @@ describe('gitaliases/reduce', async() => {
         ).to.equal('BAAA')
     );
 
+    it('Should wait for async reducer functions as well', async() =>
+        expect(
+            await reduce(
+                array,
+                (collector, item) => new Promise(
+                    (resolve) => setTimeout(
+                        () => resolve([collector, item].join('')),
+                        40
+                    )
+                ),
+                'B'
+            ),
+            'Should be an array of results'
+        ).to.equal('BAAA')
+    );
+
     it('Should pass the index as third argument to reducer', async() => {
             const results = [];
 
@@ -82,11 +98,20 @@ describe('gitaliases/reduce', async() => {
             expect(results).to.not.include(3);
     });
 
-    it('Should pass the original array as fourth argument to reducer', async() =>
+    it('Should pass the array of results as fourth argument to reducer', async() =>
             await reduce(
                 array,
-                (collector, item, index, arr) => verifyArray(arr)
+                (collector, item, index, arr) => (arr === 'AAA')
             )
+    );
+
+
+    it('Works on a normal array as well', async() =>
+            expect(await reduce(
+                ['B', 'B', 'B'],
+                (collector, item) => [...collector, item],
+                []
+            )).to.deep.equal(['B', 'B', 'B'])
     );
 
     it('Should not mutate original array', async() => {

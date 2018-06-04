@@ -15,18 +15,19 @@
  * @param  {Any}     initial Value to use as the first argument to the first call of the callback. If no initial value is supplied, the first element in the array will be used. Calling reduce() on an empty array without an initial value is an error.
  * @return {Any}
  */
-module.exports = async function reduce(array, reducer, initial){
+module.exports = async function reduce(array, reducer, initial) {
     if (!Array.isArray(array)) {
         throw new TypeError(`reduce function expects first argument to be an array. instead got ${typeof array}`);
     }
 
+    const results = await Promise.all(array);
     const provided = typeof initial !== 'undefined';
     let index = provided ? 0 : 1;
-    let accumulator = provided ? initial : await array[0];
+    let accumulator = provided ? initial : results[0];
 
-    while (index < array.length) {
-        const value = await array[index];
-        accumulator = await reducer(accumulator, value, index, array);
+    while (index < results.length) {
+        const value = results[index];
+        accumulator = await reducer(accumulator, value, index, results);
         index++;
     }
 
