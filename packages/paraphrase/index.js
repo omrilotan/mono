@@ -3,7 +3,7 @@
  * @since 1.0.0
  */
 
-const resolve = require('./lib/resolve');
+const notate = require('notate');
 
 /**
  * Valid types of results for the interpolated string
@@ -52,7 +52,7 @@ module.exports = (...replacers) =>
          * @return {String}          Found value
          */
         function replace(haystack, needle) {
-            const replacement = resolve(needle.trim(), data);
+            const replacement = notate(data, needle.trim());
 
             return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : haystack;
         }

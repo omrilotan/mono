@@ -1,6 +1,6 @@
 {
   "name": "paraphrase",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Create flavoured string phraser",
   "author": "omrilotan",
   "license": "MIT",
@@ -12,5 +12,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t paraphrase; cd -"
+  },
+  "dependencies": {
+    "notate": "^1.0.1"
   }
 }
