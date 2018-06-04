@@ -13,6 +13,7 @@ A "mono-repo" for several packages
 | **`@(._.)/execute`** | [Executes script in a child process](./packages/execute#readme) | [![](https://img.shields.io/npm/v/%40\(._.\)/execute.svg)](https://www.npmjs.com/package/%40\(._.\)/execute)
 | <sup>[WIP]</sup> **`jsnpm`** | [NPM API for application workflow](./packages/jsnpm#readme) | [![](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
+| **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | <sup>[WIP]</sup> **`twinsies`** | [Pluggable file copier](./packages/twinsies#readme) | [![](https://img.shields.io/npm/v/twinsies.svg)](https://www.npmjs.com/package/twinsies)

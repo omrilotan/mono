@@ -1,0 +1,16 @@
+{
+  "name": "notate",
+  "version": "1.0.0",
+  "description": "Resolve dot notation strings",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/notate/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t notate; cd -"
+  }
+}
