@@ -21,19 +21,25 @@
         fetch(&#39;two&#39;).then(res =&gt; res.json()),
         fetch(&#39;ten&#39;).then(res =&gt; res.json()),
     ],
-    (accumulator, item) =&gt; Object.assign(accumulator, {[item.key]: item.value}),
-    {}
+    (accumulator, item) =&gt; [...accumulator, item],
+    []
 )
 </code></pre>
-<p>The callback matches the signature&#39;s 4 arguments, except the array is the array of Promise results</p>
+<p>The callback matches Array.prototype.reduce&#39;s 4 argument signature, except the 4th argument (<code>array</code>) are the results of the Promises, and the callback itself can be asynchronous as well.</p>
 <pre><code class="lang-js">const results = await reduce(
     [
-        fetch(&#39;one&#39;).then(res =&gt; res.json()),
-        fetch(&#39;two&#39;).then(res =&gt; res.json()),
-        fetch(&#39;ten&#39;).then(res =&gt; res.json()),
+        fetch(&#39;one&#39;),
+        fetch(&#39;two&#39;),
+        fetch(&#39;ten&#39;),
     ],
-    (accumulator, item, index, array) =&gt; index % 2 ? [...accumulator, item] : accumulator,
-    []
+    async (accumulator, response, index, array) =&gt; {
+        if (!response.ok) {
+            return accumulator
+        }
+        const data = await response.json()
+        return Object.assign(accumulator, data)
+    },
+    {}
 )
 </code></pre>
     </body>
