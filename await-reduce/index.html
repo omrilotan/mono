@@ -11,7 +11,7 @@
     <body>
         <a href="../">↩︎</a>
         <h1 id="await-reduce-">await-reduce <a href="https://www.npmjs.com/package/await-reduce"><img src="https://img.shields.io/npm/v/await-reduce.svg" alt=""></a> <a href="https://github.com/omrilotan/mono"><img src="https://img.shields.io/badge/mono--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
-<p>Resolves and reduce an array of promises</p>
+<p>Resolve and reduce an array of promises</p>
 <pre><code class="lang-js">const reduce = require(&#39;await-reduce&#39;);
 </code></pre>
 <p>The behaviour matches Array.prototype.reduce.</p>
@@ -25,7 +25,7 @@
     {}
 )
 </code></pre>
-<p>The callback matches the signature&#39;s 4 arguments</p>
+<p>The callback matches the signature&#39;s 4 arguments, except the array is the array of Promise results</p>
 <pre><code class="lang-js">const results = await reduce(
     [
         fetch(&#39;one&#39;).then(res =&gt; res.json()),
