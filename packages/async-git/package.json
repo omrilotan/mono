@@ -1,0 +1,19 @@
+{
+  "name": "async-git",
+  "version": "1.0.0",
+  "description": "Get some git info",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.github.io/mono/async-git/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t async-git; cd -"
+  },
+  "dependencies": {
+    "async-execute": "^1.0.0"
+  }
+}

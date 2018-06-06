@@ -17,7 +17,7 @@ const title = 'mono';
                     version,
                 } = require(`../packages/${item}/package.json`);
 
-                if (version.includes('alpha')) {
+                if (version.includes('alpha') || version.includes('beta')) {
                     return;
                 }
 
