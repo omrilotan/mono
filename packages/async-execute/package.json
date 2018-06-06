@@ -1,16 +1,16 @@
 {
-  "name": "@(._.)/execute",
+  "name": "async-execute",
   "version": "1.0.0",
   "description": "Executes script in a child process",
-  "homepage": "https:///omrilotan.github.io/mono",
   "author": "omrilotan",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
+  "homepage": "https://omrilotan.github.io/mono/async-execute/",
   "main": "index.js",
   "scripts": {
-    "test": "cd ../../; npm t execute; cd -"
+    "test": "cd ../../; npm t async-execute; cd -"
   }
 }

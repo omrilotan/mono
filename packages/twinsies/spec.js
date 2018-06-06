@@ -4,7 +4,7 @@ const {
 } = require('fs');
 
 const interpolate = require('../paraphrase')(/\${([^{}]*)}/g);
-const execute = require('../execute');
+const execute = require('../async-execute');
 const Twinsies = require('./');
 
 const source = `${__dirname}/test-files/src/`;
