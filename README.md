@@ -16,4 +16,5 @@ A "mono-repo" for several packages
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
+| **`run-all-the-things`** | [Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
