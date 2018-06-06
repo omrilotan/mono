@@ -1,6 +1,6 @@
 {
   "name": "run-all-the-things",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run NPM scripts in parallel",
   "author": "omrilotan",
   "license": "MIT",
@@ -10,7 +10,8 @@
   },
   "homepage": "https://omrilotan.github.io/mono/run-all-the-things/",
   "bin": {
-    "things": "./index.js"
+    "things": "./index.js",
+    "run-all-the-things": "./index.js"
   },
   "main": "index.js",
   "scripts": {

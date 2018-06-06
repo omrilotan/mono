@@ -29,6 +29,6 @@ async function run(script) {
     task.on('close', code => {
         count--;
         console.log(`process exited with code ${code}`);
-        count || process.kill();
+        count || process.kill(process.pid);
     });
 }
