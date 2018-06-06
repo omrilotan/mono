@@ -5,11 +5,11 @@ $borders: #dfe2e5;
 * { margin: 0; padding: 0; }
 
 body {
-    color: $text-color;
-    font: 100 100%/1.4 -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
-    max-width: 900px;
-    padding: 2em;
-    margin: 0 auto;
+  color: $text-color;
+  font: 100 100%/1.4 -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
+  max-width: 900px;
+  padding: 2em;
+  margin: 0 auto;
 }
 
 h1 {
@@ -17,10 +17,10 @@ h1 {
   margin: 0 0 .5em;
 
   figure {
-      width: 1.25em;
-      height: 1.25em;
-      display: inline-block;
-      vertical-align: text-top;
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    vertical-align: text-top;
   }
 }
 
@@ -35,6 +35,16 @@ h2, h3, h4 { margin: 0 0 .25em; }
 
 p, pre, ul, table, blockquote { margin: 0 0 1em; }
 
+ul, ol {
+  ul, ol, p, pre {
+    margin: 0;
+  }
+}
+
+ul, ol {
+  padding: 0 0 0 2em;
+}
+
 a {
               color: #2980b9;
   &:visited { color: #8e44ad; }
@@ -42,11 +52,15 @@ a {
 }
 
 table {
-     border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 table, th, td {
-     border: 1px solid $borders;
+  border: 1px solid $borders;
+}
+
+th {
+  font-weight: 500;
 }
 
 th, td, pre, code {
