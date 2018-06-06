@@ -1,6 +1,6 @@
 {
   "name": "run-all-the-things",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Run NPM scripts in parallel",
   "author": "omrilotan",
   "license": "MIT",

@@ -2,6 +2,8 @@
 
 const { exec } = require('child_process');
 
+process.on('unhandledRejection', (error) => { throw error; });
+
 const args = [...process.argv];
 
 const names = [
@@ -20,15 +22,18 @@ let count = args.length;
 Promise.all(args.map(run));
 
 async function run(script) {
-    const task = exec(`npm run ${script}`)
+    const task = exec(`npm run ${script}`);
     process.on('SIGINT', task.kill);
+    let exit = 0;
 
     task.stdout.pipe(process.stdout);
     task.stderr.pipe(process.stderr);
 
     task.on('close', code => {
+        exit += code;
+
         count--;
         console.log(`process exited with code ${code}`);
-        count || process.kill(process.pid);
+        count || process.exit(exit);
     });
 }

@@ -1,11 +1,9 @@
 # mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/gh/omrilotan/workflows/mono)
 A "mono-repo" for several packages
 
-## TOC
-
 | Name | Description | Link
 | --- | --- | ---
-| **`@(._.)/assign`** | [Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/%40\(._.\)/assign.svg)](https://www.npmjs.com/package/%40\(._.\)/assign)
+| **`@(._.)/assign`** | [Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/@(._.)/assign.svg)](https://www.npmjs.com/package/@(._.)/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [Get some git info](./packages/async-git#readme) | [![](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)

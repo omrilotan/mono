@@ -27,10 +27,22 @@ jobs:
           key: build-cache-{{ .Revision }}
       - run:
           name: Test
-          command: npm t
+          command: ./packages/run-all-the-things/index.js test lint
+  readme:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: build-cache-{{ .Revision }}
       - run:
-          name: Code lint
-          command: npm run lint
+          name: Create this repo's readme
+          command: npm run readme
+      - run:
+          name: Set git user
+          command: curl ci-cd.net/v1/git/user | bash -s a1vy a01101100vy@gmail.com
+      - run:
+          name: Update changes
+          command: curl ci-cd.net/v1/git/update | bash
   publish:
     <<: *defaults
     steps:
@@ -56,7 +68,7 @@ jobs:
           name: Create the docs
           command: npm run doc
       - run:
-          name: Set git use
+          name: Set git user
           command: curl ci-cd.net/v1/git/user | bash -s a1vy a01101100vy@gmail.com
       - run:
           name: Push to gh-pages
@@ -73,6 +85,9 @@ workflows:
             - install
       - publish:
           context: globalenv
+          requires:
+            - test
+      - readme:
           requires:
             - test
       - docs:
