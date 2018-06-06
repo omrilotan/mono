@@ -1,7 +1,7 @@
 const exec = require('async-execute');
 const git = require('.');
 
-describe('async-git', async() => {
+describe(`async-git (${Object.getOwnPropertyNames(git).join(', ')})`, async() => {
     let start;
 
     before(async() => {
@@ -22,11 +22,13 @@ describe('async-git', async() => {
         'name',
         'branch',
         'author',
+        'comitter',
         'email',
         'sha',
         'short',
+        'subject',
         'message',
-    ].forEach(member => it(`${member} getter should retreive a string`, async () => {
+    ].forEach(member => it(`${member} should retreive a string`, async () => {
         const value = await git[member];
         expect(value).to.be.a('string');
         expect(value).to.have.lengthOf.at.least(1);

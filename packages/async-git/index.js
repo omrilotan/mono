@@ -1,35 +1,44 @@
 const exec = require('async-execute');
 
-const formats = new Map();
-formats.set('name', 'an');
-formats.set('email', 'ae');
-formats.set('sha', 'H');
-formats.set('short', 'h');
-formats.set('message', 'B');
-
-const show = async part => await exec(`git show -s --format=%${formats.get(part)}`);
-
-const getters = {
-    name: async () => await exec('basename -s .git `git config --get remote.origin.url`'),
-    branch: async () => await exec('git rev-parse --abbrev-ref HEAD'),
-    author: async () => await show('name'),
-    email: async () => await show('email'),
-    sha: async () => await show('sha'),
-    short: async () => await show('short'),
-    message: async () => await show('message'),
+const formats = {
+    author: 'an',
+    comitter: 'cn',
+    email: 'ae',
+    sha: 'H',
+    short: 'h',
+    subject: 's',
+    message: 'B',
 };
+
+const getters = Object.assign(
+    {
+        name: async () => await exec('basename -s .git `git config --get remote.origin.url`'),
+        branch: async () => await exec('git rev-parse --abbrev-ref HEAD'),
+    },
+    Object.entries(formats).reduce(
+        (props, [key, value]) => Object.assign(
+            props,
+            {
+                [key]: async () => await exec(`git show -s --format=%${value}`),
+            }
+        ),
+        {}
+    )
+);
 
 /**
  * @typedef           gitGet
  * @description       Get git info
  * @type     {Object}
- * @property {Promise<String>} name    Project name
- * @property {Promise<String>} branch  Current branch name
- * @property {Promise<String>} author  Author name of the last commit
- * @property {Promise<String>} email   Author email of the last commit
- * @property {Promise<String>} sha     Unique identifier of the last commit
- * @property {Promise<String>} short   7 Character Unique identifier of the last commit
- * @property {Promise<String>} message Most recent commit message
+ * @property {Promise<String>} name     Project name
+ * @property {Promise<String>} branch   Current branch name
+ * @property {Promise<String>} author   Author name of the last commit
+ * @property {Promise<String>} comitter Comitter name of the last commit
+ * @property {Promise<String>} email    Author email of the last commit
+ * @property {Promise<String>} sha      Unique identifier of the last commit
+ * @property {Promise<String>} short    7 Character Unique identifier of the last commit
+ * @property {Promise<String>} subject  Most recent commit subject
+ * @property {Promise<String>} message  Most recent commit full message
  */
 module.exports = Object.defineProperties(
     {},
@@ -39,7 +48,7 @@ module.exports = Object.defineProperties(
                 props,
                 {
                     [key]: {
-                        get: async () => await value(),
+                        get: value,
                         configurable: true,
                     }
                 }

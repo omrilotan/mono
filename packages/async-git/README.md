@@ -21,7 +21,9 @@ const [
 | name | Project name
 | branch | Current branch name
 | author | Author name of the last commit
+| comitter | Comitter name of the last commit
 | email | Author email of the last commit
 | sha | Unique identifier of the last commit
 | short | 7 Character Unique identifier of the last commit
-| message | Most recent commit message
+| subject | Most recent commit subject
+| message | Most recent commit full message
