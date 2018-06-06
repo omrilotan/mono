@@ -1,6 +1,8 @@
 # mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/gh/omrilotan/workflows/mono)
 A "mono-repo" for several packages
 
+## TOC
+
 | Name | Description | Link
 | --- | --- | ---
 | **`@(._.)/assign`** | [Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/@(._.)/assign.svg)](https://www.npmjs.com/package/@(._.)/assign)
