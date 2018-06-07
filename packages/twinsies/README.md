@@ -1,4 +1,4 @@
-# [WIP] Twinsies [![](https://img.shields.io/npm/v/twinsies.svg)](https://www.npmjs.com/package/twinsies) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
+# [WIP] Twinsies [![](https://img.shields.io/npm/v/twinsies.svg)](https://www.npmjs.com/package/twinsies) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/twinsies)
 
 Pluggable file copier
 

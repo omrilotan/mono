@@ -1,4 +1,4 @@
-# Upgradable [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
+# Upgradable [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/upgradable)
 
 "Upgradable" runs in a background child process and checks for updates in your CLI package.
 If there's a new version available - at end of interaction, when user sends interrupt signal (ctrl+c), it will prompt your users to upgrade your node CLI tool.

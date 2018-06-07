@@ -1,4 +1,4 @@
-# notate [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
+# notate [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/notate)
 
 Resolve dot notation strings
 

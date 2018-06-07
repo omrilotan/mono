@@ -1,4 +1,4 @@
-# bench-press [![](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
+# bench-press [![](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/bench-press)
 
 
 Benchmark operations

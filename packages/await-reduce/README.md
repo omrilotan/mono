@@ -1,4 +1,4 @@
-# await-reduce [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce) [![](https://img.shields.io/badge/mono--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono)
+# await-reduce [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/await-reduce)
 
 Resolve and reduce an array of promises
 

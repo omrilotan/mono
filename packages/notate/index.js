@@ -14,10 +14,10 @@
  *   }
  * };
  *
- * notate('top_level.nested.value', obj);
+ * notate(obj, 'top_level.nested.value');
  * // 'My Value'
  *
- * notate('top_level.missing.value', obj);
+ * notate(obj, 'top_level.missing.value');
  * // undefined
  */
 module.exports = (source, string = '') => string
