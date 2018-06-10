@@ -32,7 +32,7 @@ const title = 'mono';
     <td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
 </tr>
 `);
-                links.push(`<link rel="prerender" href="${link}/">`);
+                links.push(`<link rel="prerender" href="${link}">`);
 
             }
         )
