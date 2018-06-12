@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>selenium-chrome-clear-cache | an npm package by omrilotan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="prerender" href="../">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="selenium-chrome-clear-cache-">selenium-chrome-clear-cache <a href="https://www.npmjs.com/package/selenium-chrome-clear-cache"><img src="https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/selenium-chrome-clear-cache"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+<p>Clear cache of a chrome browser in a Selenium flow</p>
+<p><img src="https://user-images.githubusercontent.com/516342/41310034-027fbc12-6e89-11e8-95b2-8506b7cd05bc.gif" alt="clear-cache"></p>
+<pre><code class="lang-js">const webdriver = require(&#39;selenium-webdriver&#39;);
+const driver = await new Builder().forBrowser(&#39;chrome&#39;).build();
+
+await driver.get(&#39;http://www.website.com/login&#39;);
+await driver.findElement(By.name(&#39;username&#39;)).sendKeys(&#39;admin&#39;);
+await driver.findElement(By.name(&#39;password&#39;)).sendKeys(&#39;4dM!n&#39;, Key.RETURN);
+// Web page redirects us
+await driver.wait(until.urlIs(&#39;http://www.website.com/&#39;), 1000);
+
+await clearCache({webdriver, driver});
+
+await driver.get(&#39;http://www.website.com/&#39;);
+// Gather logged in performance metrics
+</code></pre>
+<blockquote>
+<p>Uses chrome driver. <a href="http://chromedriver.storage.googleapis.com/index.html">Get one</a></p>
+</blockquote>
+    </body>
+</html>
