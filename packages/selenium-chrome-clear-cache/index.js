@@ -47,13 +47,9 @@ module.exports = async function clearCache({webdriver, driver}) {
         3000
     );
 
-    await driver.sleep(4000);
-
     await driver.findElement(
         By.js(find, CHECKBOX)
     ).click();
-
-    await driver.sleep(4000);
 
     const button = driver.findElement(
         By.js(find, BUTTON)
