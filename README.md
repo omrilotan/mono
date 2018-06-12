@@ -17,4 +17,5 @@ A "mono-repo" for several packages
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | **`run-all-the-things`** | [Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
+| **`selenium-chrome-clear-cache`** | [Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
