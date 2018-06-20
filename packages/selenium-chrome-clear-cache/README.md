@@ -23,15 +23,22 @@ await driver.get('http://www.website.com/');
 
 > Uses chrome driver. [Get one](http://chromedriver.storage.googleapis.com/index.html)
 
-## Options
 
-What should the browser clear
+## Behaviour and Options
+
+The default behaviour clears the cache and history from the last hour. Options can be applied (in form of named arguments) to configure what the browser should clear
 
 | name | default
 | - | -
 | cookies | false
 | cache | true
 | history | true
+
+```js
+await clearCache({webdriver, driver}, {cookies: true}); // Also clears the cookies
+
+await clearCache({webdriver, driver}, {history: false}); // Do not clear the history
+```
 
 ## Measuring page performance example
 ![image](https://user-images.githubusercontent.com/516342/41311395-d200f8e0-6e8c-11e8-89ac-1e76c4ff283d.png)

@@ -59,8 +59,6 @@ module.exports = async function clearCache({webdriver, driver}, {cookies = false
         3000
     );
 
-    await driver.sleep(2000);
-
     await Promise.all(
         [
             [cookies, COOKIES],
@@ -70,8 +68,6 @@ module.exports = async function clearCache({webdriver, driver}, {cookies = false
             async ([option, query]) => option || await driver.findElement(By.js(find, query)).click()
         )
     );
-
-    await driver.sleep(2000);
 
     await driver.findElement(
         By.js(find, BUTTON)
