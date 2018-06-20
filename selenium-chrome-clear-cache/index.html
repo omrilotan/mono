@@ -31,9 +31,8 @@ await driver.get(&#39;http://www.website.com/&#39;);
 <blockquote>
 <p>Uses chrome driver. <a href="http://chromedriver.storage.googleapis.com/index.html">Get one</a></p>
 </blockquote>
-<h2 id="behaviour-and-options">Behaviour and Options</h2>
-<p>The default behaviour clears the cache and history from the last hour.</p>
-<p>Options can be applied (in form of named arguments) to configure what the browser should clear</p>
+<h2 id="options">Options</h2>
+<p>What should the browser clear</p>
 <table>
 <thead>
 <tr>
@@ -56,10 +55,6 @@ await driver.get(&#39;http://www.website.com/&#39;);
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-js">await clearCache({webdriver, driver}, {cookies: true}); // Also clears the cookies
-
-await clearCache({webdriver, driver}, {history: false}); // Do not clear the history
-</code></pre>
 <h2 id="measuring-page-performance-example">Measuring page performance example</h2>
 <p><img src="https://user-images.githubusercontent.com/516342/41311395-d200f8e0-6e8c-11e8-89ac-1e76c4ff283d.png" alt="image"></p>
     </body>
