@@ -16,7 +16,12 @@ describe('selenium-chrome-clear-cache', async() => {
     });
 
     afterEach(async() => {
-        await driver.quit();
+        try {
+            await driver.quit();
+        } catch (error) {
+            console.error(error);
+        }
+
         await sleep(1000);
     });
 
@@ -55,7 +60,12 @@ describe('selenium-chrome-clear-cache', async() => {
             loadTimes.push(await driver.executeScript(MEASURE));
 
             expect(loadTimes[1]).to.be.below(loadTimes[0]);
-            expect(loadTimes[2]).not.to.be.below(loadTimes[1]);
+            expect(loadTimes[2]).to.be.below(loadTimes[0]);
+            expect(
+                Math.abs(loadTimes[2] - loadTimes[1])
+            ).to.be.below(
+                Math.abs(loadTimes[2] - loadTimes[0])
+            );
         }).timeout(TIMEOUT).retries(2);
     }
 });
