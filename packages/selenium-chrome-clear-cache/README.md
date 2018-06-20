@@ -23,6 +23,16 @@ await driver.get('http://www.website.com/');
 
 > Uses chrome driver. [Get one](http://chromedriver.storage.googleapis.com/index.html)
 
+## Options
+
+What should the browser clear
+
+| name | default
+| - | -
+| cookies | false
+| cache | true
+| history | true
+
 ## Measuring page performance example
 ![image](https://user-images.githubusercontent.com/516342/41311395-d200f8e0-6e8c-11e8-89ac-1e76c4ff283d.png)
 

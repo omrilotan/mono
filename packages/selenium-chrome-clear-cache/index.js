@@ -5,10 +5,22 @@
 const PAGE = 'chrome://settings/clearBrowserData';
 
 /**
- * Query selector for shadow DOM: checkbox for clear browsing data confirmation
+ * Query selector for shadow DOM: checkbox for clear cookies
  * @type {String}
  */
-const CHECKBOX = '* /deep/ [label*="Cookies"]';
+const COOKIES = '* /deep/ [id="cookiesCheckboxBasic"]';
+
+/**
+ * Query selector for shadow DOM: checkbox for clear browsing data
+ * @type {String}
+ */
+const HISTORY = '* /deep/ [id="browsingCheckboxBasic"]';
+
+/**
+ * Query selector for shadow DOM: checkbox for clear cache
+ * @type {String}
+ */
+const CACHE = '* /deep/ [id="cacheCheckboxBasic"]';
 
 /**
  * Query selector for shadow DOM: Submit buttons
@@ -35,7 +47,7 @@ const find = (selector) => document.querySelector(selector);
  *
  * await clearCache({webdriver, driver});
  */
-module.exports = async function clearCache({webdriver, driver}) {
+module.exports = async function clearCache({webdriver, driver}, {cookies = false, cache = true, history = true} = {}) {
     const { By, until } = webdriver;
 
     await driver.get(PAGE);
@@ -47,11 +59,21 @@ module.exports = async function clearCache({webdriver, driver}) {
         3000
     );
 
-    await driver.findElement(
-        By.js(find, CHECKBOX)
-    ).click();
+    await driver.sleep(2000);
 
-    const button = driver.findElement(
+    await Promise.all(
+        [
+            [cookies, COOKIES],
+            [cache, CACHE],
+            [history, HISTORY],
+        ].map(
+            async ([option, query]) => option || await driver.findElement(By.js(find, query)).click()
+        )
+    );
+
+    await driver.sleep(2000);
+
+    await driver.findElement(
         By.js(find, BUTTON)
     ).click();
 
