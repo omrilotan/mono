@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/twinsies/",
+  "homepage": "https://omrilotan.com/mono/twinsies/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t twinsies; cd -"

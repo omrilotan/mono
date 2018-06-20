@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/upgradable/",
+  "homepage": "https://omrilotan.com/mono/upgradable/",
   "bin": {
     "upgradable": "./index.js"
   },

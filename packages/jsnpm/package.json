@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/jsnpm/",
+  "homepage": "https://omrilotan.com/mono/jsnpm/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t jsnpm; cd -"

@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/oh-my-gauge.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/oh-my-gauge/",
+  "homepage": "https://omrilotan.com/mono/oh-my-gauge/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t oh-my-gauge; cd -"

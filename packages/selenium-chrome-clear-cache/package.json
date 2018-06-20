@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/selenium-chrome-clear-cache/",
+  "homepage": "https://omrilotan.com/mono/selenium-chrome-clear-cache/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t selenium-chrome-clear-cache; cd -"

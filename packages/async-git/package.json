@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/async-git/",
+  "homepage": "https://omrilotan.com/mono/async-git/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t async-git; cd -"

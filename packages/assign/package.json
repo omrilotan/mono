@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/assign/",
+  "homepage": "https://omrilotan.com/mono/assign/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t assign; cd -"

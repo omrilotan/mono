@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/edit-package/",
+  "homepage": "https://omrilotan.com/mono/edit-package/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t edit-package; cd -"

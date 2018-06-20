@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/run-all-the-things/",
+  "homepage": "https://omrilotan.com/mono/run-all-the-things/",
   "bin": {
     "things": "./index.js",
     "run-all-the-things": "./index.js"

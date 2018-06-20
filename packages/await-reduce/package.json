@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/await-reduce/",
+  "homepage": "https://omrilotan.com/mono/await-reduce/",
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t await-reduce; cd -"

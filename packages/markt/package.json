@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/omrilotan/markt.git"
   },
-  "homepage": "https://omrilotan.github.io/mono/markt/",
+  "homepage": "https://omrilotan.com/mono/markt/",
   "bin": {
     "markt": "./bin/markt"
   },
