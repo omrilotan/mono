@@ -28,6 +28,13 @@ jobs:
       - run:
           name: Test
           command: ./packages/run-all-the-things/index.js test lint
+          environment:
+            MOCHA_FILE: junit/test-results.xml
+          when: always
+      - store_test_results:
+          path: ./junit
+      - store_artifacts:
+          path: ./junit
   readme:
     <<: *defaults
     steps:
