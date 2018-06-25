@@ -3,7 +3,7 @@ const {Builder} = webdriver;
 const clearCache = require('.');
 
 const TIMEOUT = 30 * 1e3;
-const HOOK_TIMEOUT = 10 * 1e3;
+const RETRIES = process.env.CI ? 2 : 1;
 
 const LINK = 'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching';
 const MEASURE = 'return performance.timing.loadEventEnd - performance.timing.navigationStart;';
@@ -19,7 +19,7 @@ describe('selenium-chrome-clear-cache', async() => {
         try {
             await driver.quit();
         } catch (error) {
-            console.error(error);
+            console.error(error); // eslint-disable-line no-console
         }
 
         await sleep(1000);
@@ -43,7 +43,7 @@ describe('selenium-chrome-clear-cache', async() => {
 
             expect(loadTimes[1]).to.be.below(loadTimes[0]);
             expect(loadTimes[2]).not.to.be.below(loadTimes[1]);
-        }).timeout(TIMEOUT).retries(2);
+        }).timeout(TIMEOUT).retries(RETRIES);
 
         it(`Load times should  decrease with cache and stay low after de-selecting all checkboxes (${3 - i}/3)`, async() => {
             const loadTimes = [];
@@ -66,6 +66,6 @@ describe('selenium-chrome-clear-cache', async() => {
             ).to.be.below(
                 Math.abs(loadTimes[2] - loadTimes[0])
             );
-        }).timeout(TIMEOUT).retries(2);
+        }).timeout(TIMEOUT).retries(RETRIES);
     }
 });

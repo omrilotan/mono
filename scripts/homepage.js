@@ -3,8 +3,6 @@
 const fs = require('fs').promises;
 const phrase = require('../packages/paraphrase/double');
 
-const title = 'mono';
-
 (async () => {
     const [rows, links] = [[], []];
 
@@ -37,6 +35,9 @@ const title = 'mono';
             }
         )
 
+    const { name, description } = require('../package.json');
+    const title = name.split('/').pop();
+    const user = 'omrilotan';
 
     const content = rows.join('');
     const head = links.join('\n');
@@ -46,7 +47,9 @@ const title = 'mono';
     const output = phrase(template, {
         head,
         title,
+        user,
         content,
+        description,
     });
 
     await fs.writeFile('docs/index.html', output);

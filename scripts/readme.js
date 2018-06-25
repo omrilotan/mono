@@ -42,11 +42,10 @@ const reduce = require('../packages/await-reduce');
 })()
 
 function output(packages) {
-    const pkg = require('../package.json');
-    const title = pkg.title.split('/').pop();
-    const { description } = pkg;
+    const { description, name } = require('../package.json');
+    const title = name.split('/').pop();
     const badge = 'https://circleci.com/gh/omrilotan/mono.svg?style=svg';
-    const ciurl = 'https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/build-insights/gh/omrilotan/mono/master';
+    const ciurl = 'https://circleci.com/build-insights/gh/omrilotan/mono/master';
 
     return `# ${title} [![](${badge})](${ciurl})
 ${description}
