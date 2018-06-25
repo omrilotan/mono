@@ -42,8 +42,14 @@ const reduce = require('../packages/await-reduce');
 })()
 
 function output(packages) {
-    return `# mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/gh/omrilotan/workflows/mono)
-A "mono-repo" for several packages
+    const pkg = require('../package.json');
+    const title = pkg.title.split('/').pop();
+    const { description } = pkg;
+    const badge = 'https://circleci.com/gh/omrilotan/mono.svg?style=svg';
+    const ciurl = 'https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/build-insights/gh/omrilotan/mono/master';
+
+    return `# ${title} [![](${badge})](${ciurl})
+${description}
 
 ## TOC
 

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Mono repo holding multiple packages",
   "author": "omrilotan",
-  "homepage": "https://omrilotan.com",
+  "homepage": "https://omrilotan.com/mono",
   "license": "MIT",
   "repository": {
     "type": "git",
