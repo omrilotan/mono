@@ -1,5 +1,5 @@
-# mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/gh/omrilotan/workflows/mono)
-A "mono-repo" for several packages
+# mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/build-insights/gh/omrilotan/mono/master)
+Mono repo holding multiple packages
 
 ## TOC
 
