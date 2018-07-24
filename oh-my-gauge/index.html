@@ -47,15 +47,15 @@ const benchmark = new Benchmark(
 
 benchmark(
     100000,
-    [() =&gt; {/* Do thing one     */}, &#39;Thing 1 description&#39;],
-    [() =&gt; {/* Do thing two     */}, &#39;Thing 2 description&#39;],
+    [() =&gt; {/* Do thing one   */}, &#39;Thing 1 description&#39;],
+    [() =&gt; {/* Do thing two   */}, &#39;Thing 2 description&#39;],
     [() =&gt; {/* Do thing three */}, &#39;Thing 3 description&#39;]
 );
 
 // Use a map, maps are fun
 const things = new Map();
-things.set(() =&gt; {/* Do thing one     */}, &#39;Thing 1 description&#39;);
-things.set(() =&gt; {/* Do thing two     */}, &#39;Thing 2 description&#39;);
+things.set(() =&gt; {/* Do thing one   */}, &#39;Thing 1 description&#39;);
+things.set(() =&gt; {/* Do thing two   */}, &#39;Thing 2 description&#39;);
 things.set(() =&gt; {/* Do thing three */}, &#39;Thing 3 description&#39;);
 
 benchmark(1e5, ...things);
