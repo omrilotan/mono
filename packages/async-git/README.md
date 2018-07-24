@@ -6,11 +6,11 @@ Retrieves data from current git repository
 const git = require('async-git');
 
 const [
-    author_name,
-    commit_message,
+	author_name,
+	commit_message,
 ] = [
-    await git.author,
-    await git.message,
+	await git.author,
+	await git.message,
 ];
 
 `${author_name} committed ${commit_message}` // Omri committed Some changes

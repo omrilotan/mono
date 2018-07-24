@@ -9,7 +9,7 @@ Benchmark operations
 import benchpress from 'bench-press';
 
 console.log(
-    benchpress(() => myFunction())
+	benchpress(() => myFunction())
 );
 
 // Running 1000 times took 54ms
@@ -19,12 +19,12 @@ console.log(
 ### Message
 ```js
 console.log(
-    benchpress(
-        () => myFunction(),
-        {
-            message: 'myFunction ✖ ${iterations} = ${duration}',
-        }
-    )
+	benchpress(
+		() => myFunction(),
+		{
+			message: 'myFunction ✖ ${iterations} = ${duration}',
+		}
+	)
 );
 
 // myFunction ✖ 1000 = 54
@@ -33,12 +33,12 @@ console.log(
 ### Iterations
 ```js
 console.log(
-    benchpress(
-        () => myFunction(),
-        {
-            iterations: 1e5,
-        }
-    )
+	benchpress(
+		() => myFunction(),
+		{
+			iterations: 1e5,
+		}
+	)
 );
 
 // Running 100000 times took 54ms

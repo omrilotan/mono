@@ -1,20 +1,20 @@
 {
-  "name": "boxt",
-  "version": "0.3.1",
-  "description": "Create boxes around text",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/boxt/",
-  "main": "index.js",
-  "scripts": {
-    "start": "node examples",
-    "test": "cd ../../; npm t boxt; cd -"
-  },
-  "dependencies": {
-    "colors": "^1.3.0"
-  }
+	"name": "boxt",
+	"version": "0.3.1",
+	"description": "Create boxes around text",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/boxt/",
+	"main": "index.js",
+	"scripts": {
+		"start": "node examples",
+		"test": "cd ../../; npm t boxt; cd -"
+	},
+	"dependencies": {
+		"colors": "^1.3.0"
+	}
 }

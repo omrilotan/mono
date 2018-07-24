@@ -1,25 +1,25 @@
 {
-  "name": "markt",
-  "version": "1.1.1",
-  "description": "Generate pages from markdown",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/omrilotan/markt.git"
-  },
-  "homepage": "https://omrilotan.com/mono/markt/",
-  "bin": {
-    "markt": "./bin/markt"
-  },
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t markt; cd -"
-  },
-  "dependencies": {
-    "fs-extra": "^5.0.0",
-    "marked": "^0.3.19",
-    "paraphrase": "^1.2.0"
-  },
-  "preferGlobal": true
+	"name": "markt",
+	"version": "1.1.1",
+	"description": "Generate pages from markdown",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/omrilotan/markt.git"
+	},
+	"homepage": "https://omrilotan.com/mono/markt/",
+	"bin": {
+		"markt": "./bin/markt"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t markt; cd -"
+	},
+	"dependencies": {
+		"fs-extra": "^5.0.0",
+		"marked": "^0.3.19",
+		"paraphrase": "^1.2.0"
+	},
+	"preferGlobal": true
 }

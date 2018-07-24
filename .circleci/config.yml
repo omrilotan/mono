@@ -101,6 +101,10 @@ workflows:
           context: globalenv
           requires:
             - publish
+          filters:
+            branches:
+              only:
+                - master
 
 experimental:
   notify:

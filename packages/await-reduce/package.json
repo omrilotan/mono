@@ -1,16 +1,16 @@
 {
-  "name": "await-reduce",
-  "version": "1.1.1",
-  "description": "Resolve and reduce an array of promises",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/await-reduce/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t await-reduce; cd -"
-  }
+	"name": "await-reduce",
+	"version": "1.1.1",
+	"description": "Resolve and reduce an array of promises",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/await-reduce/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t await-reduce; cd -"
+	}
 }

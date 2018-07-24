@@ -28,7 +28,7 @@ phrase('Hello, ${name}', {name: 'Martin'}); // Hello, Martin
 
 ```js
 const user = {
-    name: {first: 'Martin', last: 'Prince'}
+	name: {first: 'Martin', last: 'Prince'}
 };
 phrase('Hello, ${name.first} ${name.last}', user); // Hello, Martin Prince
 ```

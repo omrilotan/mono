@@ -6,16 +6,16 @@ Pluggable file copier
 const Twinsies = require('twinsies')
 
 new Twinsies({
-  source: './src',
-  target: './dist',
-  matches: [
-    /.*\.json/,
-    /.*\.yml/
-  ],
-  process: string => string.replace(/<SERVICE_NAME>/g, 'My Awesome Service')
+	source: './src',
+	target: './dist',
+	matches: [
+		/.*\.json/,
+		/.*\.yml/
+	],
+	process: string => string.replace(/<SERVICE_NAME>/g, 'My Awesome Service')
 }).register(
-  (...files) => console.log(
-    files.map(file => `Written ${file}`).join('\n')
-  )
+	(...files) => console.log(
+		files.map(file => `Written ${file}`).join('\n')
+	)
 ).start()
 ```

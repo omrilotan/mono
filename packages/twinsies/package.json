@@ -1,21 +1,21 @@
 {
-  "name": "twinsies",
-  "version": "0.0.1-alpha",
-  "description": "Pluggable file copier",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/twinsies/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t twinsies; cd -"
-  },
-  "dependencies": {
-    "fs-readfile-promise": "^3.0.0",
-    "output-file": "^1.1.1",
-    "recursive-readdir": "^2.2.1"
-  }
+	"name": "twinsies",
+	"version": "0.0.1-alpha",
+	"description": "Pluggable file copier",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/twinsies/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t twinsies; cd -"
+	},
+	"dependencies": {
+		"fs-readfile-promise": "^3.0.0",
+		"output-file": "^1.1.1",
+		"recursive-readdir": "^2.2.1"
+	}
 }

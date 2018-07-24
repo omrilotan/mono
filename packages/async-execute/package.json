@@ -1,16 +1,16 @@
 {
-  "name": "async-execute",
-  "version": "1.0.0",
-  "description": "Executes script in a child process",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/async-execute/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t async-execute; cd -"
-  }
+	"name": "async-execute",
+	"version": "1.0.0",
+	"description": "Executes script in a child process",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/async-execute/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t async-execute; cd -"
+	}
 }

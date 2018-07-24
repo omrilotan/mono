@@ -1,7 +1,7 @@
 {
-  "name": "${name}",
-  "version": "${version}",
-  "scripts": {
-    "test": "${testScript}"
-  }
+	"name": "${name}",
+	"version": "${version}",
+	"scripts": {
+		"test": "${testScript}"
+	}
 }

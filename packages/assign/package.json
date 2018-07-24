@@ -1,16 +1,16 @@
 {
-  "name": "@(._.)/assign",
-  "version": "1.0.0",
-  "description": "Object deep assign",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/assign/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t assign; cd -"
-  }
+	"name": "@(._.)/assign",
+	"version": "1.0.0",
+	"description": "Object deep assign",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/assign/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t assign; cd -"
+	}
 }

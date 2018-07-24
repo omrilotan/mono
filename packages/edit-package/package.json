@@ -1,22 +1,22 @@
 {
-  "name": "edit-package",
-  "version": "1.0.0",
-  "description": "Read, write and reset package.json",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/edit-package/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t edit-package; cd -"
-  },
-  "dependencies": {
-    "lodash.merge": "^4.6.1"
-  },
-  "devDependencies": {
-    "fs-extra": "^5.0.0"
-  }
+	"name": "edit-package",
+	"version": "1.0.0",
+	"description": "Read, write and reset package.json",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/edit-package/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t edit-package; cd -"
+	},
+	"dependencies": {
+		"lodash.merge": "^4.6.1"
+	},
+	"devDependencies": {
+		"fs-extra": "^5.0.0"
+	}
 }
