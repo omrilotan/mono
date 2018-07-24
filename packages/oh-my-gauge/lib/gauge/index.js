@@ -15,31 +15,31 @@
  * myThing.method = gauge(myThing.method, 'Method name or description');
  */
 module.exports = class Gauge {
-    constructor(report) {
-        this.report = report;
+	constructor(report) {
+		this.report = report;
 
-        return this.wrap.bind(this);
-    }
+		return this.wrap.bind(this);
+	}
 
-  /**
-   * wrap a function with the report callback, accepting the time it took to complete the operation
-   * @param  {Function} fn
-   * @param  {String} name
-   * @return {Function}
-   */
-    wrap(fn, name) {
-        const report = this.report;
+	/**
+	 * wrap a function with the report callback, accepting the time it took to complete the operation
+	 * @param  {Function} fn
+	 * @param  {String}   name
+	 * @return {Function}
+	 */
+	wrap(fn, name) {
+		const report = this.report;
 
-        function wrapped(...args) {
-            const start = Date.now();
-            const result = fn.apply(this, args);
+		function wrapped(...args) {
+			const start = Date.now();
+			const result = fn.apply(this, args);
 
-            report(Date.now() - start, name);
-            return result;
-        }
+			report(Date.now() - start, name);
+			return result;
+		}
 
-        wrapped.__original = fn;
+		wrapped.__original = fn;
 
-        return wrapped;
-    }
+		return wrapped;
+	}
 }

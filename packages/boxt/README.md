@@ -17,12 +17,12 @@ It might be multilined`);
 ## Options
 ```js
 boxt(
-    'Guests, like fish, begin to smell after three days.',
-    {
-        color: 'green',
-        theme: 'round',
-        padding: 4,
-    }
+	'Guests, like fish, begin to smell after three days.',
+	{
+		color: 'green',
+		theme: 'round',
+		padding: 4,
+	}
 );
 ```
 

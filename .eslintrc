@@ -1,26 +1,30 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 2017,
-    "sourceType": "module"
-  },
-  "env": {
-    "node": true,
-    "es6": true
-  },
-  "extends": "eslint:recommended",
-  "rules": {},
-  "overrides": [
-    {
-      "files": [ "**/spec.js" ],
-      "env": {
-        "mocha": true
-      },
-      "globals": {
-        "expect": true,
-        "assert": true,
-        "sleep": true,
-        "freeze": true
-      }
-    }
-  ]
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module"
+	},
+	"env": {
+		"node": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"indent": [
+			"error", "tab", { "SwitchCase": 1, "FunctionDeclaration": { "body": 1, "parameters": 2 } }
+		],
+	},
+	"overrides": [
+		{
+			"files": [ "**/spec.js" ],
+			"env": {
+				"mocha": true
+			},
+			"globals": {
+				"expect": true,
+				"assert": true,
+				"sleep": true,
+				"freeze": true
+			}
+		}
+	]
 }

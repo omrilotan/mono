@@ -1,34 +1,34 @@
 const exec = require('async-execute');
 
 const formats = {
-    author: 'an',
-    comitter: 'cn',
-    email: 'ae',
-    sha: 'H',
-    short: 'h',
-    subject: 's',
-    message: 'B',
+	author: 'an',
+	comitter: 'cn',
+	email: 'ae',
+	sha: 'H',
+	short: 'h',
+	subject: 's',
+	message: 'B',
 };
 
 const getters = Object.assign(
-    {
-        name: async () => await exec('basename -s .git `git config --get remote.origin.url`'),
-        branch: async () => await exec('git rev-parse --abbrev-ref HEAD'),
-    },
-    Object.entries(formats).reduce(
-        (props, [key, value]) => Object.assign(
-            props,
-            {
-                [key]: async () => await exec(`git show -s --format=%${value}`),
-            }
-        ),
-        {}
-    )
+	{
+		name: async () => await exec('basename -s .git `git config --get remote.origin.url`'),
+		branch: async () => await exec('git rev-parse --abbrev-ref HEAD'),
+	},
+	Object.entries(formats).reduce(
+		(props, [key, value]) => Object.assign(
+			props,
+			{
+				[key]: async () => await exec(`git show -s --format=%${value}`),
+			}
+		),
+		{}
+	)
 );
 
 /**
- * @typedef           gitGet
- * @description       Get git info
+ * @typedef     gitGet
+ * @description Get git info
  * @type     {Object}
  * @property {Promise<String>} name     Project name
  * @property {Promise<String>} branch   Current branch name
@@ -41,19 +41,19 @@ const getters = Object.assign(
  * @property {Promise<String>} message  Most recent commit full message
  */
 module.exports = Object.defineProperties(
-    {},
-    Object.entries(getters).reduce(
-        (props, [key, value]) => {
-            return Object.assign(
-                props,
-                {
-                    [key]: {
-                        get: value,
-                        configurable: true,
-                    }
-                }
-            )
-        },
-        {}
-    )
+	{},
+	Object.entries(getters).reduce(
+		(props, [key, value]) => {
+			return Object.assign(
+				props,
+				{
+					[key]: {
+						get: value,
+						configurable: true,
+					}
+				}
+			)
+		},
+		{}
+	)
 );

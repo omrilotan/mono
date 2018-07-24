@@ -10,14 +10,14 @@ const phraser = paraphrase(/\${([^{}]*)}/gm);
  * @return {String}
  */
 module.exports = function benchpress(fn, {message = 'Running ${iterations} times took ${duration}ms', iterations = 1e3} = {}) {
-    const start = Date.now();
-    let count = iterations;
+	const start = Date.now();
+	let count = iterations;
 
-    while (count--) {
-        fn();
-    }
+	while (count--) {
+		fn();
+	}
 
-    const duration = Date.now() - start;
+	const duration = Date.now() - start;
 
-    return phraser(message, {iterations, duration});
+	return phraser(message, {iterations, duration});
 }

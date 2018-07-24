@@ -25,38 +25,38 @@ const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
 
 module.exports = (...replacers) =>
 
-    /**
-     * phraser description
-     * @param  {String}                 string       Template
-     * @param  {Object|(String|number)} data         Data for filling
-     * @param  {...(String|number)}     replacements Replacement for filling
-     * @return {String}                              Result
-     */
-    function phraser(string = '', data, ...replacements) {
-        if (typeof string !== 'string') {
-            throw new TypeError(`paraphrase expects first argument to be a string, got a ${typeof string}`);
-        }
+	/**
+	 * phraser description
+	 * @param  {String}                 string       Template
+	 * @param  {Object|(String|number)} data         Data for filling
+	 * @param  {...(String|number)}     replacements Replacement for filling
+	 * @return {String}                              Result
+	 */
+	function phraser(string = '', data, ...replacements) {
+		if (typeof string !== 'string') {
+			throw new TypeError(`paraphrase expects first argument to be a string, got a ${typeof string}`);
+		}
 
-        if (!data) {
-            return string;
-        }
+		if (!data) {
+			return string;
+		}
 
-        if (VALID_RESULT_TYPES.includes(typeof data)) {
-            data = [data, ...replacements];
-        }
+		if (VALID_RESULT_TYPES.includes(typeof data)) {
+			data = [data, ...replacements];
+		}
 
-        /**
-         * Replace method build with internal reference to the passed in data structure
-         * @param  {String} haystack The full string match
-         * @param  {String} needle   The content to identify as data member
-         * @return {String}          Found value
-         */
-        function replace(haystack, needle) {
-            const replacement = notate(data, needle.trim());
+		/**
+		 * Replace method build with internal reference to the passed in data structure
+		 * @param  {String} haystack The full string match
+		 * @param  {String} needle   The content to identify as data member
+		 * @return {String}         Found value
+		 */
+		function replace(haystack, needle) {
+			const replacement = notate(data, needle.trim());
 
-            return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : haystack;
-        }
+			return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : haystack;
+		}
 
-        return replacers.reduce((string, replacer) => string.replace(replacer, replace), string);
-    };
+		return replacers.reduce((string, replacer) => string.replace(replacer, replace), string);
+	};
 

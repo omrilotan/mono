@@ -13,14 +13,14 @@ A gauge takes in a function
 ```js
 const Gauge = require('oh-my-gauge').Gauge;
 const gauge = new Gauge((res, name) => console.log(`${name} took ${res}ms`));
-//                        ^     ^         ^
-//              Milliseconds  String   report-method
+//                        ^     ^        ^
+//               Milliseconds String  report-method
 
 const myObj = {
-    name: 'My Obj',
-    sayName: function() {
-        return this.name;
-    }
+	name: 'My Obj',
+	sayName: function() {
+		return this.name;
+	}
 };
 
 myObj.sayName = gauge(myObj.sayName, 'sayName method');
@@ -34,15 +34,15 @@ const { Benchmark } = require('oh-my-gauge');
 const benchmark = new Benchmark(); // console.log with default format
 -- OR --
 const benchmark = new Benchmark(
-    sendMetricsToServer, // override the default console.log callback
-    (ms, name) => `Method: ${name}, Time: ${ms}` // override default formatter
+	sendMetricsToServer, // override the default console.log callback
+	(ms, name) => `Method: ${name}, Time: ${ms}` // override default formatter
 );
 
 benchmark(
-  100000,
-  [() => {/* Do thing one   */}, 'Thing 1 description'],
-  [() => {/* Do thing two   */}, 'Thing 2 description'],
-  [() => {/* Do thing three */}, 'Thing 3 description']
+	100000,
+	[() => {/* Do thing one   */}, 'Thing 1 description'],
+	[() => {/* Do thing two   */}, 'Thing 2 description'],
+	[() => {/* Do thing three */}, 'Thing 3 description']
 );
 
 // Use a map, maps are fun
@@ -66,15 +66,16 @@ const numbers = (size, from = 0) => Array.from(Array(size)).map((i, n) => n + fr
 const tests = new Map()
 
 const option1 = () => (numbers(100, 1))
-  .map((i) => i * 3)
-  .filter((i) => i % 2)
-  .reduce((i, a) => i + a, 100)
+	.map((i) => i * 3)
+	.filter((i) => i % 2)
+	.reduce((i, a) => i + a, 100)
 tests.set(option1, 'Option 1: A neat one liner')
 
-const option2 = () => (numbers(100, 1)).reduce((i, a) => {
-    const three = a * 3
-    return three % 2 ? three + i : three
-  }, 100)
+const option2 = () => (numbers(100, 1))
+	.reduce((i, a) => {
+		const three = a * 3
+		return three % 2 ? three + i : three
+	}, 100)
 tests.set(option2, 'Option 2: A one loop reducer')
 
 

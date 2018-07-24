@@ -24,12 +24,10 @@ see?`, {align: 'left'});
 
 log(`I, however,
 am aligned to the right.`, {align: 'end'});
-
-log(
-    ['My white spaces counts!                    ',
-    'I can move blocks of text from side to side.',
-    '                   and I control it manually',
-    '                                    😀      ',
+log(['My white spaces counts!                    ',
+     'I can move blocks of text from side to side.', // eslint-disable-line indent
+     '                   and I control it manually', // eslint-disable-line indent
+     '                                    😀      ', // eslint-disable-line indent
 ].join('\n'));
 
 const $ = '✓'.green;

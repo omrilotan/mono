@@ -11,13 +11,13 @@ const ZERO_WIDTH_JOINER = '\u{200D}';
  * @type {Array}
  */
 const ranges = Object.values({
-    'Variation Selectors': ['\ufe00', '\ufe0f'],
-    'Hebrew punctuation': ['\u0591', '\u05C7'],
+	'Variation Selectors': ['\ufe00', '\ufe0f'],
+	'Hebrew punctuation': ['\u0591', '\u05C7'],
 });
 
 const pattern = new RegExp(
-    ranges.map(range => `[${range.join('-')}]`).join('|'),
-      'g'
+	ranges.map(range => `[${range.join('-')}]`).join('|'),
+	'g'
 );
 
 /**
@@ -33,9 +33,9 @@ const len = (string) => Array.from(string.replace(pattern, '')).length;
  * @return {number}
  */
 module.exports = function length(string){
-    const split = string.strip.split(ZERO_WIDTH_JOINER)
-    return split.reduce(
-        (sum, part) => sum + len(part),
-        0
-    ) / split.length;
+	const split = string.strip.split(ZERO_WIDTH_JOINER)
+	return split.reduce(
+		(sum, part) => sum + len(part),
+		0
+	) / split.length;
 };

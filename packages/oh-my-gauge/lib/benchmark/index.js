@@ -25,40 +25,40 @@ const Gauge = require('../gauge');
  * const customisedBenchmark = new Benchmark(console.info, (ms, name) => `Method: ${name}, Time: ${ms}ms`);
  */
 module.exports = class Benchmark {
-    constructor(
-        callback = console.log,
-        formatter = (ms, name) => `${name} took ${ms}ms`
-    ) {
-        this.gauge = new Gauge((...args) => callback(formatter(...args)));
-        return this.run.bind(this);
-    }
+	constructor(
+		callback = console.log, // eslint-disable-line no-console
+		formatter = (ms, name) => `${name} took ${ms}ms`
+	) {
+		this.gauge = new Gauge((...args) => callback(formatter(...args)));
+		return this.run.bind(this);
+	}
 
-    /**
-     * Run a list of functions through a gauge measure iteration
-     * @param  {Number}    times Times to run the functions
-     * @param  {Map[]} ...tests maps: {Function}: function to test, {name}: Name to report
-     * no return value
-     */
-    run(times, ...tests) {
-        while(tests.length) {
+	/**
+	 * Run a list of functions through a gauge measure iteration
+	 * @param  {Number} times Times to run the functions
+	 * @param  {Map[]} ...tests maps: {Function}: function to test, {name}: Name to report
+	 * no return value
+	 */
+	run(times, ...tests) {
+		while(tests.length) {
 
-            // Extract one of the tests randomly
-            const test = tests.splice(Math.floor(Math.random() * tests.length), 1)[0];
+			// Extract one of the tests randomly
+			const test = tests.splice(Math.floor(Math.random() * tests.length), 1)[0];
 
-            this.measure(test[0], times, test[1]);
-        }
-    }
+			this.measure(test[0], times, test[1]);
+		}
+	}
 
-    /**
-     * Iterate other a function n times inside a pre defined gauge
-     * @param  {Function} fn Function to run, should accept no arguments
-     * @param  {Number}   [iterations=10000] Times to run the functions
-     * @param  {String}   message    Message to return to the gauge instance
-     * no return value
-     */
-    measure(fn, iterations = 10000, message = fn.toString()) {
-        this.gauge(() => repeat(fn, iterations), message)();
-    }
+	/**
+	 * Iterate other a function n times inside a pre defined gauge
+	 * @param  {Function} fn Function to run, should accept no arguments
+	 * @param  {Number}   [iterations=10000] Times to run the functions
+	 * @param  {String}   message            Message to return to the gauge instance
+	 * no return value
+	 */
+	measure(fn, iterations = 10000, message = fn.toString()) {
+		this.gauge(() => repeat(fn, iterations), message)();
+	}
 }
 
 /**
@@ -69,7 +69,7 @@ module.exports = class Benchmark {
  * no return value
  */
 function repeat(fn, iterations = 0) {
-    while (iterations--) {
-        fn();
-    }
+	while (iterations--) {
+		fn();
+	}
 }

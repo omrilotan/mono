@@ -1,21 +1,21 @@
 {
-  "name": "run-all-the-things",
-  "version": "0.1.2",
-  "description": "Run NPM scripts in parallel",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/run-all-the-things/",
-  "bin": {
-    "things": "./index.js",
-    "run-all-the-things": "./index.js"
-  },
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t run-all-the-things; cd -"
-  },
-  "dependencies": {}
+	"name": "run-all-the-things",
+	"version": "0.1.2",
+	"description": "Run NPM scripts in parallel",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/run-all-the-things/",
+	"bin": {
+		"things": "./index.js",
+		"run-all-the-things": "./index.js"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t run-all-the-things; cd -"
+	},
+	"dependencies": {}
 }

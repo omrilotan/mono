@@ -4,9 +4,9 @@ Read, write and reset package.json
 
 ```js
 const {
-    read,
-    write,
-    reset,
+	read,
+	write,
+	reset,
 } = require('edit-package')
 
 const { version } = await read()

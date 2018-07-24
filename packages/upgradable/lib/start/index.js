@@ -16,8 +16,8 @@ const EVENT_LOOP = 1000;
 let beenthere = false;
 
 /**
- * @typedef  {Info}           Information about the package
- * @type     {Object}
+ * @typedef {Info} Information about the package
+ * @type    {Object}
  * @property {String} latest  Package"s latest version
  * @property {String} message Suffix message for the upgrade prompt
  * @property {String} name    Package name
@@ -31,43 +31,43 @@ let beenthere = false;
  * @param  {String}  options.version           Current version
  * @param  {Boolean} [options.immediate=false] Should execute immediately (or upon signal termination)
  * @param  {String}  [options.message="I can fix that for you."] Suffix message
- * @return {Boolean} (async)                                     is there an update available
+ * @return {Boolean} (async)                   is there an update available
  */
 /* eslint-enable max-len */
 module.exports = async function init ({
-    immediate = false,
-    message = "I can fix that for you.",
-    name,
-    version,
+	immediate = false,
+	message = "I can fix that for you.",
+	name,
+	version,
 } = {}) {
-    if (!name || !version) {
-        return false;
-    }
+	if (!name || !version) {
+		return false;
+	}
 
-    const latest = await fork("latest-version", {name});
+	const latest = await fork("latest-version", {name});
 
-    if (!semver.gt(latest, version)) {
-        return false;
-    }
+	if (!semver.gt(latest, version)) {
+		return false;
+	}
 
-    /**
-     * Package info
-     * @type {Info}
-     */
-    const info = {
-        latest,
-        message,
-        name,
-        version,
-    };
+	/**
+	 * Package info
+	 * @type {Info}
+	 */
+	const info = {
+		latest,
+		message,
+		name,
+		version,
+	};
 
-    if (immediate) {
-        await start(info);
-    } else {
-        later(info);
-    }
+	if (immediate) {
+		await start(info);
+	} else {
+		later(info);
+	}
 
-    return true;
+	return true;
 };
 
 /**
@@ -76,16 +76,16 @@ module.exports = async function init ({
  * @return {undefined} no return value
  */
 function later (info) {
-    process.stdin.resume();
-    process.on("SIGINT", start.bind(null, info));
+	process.stdin.resume();
+	process.on("SIGINT", start.bind(null, info));
 
-    (function wait () {
-        if (beenthere) {
-            return;
-        }
+	(function wait () {
+		if (beenthere) {
+			return;
+		}
 
-        setTimeout(wait, EVENT_LOOP);
-    }());
+		setTimeout(wait, EVENT_LOOP);
+	}());
 }
 
 /**
@@ -94,32 +94,32 @@ function later (info) {
  * @returns {undefined} No return value
  */
 async function start ({latest, message, name, version}) {
-    if (beenthere) {
-        return;
-    }
+	if (beenthere) {
+		return;
+	}
 
-    beenthere = true;
+	beenthere = true;
 
-    console.log(
-        box({
-            latest,
-            message,
-            name,
-            version,
-        })
-    );
+	console.log( // eslint-disable-line no-console
+		box({
+			latest,
+			message,
+			name,
+			version,
+		})
+	);
 
-    const Confirm = require("prompt-confirm");
-    const confirmed = await new Confirm(
-        `install ${name.yellow} version ${latest.yellow} globally?`
-    ).run();
+	const Confirm = require("prompt-confirm");
+	const confirmed = await new Confirm(
+		`install ${name.yellow} version ${latest.yellow} globally?`
+	).run();
 
-    if (!confirmed) {
-        process.exit(); // eslint-disable-line no-process-exit
-    }
+	if (!confirmed) {
+		process.exit(); // eslint-disable-line no-process-exit
+	}
 
-    await require("../install-latest")(name);
-    process.exit(); // eslint-disable-line no-process-exit
+	await require("../install-latest")(name);
+	process.exit(); // eslint-disable-line no-process-exit
 }
 
 /**
@@ -128,20 +128,20 @@ async function start ({latest, message, name, version}) {
  * @return {String}      Message to user
  */
 function box ({latest, message, name, version}) {
-    const lines = [
-        `You are running ${name.yellow} version ${version.yellow}`,
-        `The latest version is ${latest.green}`,
-    ];
+	const lines = [
+		`You are running ${name.yellow} version ${version.yellow}`,
+		`The latest version is ${latest.green}`,
+	];
 
-    if (message) {
-        lines.push(message.bold.italic);
-    }
+	if (message) {
+		lines.push(message.bold.italic);
+	}
 
-    return boxt(
-        lines.join("\n"),
-        {
-            "align": "left",
-            "theme": "round",
-        }
-    );
+	return boxt(
+		lines.join("\n"),
+		{
+			"align": "left",
+			"theme": "round",
+		}
+	);
 }

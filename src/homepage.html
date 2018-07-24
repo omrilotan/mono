@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>{{ title }} | npm packages by {{ user }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="prerender" href="../">
-        {{ head }}
-    </head>
-    <body>
-        <a href="../">↩︎</a>
-        <h1>🚝 {{ title }} <a href="https://github.com/{{ user }}/{{ title }}"><img src="https://img.shields.io/badge/{{ title }}--000000.svg?logo=github&style=social"></a> <a href="https://circleci.com/gh/{{ user }}/workflows/{{ title }}"><img src="https://circleci.com/gh/{{ user }}/{{ title }}.svg?style=svg"></a></h1>
-        <p>{{ description }}</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>name</th>
-                    <th>description</th>
-                    <th>version</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{ content }}
-            </tbody>
-        <table>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>{{ title }} | npm packages by {{ user }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="prerender" href="../">
+		{{ head }}
+	</head>
+	<body>
+		<a href="../">↩︎</a>
+		<h1>🚝 {{ title }} <a href="https://github.com/{{ user }}/{{ title }}"><img src="https://img.shields.io/badge/{{ title }}--000000.svg?logo=github&style=social"></a> <a href="https://circleci.com/gh/{{ user }}/workflows/{{ title }}"><img src="https://circleci.com/gh/{{ user }}/{{ title }}.svg?style=svg"></a></h1>
+		<p>{{ description }}</p>
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>description</th>
+					<th>version</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{ content }}
+			</tbody>
+		<table>
+	</body>
 </html>

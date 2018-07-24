@@ -1,16 +1,16 @@
 {
-  "name": "transparent-pixel",
-  "version": "1.0.0",
-  "description": "One transparent pixel",
-  "author": "omrilotan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
-  },
-  "homepage": "https://omrilotan.com/mono/transparent-pixel/",
-  "main": "index.js",
-  "scripts": {
-    "test": "cd ../../; npm t transparent-pixel; cd -"
-  }
+	"name": "transparent-pixel",
+	"version": "1.0.0",
+	"description": "One transparent pixel",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/transparent-pixel/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t transparent-pixel; cd -"
+	}
 }

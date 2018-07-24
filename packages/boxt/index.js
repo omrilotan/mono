@@ -13,7 +13,7 @@ const maxLength = (...args) => args.reduce((max, arg) => Math.max(length(arg), m
  * Returns an array of n repetitions
  * @param  {string} content
  * @param  {number} length
- * @return {Array}          n repetition of an item
+ * @return {Array} n repetition of an item
  *
  * @example arrayOf('-', 3) // ['-', '-', '-']
  */
@@ -69,87 +69,87 @@ const ALIGN = 'center';
  * └──────────────────────────────────────────┘
  */
 module.exports = function boxed(message, {
-        color = BOX_COLOR,
-        padding = PADDING,
-        theme = THEME,
-        align = ALIGN,
-        title,
-    } = {}) {
+	color = BOX_COLOR,
+	padding = PADDING,
+	theme = THEME,
+	align = ALIGN,
+	title,
+} = {}) {
 
-    if (!colors.hasOwnProperty(color)) {
-        throw new Error(`colors does not support color "${color}"`);
-    }
-    if (!themes.hasOwnProperty(theme)) {
-        throw new Error(`themes do not include a "${theme}" theme`);
-    }
+	if (!colors.hasOwnProperty(color)) {
+		throw new Error(`colors does not support color "${color}"`);
+	}
+	if (!themes.hasOwnProperty(theme)) {
+		throw new Error(`themes do not include a "${theme}" theme`);
+	}
 
-    const lines = message.split('\n');
-    const width = maxLength(...message.split('\n'));
-    const space = width + padding * 2;
-    const times = (string = ' ', length = space) => arrayOf(string, length);
+	const lines = message.split('\n');
+	const width = maxLength(...message.split('\n'));
+	const space = width + padding * 2;
+	const times = (string = ' ', length = space) => arrayOf(string, length);
 
-    // Themed borders
-    const [
-        h,
-        v,
-        tl,
-        tr,
-        bl,
-        br,
-        ml,
-        mr,
-    ] = [
-        'h',
-        'v',
-        'tl',
-        'tr',
-        'bl',
-        'br',
-        'ml',
-        'mr',
-    ].map(item => themes[theme][item][color]);
+	// Themed borders
+	const [
+		h,
+		v,
+		tl,
+		tr,
+		bl,
+		br,
+		ml,
+		mr,
+	] = [
+		'h',
+		'v',
+		'tl',
+		'tr',
+		'bl',
+		'br',
+		'ml',
+		'mr',
+	].map(item => themes[theme][item][color]);
 
-    const lineMap = line => {
-        const w = width + line.length - length(line); // white space width including style chars
+	const lineMap = line => {
+		const w = width + line.length - length(line); // white space width including style chars
 
-        const content = (() => {
-            switch (align) {
-                case 'left':
-                case 'start':
-                    return line.padEnd(w, ' ');
-                case 'right':
-                case 'end':
-                    return line.padStart(w, ' ');
-                case 'center':
-                default:
-                    return line.padEnd(Math.ceil(w - (w - length(line)) / 2), ' ').padStart(w, ' ')
-            }
-        })();
+		const content = (() => {
+			switch (align) {
+				case 'left':
+				case 'start':
+					return line.padEnd(w, ' ');
+				case 'right':
+				case 'end':
+					return line.padStart(w, ' ');
+				case 'center':
+				default:
+					return line.padEnd(Math.ceil(w - (w - length(line)) / 2), ' ').padStart(w, ' ')
+			}
+		})();
 
-        return [
-            v,
-            times(' ', padding),
-            content,
-            times(' ', padding),
-            v
-        ];
-    };
+		return [
+			v,
+			times(' ', padding),
+			content,
+			times(' ', padding),
+			v
+		];
+	};
 
-    const titleLines = title ? [
-        lineMap(title),
-        [v, times(' '), v],
-        [ml, times(h), mr],
-        [v, times(' '), v],
-    ] : [];
+	const titleLines = title ? [
+		lineMap(title),
+		[v, times(' '), v],
+		[ml, times(h), mr],
+		[v, times(' '), v],
+	] : [];
 
-    return [
-        [''],
-        [tl, times(h), tr],
-        [v, times(' '), v],
-        ...titleLines,
-        ...lines.map(lineMap),
-        [v, times(' '), v],
-        [bl, times(h), br],
-        [''],
-    ].map(item => item.join('')).join('\n');
+	return [
+		[''],
+		[tl, times(h), tr],
+		[v, times(' '), v],
+		...titleLines,
+		...lines.map(lineMap),
+		[v, times(' '), v],
+		[bl, times(h), br],
+		[''],
+	].map(item => item.join('')).join('\n');
 }

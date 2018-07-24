@@ -6,11 +6,11 @@ Resolve dot notation strings
 const notate = require('notate');
 
 const obj = {
-  top_level: {
-    nested: {
-      value: 'My Value',
-    },
-  },
+	top_level: {
+		nested: {
+			value: 'My Value',
+		},
+	},
 };
 
 notate(obj, 'top_level.nested.value') // 'My Value'

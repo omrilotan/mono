@@ -48,30 +48,30 @@ const find = (selector) => document.querySelector(selector);
  * await clearCache({webdriver, driver});
  */
 module.exports = async function clearCache({webdriver, driver}, {cookies = false, cache = true, history = true} = {}) {
-    const { By, until } = webdriver;
+	const { By, until } = webdriver;
 
-    await driver.get(PAGE);
+	await driver.get(PAGE);
 
-    await driver.wait(
-        until.elementLocated(
-            By.js(find, BUTTON)
-        ),
-        3000
-    );
+	await driver.wait(
+		until.elementLocated(
+			By.js(find, BUTTON)
+		),
+		3000
+	);
 
-    await Promise.all(
-        [
-            [cookies, COOKIES],
-            [cache, CACHE],
-            [history, HISTORY],
-        ].map(
-            async ([option, query]) => option || await driver.findElement(By.js(find, query)).click()
-        )
-    );
+	await Promise.all(
+		[
+			[cookies, COOKIES],
+			[cache, CACHE],
+			[history, HISTORY],
+		].map(
+			async ([option, query]) => option || await driver.findElement(By.js(find, query)).click()
+		)
+	);
 
-    await driver.findElement(
-        By.js(find, BUTTON)
-    ).click();
+	await driver.findElement(
+		By.js(find, BUTTON)
+	).click();
 
-    await driver.sleep(400);
+	await driver.sleep(400);
 };

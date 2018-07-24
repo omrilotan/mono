@@ -3,8 +3,8 @@
 const args = require('../args');
 
 const defaults = {
-    source: './README.md',
-    destination: './index.html',
+	source: './README.md',
+	destination: './index.html',
 };
 
 const {promisify} = require('util');
@@ -13,38 +13,38 @@ const read = promisify(require('fs').readFile);
 const markt = require('../');
 
 (async() => {
-    try {
-        const {options, rest} = args(...process.argv)
+	try {
+		const {options, rest} = args(...process.argv)
 
-        // Legacy interface support
-        let [source, destination, template] = rest;
+		// Legacy interface support
+		let [source, destination, template] = rest;
 
-        console.log(options);
+		console.log(options); // eslint-disable-line no-console
 
-        options.source      = options.source      || source      || defaults.source;
-        options.destination = options.destination || destination || defaults.destination;
-        options.template    = options.template    || template    || defaults.template;
+		options.source		= options.source		|| source		|| defaults.source;
+		options.destination = options.destination || destination || defaults.destination;
+		options.template	= options.template	|| template	|| defaults.template;
 
-        const content = (await read(options.source)).toString();
+		const content = (await read(options.source)).toString();
 
-        if (options.template) {
-            options.template = (await read(options.template)).toString();
-        }
+		if (options.template) {
+			options.template = (await read(options.template)).toString();
+		}
 
-        Object.assign(
-            options,
-        );
+		Object.assign(
+			options,
+		);
 
-        const output = await markt(
-            content,
-            options
-        );
+		const output = await markt(
+			content,
+			options
+		);
 
-        await fse.outputFile(options.destination, output);
+		await fse.outputFile(options.destination, output);
 
-        console.info(`written in ${process.cwd()}/${options.destination}`);
-    } catch (error) {
-        console.error(error);
-    }
+		console.info(`written in ${process.cwd()}/${options.destination}`); // eslint-disable-line no-console
+	} catch (error) {
+		console.error(error); // eslint-disable-line no-console
+	}
 
 })();

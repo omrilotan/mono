@@ -6,8 +6,8 @@
  */
 
 Object.assign(
-    module.exports,
-    require('./fs-async'),
-    require('./jsonCopy'),
-    require('./packageData')
+	module.exports,
+	require('./fs-async'),
+	require('./jsonCopy'),
+	require('./packageData')
 );

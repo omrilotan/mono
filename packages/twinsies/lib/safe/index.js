@@ -10,10 +10,10 @@
  * @return {Function}
  */
 module.exports = (success, fail = () => {}) => (error, ...args) => {
-    if (error) {
-        fail(error);
-        return;
-    }
+	if (error) {
+		fail(error);
+		return;
+	}
 
-    return success(...args);
+	return success(...args);
 };

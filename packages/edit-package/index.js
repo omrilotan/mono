@@ -7,10 +7,10 @@
  */
 
 const {
-    writeFile,
-    readFile,
-    jsonCopy,
-    packageData,
+	writeFile,
+	readFile,
+	jsonCopy,
+	packageData,
 } = require('./utils')
 
 const merge = require('lodash.merge');
@@ -19,12 +19,12 @@ let _original;
 let _suffix;
 const original = async () => _original = _original || jsonCopy(await packageData());
 const suffix = async () => {
-    if (typeof _suffix !== 'string') {
-        const contents = await readFile('package.json');
+	if (typeof _suffix !== 'string') {
+		const contents = await readFile('package.json');
 
-        _suffix = contents.toString().endsWith('\n') ? '\n' : '';
-    }
-    return _suffix;
+		_suffix = contents.toString().endsWith('\n') ? '\n' : '';
+	}
+	return _suffix;
 }
 
 
@@ -47,24 +47,24 @@ module.exports.read = async () => await packageData();
  * await packageEditor.write({name: 'NOT_THE_PACKAGE_NAME'});
  */
 module.exports.write = async (data) => {
-    await original(); // make sure original is stored
+	await original(); // make sure original is stored
 
-    const json = merge(
-        {},
-        await module.exports.read(),
-        data
-    );
+	const json = merge(
+		{},
+		await module.exports.read(),
+		data
+	);
 
-    try {
-        await writeFile(
-            'package.json',
-            JSON.stringify(json, null, 2) + await suffix()
-        );
-    } catch (error) {
-        throw error;
-    }
+	try {
+		await writeFile(
+			'package.json',
+			JSON.stringify(json, null, 2) + await suffix()
+		);
+	} catch (error) {
+		throw error;
+	}
 
-    return json;
+	return json;
 };
 
 /**

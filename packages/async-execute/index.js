@@ -6,20 +6,20 @@ const exec = require('child_process').exec;
  * @return {Promise}
  */
 module.exports = (script) => new Promise(
-    (resolve, reject) => {
-        const child = exec(
-            script,
-            (error, stdout = '') => {
-                if (error) {
-                    error.exitCode = child.exitCode;
-                    reject(error);
-                    return;
-                }
+	(resolve, reject) => {
+		const child = exec(
+			script,
+			(error, stdout = '') => {
+				if (error) {
+					error.exitCode = child.exitCode;
+					reject(error);
+					return;
+				}
 
-                resolve(
-                    stdout.trim(),
-                    child.exitCode
-                );
-            }
-        );
-    });
+				resolve(
+					stdout.trim(),
+					child.exitCode
+				);
+			}
+		);
+	});

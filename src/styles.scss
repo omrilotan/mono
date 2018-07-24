@@ -5,28 +5,28 @@ $borders: #dfe2e5;
 * { margin: 0; padding: 0; }
 
 body {
-  color: $text-color;
-  background: #fff;
-  font: 100 100%/1.4 -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
-  max-width: 900px;
-  padding: 2em;
-  margin: 0 auto;
+	color: $text-color;
+	background: #fff;
+	font: 100 100%/1.4 -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
+	max-width: 900px;
+	padding: 2em;
+	margin: 0 auto;
 }
 
 h1 {
-  font-size: 4em;
-  margin: 0 0 .5em;
+	font-size: 4em;
+	margin: 0 0 .5em;
 
-  figure {
-    width: 1.25em;
-    height: 1.25em;
-    display: inline-block;
-    vertical-align: text-top;
-  }
+	figure {
+		width: 1.25em;
+		height: 1.25em;
+		display: inline-block;
+		vertical-align: text-top;
+	}
 }
 
 h2, h3, h4, th {
-    font-weight: 100;
+	font-weight: 100;
 }
 
 h2 { font-size: 2em; }
@@ -37,60 +37,60 @@ h2, h3, h4 { margin: 0 0 .25em; }
 p, pre, ul, table, blockquote { margin: 0 0 1em; }
 
 ul, ol {
-  ul, ol, p, pre {
-    margin: 0;
-  }
+	ul, ol, p, pre {
+		margin: 0;
+	}
 }
 
 ul, ol {
-  padding: 0 0 0 2em;
+	padding: 0 0 0 2em;
 }
 
 a {
-              color: #2980b9;
-  &:visited { color: #8e44ad; }
-  &:active  { color: #27ae60; }
+	            color: #2980b9;
+	&:visited { color: #8e44ad; }
+	&:active  { color: #27ae60; }
 }
 
 table {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 table, th, td {
-  border: 1px solid $borders;
+	border: 1px solid $borders;
 }
 
 th {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 th, td, pre, code {
-    padding: .2em .5em;
+	padding: .2em .5em;
 }
 
 pre > code {
-  padding: 0;
+	padding: 0;
 }
 
 pre, code {
-  color: #454545;
+	color: #454545;
 }
 
 tbody tr:nth-child(odd),
 pre, code {
-  background: $background-alt;
+	background: $background-alt;
 }
 
 blockquote {
-  padding-left: .5em;
-  border-left: 4px solid $background-alt;
+	padding-left: .5em;
+	border-left: 4px solid $background-alt;
 }
 
 img, pre, code, table {
-  max-width: 100%;
-  overflow-x: auto;
+	max-width: 100%;
+	overflow-x: auto;
 }
 
 @media only screen and (max-width: 768px) {
-  body { padding: 1em; }
+	body { padding: 1em; }
 }

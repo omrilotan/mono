@@ -26,45 +26,45 @@ const isObject = (target) => ['object', 'function'].includes(typeof target) && t
  * @return {Object} Original to, assigned
  */
 function assign(to, from) {
-    if (Array.isArray(to) && Array.isArray(from)) {
-        assignArray(to, from);
-        return to;
-    }
+	if (Array.isArray(to) && Array.isArray(from)) {
+		assignArray(to, from);
+		return to;
+	}
 
-    to = Object(to);
-    from = Object(from);
+	to = Object(to);
+	from = Object(from);
 
-    assignKeys(to, from);
-    assignSymbols(to, from);
+	assignKeys(to, from);
+	assignSymbols(to, from);
 
-    return to;
+	return to;
 }
 
 /**
  * Assign second object keys to first
  * @private
- * @param  {Object} to   Target object to assign to
- * @param  {Object} from The object from which to assign respective values
+ * @param {Object} to   Target object to assign to
+ * @param {Object} from The object from which to assign respective values
  * no return value
  */
 const assignKeys = (to, from) => Object.keys(from)
-    .forEach((key) => assignKey(to, from, key));
+	.forEach((key) => assignKey(to, from, key));
 
 /**
  * Assign second object symbols to first
  * @private
- * @param  {Object} to   Target object to assign to
- * @param  {Object} from The object from which to assign respective values
+ * @param {Object} to   Target object to assign to
+ * @param {Object} from The object from which to assign respective values
  * no return value
  */
 const assignSymbols = (to, from) => getOwnPropertySymbols(from)
-    .forEach((symbol) => assignKey(to, from, symbol));
+	.forEach((symbol) => assignKey(to, from, symbol));
 
 /**
  * Assign members of second array to first
  * @private
- * @param  {Array} to    Target array to assign to
- * @param  {Array} from  The array from which to assign respective values
+ * @param {Array} to  	Target array to assign to
+ * @param {Array} from	The array from which to assign respective values
  * no return value
  */
 const assignArray = (to, from) => from.forEach((item, index) => assignable(to[index]) && assignable(item) ? assign(to[index], item) : to.push(item));
@@ -80,18 +80,18 @@ const getOwnPropertySymbols = (object) => Object.getOwnPropertySymbols ? Object.
 /**
  * assign one key from one object to the target
  * @private
- * @param  {Object} to   Target object to assign to
- * @param  {Object} from The object to assign value
- * @param  {String|Symbol} key
+ * @param {Object} to   Target object to assign to
+ * @param {Object} from The object to assign value
+ * @param {String|Symbol} key
  * no return value
  */
 function assignKey(to, from, key) {
-    const easyAssign = !to.hasOwnProperty(key) || !assignable(from[key]);
+	const easyAssign = !to.hasOwnProperty(key) || !assignable(from[key]);
 
-    to[key] = easyAssign ? from[key] : assign(
-        clone(to[key]),
-        from[key]
-    );
+	to[key] = easyAssign ? from[key] : assign(
+		clone(to[key]),
+		from[key]
+	);
 }
 
 /**
@@ -111,7 +111,7 @@ const clone = (instance) => Array.isArray(instance) ? instance.slice(0) : Object
  * @example assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}
  */
 module.exports = function(target, ...others) {
-    assignable(target) && others.forEach((other) => assign(target, other));
+	assignable(target) && others.forEach((other) => assign(target, other));
 
-    return target;
+	return target;
 }
