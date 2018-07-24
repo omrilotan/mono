@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>transparent-pixel | an npm package by omrilotan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="prerender" href="../">
+    </head>
+    <body>
+        <a href="../">↩︎</a>
+        <h1 id="transparent-pixel-">transparent-pixel <a href="https://www.npmjs.com/package/transparent-pixel"><img src="https://img.shields.io/npm/v/transparent-pixel.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/transparent-pixel"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+<p>One transparent pixel</p>
+<h2 id="serve-a-transparent-pixel-with-express-js-">Serve a transparent pixel with express.js:</h2>
+<pre><code class="lang-js">const express = require(&#39;express&#39;);
+const pixel = require(&#39;transparent-pixel&#39;);
+
+const app = express();
+
+app.get(&#39;/pixel/:metric&#39;, (request, response) =&gt; {
+    report(request.params.metric); // your own logic
+
+    response
+        .status(201)
+        .type(&#39;gif&#39;)
+        .send(pixel);
+});
+</code></pre>
+    </body>
+</html>
