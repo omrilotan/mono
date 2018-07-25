@@ -45,7 +45,6 @@ phrase('Hello, ${0} ${1}', ['Martin', 'Prince']); // Hello, Martin Prince
 phrase('Hello, ${0} ${1}', 'Martin', 'Prince'); // Hello, Martin Prince
 ```
 
-
 ## Premade
 
 ### dollar `${...}`
@@ -74,4 +73,12 @@ phrase('Hello, %{name}', {name: 'Martin'}); // Hello, Martin
 const phrase = require('paraphrase/hash');
 
 phrase('Hello, #{name}', {name: 'Martin'}); // Hello, Martin
+```
+
+## Bundled version
+Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes a bundled ES5 commonjs module.
+
+Also available for explicit import:
+```js
+const paraphrase = require('paraphrase/bundle');
 ```

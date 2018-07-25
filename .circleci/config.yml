@@ -9,25 +9,37 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run:
-          name: Set NPM user
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
           command: npm i
       - save_cache:
-          key: build-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - save_cache:
+          key: install-cache-{{ .Revision }}
           paths:
             - ../app
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: install-cache-{{ .Revision }}
+      - run:
+          name: Check code syntax
+          command: npm run lint
   test:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: build-cache-{{ .Revision }}
+          key: install-cache-{{ .Revision }}
       - run:
           name: Test
-          command: ./packages/run-all-the-things/index.js test lint
+          command: npm run test
           environment:
             MOCHA_FILE: junit/test-results.xml
           when: always
@@ -40,7 +52,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: build-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Create this repo's readme
           command: npm run readme
@@ -50,15 +62,27 @@ jobs:
       - run:
           name: Update changes
           command: curl ci-cd.net/v1/git/update | bash
-  publish:
+  bundle:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: build-cache-{{ .Revision }}
+          key: install-cache-{{ .Revision }}
       - run:
-          name: Set NPM user
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          name: Create bundle distribution files
+          command: npm run bundle
+      - save_cache:
+          key: bundle-cache-{{ .Revision }}
+          paths:
+            - ../app
+  publish:
+    <<: *defaults
+    steps:
+      - restore_cache:
+          key: bundle-cache-{{ .Revision }}
+      - run:
+          name: Set NPM tokens
+          command: echo -e $NPMRC > ~/.npmrc
       - run:
           name: Publish to NPM
           command: npm run publish-packages
@@ -67,10 +91,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: build-cache-{{ .Revision }}
-      - run:
-          name: Set NPM user
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Create the docs
           command: npm run doc
@@ -87,16 +108,25 @@ workflows:
     jobs:
       - install:
           context: globalenv
+      - lint:
+          requires:
+            - install
       - test:
           requires:
             - install
+      - bundle:
+          requires:
+            - install
+      - readme:
+          requires:
+            - test
+            - lint
       - publish:
           context: globalenv
           requires:
             - test
-      - readme:
-          requires:
-            - test
+            - lint
+            - bundle
       - docs:
           context: globalenv
           requires:

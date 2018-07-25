@@ -10,10 +10,14 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "scripts": {
-    "test": "./scripts/test.sh",
-    "lint": "eslint -c .eslintrc *.js **/*.js --quiet",
+    "clean": "./scripts/foreach.sh \"rm -rf bundle\"",
     "postinstall": "./scripts/foreach.sh \"npm i\"",
-    "prepublish-packages": "npm t; npm run lint",
+    "test": "./scripts/test.sh",
+    "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
+    "bundle": "./packages/run-all-the-things/index.js webpack babel",
+    "webpack": "webpack --config webpack.config.js",
+    "babel": "./scripts/foreach.sh \"npm run bundle\"",
+    "postbundle": "npx mocha bundles/test.js",
     "publish-packages": "./scripts/foreach.sh \"npx published\"",
     "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",
@@ -21,17 +25,19 @@
     "readme": "node ./scripts/readme.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "chai-string": "^1.4.0",
     "dont-look-up": "^1.0.0",
     "eslint": "^5.0.0",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.17.0",
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.9.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
   },
-  "private": true,
-  "publishConfig": {
-    "tag": "after-next",
-    "tag-version-prefix": "next-tag"
-  }
+  "private": true
 }

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+process.on('unhandledRejection', (error) => { throw error; });
+
 const fs = require('fs').promises;
 const phrase = require('../packages/paraphrase/double');
 
@@ -15,6 +17,7 @@ const phrase = require('../packages/paraphrase/double');
 					name,
 					description,
 					version,
+					browser,
 				} = require(`../packages/${item}/package.json`);
 
 				if (version.includes('alpha') || version.includes('beta')) {
@@ -26,7 +29,7 @@ const phrase = require('../packages/paraphrase/double');
 				rows.push(`
 <tr>
 	<td><a href="${link}">${name}</a></td>
-	<td>${description}</td>
+	<td>${description}${browser ? ' <i title="includes browser entry">🖥</i>' : ''}</td>
 	<td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
 </tr>
 `);

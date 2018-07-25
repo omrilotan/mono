@@ -1,4 +1,3 @@
-const {assert, expect} = require('chai');
 const safe = require('./');
 
 describe('lib', () => {
