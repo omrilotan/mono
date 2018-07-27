@@ -52,7 +52,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: install-cache-{{ .Revision }}
       - run:
           name: Create this repo's readme
           command: npm run readme
@@ -91,7 +91,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: bundle-cache-{{ .Revision }}
       - run:
           name: Create the docs
           command: npm run doc
