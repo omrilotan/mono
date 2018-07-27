@@ -10,7 +10,7 @@
 	},
 	"homepage": "https://omrilotan.com/mono/paraphrase/",
 	"main": "index.js",
-	"browser": "bundle/index.js",
+	"browser": "dist/index.js",
 	"scripts": {
 		"test": "cd ../../; npm t paraphrase; cd -"
 	},

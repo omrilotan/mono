@@ -1,5 +1,5 @@
 const {resolve} = require('path');
-const entry = require('./bundles/entries');
+const entry = require(resolve(__dirname, 'dists', 'entries'));
 
 module.exports = {
 	mode: 'production',

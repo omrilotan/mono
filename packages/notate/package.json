@@ -10,9 +10,9 @@
 	},
 	"homepage": "https://omrilotan.com/mono/notate/",
 	"main": "index.js",
-	"browser": "bundle/index.js",
+	"browser": "dist/index.js",
 	"scripts": {
-		"bundle": "mkdir -p bundle; babel index.js --out-file bundle/index.js",
+		"dist": "mkdir -p dist; babel index.js --out-file dist/index.js",
 		"test": "cd ../../; npm t notate; cd -"
 	}
 }

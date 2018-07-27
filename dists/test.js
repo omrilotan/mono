@@ -2,7 +2,7 @@ const {resolve} = require('path');
 const entries = require('./entries');
 
 describe(
-	'bundle files',
+	'create dist files',
 	() => Object.keys(entries)
 		.forEach(
 			pkg => it(
@@ -10,7 +10,7 @@ describe(
 					.replace(resolve(__dirname, '../packages'), '')
 					.split('/')
 					.filter(i => !!i)
-					.shift()}" bundle as a consumable module`,
+					.shift()}" dist as a consumable module`,
 				() => {
 					if (typeof require(pkg) !== 'function') {
 						throw new TypeError(`${pkg} module should expose a function`);

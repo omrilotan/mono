@@ -18,8 +18,8 @@ module.exports = readdirSync(packageDir())
 					packageDir(pkg, 'package.json')
 				);
 
-				if (scripts.bundle) {
-					throw new Error('I\'ll bundle myself, thank you very much.')
+				if (scripts.dist) {
+					throw new Error('I\'ll create my own dist files, thank you very much.')
 				}
 
 				const entry = browser && main ?

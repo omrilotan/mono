@@ -10,14 +10,14 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "scripts": {
-    "clean": "./scripts/foreach.sh \"rm -rf bundle\"",
+    "clean": "./scripts/foreach.sh \"rm -rf dist\"",
     "postinstall": "./scripts/foreach.sh \"npm i\"",
     "test": "./scripts/test.sh",
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
-    "bundle": "./packages/run-all-the-things/index.js webpack babel",
+    "dist": "./packages/run-all-the-things/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
-    "babel": "./scripts/foreach.sh \"npm run bundle\"",
-    "postbundle": "npx mocha bundles/test.js",
+    "babel": "./scripts/foreach.sh \"npm run dist\"",
+    "postdist": "npx mocha dists/test.js",
     "publish-packages": "./scripts/foreach.sh \"npx published\"",
     "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",

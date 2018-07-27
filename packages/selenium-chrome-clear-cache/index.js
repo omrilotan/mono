@@ -48,6 +48,10 @@ const find = (selector) => document.querySelector(selector);
  * await clearCache({webdriver, driver});
  */
 module.exports = async function clearCache({webdriver, driver}, {cookies = false, cache = true, history = true} = {}) {
+	if (!(cookies || cache || history)) {
+		return;
+	}
+
 	const { By, until } = webdriver;
 
 	await driver.get(PAGE);

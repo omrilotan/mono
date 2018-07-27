@@ -23,5 +23,5 @@ Environments which exclude node_modules from the transpiling pipeline should inc
 
 Also available for explicit import:
 ```js
-const notate = require('notate/bundle');
+const notate = require('notate/dist');
 ```
