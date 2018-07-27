@@ -68,6 +68,13 @@ th, td, pre, code {
 	padding: .2em .5em;
 }
 
+table i {
+	float: right;
+	margin-left: .5em
+	font-style: normal;
+	cursor: help;
+}
+
 pre > code {
 	padding: 0;
 }

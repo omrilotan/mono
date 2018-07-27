@@ -15,7 +15,7 @@
 	},
 	"overrides": [
 		{
-			"files": [ "**/spec.js" ],
+			"files": [ "**/spec.js", "**/test.js" ],
 			"env": {
 				"mocha": true
 			},
@@ -24,6 +24,12 @@
 				"assert": true,
 				"sleep": true,
 				"freeze": true
+			}
+		},
+		{
+			"files": [ "**/selenium-chrome-clear-cache/*" ],
+			"env": {
+				"browser": true
 			}
 		}
 	]

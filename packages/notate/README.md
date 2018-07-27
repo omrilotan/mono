@@ -17,3 +17,11 @@ notate(obj, 'top_level.nested.value') // 'My Value'
 
 notate(obj, 'top_level.missing.value') // undefined
 ```
+
+## Transpiled version
+Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
+
+Also available for explicit import:
+```js
+const notate = require('notate/dist');
+```

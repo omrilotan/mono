@@ -18,7 +18,7 @@ describe('oh-my-gauge', () => {
 		expect(require.cache[require.resolve('./lib/gauge')]).to.be.undefined;
 		expect(require.cache[require.resolve('./lib/benchmark')]).to.be.undefined;
 
-		const { Gauge, Benchmark } = require('.'); // eslint-disable-line no-unused
+		const { Gauge, Benchmark } = require('.'); // eslint-disable-line no-unused-vars
 
 		expect(require.cache[require.resolve('./lib/gauge')]).to.not.be.undefined;
 		expect(require.cache[require.resolve('./lib/benchmark')]).to.not.be.undefined;
