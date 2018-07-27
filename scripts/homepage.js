@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-process.on('unhandledRejection', (error) => { throw error; });
+process.on('unhandledRejection', error => { throw error; });
 
 const fs = require('fs').promises;
 const phrase = require('../packages/paraphrase/double');

@@ -50,7 +50,7 @@ module.exports = Object.defineProperties(
 					[key]: {
 						get: value,
 						configurable: true,
-					}
+					},
 				}
 			)
 		},

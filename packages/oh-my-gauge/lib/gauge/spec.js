@@ -19,7 +19,7 @@ describe('oh-my-gauge/Gauge', () => {
 				name: 'my collection',
 				whatsMyName: function() {
 					return this.name;
-				}
+				},
 			};
 
 			collection.wrapped = gauge(collection.whatsMyName);
@@ -28,7 +28,7 @@ describe('oh-my-gauge/Gauge', () => {
 	});
 
 	describe('Gauge function works correctly', () => {
-		it('Reports the wrapped name', (done) => {
+		it('Reports the wrapped name', done => {
 			const wrapped = (new Gauge((number, name) => {
 				expect(name).to.be.a('string');
 				done();
@@ -37,8 +37,8 @@ describe('oh-my-gauge/Gauge', () => {
 			wrapped();
 		});
 
-		it('Reports a numeral value', (done) => {
-			const wrapped = (new Gauge((number) => {
+		it('Reports a numeral value', done => {
+			const wrapped = (new Gauge(number => {
 				expect(number).to.be.a('number');
 				done();
 			}))(() => {});
@@ -46,8 +46,8 @@ describe('oh-my-gauge/Gauge', () => {
 			wrapped();
 		});
 
-		it('Reports process time', (done) => {
-			const wrapped = (new Gauge((number) => {
+		it('Reports process time', done => {
+			const wrapped = (new Gauge(number => {
 				expect(number).to.be.above(90);
 				expect(number).to.be.below(110);
 				done();

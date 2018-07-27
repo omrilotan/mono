@@ -35,7 +35,7 @@ describe('Twinsies', async() => {
 		twinsies.unwatch();
 	});
 
-	it('creates an initial copy', (done) => {
+	it('creates an initial copy', done => {
 		twinsies.register(verify).start()
 
 		function verify() {
@@ -45,7 +45,7 @@ describe('Twinsies', async() => {
 		}
 	});
 
-	it('Ignores unmatched files', (done) => {
+	it('Ignores unmatched files', done => {
 		assert(existsSync(`${source}ignoreme.yml`));
 		assert(!existsSync(`${target}ignoreme.yml`));
 
@@ -57,7 +57,7 @@ describe('Twinsies', async() => {
 		}
 	});
 
-	it('Copies the contents of the files', (done) => {
+	it('Copies the contents of the files', done => {
 		assert(!['example.json'].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 
@@ -69,7 +69,7 @@ describe('Twinsies', async() => {
 		}
 	});
 
-	it('processes the content of the files', (done) => {
+	it('processes the content of the files', done => {
 		assert(!['example.json'].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 
@@ -80,11 +80,11 @@ describe('Twinsies', async() => {
 		}
 	});
 
-	it('Reports to registered function', (done) => {
+	it('Reports to registered function', done => {
 		twinsies.register(() => done()).start()
 	});
 
-	it('watches for file changes', (done) => {
+	it('watches for file changes', done => {
 		assert(!['changing.json'].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 

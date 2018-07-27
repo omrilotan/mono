@@ -30,7 +30,7 @@ describe('markt', async () => {
 	it('test options object', async () => {
 		const res = await markt('*Hello*', {
 			template: '{{title}} {{content}}',
-			title: 'the title'
+			title: 'the title',
 		});
 
 		expect(res).to.include('<p><em>Hello</em></p>');

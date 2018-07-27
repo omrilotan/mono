@@ -17,7 +17,7 @@ by the color of their skin,
 but by the content of their character.
 I have a dream today!`, {color: 'green', padding: 5, theme: 'round'});
 
-log(`I have a title`, {title: `I am the title`.bold});
+log('I have a title', {title: 'I am the title'.bold});
 
 log(`I am aligned to the left
 see?`, {align: 'left'});

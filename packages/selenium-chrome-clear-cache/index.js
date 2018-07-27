@@ -33,7 +33,7 @@ const BUTTON = '* /deep/ #clearBrowsingDataConfirm';
  * @param  {string} selector
  * @return {HTMLElement}
  */
-const find = (selector) => document.querySelector(selector);
+const find = selector => document.querySelector(selector);
 
 /**
  * Clear the cache of a chrome browser

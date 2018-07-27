@@ -46,7 +46,7 @@ module.exports.read = async () => await packageData();
  * @example
  * await packageEditor.write({name: 'NOT_THE_PACKAGE_NAME'});
  */
-module.exports.write = async (data) => {
+module.exports.write = async data => {
 	await original(); // make sure original is stored
 
 	const json = merge(

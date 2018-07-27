@@ -8,7 +8,7 @@
  * @param  {Object} target
  * @return {Boolean} is this object "assignable"
  */
-const assignable = (target) => isObject(target) && ![undefined, null].includes(target);
+const assignable = target => isObject(target) && ![undefined, null].includes(target);
 
 /**
  * Checks a target is an object, excludes null
@@ -16,7 +16,7 @@ const assignable = (target) => isObject(target) && ![undefined, null].includes(t
  * @param  {Any} target [description]
  * @return {Boolean} Is the target an object
  */
-const isObject = (target) => ['object', 'function'].includes(typeof target) && target !== null;
+const isObject = target => ['object', 'function'].includes(typeof target) && target !== null;
 
 /**
  * Delegate to assign keys and symbols
@@ -48,7 +48,7 @@ function assign(to, from) {
  * no return value
  */
 const assignKeys = (to, from) => Object.keys(from)
-	.forEach((key) => assignKey(to, from, key));
+	.forEach(key => assignKey(to, from, key));
 
 /**
  * Assign second object symbols to first
@@ -58,7 +58,7 @@ const assignKeys = (to, from) => Object.keys(from)
  * no return value
  */
 const assignSymbols = (to, from) => getOwnPropertySymbols(from)
-	.forEach((symbol) => assignKey(to, from, symbol));
+	.forEach(symbol => assignKey(to, from, symbol));
 
 /**
  * Assign members of second array to first
@@ -75,7 +75,7 @@ const assignArray = (to, from) => from.forEach((item, index) => assignable(to[in
  * @param  {Object} object
  * @return {Array} List of symbol keys (falls back to an empty array)
  */
-const getOwnPropertySymbols = (object) => Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(object) : [];
+const getOwnPropertySymbols = object => Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(object) : [];
 
 /**
  * assign one key from one object to the target
@@ -100,7 +100,7 @@ function assignKey(to, from, key) {
  * @param  {Object|Array} instance Object or Array to clone
  * @return {Object|Array} (respectively) a shallow clone
  */
-const clone = (instance) => Array.isArray(instance) ? instance.slice(0) : Object.assign({}, instance);
+const clone = instance => Array.isArray(instance) ? instance.slice(0) : Object.assign({}, instance);
 
 /**
  * Deep object assignment
@@ -111,7 +111,7 @@ const clone = (instance) => Array.isArray(instance) ? instance.slice(0) : Object
  * @example assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}
  */
 module.exports = function(target, ...others) {
-	assignable(target) && others.forEach((other) => assign(target, other));
+	assignable(target) && others.forEach(other => assign(target, other));
 
 	return target;
 }

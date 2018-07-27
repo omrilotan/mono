@@ -8,8 +8,8 @@ describe(`async-git (${Object.getOwnPropertyNames(git).join(', ')})`, async() =>
 		if (process.env.CI) { return; }
 
 		start = await git.sha;
-		await exec(`git add .`)
-		await exec(`git commit -m "committing all changes before tests"`)
+		await exec('git add .')
+		await exec('git commit -m "committing all changes before tests"')
 	});
 
 	after(async() => {

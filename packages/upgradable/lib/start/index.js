@@ -1,7 +1,7 @@
-const semver = require("semver");
-const boxt = require("boxt");
-const fork = require("../fork");
-require("colors");
+const semver = require('semver');
+const boxt = require('boxt');
+const fork = require('../fork');
+require('colors');
 
 /**
  * Keep the event loop alive for another second until we"ve been there
@@ -36,7 +36,7 @@ let beenthere = false;
 /* eslint-enable max-len */
 module.exports = async function init ({
 	immediate = false,
-	message = "I can fix that for you.",
+	message = 'I can fix that for you.',
 	name,
 	version,
 } = {}) {
@@ -44,7 +44,7 @@ module.exports = async function init ({
 		return false;
 	}
 
-	const latest = await fork("latest-version", {name});
+	const latest = await fork('latest-version', {name});
 
 	if (!semver.gt(latest, version)) {
 		return false;
@@ -77,7 +77,7 @@ module.exports = async function init ({
  */
 function later (info) {
 	process.stdin.resume();
-	process.on("SIGINT", start.bind(null, info));
+	process.on('SIGINT', start.bind(null, info));
 
 	(function wait () {
 		if (beenthere) {
@@ -109,7 +109,7 @@ async function start ({latest, message, name, version}) {
 		})
 	);
 
-	const Confirm = require("prompt-confirm");
+	const Confirm = require('prompt-confirm');
 	const confirmed = await new Confirm(
 		`install ${name.yellow} version ${latest.yellow} globally?`
 	).run();
@@ -118,7 +118,7 @@ async function start ({latest, message, name, version}) {
 		process.exit(); // eslint-disable-line no-process-exit
 	}
 
-	await require("../install-latest")(name);
+	await require('../install-latest')(name);
 	process.exit(); // eslint-disable-line no-process-exit
 }
 
@@ -138,10 +138,10 @@ function box ({latest, message, name, version}) {
 	}
 
 	return boxt(
-		lines.join("\n"),
+		lines.join('\n'),
 		{
-			"align": "left",
-			"theme": "round",
+			'align': 'left',
+			'theme': 'round',
 		}
 	);
 }

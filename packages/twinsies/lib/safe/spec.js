@@ -2,10 +2,10 @@ const safe = require('./');
 
 describe('lib', () => {
 	describe('safe', () => {
-		it('handles errors', (done) => {
+		it('handles errors', done => {
 			const callback = safe(
 				() => {},
-				(error) => {
+				error => {
 					expect(error).to.equal('ERROR_MESSAGE');
 					done();
 				}
@@ -14,9 +14,9 @@ describe('lib', () => {
 			callback('ERROR_MESSAGE');
 		});
 
-		it('omit error argument from the success callback', (done) => {
+		it('omit error argument from the success callback', done => {
 			const callback = safe(
-				(arg) => {
+				arg => {
 					expect(arg).to.equal('Something good');
 					done();
 				},

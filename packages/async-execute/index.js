@@ -5,7 +5,7 @@ const exec = require('child_process').exec;
  * @param  {String}  script
  * @return {Promise}
  */
-module.exports = (script) => new Promise(
+module.exports = script => new Promise(
 	(resolve, reject) => {
 		const child = exec(
 			script,

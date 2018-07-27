@@ -131,7 +131,7 @@ module.exports = function boxed(message, {
 			times(' ', padding),
 			content,
 			times(' ', padding),
-			v
+			v,
 		];
 	};
 

@@ -55,7 +55,7 @@ describe('paraphrase', () => {
 				name: {
 					first: 'Martin',
 					last: 'Prince',
-				}
+				},
 			};
 
 			expect(phrase(string, data)).to.equal('Hello, Martin Prince');

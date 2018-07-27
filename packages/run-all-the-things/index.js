@@ -2,7 +2,7 @@
 
 const { exec } = require('child_process');
 
-process.on('unhandledRejection', (error) => { throw error; });
+process.on('unhandledRejection', error => { throw error; });
 
 const args = [...process.argv];
 

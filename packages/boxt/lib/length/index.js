@@ -25,7 +25,7 @@ const pattern = new RegExp(
  * @param  {string} string
  * @return {number}
  */
-const len = (string) => Array.from(string.replace(pattern, '')).length;
+const len = string => Array.from(string.replace(pattern, '')).length;
 
 /**
  * Length of string disregarding control characters, variations and punctuations

@@ -43,12 +43,12 @@ describe('edit-package', () => {
 			publishConfig: {
 				tag: 'next',
 				'tag-version-prefix': 'next-tag',
-			}
+			},
 		});
 		await editor.write({
 			publishConfig: {
 				tag: 'after-next',
-			}
+			},
 		});
 		expect(readJsonSync('package.json').publishConfig['tag-version-prefix']).to.equal('next-tag');
 	});

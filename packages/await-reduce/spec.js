@@ -1,5 +1,5 @@
 const reduce = require('.');
-const result = () => new Promise((resolve) => setTimeout(() => resolve('A'), 40))
+const result = () => new Promise(resolve => setTimeout(() => resolve('A'), 40))
 
 describe('gitaliases/await-reduce', async() => {
 	let array;
@@ -64,7 +64,7 @@ describe('gitaliases/await-reduce', async() => {
 			await reduce(
 				array,
 				(collector, item) => new Promise(
-					(resolve) => setTimeout(
+					resolve => setTimeout(
 						() => resolve([collector, item].join('')),
 						40
 					)

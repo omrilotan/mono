@@ -1,5 +1,5 @@
 const IGNORABLES = [
-	'--'
+	'--',
 ];
 
 module.exports = function args(...args) {

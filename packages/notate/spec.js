@@ -5,9 +5,9 @@ describe('notate', () => {
 	const dummy = {
 		top: {
 			middle: {
-				low: 'value'
-			}
-		}
+				low: 'value',
+			},
+		},
 	};
 
 	it('Should throw an error when non string is supposed to be processed',
