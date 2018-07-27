@@ -1,8 +1,8 @@
 {
 	"name": "upgradable",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Interactive upgrade machine for NPM CLI tools",
-	"author": "Omri",
+	"author": "omrilotan",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -20,7 +20,7 @@
 	"dependencies": {
 		"boxt": "^0.3.0",
 		"colors": "^1.1.2",
-		"npm": "^5.7.1",
+		"npm": "^6.2.0",
 		"prompt-confirm": "^1.2.0",
 		"semver": "^5.5.0"
 	}

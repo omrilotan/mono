@@ -77,7 +77,9 @@ module.exports = async function init ({
  */
 function later (info) {
 	process.stdin.resume();
-	process.on('SIGINT', start.bind(null, info));
+	const action = start.bind(null, info);
+	process.on('SIGINT', action);
+	process.on('SIGTERM', action);
 
 	(function wait () {
 		if (beenthere) {
