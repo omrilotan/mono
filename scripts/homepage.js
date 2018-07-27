@@ -11,16 +11,17 @@ const phrase = require('../packages/paraphrase/double');
 	(await fs.readdir('packages'))
 		.forEach(
 			item => {
-				if (item.startsWith('.')) { return }
+				if (item.startsWith('.')) { return; }
 
+				const pkg = require(`../packages/${item}/package.json`);
 				const {
 					name,
 					description,
 					version,
 					browser,
-				} = require(`../packages/${item}/package.json`);
+				} = pkg;
 
-				if (version.includes('alpha') || version.includes('beta')) {
+				if (pkg.private || version.includes('alpha') || version.includes('beta')) {
 					return;
 				}
 

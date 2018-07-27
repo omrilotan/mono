@@ -1,0 +1,17 @@
+{
+	"name": "@(._.)/oooooo",
+	"version": "3.3.3",
+	"description": "An empty package meant for testing purposes",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/oooooo/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t oooooo; cd -"
+	},
+	"private": true
+}
