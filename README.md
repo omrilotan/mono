@@ -15,6 +15,7 @@ Mono repo holding multiple packages
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
+| **`@(._.)/oooooo`** | [An empty package meant for testing purposes](./packages/oooooo#readme) | [![](https://img.shields.io/npm/v/@(._.)/oooooo.svg)](https://www.npmjs.com/package/@(._.)/oooooo)
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | **`run-all-the-things`** | [Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`selenium-chrome-clear-cache`** | [Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
