@@ -2,13 +2,17 @@
 
 process.on('unhandledRejection', error => { throw error; });
 
-const fs = require('fs').promises;
+const {
+	readdir,
+	readFile,
+	writeFile,
+} = require('fs').promises;
 const phrase = require('../packages/paraphrase/double');
 
 (async () => {
 	const [rows, links] = [[], []];
 
-	(await fs.readdir('packages'))
+	(await readdir('packages'))
 		.forEach(
 			item => {
 				if (item.startsWith('.')) { return; }
@@ -46,7 +50,7 @@ const phrase = require('../packages/paraphrase/double');
 	const content = rows.join('');
 	const head = links.join('\n');
 
-	const template = (await fs.readFile('src/homepage.html')).toString();
+	const template = (await readFile('src/homepage.html')).toString();
 
 	const output = phrase(template, {
 		head,
@@ -56,5 +60,5 @@ const phrase = require('../packages/paraphrase/double');
 		description,
 	});
 
-	await fs.writeFile('docs/index.html', output);
+	await writeFile('docs/index.html', output);
 })();
