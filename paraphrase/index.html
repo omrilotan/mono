@@ -58,5 +58,10 @@ phrase(&#39;Hello, %{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
 
 phrase(&#39;Hello, #{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
 </code></pre>
+<h2 id="bundled-version">Bundled version</h2>
+<p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes a bundled ES5 commonjs module.</p>
+<p>Also available for explicit import:</p>
+<pre><code class="lang-js">const paraphrase = require(&#39;paraphrase/dist&#39;);
+</code></pre>
 	</body>
 </html>
