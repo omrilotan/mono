@@ -11,6 +11,7 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="index-require-">index-require <a href="https://www.npmjs.com/package/index-require"><img src="https://img.shields.io/npm/v/index-require.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/index-require"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+<h2 id="scan-directory-for-nested-directories-and-create-an-index-module">Scan directory for nested directories and create an index module</h2>
 <p>Tree</p>
 <pre><code>├── main.js
 └── lib
@@ -23,10 +24,14 @@
         └── spec.js
 </code></pre><p>lib/index.js</p>
 <pre><code class="lang-js">const inedx = require(&#39;index-require&#39;);
-module.exports = inedx(__dirname, name =&gt; `./${name}`);
+module.exports = inedx(__dirname);
 </code></pre>
 <p>main.js</p>
 <pre><code class="lang-js">const {module1, module2} = require(&#39;./lib&#39;);
+</code></pre>
+<h3 id="optional-second-argument-for-different-structures">Optional second argument for different structures</h3>
+<pre><code class="lang-js">const inedx = require(&#39;index-require&#39;);
+module.exports = inedx(__dirname, name =&gt; `./${name}/main.js`);
 </code></pre>
 	</body>
 </html>
