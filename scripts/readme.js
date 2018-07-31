@@ -11,13 +11,14 @@ const reduce = require('../packages/await-reduce');
 		await fs.readdir('./packages'),
 		async (results, dir) => {
 			try {
+				const pkg = require(`../packages/${dir}/package.json`);
 				const {
 					name,
 					description,
 					version,
-				} = require(`../packages/${dir}/package.json`);
+				} = pkg;
 
-				if (version.includes('alpha') || version.includes('beta')) {
+				if (pkg.private || version.includes('alpha') || version.includes('beta')) {
 					return results;
 				}
 
