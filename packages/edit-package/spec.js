@@ -5,7 +5,6 @@ const {
 } = require('fs-extra');
 
 const packageJson = require('../../package.json');
-const original = readJsonSync('package.json');
 
 describe('edit-package', () => {
 	afterEach(async () => {

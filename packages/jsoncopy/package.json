@@ -1,0 +1,16 @@
+{
+	"name": "jsoncopy",
+	"version": "1.0.0",
+	"description": "Create a deep clone of an object using JSON functionalities.",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/jsoncopy/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t jsoncopy; cd -"
+	}
+}
