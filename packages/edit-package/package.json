@@ -1,6 +1,6 @@
 {
 	"name": "edit-package",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Read, write and reset package.json",
 	"author": "omrilotan",
 	"license": "MIT",

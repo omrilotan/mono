@@ -4,7 +4,8 @@ const {
 	readFileSync,
 } = require('fs-extra');
 
-const packageJson = require('../../package.json')
+const packageJson = require('../../package.json');
+const original = readJsonSync('package.json');
 
 describe('edit-package', () => {
 	afterEach(async () => {
@@ -26,10 +27,17 @@ describe('edit-package', () => {
 	});
 
 	it('reset restores original package.json', async () => {
-		await editor.write({name: 'NOT_THE_PACKAGE_NAME'});
+		await editor.write({name: 'NOT_THE_PACKAGE_NAME', newkey: 'THIS WAS NOT HERE BEFORE'});
 		await editor.reset();
-		expect(readJsonSync('package.json').name).not.to.equal('NOT_THE_PACKAGE_NAME');
-		expect(readJsonSync('package.json').name).to.equal(packageJson.name);
+
+		const {
+			name,
+			newkey,
+		} = readJsonSync('package.json');
+
+		expect(name).not.to.equal('NOT_THE_PACKAGE_NAME');
+		expect(name).to.equal(packageJson.name);
+		expect(newkey).to.be.undefined;
 	});
 
 	it('continues from saved package file', async () => {

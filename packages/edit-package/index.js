@@ -71,4 +71,13 @@ module.exports.write = async data => {
  * Reset to the original package.json
  * @return {Objecy}
  */
-module.exports.reset = async () => await module.exports.write(await original());
+module.exports.reset = async () => {
+	try {
+		await writeFile(
+			'package.json',
+			JSON.stringify(await original(), null, 2) + await suffix()
+		);
+	} catch (error) {
+		throw error;
+	}
+};
