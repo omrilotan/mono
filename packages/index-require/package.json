@@ -1,6 +1,6 @@
 {
 	"name": "index-require",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Create an index for a lib directory",
 	"author": "omrilotan",
 	"license": "MIT",

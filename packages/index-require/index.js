@@ -22,8 +22,11 @@ module.exports = (dirname, pattern = name => `./${name}`) => modules(dirname)
 			accumulator,
 			{
 				[name]: require(
-					pattern(name)
-				)
+					resolve(
+						dirname,
+						pattern(name)
+					)
+				),
 			}
 		),
 		{}
