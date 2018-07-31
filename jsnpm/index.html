@@ -11,6 +11,36 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="-wip-jsnpm-">[WIP] jsnpm <a href="https://www.npmjs.com/package/jsnpm"><img src="https://img.shields.io/npm/v/jsnpm.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/jsnpm"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
-<p>NPM API for application workflow (WIP)</p>
+<p>NPM API for application workflow</p>
+<h2 id="exists">exists</h2>
+<p>{Boolean} Does this package exist?</p>
+<pre><code class="lang-js">const {exists} = require(&#39;jsnpm&#39;);
+
+async exists(&#39;@me/my-package&#39;) // true | false
+</code></pre>
+<h2 id="latest">latest</h2>
+<p>{String} Get the latest version of a package</p>
+<pre><code class="lang-js">const {latest} = require(&#39;jsnpm&#39;);
+
+async latest(&#39;@me/my-package&#39;) // &#39;3.3.3&#39;
+</code></pre>
+<h2 id="publish">publish</h2>
+<p>{void} Publish the hosting package we&#39;re running in (runtime directory)</p>
+<pre><code class="lang-js">const {publish} = require(&#39;jsnpm&#39;);
+
+async publish()
+</code></pre>
+<h2 id="settag">setTag</h2>
+<p>{void} Set a version to a tag</p>
+<pre><code class="lang-js">const {setTag} = require(&#39;jsnpm&#39;);
+
+async setTag(&#39;@me/my-package&#39;, &#39;2.2.2&#39;, &#39;latest&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]
+</code></pre>
+<h2 id="versions">versions</h2>
+<p>{Array} Get all published versions of a package</p>
+<pre><code class="lang-js">const {latest} = require(&#39;jsnpm&#39;);
+
+async latest(&#39;@me/my-package&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]
+</code></pre>
 	</body>
 </html>
