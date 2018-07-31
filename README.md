@@ -14,6 +14,7 @@ Mono repo holding multiple packages
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`index-require`** | [Create an index for a lib directory](./packages/index-require#readme) | [![](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
 | **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
+| **`jsoncopy`** | [Create a deep clone of an object using JSON functionalities.](./packages/jsoncopy#readme) | [![](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy)
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
