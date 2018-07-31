@@ -1,0 +1,16 @@
+{
+	"name": "index-require",
+	"version": "0.0.1",
+	"description": "Create an index for a lib directory",
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/index-require/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t index-require; cd -"
+	}
+}
