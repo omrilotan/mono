@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>jsoncopy | an npm package by omrilotan</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="../styles.css">
+		<link rel="prerender" href="../">
+	</head>
+	<body>
+		<a href="../">↩︎</a>
+		<h1 id="jsoncopy-">jsoncopy <a href="https://www.npmjs.com/package/jsoncopy"><img src="https://img.shields.io/npm/v/jsoncopy.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/jsoncopy"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+<p>Create a deep clone of an object using JSON functionalities. Very efficient and quick, not a comprehensive copyier (can&#39;t copy functions, circular references)</p>
+<pre><code class="lang-js">const jsoncopy = require(&#39;jsoncopy&#39;);
+
+const orig = {top: {nested: {value: 1}}};
+const copy = jsoncopy(obj);
+obj.top.nested.value = 2;
+
+orig.top.nested.value // 2
+copy.top.nested.value // 1
+</code></pre>
+	</body>
+</html>
