@@ -9,10 +9,19 @@ describe('jsnpm', async() => {
 				await exists('jsnpm')
 			).to.be.true
 		);
-
 		it('Should find that a package does not exists', async() =>
 			expect(
 				await exists('ljaslkjasdnkldjas-09u2398u23uhe')
+			).to.be.false
+		);
+		it('Should find if a tag exists', async() =>
+			expect(
+				await exists('jsnpm', 'latest')
+			).to.be.true
+		);
+		it('Should find that a tag does not exists', async() =>
+			expect(
+				await exists('jsnpm', 'ljaslkjasdnkldjas')
 			).to.be.false
 		);
 	});

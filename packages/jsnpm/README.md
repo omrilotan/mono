@@ -3,12 +3,12 @@
 NPM API for application workflow
 
 ## exists
-
 {Boolean} Does this package exist?
 ```js
 const {exists} = require('jsnpm');
 
 async exists('@me/my-package') // true | false
+async exists('@me/my-package', 'next') // true | false
 ```
 
 ## latest
@@ -41,4 +41,12 @@ async setTag('@me/my-package', '2.2.2', 'latest') // ['0.0.0', '1.1.1', '2.2.2',
 const {latest} = require('jsnpm');
 
 async latest('@me/my-package') // ['0.0.0', '1.1.1', '2.2.2', '3.3.3']
+```
+
+## config
+{void} Set a configuration for the "npm" instance we're working on
+```js
+const {config} = require('jsnpm');
+
+await config('registry', 'https://company.jfrog.io/company/api/npm/npm-company/')
 ```
