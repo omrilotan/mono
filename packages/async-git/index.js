@@ -8,6 +8,7 @@ const formats = {
 	short: 'h',
 	subject: 's',
 	message: 'B',
+	body: 'b',
 };
 
 const getters = Object.assign(

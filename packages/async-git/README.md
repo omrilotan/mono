@@ -25,6 +25,7 @@ const [
 | email | String | Author email of the last commit
 | sha | String | Unique identifier of the last commit
 | short | String | 7 Character Unique identifier of the last commit
+| message | String | Most recent commit full message (subject and body)
 | subject | String | Most recent commit subject
-| message | String | Most recent commit full message
+| body | String | Most recent commit message body
 | date | Date | Date of the last change

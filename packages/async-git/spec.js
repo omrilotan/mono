@@ -34,6 +34,11 @@ describe(`async-git (${Object.getOwnPropertyNames(git).join(', ')})`, async() =>
 		expect(value).to.have.lengthOf.at.least(1);
 	}));
 
+	it('body should retrieve a string, may be empty', async () => {
+		const value = await git.body;
+		expect(value).to.be.a('string');
+	});
+
 	it('date should retrieve a valid date', async () => {
 		const date = await git.date;
 
