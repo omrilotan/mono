@@ -16,14 +16,15 @@ const [
 `${author_name} committed ${commit_message}` // Omri committed Some changes
 ```
 
-| Property | Description
-| - | -
-| name | Project name
-| branch | Current branch name
-| author | Author name of the last commit
-| comitter | Comitter name of the last commit
-| email | Author email of the last commit
-| sha | Unique identifier of the last commit
-| short | 7 Character Unique identifier of the last commit
-| subject | Most recent commit subject
-| message | Most recent commit full message
+| Property | Type | Description
+| - | - | -
+| name | String | Project name
+| branch | String | Current branch name
+| author | String | Author name of the last commit
+| comitter | String | Comitter name of the last commit
+| email | String | Author email of the last commit
+| sha | String | Unique identifier of the last commit
+| short | String | 7 Character Unique identifier of the last commit
+| subject | String | Most recent commit subject
+| message | String | Most recent commit full message
+| date | Date | Date of the last change

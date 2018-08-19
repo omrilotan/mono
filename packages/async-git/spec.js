@@ -28,11 +28,31 @@ describe(`async-git (${Object.getOwnPropertyNames(git).join(', ')})`, async() =>
 		'short',
 		'subject',
 		'message',
-	].forEach(member => it(`${member} should retreive a string`, async () => {
+	].forEach(member => it(`${member} should retrieve a string`, async () => {
 		const value = await git[member];
 		expect(value).to.be.a('string');
 		expect(value).to.have.lengthOf.at.least(1);
 	}));
+
+	it('date should retrieve a valid date', async () => {
+		const date = await git.date;
+
+		expect(date).to.be.a('date');
+
+		const invalid = Number.isNaN(date.getTime());
+		expect(invalid).to.be.false;
+	});
+
+	it('date should be in proximity to now', async () => {
+		const date = await git.date;
+
+		expect(
+			date.getFullYear()
+		).to.be.closeTo(
+			new Date().getFullYear(),
+			1
+		);
+	});
 
 	it('Should get the short and long sha', async() => {
 		expect(await git.sha).to.have.lengthOf(40);

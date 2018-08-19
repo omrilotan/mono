@@ -14,6 +14,7 @@ const getters = Object.assign(
 	{
 		name: async () => await exec('basename -s .git `git config --get remote.origin.url`'),
 		branch: async () => await exec('git rev-parse --abbrev-ref HEAD'),
+		date: async () => new Date(parseInt(await exec('git show -s --format=%at')) * 1000),
 	},
 	Object.entries(formats).reduce(
 		(props, [key, value]) => Object.assign(
