@@ -20,11 +20,16 @@ async latest('@me/my-package') // '3.3.3'
 ```
 
 ## publish
-{void} Publish the hosting package we're running in (runtime directory)
+{void} Publish the hosting package we're running in (runtime directory). Throws error when publish fails
 ```js
 const {publish} = require('jsnpm');
 
-async publish()
+try {
+	async publish()
+	console.log('Published successfully')
+} catch (error) {
+	console.error(error)
+}
 ```
 
 ## setTag
