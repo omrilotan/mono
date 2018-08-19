@@ -16,7 +16,7 @@
 
 const orig = {top: {nested: {value: 1}}};
 const copy = jsoncopy(obj);
-orig.top.nested.value = 2;
+obj.top.nested.value = 2;
 
 orig.top.nested.value // 2
 copy.top.nested.value // 1
