@@ -26,10 +26,15 @@ async exists(&#39;@me/my-package&#39;, &#39;next&#39;) // true | false
 async latest(&#39;@me/my-package&#39;) // &#39;3.3.3&#39;
 </code></pre>
 <h2 id="publish">publish</h2>
-<p>{void} Publish the hosting package we&#39;re running in (runtime directory)</p>
+<p>{void} Publish the hosting package we&#39;re running in (runtime directory). Throws error when publish fails</p>
 <pre><code class="lang-js">const {publish} = require(&#39;jsnpm&#39;);
 
-async publish()
+try {
+    async publish()
+    console.log(&#39;Published successfully&#39;)
+} catch (error) {
+    console.error(error)
+}
 </code></pre>
 <h2 id="settag">setTag</h2>
 <p>{void} Set a version to a tag</p>
