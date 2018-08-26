@@ -1,6 +1,6 @@
 {
 	"name": "await-reduce",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Resolve and reduce an array of promises",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -10,7 +10,9 @@
 	},
 	"homepage": "https://omrilotan.com/mono/await-reduce/",
 	"main": "index.js",
+	"browser": "dist/index.js",
 	"scripts": {
+		"dist": "mkdir -p dist; babel index.js --out-file dist/index.js",
 		"test": "cd ../../; npm t await-reduce; cd -"
 	}
 }
