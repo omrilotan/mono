@@ -11,6 +11,14 @@ async exists('@me/my-package') // true | false
 async exists('@me/my-package', 'next') // true | false
 ```
 
+## getVersion
+{String} Get the version of a tag in a package
+```js
+const {getVersion} = require('jsnpm');
+
+async getVersion('@me/my-package', 'next') // '1.7.9-rc-5fca53d'
+```
+
 ## latest
 {String} Get the latest version of a package
 ```js

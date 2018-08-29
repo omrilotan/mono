@@ -1,4 +1,4 @@
-const {promisify} = require('util');
+const getVersion = require('../getVersion');
 
 /**
  * Get the package version corresponding with "latest" tag
@@ -6,8 +6,7 @@ const {promisify} = require('util');
  * @return {String}      Version
  */
 module.exports = async function latest(name) {
-	const result = await promisify(this.view)(`${name}@latest`, 'version');
-	const latest = Object.values(result).shift();
+	const latest = await getVersion(name, 'latest');
 
 	if (!latest) {
 		throw new Error(`Could not find a latest tag in for package "${name}"`);
