@@ -1,6 +1,6 @@
 {
 	"name": "jsnpm",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "Use NPM in Javascript runtime",
 	"author": "omrilotan",
 	"license": "MIT",

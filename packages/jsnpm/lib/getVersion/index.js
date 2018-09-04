@@ -6,7 +6,7 @@ const {promisify} = require('util');
  * @param  {String} [tag='latest'] Tag
  * @return {Boolean}
  */
-module.exports = async function exists(module, tag = 'latest') {
+module.exports = async function getVersion(module, tag = 'latest') {
 	try {
 		const results = await promisify(this.view)([module, tag].join('@'), 'version');
 		const version = Object.values(results).shift();
