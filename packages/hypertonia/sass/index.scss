@@ -1,0 +1,46 @@
+$background: #000;
+$foreground: #fff;
+$tabs-height: 24px;
+$tab-icon-size: 14px;
+
+.hyper_main {
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #f368e0, black) 1 100%;
+
+	.header_header {
+		background-color: $background;
+  	border-top: 1px solid #f368e0;
+	}
+	.tabs_borderShim {
+		display:none transparent;
+	}
+	.tab_tab {
+		border: 0;
+	}
+	.tab_active {
+		.tab_textInner {
+			&:before {
+				content: "⚡️";
+			}
+		}
+	}
+	.tabs_list, .tabs_nav, .tab_text {
+    height: $tabs-height;
+    line-height: $tabs-height;
+    max-height: $tabs-height;
+	}
+	.terms_terms {
+		margin-top: $tabs-height;
+	}
+	.tab_icon {
+		height: $tab-icon-size;
+		width: $tab-icon-size;
+		top: ($tabs-height - $tab-icon-size) / 2;
+	}
+	.tab_textActive {
+		background: rgba(255, 255, 255, .05);
+	}
+}
+
+@import './hyper-search';

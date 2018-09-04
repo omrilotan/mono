@@ -1,0 +1,41 @@
+.hyper-search-wrapper {
+	border: 0 !important;
+	padding: 0 !important;
+	background-color: transparent !important;
+	display: flex !important;
+	opacity: 1 !important;
+
+	button {
+		top: 0 !important;
+		padding: 0 6px !important;
+		cursor: pointer !important;
+		border-radius: 0 !important;
+		background: transparent !important;
+		color: white !important;
+		opacity: 0.8 !important;
+		&:hover {
+			opacity: 1.0 !important;
+		}
+	}
+	&:before {
+		width: 20px !important;
+		color: black !important;
+		position: absolute !important;
+		content: "🔍" !important;
+		font-size: 10px !important;
+		margin: 7px !important;
+		z-index: 999 !important;
+	}
+}
+#hyper-search-input {
+	background-color: black !important;
+	color: white !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	padding: 3px 6px 3px 24px !important;
+	margin-right: 0 !important;
+	opacity: .8 !important;
+}
+#hyper-search-input:focus {
+	opacity: 1 !important;
+}
