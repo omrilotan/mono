@@ -1,6 +1,10 @@
-const jsnpm = require('.');
-
 describe('jsnpm', async() => {
+	let jsnpm;
+	before(() => {
+		delete require.cache[require.resolve('.')];
+		jsnpm = require('.');
+	});
+
 	describe('exists', async() => {
 		const {exists} = jsnpm;
 
