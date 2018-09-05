@@ -1,5 +1,6 @@
 const {resolve} = require('path');
 const {readFileSync} = require('fs');
+const assign = require('@(._.)/assign');
 
 const {
 	red,
@@ -33,34 +34,33 @@ const defaults = {
 	backgroundColor,
 	borderColor: overlap,
 	cursorColor,
+	colors: {
+		black,
+		red,
+		green,
+		yellow,
+		blue,
+		magenta,
+		cyan,
+		white,
+		lightBlack,
+		lightRed,
+		lightGreen,
+		lightYellow,
+		lightBlue,
+		lightMagenta,
+		lightCyan,
+		lightWhite,
+	},
 };
 
 exports.decorateConfig = config => Object.assign(
 	{},
-	defaults,
-	config,
+	assign(defaults, config),
 	{
-		colors: {
-			black,
-			red,
-			green,
-			yellow,
-			blue,
-			magenta,
-			cyan,
-			white,
-			lightBlack,
-			lightRed,
-			lightGreen,
-			lightYellow,
-			lightBlue,
-			lightMagenta,
-			lightCyan,
-			lightWhite,
-		},
 		css: [
-			config.css,
 			readFileSync(resolve(__dirname, 'dist/styles.css')).toString(),
+			config.css,
 		].join('\n'),
 	}
 );

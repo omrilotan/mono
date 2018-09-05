@@ -9,16 +9,19 @@
 2. `hpm install hypertonia`
 
 #### Install manually
-1. Open `~/.hyper.js` in your favorite editor.
-2. Add `hypertonia` to the `plugins` array.
+Add `hypertonia` to the `plugins` array in `~/.hyper.js`.
 
 #### Configure
-1. Open `~/.hyper.js` in your favorite editor.
-2. Your `config` takes precedence.
+Your `~/.hyper.js` `config` takes precedence, delete colour and font attributes you want **not** to override.
 
 ```js
-{
-	fontFamily: '"consolas"',
-	fontSize: 16
-}
+...
+	config: {
+		fontFamily: '"consolas"',
+		fontSize: 16,
+		colors: {
+			red: '#C51E14',
+		},
+	}
+...
 ```
