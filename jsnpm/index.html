@@ -19,6 +19,12 @@
 async exists(&#39;@me/my-package&#39;) // true | false
 async exists(&#39;@me/my-package&#39;, &#39;next&#39;) // true | false
 </code></pre>
+<h2 id="getversion">getVersion</h2>
+<p>{String} Get the version of a tag in a package</p>
+<pre><code class="lang-js">const {getVersion} = require(&#39;jsnpm&#39;);
+
+async getVersion(&#39;@me/my-package&#39;, &#39;next&#39;) // &#39;1.7.9-rc-5fca53d&#39;
+</code></pre>
 <h2 id="latest">latest</h2>
 <p>{String} Get the latest version of a package</p>
 <pre><code class="lang-js">const {latest} = require(&#39;jsnpm&#39;);
