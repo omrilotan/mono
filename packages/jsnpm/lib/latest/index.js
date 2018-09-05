@@ -6,11 +6,11 @@ const getVersion = require('../getVersion');
  * @return {String}      Version
  */
 module.exports = async function latest(name) {
-	const latest = await getVersion(name, 'latest');
+	const latest = await getVersion.call(this, name, 'latest');
 
 	if (!latest) {
 		throw new Error(`Could not find a latest tag in for package "${name}"`);
 	}
 
-	return latest.version;
+	return latest;
 }

@@ -1,10 +1,6 @@
-describe('jsnpm', async() => {
-	let jsnpm;
-	before(() => {
-		delete require.cache[require.resolve('.')];
-		jsnpm = require('.');
-	});
+const jsnpm = require('.');
 
+describe('jsnpm', async() => {
 	describe('exists', async() => {
 		const {exists} = jsnpm;
 
