@@ -4,12 +4,16 @@
 
 ![image](https://user-images.githubusercontent.com/516342/45075333-787e1000-b0ef-11e8-9094-802b4f09ba31.png)
 
-#### Install using Hyper Package Manager ([HPM](https://github.com/zeit/hpm))
-1. `npm install -g hpm-cli`
-2. `hpm install hypertonia`
-
-#### Install manually
+#### Install
 Add `hypertonia` to the `plugins` array in `~/.hyper.js`.
+
+```js
+...
+  plugins: [
+    'hypertonia',
+  ],
+...
+```
 
 #### Configure
 Your `~/.hyper.js` `config` takes precedence, delete colour and font attributes you want **not** to override.

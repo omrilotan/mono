@@ -2,11 +2,13 @@ $background: #000;
 $foreground: #fff;
 $tabs-height: 24px;
 $tab-icon-size: 14px;
+$theme-color-top: #f368e0;
+$theme-color-bottom: #ffa502;
 
 .hyper_main {
 	border-width: 1px;
 	border-style: solid;
-	border-image: linear-gradient(to bottom, #f368e0, #ffa502) 1 100%;
+	border-image: linear-gradient(to bottom, $theme-color-top, $theme-color-bottom) 1 100%;
 
 	&.hyper_mainRounded {
 		border-radius: 0 !important;
@@ -14,7 +16,7 @@ $tab-icon-size: 14px;
 
 	.header_header {
 		background-color: $background;
-		border-top: 1px solid #f368e0;
+		border-top: 1px solid $theme-color-top;
 	}
 	.tabs_borderShim {
 		display:none !important;
@@ -36,7 +38,7 @@ $tab-icon-size: 14px;
 	}
 	.terms_terms {
 		margin-top: $tabs-height;
-		border-bottom: 1px solid #ffa502;
+		border-bottom: 1px solid $theme-color-bottom;
 		bottom: -1px;
 	}
 	.tab_icon {
@@ -46,6 +48,19 @@ $tab-icon-size: 14px;
 	}
 	.tab_textActive {
 		background: rgba(255, 255, 255, .05);
+	}
+
+	.splitpane_divider {
+		border: 0;
+		margin: 0;
+		background: $theme-color-bottom;
+	}
+
+	.splitpane_divider.splitpane_divider_vertical {
+		width: 1px;
+	}
+	.splitpane_divider.splitpane_divider_horizontal {
+		height: 1px;
 	}
 }
 
