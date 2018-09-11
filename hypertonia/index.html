@@ -13,13 +13,14 @@
 		<h1 id="hypertonia-">hypertonia <a href="https://www.npmjs.com/package/hypertonia"><img src="https://img.shields.io/npm/v/hypertonia.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/hypertonia"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
 <h2 id="a-theme-for-hyper">A theme for <a href="https://hyper.is/">Hyper</a></h2>
 <p><img src="https://user-images.githubusercontent.com/516342/45075333-787e1000-b0ef-11e8-9094-802b4f09ba31.png" alt="image"></p>
-<h4 id="install-using-hyper-package-manager-hpm-">Install using Hyper Package Manager (<a href="https://github.com/zeit/hpm">HPM</a>)</h4>
-<ol>
-<li><code>npm install -g hpm-cli</code></li>
-<li><code>hpm install hypertonia</code></li>
-</ol>
-<h4 id="install-manually">Install manually</h4>
+<h4 id="install">Install</h4>
 <p>Add <code>hypertonia</code> to the <code>plugins</code> array in <code>~/.hyper.js</code>.</p>
+<pre><code class="lang-js">...
+  plugins: [
+    &#39;hypertonia&#39;,
+  ],
+...
+</code></pre>
 <h4 id="configure">Configure</h4>
 <p>Your <code>~/.hyper.js</code> <code>config</code> takes precedence, delete colour and font attributes you want <strong>not</strong> to override.</p>
 <pre><code class="lang-js">...
