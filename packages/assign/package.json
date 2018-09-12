@@ -1,6 +1,6 @@
 {
 	"name": "@(._.)/assign",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Object deep assign",
 	"author": "omrilotan",
 	"license": "MIT",

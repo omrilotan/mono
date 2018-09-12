@@ -1,6 +1,6 @@
 {
 	"name": "doamrn",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Retrieve a random item from the arguments",
 	"author": "omrilotan",
 	"license": "MIT",
