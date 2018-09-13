@@ -22,6 +22,7 @@ const {
 	foregroundColor,
 	backgroundColor,
 	cursorColor,
+	selectionColor,
 	overlap,
 } = require('./lib/colours');
 
@@ -34,6 +35,7 @@ const defaults = {
 	backgroundColor,
 	borderColor: overlap,
 	cursorColor,
+	selectionColor,
 	colors: {
 		black,
 		red,

@@ -9,6 +9,8 @@ const black = '#000000';
 const lightBlack = '#686868';
 const foregroundColor = white;
 const backgroundColor = black;
+const cursorColor = 'rgba(52, 152, 219, 1)';
+const selectionColor = 'rgba(52, 152, 219, .3)';
 const overlap = '#000000hy';
 
 module.exports = {
@@ -30,6 +32,7 @@ module.exports = {
 	lightWhite: white,
 	foregroundColor,
 	backgroundColor,
-	cursorColor: blue,
+	cursorColor,
+	selectionColor,
 	overlap,
 };
