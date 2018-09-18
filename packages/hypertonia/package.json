@@ -1,6 +1,6 @@
 {
 	"name": "hypertonia",
-	"version": "0.2.3",
+	"version": "0.2.5",
 	"description": "A theme for Hyper.",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -11,7 +11,7 @@
 	"homepage": "https://omrilotan.com/mono/hypertonia/",
 	"main": "index.js",
 	"scripts": {
-		"prepublishOnly": "node-sass sass/index.scss dist/styles.css"
+		"prepublishOnly": "node-sass sass/index.scss dist/styles.css & node-sass sass/term.scss dist/term.css"
 	},
 	"devDependencies": {
 		"node-sass": "^4.9.3"

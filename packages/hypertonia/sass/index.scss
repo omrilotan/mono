@@ -1,14 +1,10 @@
-$background: #000;
-$foreground: #fff;
-$tabs-height: 24px;
-$tab-icon-size: 14px;
-$theme-color-top: #f368e0;
-$theme-color-bottom: #ffa502;
+@import './variables';
 
 .hyper_main {
 	border-width: 1px;
 	border-style: solid;
 	border-image: linear-gradient(to bottom, $theme-color-top, $theme-color-bottom) 1 100%;
+	font-weight: 100;
 
 	&.hyper_mainRounded {
 		border-radius: 0 !important;
@@ -21,20 +17,22 @@ $theme-color-bottom: #ffa502;
 	.tabs_borderShim {
 		display:none !important;
 	}
+	.tabs_list, .tabs_nav, .tab_text {
+		height: $tabs-height;
+		line-height: $tabs-height;
+		max-height: $tabs-height;
+	}
 	.tab_tab {
 		border: 0;
+		font-style: italic;
 	}
 	.tab_active {
+		font-style: normal;
 		.tab_textInner {
 			&:before {
 				content: "⚡️";
 			}
 		}
-	}
-	.tabs_list, .tabs_nav, .tab_text {
-		height: $tabs-height;
-		line-height: $tabs-height;
-		max-height: $tabs-height;
 	}
 	.terms_terms {
 		margin-top: $tabs-height;
@@ -61,6 +59,21 @@ $theme-color-bottom: #ffa502;
 	}
 	.splitpane_divider.splitpane_divider_horizontal {
 		height: 1px;
+	}
+}
+
+.xterm-viewport {
+	&::-webkit-scrollbar {
+		width: 1px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0;
+		background-color: rgba($theme-color-bottom, .3);
+
+		&:hover {
+			background-color: rgba($theme-color-bottom, 1);
+		}
 	}
 }
 

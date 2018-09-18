@@ -64,6 +64,10 @@ exports.decorateConfig = config => Object.assign(
 			readFileSync(resolve(__dirname, 'dist/styles.css')).toString(),
 			config.css,
 		].join('\n'),
+		termCSS: [
+			readFileSync(resolve(__dirname, 'dist/term.css')).toString(),
+			config.css,
+		].join('\n'),
 	}
 );
 

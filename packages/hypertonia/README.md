@@ -21,3 +21,6 @@ Your `~/.hyper.js` `config` takes precedence, delete colour and font attributes 
 	}
 ...
 ```
+
+With a skin for [hyper-search](https://github.com/jaanauati/hyper-search)
+<img src="https://user-images.githubusercontent.com/516342/45599144-4920aa80-b9ef-11e8-9942-283094cfb637.png" width="200">
