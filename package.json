@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
+  "engines": {
+    "node": ">=10.2"
+  },
   "scripts": {
     "clean": "./scripts/foreach.sh \"rm -rf dist\"",
     "postinstall": "./scripts/foreach.sh \"npm i\"",
