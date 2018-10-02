@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>Searching...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta http-equiv="Cache-Control" content="no-cache"/>
+		<meta name="googlebot" content="noindex" />
+		<meta name="robots" content="noindex" />
+		<style>
+*{margin:0;padding:0}
+html,body{height:100%}
+body{font:100 100%/1.4 -apple-system,"BlinkMacSystemFont","Helvetica Neue","Helvetica","Lucida Grande","Arial",sans-serif;display:flex;justify-content:center;align-items:center}
+@keyframes ddd{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+body:after{content:'';display:inline-block;width:2em;animation:ddd 1.5s infinite;
+		</style>
+	</head>
+	<body>
+		Searching
+		<script>
+(async() => {
+	const name = window.location.pathname.split('/').filter(i => !!i).shift();
+	const repo = `https://api.github.com/repos/omrilotan/${name}`;
+	let target = '/';
+
+	try {
+		const res = await fetch(repo, {mode: 'cors'});
+		res.status.toString().startsWith('2') && (target = (await res.json()).html_url);
+	} catch (error) {
+		// fail silently
+	} finally {
+		window.location.replace(target);
+	}
+})();
+		</script>
+	</body>
+</html>
