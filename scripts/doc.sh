@@ -13,3 +13,5 @@ function search {
 }
 
 search "packages"
+
+cp -r src/assets/* docs/
