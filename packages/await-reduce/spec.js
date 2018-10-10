@@ -1,7 +1,7 @@
 const reduce = require('.');
 const result = () => new Promise(resolve => setTimeout(() => resolve('A'), 40))
 
-describe('gitaliases/await-reduce', async() => {
+describe('await-reduce', async() => {
 	let array;
 	beforeEach(() => {
 		array = [
@@ -118,4 +118,16 @@ describe('gitaliases/await-reduce', async() => {
 			[]
 		)).to.deep.equal(['B', 'B', 'B'])
 	);
+
+	it('Should resolve promises in the reduced array', async() => {
+		expect(await reduce(
+			[
+				new Promise(resolve => resolve('A')),
+				new Promise(resolve => resolve('B')),
+				new Promise(resolve => resolve('C')),
+			],
+			(collector, item) => [...collector, item],
+			[]
+		)).to.deep.equal(['A', 'B', 'C'])
+	});
 });
