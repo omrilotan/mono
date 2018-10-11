@@ -1,4 +1,4 @@
-# paraphrase [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/paraphrase)
+# paraphrase [![](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/paraphrase) [![](https://badge.runkitcdn.com/paraphrase.svg)](https://runkit.com/omrilotan/paraphrase)
 
 ## String template interpolation
 
