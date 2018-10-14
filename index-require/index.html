@@ -29,6 +29,22 @@ module.exports = inedx(__dirname);
 <p>main.js</p>
 <pre><code class="lang-js">const {module1, module2} = require(&#39;./lib&#39;);
 </code></pre>
+<h2 id="app-with-features-structure">App with features structure</h2>
+<p>app.js</p>
+<pre><code> ├── app.js
+ ├── feature1
+ │   ├── index.js
+ │   └── spec.js
+ └── feature2
+     ├── index.js
+     └── spec.js
+</code></pre><p>app.js</p>
+<pre><code class="lang-js">const inedx = require(&#39;index-require&#39;);
+const {
+    feature1,
+    feature2,
+} = inedx(__dirname);
+</code></pre>
 <h3 id="optional-second-argument-for-different-structures">Optional second argument for different structures</h3>
 <pre><code class="lang-js">const inedx = require(&#39;index-require&#39;);
 module.exports = inedx(__dirname, name =&gt; `./${name}/main.js`);
