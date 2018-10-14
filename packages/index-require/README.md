@@ -6,13 +6,13 @@ Tree
 ```
 ├── main.js
 └── lib
-    ├── index.js
-    ├── module1
-    │   ├── index.js
-    │   └── spec.js
-    └── module2
-        ├── index.js
-        └── spec.js
+    ├── index.js
+    ├── module1
+    │   ├── index.js
+    │   └── spec.js
+    └── module2
+        ├── index.js
+        └── spec.js
 ```
 
 lib/index.js
@@ -24,6 +24,27 @@ module.exports = inedx(__dirname);
 main.js
 ```js
 const {module1, module2} = require('./lib');
+```
+
+## App with features structure
+app.js
+```
+ ├── app.js
+ ├── feature1
+ │   ├── index.js
+ │   └── spec.js
+ └── feature2
+     ├── index.js
+     └── spec.js
+```
+
+app.js
+```js
+const inedx = require('index-require');
+const {
+	feature1,
+	feature2,
+} = inedx(__dirname);
 ```
 
 ### Optional second argument for different structures
