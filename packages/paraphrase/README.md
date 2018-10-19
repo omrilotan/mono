@@ -75,6 +75,14 @@ const phrase = require('paraphrase/hash');
 phrase('Hello, #{name}', {name: 'Martin'}); // Hello, Martin
 ```
 
+## patterns
+A paraphrase instance exposes access to it's patterns array
+```js
+const phrase = require('paraphrase/hash');
+
+phrase.patterns // [ /#{([^{}]*)}/gm ]
+```
+
 ## Bundled version
 Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes a bundled ES5 commonjs module.
 

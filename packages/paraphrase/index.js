@@ -23,7 +23,7 @@ const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
  * phraser('Hello, ${name}', {name: 'Martin'})
  */
 
-module.exports = (...replacers) =>
+module.exports = function paraphrase(...replacers) {
 
 	/**
 	 * phraser description
@@ -58,5 +58,9 @@ module.exports = (...replacers) =>
 		}
 
 		return replacers.reduce((string, replacer) => string.replace(replacer, replace), string);
-	};
+	}
 
+	phraser.patterns = replacers;
+
+	return phraser;
+};
