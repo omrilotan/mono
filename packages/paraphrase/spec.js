@@ -28,6 +28,27 @@ describe('paraphrase', () => {
 			const res = phrase('Hello, ${ first } %{ first } {{ last }}', {first, last});
 			expect(phrase(res)).to.equal(`Hello, ${first} ${first} ${last}`);
 		});
+
+		it('Should expose its replacers', () => {
+			const patterns = [
+				/\${([^{}]*)}/g,
+				/%{([^{}]*)}/g,
+				/{{([^{}]*)}}/g,
+			];
+			const phrase = paraphrase(...patterns);
+			expect(phrase.patterns).to.be.an('array');
+			assert(phrase.patterns.every(pattern => pattern instanceof RegExp));
+			expect(phrase.patterns[0]).to.equal(patterns[0]);
+		});
+
+		it('patterns array mutations does not affect the instance', () => {
+			const patterns = [/{{([^{}]*)}}/g];
+			const phrase = paraphrase(...patterns);
+			patterns.pop();
+			expect(phrase('{{ key }}', {key: 'value'})).equal('value');
+			expect(patterns).to.have.lengthOf(0);
+			expect(phrase.patterns).to.have.lengthOf(1);
+		});
 	});
 
 	describe('works with spread arguments', () => {
