@@ -1,6 +1,6 @@
 {
 	"name": "pgae",
-	"version": "0.0.1-alpha.1",
+	"version": "0.0.1-alpha.2",
 	"description": "Make one page",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -17,11 +17,11 @@
 		"await-reduce": "^1.2.1",
 		"babel-core": "^6.26.3",
 		"babel-plugin-syntax-async-functions": "^6.13.0",
+		"babel-preset-minify": "^0.5.0",
 		"index-require": "^0.1.0",
 		"marked": "^0.5.1",
 		"node-sass": "^4.9.3",
-		"paraphrase": "^1.3.1",
-		"uglify-js": "^3.4.9",
+		"paraphrase": "^1.4.0",
 		"uglifycss": "0.0.29"
 	}
 }
