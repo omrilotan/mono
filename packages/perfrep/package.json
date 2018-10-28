@@ -1,0 +1,27 @@
+{
+	"name": "perfrep",
+	"version": "0.1.0",
+	"description": "Host Performance Report in Percent",
+	"keywords": [
+		"cpu",
+		"heap",
+		"mem",
+		"memory",
+		"performance",
+		"report",
+		"monitoring",
+		"usage",
+		"stats"
+	],
+	"author": "omrilotan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omrilotan/mono.git"
+	},
+	"homepage": "https://omrilotan.com/mono/perfrep/",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd ../../; npm t perfrep; cd -"
+	}
+}
