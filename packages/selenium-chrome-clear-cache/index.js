@@ -36,6 +36,24 @@ const BUTTON = '* /deep/ #clearBrowsingDataConfirm';
 const find = selector => document.querySelector(selector);
 
 /**
+ * Click an element
+ * @param  {string} selector
+ * no return value
+ */
+function click(selector) {
+	document.querySelector(selector).click();
+}
+
+/**
+ * Toggle a shadow checkbox
+ * @param  {string} selector
+ * no return value
+ */
+function toggleCheckbox(selector) {
+	document.querySelector(selector).querySelector('* /deep/ [id="checkbox"]').click();
+}
+
+/**
  * Clear the cache of a chrome browser
  * @param  {Object} options.webdriver Selenium web driver API
  * @param  {Driver} options.driver    Selenium Driver instance
@@ -69,13 +87,17 @@ module.exports = async function clearCache({webdriver, driver}, {cookies = false
 			[cache, CACHE],
 			[history, HISTORY],
 		].map(
-			async ([option, query]) => option || await driver.findElement(By.js(find, query)).click()
+			async ([option, query]) => option || driver.executeScript(
+				toggleCheckbox,
+				query
+			)
 		)
 	);
 
-	await driver.findElement(
-		By.js(find, BUTTON)
-	).click();
+	driver.executeScript(
+		click,
+		BUTTON
+	);
 
 	await driver.sleep(400);
 };
