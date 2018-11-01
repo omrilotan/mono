@@ -1,5 +1,5 @@
 {
-	"name": "@(._.)/assign",
+	"name": "@recursive/assign",
 	"version": "1.1.2",
 	"description": "Object deep assign",
 	"author": "omrilotan",

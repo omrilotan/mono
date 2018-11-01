@@ -1,6 +1,6 @@
 const {resolve} = require('path');
 const {readFileSync} = require('fs');
-const assign = require('@(._.)/assign');
+const assign = require('@recursive/assign');
 
 const {
 	red,
