@@ -13,5 +13,5 @@ Environments which exclude node_modules from the transpiling pipeline should inc
 
 Also available for explicit import:
 ```js
-const assign = require('assign/bundle');
+const assign = require('@(._.)assign/bundle');
 ```
