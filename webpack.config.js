@@ -15,9 +15,8 @@ module.exports = {
 				test: /\.m?js$/,
 				loader: 'babel-loader',
 				include: __dirname,
-				options: {
-					cacheDirectory: true,
-				},
+				sideEffects: false,
+				options: require('./.babelrc.js'),
 			},
 		],
 	},

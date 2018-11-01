@@ -39,8 +39,8 @@ const results = await reduce(
 )
 ```
 
-## Bundled version
-Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes a bundled ES5 commonjs module.
+## Transpiled version
+Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
 
 Also available for explicit import:
 ```js

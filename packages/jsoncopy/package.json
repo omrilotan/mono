@@ -10,7 +10,9 @@
 	},
 	"homepage": "https://omrilotan.com/mono/jsoncopy/",
 	"main": "index.js",
+	"browser": "dist/index.js",
 	"scripts": {
+		"dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
 		"test": "cd ../../; npm t jsoncopy; cd -"
 	}
 }
