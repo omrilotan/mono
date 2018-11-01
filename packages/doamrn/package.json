@@ -1,6 +1,6 @@
 {
 	"name": "doamrn",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Retrieve a random item from the arguments",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -12,7 +12,7 @@
 	"main": "index.js",
 	"browser": "dist/index.js",
 	"scripts": {
-		"dist": "mkdir -p dist; babel index.js --out-file dist/index.js",
+		"dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
 		"test": "cd ../../; npm t doamrn; cd -"
 	}
 }

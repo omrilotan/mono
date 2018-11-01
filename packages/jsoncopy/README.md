@@ -12,3 +12,11 @@ obj.top.nested.value = 2;
 orig.top.nested.value // 2
 copy.top.nested.value // 1
 ```
+
+## Transpiled version
+Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
+
+Also available for explicit import:
+```js
+const jsoncopy = require('jsoncopy/dist');
+```
