@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`@recursive/assign`** | [Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@(._.)/assign)
+| **`@recursive/assign`** | [Object deep assign](./packages/assign#readme) | [![](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [Get some git info](./packages/async-git#readme) | [![](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
