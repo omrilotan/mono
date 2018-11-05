@@ -101,6 +101,16 @@ jobs:
       - run:
           name: Push to gh-pages
           command: curl ci-cd.net/v1/gh/pages | bash -s docs/.
+  omrilotan:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Trigger build for omrilotan.com
+          command: |
+            curl -u $CIRCLECI_API_TOKEN: \
+                 -d build_parameters[CIRCLE_JOB]=build \
+                 https://circleci.com/api/v1.1/project/github/omrilotan/omrilotan.github.io/tree/build
 
 workflows:
   version: 2
@@ -129,6 +139,14 @@ workflows:
             - lint
             - dist
       - docs:
+          context: globalenv
+          requires:
+            - publish
+          filters:
+            branches:
+              only:
+                - master
+      - omrilotan:
           context: globalenv
           requires:
             - publish
