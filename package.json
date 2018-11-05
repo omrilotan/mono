@@ -13,7 +13,7 @@
     "node": ">=10.2"
   },
   "scripts": {
-    "clean": "./scripts/foreach.sh \"rm -rf dist\"",
+    "clean": "./scripts/foreach.js \"rm -rf dist\"",
     "postinstall": "./scripts/foreach.sh \"npm i\"",
     "test": "./scripts/test.sh",
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
@@ -21,7 +21,7 @@
     "webpack": "webpack --config webpack.config.js",
     "babel": "./scripts/foreach.sh \"npm run dist\"",
     "postdist": "npx mocha dists/test.js",
-    "publish-packages": "./scripts/foreach.sh \"npx published\"",
+    "publish-packages": "./scripts/foreach.js \"npx published\"",
     "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",
     "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
