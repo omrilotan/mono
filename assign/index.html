@@ -16,6 +16,9 @@
 
 assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}
 </code></pre>
+<p>Merges arrays as well</p>
+<pre><code class="lang-js">assign({list: [1, 2]}, {list: [3, 4]}); // {list: [1, 2, 3, 4]}
+</code></pre>
 <h2 id="transpiled-version">Transpiled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
 <p>Also available for explicit import:</p>
