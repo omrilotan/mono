@@ -30,6 +30,7 @@ describe('execute', async () => {
 		}
 
 		expect(err.exitCode).to.equal(125);
+		expect(err.code).to.equal(125);
 		expect(err.message).to.contain('message content');
 		assert(threw, 'Should have thrown an error');
 	});

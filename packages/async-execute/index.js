@@ -12,6 +12,7 @@ module.exports = script => new Promise(
 			(error, stdout = '') => {
 				if (error) {
 					error.exitCode = child.exitCode;
+					error.code = child.exitCode;
 					reject(error);
 					return;
 				}

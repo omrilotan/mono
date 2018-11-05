@@ -1,7 +1,18 @@
 {
 	"name": "async-execute",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Executes script in a child process",
+	"keywords": [
+		"async",
+		"execute",
+		"exec",
+		"child_process",
+		"shell",
+		"promise",
+		"spawn",
+		"command",
+		"cmd"
+	],
 	"author": "omrilotan",
 	"license": "MIT",
 	"repository": {

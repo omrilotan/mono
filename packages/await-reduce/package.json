@@ -1,7 +1,16 @@
 {
 	"name": "await-reduce",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "Resolve and reduce an array of promises",
+	"keywords": [
+		"reduce",
+		"async",
+		"await",
+		"promise",
+		"iterable",
+		"iterator",
+		"accumulate"
+	],
 	"author": "omrilotan",
 	"license": "MIT",
 	"repository": {
