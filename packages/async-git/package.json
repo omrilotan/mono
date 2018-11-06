@@ -29,6 +29,6 @@
 		"test": "cd ../../; npm t async-git; cd -"
 	},
 	"dependencies": {
-		"async-execute": "^1.0.0"
+		"async-execute": "^1.0.1"
 	}
 }

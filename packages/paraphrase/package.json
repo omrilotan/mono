@@ -1,6 +1,6 @@
 {
 	"name": "paraphrase",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"description": "Create flavoured string phraser",
 	"keywords": [
 		"string",
@@ -23,6 +23,6 @@
 		"test": "cd ../../; npm t paraphrase; cd -"
 	},
 	"dependencies": {
-		"notate": "^1.0.1"
+		"notate": "^1.1.2"
 	}
 }

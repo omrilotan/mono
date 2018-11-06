@@ -14,6 +14,6 @@
 		"test": "cd ../../; npm t bench-press; cd -"
 	},
 	"dependencies": {
-		"paraphrase": "^1.2.1"
+		"paraphrase": "^1.4.2"
 	}
 }
