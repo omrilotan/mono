@@ -10,23 +10,20 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="upgradable-">Upgradable <a href="https://www.npmjs.com/package/upgradable"><img src="https://img.shields.io/npm/v/upgradable.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/upgradable"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+		<h1 id="upgradable-">Upgradable <a href="https://www.npmjs.com/package/upgradable"><img src="https://img.shields.io/npm/v/upgradable.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/upgradable"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <p>&quot;Upgradable&quot; runs in a background child process and checks for updates in your CLI package.
 If there&#39;s a new version available - at end of interaction, when user sends interrupt signal (ctrl+c), it will prompt your users to upgrade your node CLI tool.</p>
 <p>Use</p>
-<pre><code class="lang-js">const upgradable = require(&#39;upgradable&#39;);
+<pre><code class="language-js">const upgradable = require(&#39;upgradable&#39;);
 const { name, version } = require(&#39;./package.json&#39;);
 
-upgradable({name, version});
-</code></pre>
+upgradable({name, version});</code></pre>
 <p>Shorthand</p>
-<pre><code class="lang-js">require(&#39;upgradable&#39;)(require(&#39;./package.json&#39;));
-</code></pre>
+<pre><code class="language-js">require(&#39;upgradable&#39;)(require(&#39;./package.json&#39;));</code></pre>
 <p><img src="https://user-images.githubusercontent.com/516342/36352483-6a5c780a-14c2-11e8-974d-9eebb0083e59.png" alt="image"></p>
 <h3 id="options">options</h3>
 <h4 id="message-optional-"><code>message</code> (Optional)</h4>
-<pre><code class="lang-js">upgradable({name, version, message: &#39;This is my own inspirational message&#39;});
-</code></pre>
-<p><img width="386" alt="image" src="https://user-images.githubusercontent.com/516342/36252458-59387a00-124d-11e8-86f5-31d6eaf94f3d.png"></p>
+<pre><code class="language-js">upgradable({name, version, message: &#39;This is my own inspirational message&#39;});</code></pre>
+<img width="386" alt="image" src="https://user-images.githubusercontent.com/516342/36252458-59387a00-124d-11e8-86f5-31d6eaf94f3d.png">
 	</body>
 </html>

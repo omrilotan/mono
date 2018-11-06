@@ -10,20 +10,19 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="bench-press-">bench-press <a href="https://www.npmjs.com/package/bench-press"><img src="https://img.shields.io/npm/v/bench-press.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/bench-press"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+		<h1 id="bench-press-">bench-press <a href="https://www.npmjs.com/package/bench-press"><img src="https://img.shields.io/npm/v/bench-press.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/bench-press"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <p>Benchmark operations</p>
 <h2 id="use">Use</h2>
-<pre><code class="lang-js">import benchpress from &#39;bench-press&#39;;
+<pre><code class="language-js">import benchpress from &#39;bench-press&#39;;
 
 console.log(
     benchpress(() =&gt; myFunction())
 );
 
-// Running 1000 times took 54ms
-</code></pre>
+// Running 1000 times took 54ms</code></pre>
 <h2 id="options">Options</h2>
 <h3 id="message">Message</h3>
-<pre><code class="lang-js">console.log(
+<pre><code class="language-js">console.log(
     benchpress(
         () =&gt; myFunction(),
         {
@@ -32,10 +31,9 @@ console.log(
     )
 );
 
-// myFunction ✖ 1000 = 54
-</code></pre>
+// myFunction ✖ 1000 = 54</code></pre>
 <h3 id="iterations">Iterations</h3>
-<pre><code class="lang-js">console.log(
+<pre><code class="language-js">console.log(
     benchpress(
         () =&gt; myFunction(),
         {
@@ -44,7 +42,6 @@ console.log(
     )
 );
 
-// Running 100000 times took 54ms
-</code></pre>
+// Running 100000 times took 54ms</code></pre>
 	</body>
 </html>

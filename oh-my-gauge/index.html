@@ -10,17 +10,16 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="oh-my-gauge-">Oh My Gauge! <a href="https://www.npmjs.com/package/oh-my-gauge"><img src="https://img.shields.io/npm/v/oh-my-gauge.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/oh-my-gauge"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+		<h1 id="oh-my-gauge-">Oh My Gauge! <a href="https://www.npmjs.com/package/oh-my-gauge"><img src="https://img.shields.io/npm/v/oh-my-gauge.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/oh-my-gauge"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <p>time Javascript operations</p>
-<pre><code class="lang-js">const { Gauge, Benchmark } = require(&#39;oh-my-gauge&#39;);
-</code></pre>
+<pre><code class="language-js">const { Gauge, Benchmark } = require(&#39;oh-my-gauge&#39;);</code></pre>
 <h2 id="gauge">Gauge</h2>
 <ol>
 <li>Create a gauge instance with the results reporting function.</li>
 <li>Wrap a function with the gauge. It will return a function that measures the operation, reports it, and returns the given functions&#39; return value.</li>
 </ol>
 <p>A gauge takes in a function</p>
-<pre><code class="lang-js">const Gauge = require(&#39;oh-my-gauge&#39;).Gauge;
+<pre><code class="language-js">const Gauge = require(&#39;oh-my-gauge&#39;).Gauge;
 const gauge = new Gauge((res, name) =&gt; console.log(`${name} took ${res}ms`));
 //                        ^     ^        ^
 //               Milliseconds String  report-method
@@ -32,11 +31,10 @@ const myObj = {
     }
 };
 
-myObj.sayName = gauge(myObj.sayName, &#39;sayName method&#39;);
-</code></pre>
+myObj.sayName = gauge(myObj.sayName, &#39;sayName method&#39;);</code></pre>
 <h2 id="benchmark">Benchmark</h2>
 <p>Benchmark compares between multiple operations. It also scrambles the order so running it multiple times can yield more reliable results.</p>
-<pre><code class="lang-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;);
+<pre><code class="language-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;);
 
 const benchmark = new Benchmark(); // console.log with default format
 -- OR --
@@ -58,10 +56,9 @@ things.set(() =&gt; {/* Do thing one   */}, &#39;Thing 1 description&#39;);
 things.set(() =&gt; {/* Do thing two   */}, &#39;Thing 2 description&#39;);
 things.set(() =&gt; {/* Do thing three */}, &#39;Thing 3 description&#39;);
 
-benchmark(1e5, ...things);
-</code></pre>
+benchmark(1e5, ...things);</code></pre>
 <h3 id="this-is-a-classic-optimisation-example">This is a classic optimisation example</h3>
-<pre><code class="lang-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;)
+<pre><code class="language-js">const { Benchmark } = require(&#39;oh-my-gauge&#39;)
 
 const benchmark = new Benchmark()
 
@@ -83,19 +80,16 @@ const option2 = () =&gt; (numbers(100, 1))
 tests.set(option2, &#39;Option 2: A one loop reducer&#39;)
 
 
-benchmark(1e5, ...tests)
-</code></pre>
+benchmark(1e5, ...tests)</code></pre>
 <table>
 <thead>
 <tr>
 <th>output</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>Option 1: A neat one liner took 1084ms</code><br><code>Option 2: A one loop reducer took 553ms</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 	</body>
 </html>

@@ -10,11 +10,10 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="markt-">markt <a href="https://www.npmjs.com/package/markt"><img src="https://img.shields.io/npm/v/markt.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/markt"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a></h1>
+		<h1 id="markt-">markt <a href="https://www.npmjs.com/package/markt"><img src="https://img.shields.io/npm/v/markt.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/markt"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <p>Generate pages from markdown</p>
 <h2 id="ci-cd-use">CI-CD use</h2>
-<pre><code class="lang-sh">npx markt --source README.md --destination ./docs/index.html --template ./scripts/docs.template.html
-</code></pre>
+<pre><code class="language-sh">npx markt --source README.md --destination ./docs/index.html --template ./scripts/docs.template.html</code></pre>
 <h4 id="arguments">arguments</h4>
 <table>
 <thead>
@@ -24,8 +23,7 @@
 <th>Default</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>source</td>
 <td>Markdown to be converted to HTML and replaced by {{ content }}</td>
 <td><code>./README.md</code></td>
@@ -43,13 +41,13 @@
 <tr>
 <td>Anything</td>
 <td>Any additional options will be a replacement †</td>
+<td></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>† Additional options exaple
 For example, <code>--title My\ awesome\ package</code> will replace <code>{{ title }}</code> from a given template with <code>My awesome package</code></p>
 <h2 id="example-template-optional-">Example Template (optional)</h2>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -61,7 +59,6 @@ For example, <code>--title My\ awesome\ package</code> will replace <code>{{ tit
     &lt;body&gt;
         {{ content }}
     &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
 	</body>
 </html>

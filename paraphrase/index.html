@@ -10,64 +10,52 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="paraphrase-">paraphrase <a href="https://www.npmjs.com/package/paraphrase"><img src="https://img.shields.io/npm/v/paraphrase.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/paraphrase"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&amp;style=social" alt=""></a> <a href="https://runkit.com/omrilotan/paraphrase"><img src="https://badge.runkitcdn.com/paraphrase.svg" alt=""></a></h1>
+		<h1 id="paraphrase-">paraphrase <a href="https://www.npmjs.com/package/paraphrase"><img src="https://img.shields.io/npm/v/paraphrase.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/paraphrase"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a> <a href="https://runkit.com/omrilotan/paraphrase"><img src="https://badge.runkitcdn.com/paraphrase.svg" alt=""></a></h1>
 <h2 id="string-template-interpolation">String template interpolation</h2>
-<pre><code class="lang-js">npm i -S paraphrase
-</code></pre>
+<pre><code class="language-js">npm i -S paraphrase</code></pre>
 <p>Creates new paraphrase method instance</p>
-<pre><code class="lang-js">const paraphrase = require(&#39;paraphrase&#39;);
+<pre><code class="language-js">const paraphrase = require(&#39;paraphrase&#39;);
 const phrase = paraphrase(/\${([^{}]*)}/gm); // Create a new phrase function using a RegExp match
 
-phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <p>Acceptable replacements (values) are strings and numbers</p>
 <h2 id="examples">Examples</h2>
 <h3 id="objects">Objects</h3>
-<pre><code class="lang-js">phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+<pre><code class="language-js">phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h3 id="objects-with-dot-notation">Objects with dot notation</h3>
-<pre><code class="lang-js">const user = {
+<pre><code class="language-js">const user = {
     name: {first: &#39;Martin&#39;, last: &#39;Prince&#39;}
 };
-phrase(&#39;Hello, ${name.first} ${name.last}&#39;, user); // Hello, Martin Prince
-</code></pre>
+phrase(&#39;Hello, ${name.first} ${name.last}&#39;, user); // Hello, Martin Prince</code></pre>
 <h3 id="arrays">Arrays</h3>
-<pre><code class="lang-js">phrase(&#39;Hello, ${0} ${1}&#39;, [&#39;Martin&#39;, &#39;Prince&#39;]); // Hello, Martin Prince
-</code></pre>
+<pre><code class="language-js">phrase(&#39;Hello, ${0} ${1}&#39;, [&#39;Martin&#39;, &#39;Prince&#39;]); // Hello, Martin Prince</code></pre>
 <h3 id="spread-arguments">Spread arguments</h3>
-<pre><code class="lang-js">phrase(&#39;Hello, ${0} ${1}&#39;, &#39;Martin&#39;, &#39;Prince&#39;); // Hello, Martin Prince
-</code></pre>
+<pre><code class="language-js">phrase(&#39;Hello, ${0} ${1}&#39;, &#39;Martin&#39;, &#39;Prince&#39;); // Hello, Martin Prince</code></pre>
 <h2 id="premade">Premade</h2>
 <h3 id="dollar-">dollar <code>${...}</code></h3>
-<pre><code class="lang-js">const phrase = require(&#39;paraphrase/dollar&#39;);
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/dollar&#39;);
 
-phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h3 id="double-">double <code>{{...}}</code></h3>
-<pre><code class="lang-js">const phrase = require(&#39;paraphrase/double&#39;);
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/double&#39;);
 
-phrase(&#39;Hello, {{name}}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+phrase(&#39;Hello, {{name}}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h3 id="percent-i18n-style-">percent <code>%{...}</code> (i18n style)</h3>
-<pre><code class="lang-js">const phrase = require(&#39;paraphrase/percent&#39;);
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/percent&#39;);
 
-phrase(&#39;Hello, %{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+phrase(&#39;Hello, %{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h3 id="hash-ruby-style-">hash <code>#{...}</code> (ruby style)</h3>
-<pre><code class="lang-js">const phrase = require(&#39;paraphrase/hash&#39;);
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/hash&#39;);
 
-phrase(&#39;Hello, #{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin
-</code></pre>
+phrase(&#39;Hello, #{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h2 id="patterns">patterns</h2>
 <p>A paraphrase instance exposes access to it&#39;s patterns array</p>
-<pre><code class="lang-js">const phrase = require(&#39;paraphrase/hash&#39;);
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/hash&#39;);
 
-phrase.patterns // [ /#{([^{}]*)}/gm ]
-</code></pre>
+phrase.patterns // [ /#{([^{}]*)}/gm ]</code></pre>
 <h2 id="bundled-version">Bundled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes a bundled ES5 commonjs module.</p>
 <p>Also available for explicit import:</p>
-<pre><code class="lang-js">const paraphrase = require(&#39;paraphrase/dist&#39;);
-</code></pre>
+<pre><code class="language-js">const paraphrase = require(&#39;paraphrase/dist&#39;);</code></pre>
 	</body>
 </html>
