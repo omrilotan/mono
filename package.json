@@ -19,7 +19,7 @@
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
     "dist": "./packages/run-all-the-things/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
-    "babel": "./scripts/foreach.sh \"npm run dist\"",
+    "babel": "./scripts/foreach.sh '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",
     "postdist": "npx mocha dists/test.js",
     "publish-packages": "./scripts/foreach.js \"npx published\"",
     "predoc": "./scripts/doc.sh",
