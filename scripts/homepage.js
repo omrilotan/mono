@@ -8,6 +8,8 @@ const {
 	writeFile,
 } = require('fs').promises;
 const phrase = require('../packages/paraphrase/double');
+const git = require('../packages/async-git');
+const dateformat = require('dateformat');
 
 (async () => {
 	const [rows, links] = [[], []];
@@ -51,6 +53,7 @@ const phrase = require('../packages/paraphrase/double');
 	const head = links.join('\n');
 
 	const template = (await readFile('src/homepage.html')).toString();
+	const changed = `${await git.author}: "<b>${await git.message}</b>" <small>on ${dateformat(await git.date, 'dddd, mmmm dS, yyyy')}</small>`;
 
 	const output = phrase(template, {
 		head,
@@ -58,6 +61,7 @@ const phrase = require('../packages/paraphrase/double');
 		user,
 		content,
 		description,
+		changed,
 	});
 
 	await writeFile('docs/index.html', output);
