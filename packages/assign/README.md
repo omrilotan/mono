@@ -8,6 +8,11 @@ const assign = require('@recursive/assign');
 assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}
 ```
 
+I will merge:
+ - ✔ objects
+ - ✔ arrays
+ - ✔ functions
+
 ## Transpiled version
 Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
 
