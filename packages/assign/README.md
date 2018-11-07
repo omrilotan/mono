@@ -24,6 +24,15 @@ assign(
 // {array: [1, 2, 3, 4]}
 ```
 
+Array of assignable members
+```js
+assign(
+    [{firstName: 'Omri'}, {firstName: 'Tom'}],
+    [{lastName: 'Lotan'}, {lastName: 'Ben Amitai'}]
+)
+// [{firstName: 'Omri', lastName: 'Lotan'}, {firstName: 'Tom', lastName: 'Ben Amitai'}]
+```
+
 Set
 ```js
 assign(
@@ -36,11 +45,12 @@ assign(
 Map
 ```js
 assign(
-	{map: new Map([[1, 2], [3,4]])}
-	{map: new Map([[1, 3],[4,5]])}
+	{map: new Map([[1, 2], [3, 4]])}
+	{map: new Map([[1, 3], [4, 5]])}
 );
-// {map: [[1,3],[3,4],[4,5]]}
+// {map: [[1, 3], [3, 4], [4, 5]]}
 ```
+
 
 ## Transpiled version
 Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
