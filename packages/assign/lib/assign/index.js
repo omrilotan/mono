@@ -1,4 +1,6 @@
 const assignArray = require('../assignArray');
+const assignSet = require('../assignSet');
+const assignMap = require('../assignMap');
 const assignKeys = require('../assignKeys');
 const assignSymbols = require('../assignSymbols');
 
@@ -12,6 +14,15 @@ const assignSymbols = require('../assignSymbols');
 module.exports = function assign(target, source) {
 	if (Array.isArray(target) && Array.isArray(source)) {
 		assignArray(target, source);
+		return target;
+	}
+	if (target instanceof Set && source instanceof Set) {
+		assignSet(target, source);
+		return target;
+	}
+
+	if (target instanceof Map && source instanceof Map) {
+		assignMap(target, source);
 		return target;
 	}
 
