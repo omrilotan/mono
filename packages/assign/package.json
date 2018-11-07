@@ -1,7 +1,7 @@
 {
 	"name": "@recursive/assign",
-	"version": "1.1.3",
-	"description": "Object deep assign",
+	"version": "1.2.0",
+	"description": "Recursive assign for objects, arrays and more",
 	"keywords": [
 		"deep",
 		"merge",
@@ -13,6 +13,8 @@
 		"object",
 		"array",
 		"function",
+		"set",
+		"map",
 		"properties",
 		"property",
 		"props",

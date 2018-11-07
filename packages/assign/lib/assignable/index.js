@@ -1,5 +1,4 @@
 const OBJECT_TYPES = ['object', 'function'];
-const NULL_VALUES = [undefined, null];
 
 /**
  * Checks this object is an assignable object
@@ -7,4 +6,4 @@ const NULL_VALUES = [undefined, null];
  * @param  {Object} target
  * @return {Boolean} is this object "assignable"
  */
-module.exports = target => OBJECT_TYPES.includes(typeof target) && !NULL_VALUES.includes(target);
+module.exports = target => OBJECT_TYPES.includes(typeof target) && target !== null;
