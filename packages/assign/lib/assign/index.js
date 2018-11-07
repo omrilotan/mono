@@ -3,6 +3,7 @@ const assignSet = require('../assignSet');
 const assignMap = require('../assignMap');
 const assignKeys = require('../assignKeys');
 const assignSymbols = require('../assignSymbols');
+const { isSet, isMap } = require('../typeMatchers');
 
 /**
  * Delegate to assign keys and symbols
@@ -16,12 +17,12 @@ module.exports = function assign(target, source) {
 		assignArray(target, source);
 		return target;
 	}
-	if (target instanceof Set && source instanceof Set) {
+	if (isSet(target) && isSet(source)) {
 		assignSet(target, source);
 		return target;
 	}
 
-	if (target instanceof Map && source instanceof Map) {
+	if (isMap(target) && isMap(source)) {
 		assignMap(target, source);
 		return target;
 	}

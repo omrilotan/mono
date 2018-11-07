@@ -5,4 +5,8 @@
  * @param {Set} source	The set from which to assign respective values
  * no return value
  */
-module.exports = (target, source) => source.forEach(item => target.add(item));
+module.exports = (target, source) => {
+	source.forEach(item => {
+		target.add(item)
+	});
+}
