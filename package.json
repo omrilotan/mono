@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "./scripts/foreach.js \"rm -rf dist\"",
-    "postinstall": "./scripts/foreach.sh \"npm i\"",
+    "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
     "dist": "./packages/run-all-the-things/index.js webpack babel",
@@ -45,6 +45,7 @@
     "dateformat": "^3.0.3",
     "dont-look-up": "^1.0.0",
     "eslint": "^5.8.0",
+    "find": "^0.2.9",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.18.0",
     "node-sass": "^4.10.0",

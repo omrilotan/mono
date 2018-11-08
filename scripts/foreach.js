@@ -16,10 +16,10 @@ const [command] = argv;
 (async() => {
 	const packages = await readdir('packages');
 
-	console.log(`Executing on ${packages.length} packages`);
+	console.log(`Executing on ${packages.length} packages:`);
 
-	console.log(...(
-		await Promise.all(
+	console.log(
+		(await Promise.all(
 			packages
 				.filter(item =>
 					!item.startsWith('.')
@@ -34,6 +34,6 @@ const [command] = argv;
 						].join(' ')
 					)
 				)
-		)
-	));
+		)).join('\n')
+	);
 })();
