@@ -61,6 +61,13 @@ const phrase = require('paraphrase/double');
 phrase('Hello, {{name}}', {name: 'Martin'}); // Hello, Martin
 ```
 
+### single `{...}`
+```js
+const phrase = require('paraphrase/single');
+
+phrase('Hello, {name}', {name: 'Martin'}); // Hello, Martin
+```
+
 ### percent `%{...}` (i18n style)
 ```js
 const phrase = require('paraphrase/percent');

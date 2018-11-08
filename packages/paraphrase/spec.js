@@ -97,6 +97,7 @@ describe('paraphrase', () => {
 		Object.entries({
 			'dollar': 'Hello, ${name}',
 			'double': 'Hello, {{name}}',
+			'single': 'Hello, {name}',
 			'percent': 'Hello, %{name}',
 			'hash': 'Hello, #{name}',
 		}).forEach(([key, value]) => {
