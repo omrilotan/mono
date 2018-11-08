@@ -111,6 +111,22 @@ jobs:
             curl -u $CIRCLECI_API_TOKEN: \
                  -d build_parameters[CIRCLE_JOB]=build \
                  https://circleci.com/api/v1.1/project/github/omrilotan/omrilotan.github.io/tree/build
+  autoupdate:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Update all dependencies
+          command: npm update && npm run autoupdate
+      - run:
+          name: Stop if nothing has changed
+          command: git diff --exit-code && circleci step halt
+      - run:
+          name: Create a new branch
+          command: git checkout -b maintenance/$CIRCLE_BUILD_NUM
+      - run:
+          name: Open pull request
+          command: curl ci-cd.net/v1/gh/add-pr | bash -s $GIT_AUTH_TOKEN "⬆ Dependencies updates"
 
 workflows:
   version: 2
@@ -154,6 +170,17 @@ workflows:
             branches:
               only:
                 - master
+  scheduled:
+    triggers:
+      - schedule:
+          cron: "0 12 * * 2"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - autoupdate:
+          context: globalenv
 
 experimental:
   notify:

@@ -26,7 +26,8 @@
     "doc": "node ./scripts/homepage.js",
     "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
     "readme": "node ./scripts/readme.js",
-    "update": "./scripts/foreach.sh '../../node_modules/.bin/npm-check -u'"
+    "update": "./scripts/foreach.sh '../../node_modules/.bin/npm-check -u'",
+    "autoupdate": "./scripts/foreach.sh 'npm update'"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
