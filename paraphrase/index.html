@@ -40,6 +40,10 @@ phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</co
 <pre><code class="language-js">const phrase = require(&#39;paraphrase/double&#39;);
 
 phrase(&#39;Hello, {{name}}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
+<h3 id="single-">single <code>{...}</code></h3>
+<pre><code class="language-js">const phrase = require(&#39;paraphrase/single&#39;);
+
+phrase(&#39;Hello, {name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <h3 id="percent-i18n-style-">percent <code>%{...}</code> (i18n style)</h3>
 <pre><code class="language-js">const phrase = require(&#39;paraphrase/percent&#39;);
 
