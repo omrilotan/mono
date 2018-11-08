@@ -1,3 +1,5 @@
+const { isSet, isMap } = require('../typeMatchers');
+
 /**
  * Create a shallow clone of a given Object or Array
  * @private
@@ -7,9 +9,9 @@
 module.exports = function clone(instance) {
 	if (Array.isArray(instance)) {
 		return instance.slice(0);
-	} else if (instance instanceof Set) {
+	} else if (isSet(instance)) {
 		return new Set(instance);
-	} else if (instance instanceof Map) {
+	} else if (isMap(instance)) {
 		return new Map(instance);
 	}
 
