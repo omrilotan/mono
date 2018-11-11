@@ -38,4 +38,23 @@ describe('markt', async () => {
 		expect(res).to.not.include('{{content}}');
 		expect(res).to.not.include('{{title}}');
 	});
+
+	it('uses preset templates', async () => {
+		const res = await markt('*Hello*', {
+			preset: 'plain',
+			title: 'Hi',
+		});
+
+		expect(res).to.include('<!DOCTYPE html>');
+		expect(res).to.include('<title>Hi</title>');
+	});
+
+	it('falls back to default template when preset is not found', async () => {
+		const test = async () => await markt('*Hello*', {
+			preset: 'other',
+			title: 'Hi',
+		});
+
+		return expect(test()).to.be.rejected;
+	});
 });

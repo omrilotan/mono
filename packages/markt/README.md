@@ -8,6 +8,11 @@ Generate pages from markdown
 npx markt --source README.md --destination ./docs/index.html --template ./scripts/docs.template.html
 ```
 
+Turn the readme to a webpage
+```sh
+npx markt --preset plain --destination ./gh-pages/index.html
+```
+
 #### arguments
 
 | Name | Role | Default
@@ -15,7 +20,11 @@ npx markt --source README.md --destination ./docs/index.html --template ./script
 | source | Markdown to be converted to HTML and replaced by {{ content }} | `./README.md`
 | destination | Destination file | `./index.html`
 | Template | File | `{{content}}`
-| Anything | Any additional options will be a replacement †
+| preset | Choose from an available preset template ☝︎
+| Anything else | Any additional options will be a replacement †
+
+☝︎ Available preset templates
+- plain: Just a clean looking webpage
 
 † Additional options exaple
 For example, `--title My\ awesome\ package` will replace `{{ title }}` from a given template with `My awesome package`

@@ -1,12 +1,17 @@
 const {promisify} = require('util');
+const read = promisify(require('fs').readFile);
+const {resolve} = require('path');
 const marked = promisify(require('marked'));
 const phrase = require('paraphrase/double');
+const DEFAULT_TEMPLATE = '{{content}}';
 
 /**
  * [description]
  * @param	{String} content Markdown content
- * @param	{String} [args.template]
- * @param	{String} [args[name]] To be replaced in the template
+ * @param	{String} [options[name]] To be replaced in the template
+ * @param	{String} [options.template]
+ * @param	{String} [options.content]
+ * @param	{String} [options.preset]
  * @return {String}
  *
  * @example
@@ -17,14 +22,44 @@ const phrase = require('paraphrase/double');
  *
  * // <body><h1>This is a title</h1><code>this is code</code><footer>This is the signature or something</footer></body>
  */
-module.exports = async function(content, args = {}) {
-	if (typeof args === 'string') {
-		args = {template: args};
+module.exports = async function(content, options = {}) {
+	if (typeof options === 'string') {
+		options = {template: options};
 	}
 
-	const { template = '{{content}}' } = args;
+	const template = await getTemplate(options);
 
-	args.content = (await marked(content, {})).trim();
+	options.content = (await marked(content, {})).trim();
 
-	return phrase(template, args);
+	return phrase(template, options);
+}
+
+/**
+ * Get a template string (work through the hierarchy)
+ * @param  {String} [options.template] Template string
+ * @param  {String} [options.preset]   File name
+ * @return {String}
+ */
+async function getTemplate({template, preset}) {
+	if (typeof template === 'string') {
+		return template;
+	}
+
+	if (typeof preset === 'string') {
+		try {
+			return (
+				await read(
+					resolve(
+						__dirname,
+						'templates',
+						[preset.toLowerCase(), 'html'].join('.'),
+					)
+				)
+			).toString();
+		} catch (error) {
+			throw new Error(`Preset ${preset} not found`);
+		}
+	}
+
+	return DEFAULT_TEMPLATE;
 }
