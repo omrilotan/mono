@@ -14,6 +14,8 @@
 <p>Generate pages from markdown</p>
 <h2 id="ci-cd-use">CI-CD use</h2>
 <pre><code class="language-sh">npx markt --source README.md --destination ./docs/index.html --template ./scripts/docs.template.html</code></pre>
+<p>Turn the readme to a webpage</p>
+<pre><code class="language-sh">npx markt --preset plain --destination ./gh-pages/index.html</code></pre>
 <h4 id="arguments">arguments</h4>
 <table>
 <thead>
@@ -39,11 +41,20 @@
 <td><code>{{content}}</code></td>
 </tr>
 <tr>
-<td>Anything</td>
+<td>preset</td>
+<td>Choose from an available preset template ☝︎</td>
+<td></td>
+</tr>
+<tr>
+<td>Anything else</td>
 <td>Any additional options will be a replacement †</td>
 <td></td>
 </tr>
 </tbody></table>
+<p>☝︎ Available preset templates</p>
+<ul>
+<li>plain: Just a clean looking webpage</li>
+</ul>
 <p>† Additional options exaple
 For example, <code>--title My\ awesome\ package</code> will replace <code>{{ title }}</code> from a given template with <code>My awesome package</code></p>
 <h2 id="example-template-optional-">Example Template (optional)</h2>
