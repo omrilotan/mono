@@ -11,6 +11,7 @@ Mono repo holding multiple packages
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
+| **`create-git-alias`** | [CLI tool to apply some useful git aliases (interactive)](./packages/create-git-alias#readme) | [![](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`hypertonia`** | [A theme for Hyper.](./packages/hypertonia#readme) | [![](https://img.shields.io/npm/v/hypertonia.svg)](https://www.npmjs.com/package/hypertonia)
