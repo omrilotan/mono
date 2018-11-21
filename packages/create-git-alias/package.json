@@ -1,6 +1,6 @@
 {
 	"name": "create-git-alias",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "CLI tool to apply some useful git aliases (interactive)",
 	"keywords": [
 		"git",

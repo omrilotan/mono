@@ -18,11 +18,6 @@ module.exports = [
 		value: '!git config -l | grep alias | cut -c 7-',
 	},
 	{
-		key: 'open',
-		desc: 'open this repo in the browser',
-		value: '!f() { local repo_url=$(git config remote.origin.url); open ${repo_url%%.git}; }; f',
-	},
-	{
 		key: 'purge',
 		desc: 'remove local and remote branches (accepts many)',
 		value: '!f() { for var in "$@"; do git branch -D $var & git push origin :$var; done }; f',

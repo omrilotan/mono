@@ -39,7 +39,7 @@
 			}
 		},
 		{
-			"files": [ "scripts/**" ],
+			"files": [ "scripts/**", "**/bin/**" ],
 			"rules": {
 				"no-console": 0
 			}
