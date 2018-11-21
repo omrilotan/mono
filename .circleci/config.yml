@@ -101,6 +101,14 @@ jobs:
       - run:
           name: Push to gh-pages
           command: curl ci-cd.net/v1/gh/pages | bash -s docs/.
+      - run:
+          name: CloufFlare - Purge homepage
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CF_ZONE}/purge_cache" \
+             -H "X-Auth-Email: ${CF_EMAIL}" \
+             -H "X-Auth-Key: ${CF_API_KEY}" \
+             -H "Content-Type: application/json" \
+             --data '{"files":["https://omrilotan.com/mono/inde.html"]}'
   omrilotan:
     <<: *defaults
     steps:
