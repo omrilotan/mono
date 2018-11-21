@@ -2,8 +2,6 @@ const inquirer = require('inquirer');
 const execute = require('async-execute');
 require('colors');
 
-process.on('unhandledRejection', console.error);
-
 module.exports = async() => {
 	let aliases = require('./aliases');
 	const bulk = await execute('git config -l | grep alias | cut -c 7-');
@@ -30,9 +28,7 @@ module.exports = async() => {
 		.map(
 			({key, desc, value}) => {
 				if (existing[key]) {
-					key = `${key} [☠️ ]`;
-				} else {
-					desc = desc.bold;
+					desc = `[☠️ ] ${desc}`;
 				}
 
 				return {key, desc, value};
@@ -47,7 +43,7 @@ module.exports = async() => {
 				value: [key, value],
 				checked: false,
 			})
-	);
+		);
 
 	const answers = await inquirer
 		.prompt([

@@ -25,7 +25,7 @@ module.exports = [
 	{
 		key: 'purge',
 		desc: 'remove local and remote branches (accepts many)',
-		value: '!f() { for var in \"$@\"; do git branch -D $var & git push origin :$var; done }; f',
+		value: '!f() { for var in "$@"; do git branch -D $var & git push origin :$var; done }; f',
 	},
 	{
 		key: 'please',
@@ -45,7 +45,7 @@ module.exports = [
 	{
 		key: 'l',
 		desc: 'pretty log',
-		value: 'log --pretty=format:\"%C(yellow)%h %Cblue%>(12)%cr %Cgreen%<(20)%aN%Cred%d %Creset%s\" --graph',
+		value: 'log --pretty=format:"%C(yellow)%h %Cblue%>(12)%cr %Cgreen%<(20)%aN%Cred%d %Creset%s" --graph',
 	},
 	{
 		key: 'pruner',
@@ -55,7 +55,7 @@ module.exports = [
 	{
 		key: 'feature',
 		desc: 'Create a branch starting with today\'s date',
-		value: '!f() { git checkout -b $(date +%Y-%m-%d)-$(echo $@ | tr \" \" \"-\"); }; f'
+		value: '!f() { git checkout -b $(date +%Y-%m-%d)-$(echo $@ | tr " " "-"); }; f',
 	},
 	{
 		key: 'get',
@@ -65,17 +65,17 @@ module.exports = [
 	{
 		key: 'from',
 		desc: 'how many commit since <commit id>',
-		value: '!f() { git rev-list --count HEAD ^\"$@\"; }; f',
+		value: '!f() { git rev-list --count HEAD ^"$@"; }; f',
 	},
 	{
 		key: 'wip',
 		desc: 'a wip commit with a random commit message',
-		value: '!f() { git commit -m \"$(curl -s whatthecommit.com/index.txt)\"; }; f',
+		value: '!f() { git commit -m "$(curl -s whatthecommit.com/index.txt)"; }; f',
 	},
 	{
 		key: 'yolo',
 		desc: 'a commit with a random commit message from whatthecommit',
-		value: '!f() { git commit -m \"$(curl -s whatthecommit.com/index.txt)\"; }; f',
+		value: '!f() { git commit -m "$(curl -s whatthecommit.com/index.txt)"; }; f',
 	},
 	{
 		key: 'fix',
