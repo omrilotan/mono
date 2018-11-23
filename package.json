@@ -14,6 +14,7 @@
   },
   "scripts": {
     "clean": "./scripts/foreach.js \"rm -rf dist\"",
+    "new": "./scripts/new.js $@",
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
