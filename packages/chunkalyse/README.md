@@ -1,12 +1,17 @@
 # chunkalyse [![](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/chunkalyse)
 
-## Summarise webpack stats output file
-```sh
-webpack --config webpack.config.js --profile --json > stats.json
-```
+## Summarise webpack entries from stats output file
 
 # CLI
+Pipe stats
 ```sh
+npm i -g chunkalyse
+webpack --config webpack.config.js --profile --json | chunkalyse
+```
+
+Pass file route
+```sh
+webpack --config webpack.config.js --profile --json > stats.json
 npx chunkalyse stats.json
 ```
 ## Example output (styled in CLI, descending)
