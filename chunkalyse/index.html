@@ -11,10 +11,14 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="chunkalyse-">chunkalyse <a href="https://www.npmjs.com/package/chunkalyse"><img src="https://img.shields.io/npm/v/chunkalyse.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/chunkalyse"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
-<h2 id="summarise-webpack-stats-output-file">Summarise webpack stats output file</h2>
-<pre><code class="language-sh">webpack --config webpack.config.js --profile --json &gt; stats.json</code></pre>
+<h2 id="summarise-webpack-entries-from-stats-output-file">Summarise webpack entries from stats output file</h2>
 <h1 id="cli">CLI</h1>
-<pre><code class="language-sh">npx chunkalyse stats.json</code></pre>
+<p>Pipe stats</p>
+<pre><code class="language-sh">npm i -g chunkalyse
+webpack --config webpack.config.js --profile --json | chunkalyse</code></pre>
+<p>Pass file route</p>
+<pre><code class="language-sh">webpack --config webpack.config.js --profile --json &gt; stats.json
+npx chunkalyse stats.json</code></pre>
 <h2 id="example-output-styled-in-cli-descending-">Example output (styled in CLI, descending)</h2>
 <pre><code>main (9.7 kB)
  • await-reduce: 3.5 kB (36%)
