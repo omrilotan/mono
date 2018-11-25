@@ -46,7 +46,7 @@ const [name] = argv;
 			homepage: `https://omrilotan.com/mono/${name}/`,
 		},
 		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage'],
-		'\t'
+		2
 	);
 	files['.npmrc'] = 'package-lock=false';
 	files['.npmignore'] = '.*\n*.log\nspec.js';

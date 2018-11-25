@@ -1,43 +1,43 @@
 {
-	"name": "chunkalyse",
-	"version": "0.0.0",
-	"description": "Summarise webpack stats output file",
-	"keywords": [
-		"webpack",
-		"stats",
-		"bundle",
-		"summarize",
-		"summarise",
-		"modules",
-		"size",
-		"percent",
-		"chunks"
-	],
-	"author": "omrilotan",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/omrilotan/mono.git"
-	},
-	"homepage": "https://omrilotan.com/mono/chunkalyse/",
-	"main": "index.js",
-	"bin": "bin/chunkalyse.js",
-	"scripts": {
-		"build": "./fixtures/scripts/prepare.sh",
-		"postbuild": "npm run inspect-single && npm run inspect-multi",
-		"inspect-single": "./bin/chunkalyse.js fixtures/stats.json",
-		"inspect-multi": "./bin/chunkalyse.js fixtures/stats.multi.json",
-		"test": "cd ../../; npm t chunkalyse; cd -"
-	},
-	"dependencies": {
-		"byte-size": "^4.0.4",
-		"index-require": "^0.1.0"
-	},
-	"devDependencies": {
-		"@recursive/assign": "^1.2.3",
-		"await-reduce": "^1.2.3",
-		"paraphrase": "^1.5.0",
-		"webpack": "^4.26.0",
-		"webpack-cli": "^3.1.2"
-	}
+  "name": "chunkalyse",
+  "version": "0.0.0",
+  "description": "Summarise webpack stats output file",
+  "keywords": [
+    "webpack",
+    "stats",
+    "bundle",
+    "summarize",
+    "summarise",
+    "modules",
+    "size",
+    "percent",
+    "chunks"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/chunkalyse/",
+  "main": "index.js",
+  "bin": "bin/chunkalyse.js",
+  "scripts": {
+    "build": "./fixtures/scripts/prepare.sh",
+    "postbuild": "npm run inspect-single && npm run inspect-multi",
+    "inspect-single": "./bin/chunkalyse.js fixtures/stats.json",
+    "inspect-multi": "./bin/chunkalyse.js fixtures/stats.multi.json",
+    "test": "cd ../../; npm t chunkalyse; cd -"
+  },
+  "dependencies": {
+    "byte-size": "^4.0.4",
+    "index-require": "^0.1.0"
+  },
+  "devDependencies": {
+    "@recursive/assign": "^1.2.3",
+    "await-reduce": "^1.2.3",
+    "paraphrase": "^1.5.0",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
 }
