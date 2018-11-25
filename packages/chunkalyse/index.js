@@ -11,7 +11,7 @@ const {
 module.exports = ({chunks}) => chunks
 	.map(
 		({names, size, modules}) => ({
-			id: names.shift(),
+			name: names.shift(),
 			size,
 			modules: modules.reduce(
 				(accumulator, {name, size}) => Object.assign(
