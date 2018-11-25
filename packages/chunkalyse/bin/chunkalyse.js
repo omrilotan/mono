@@ -39,8 +39,8 @@ const chunkalyse = require('..');
 
 function start(stats) {
 	console.log(
-		chunkalyse(stats).map(
-			({name, size, modules}) => [
+		Object.entries(chunkalyse(stats)).map(
+			([name, {size, modules}]) => [
 				`${name} (${bytes(size)})`,
 				...Object.entries(modules)
 					.sort(([,a], [,b]) => b.percent - a.percent)

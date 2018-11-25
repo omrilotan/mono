@@ -32,28 +32,27 @@ chunkalyse(stats); // Array of summaries (one for each entry point)
 ```
 ## Output
 ```js
-[
-	{
-		id: 'main',
-		size: 9737,
-		modules: {
-			self: {
-				size: 354,
-				percent: 4
-			},
-			'@recursive/assign': {
-				size: 3398,
-				percent: 35
-			},
-			'await-reduce': {
-				size: 3516,
-				percent: 36
-			},
-			paraphrase: {
-				size: 2469,
-				percent: 25
-			}
-		}
-	}
-]
+{
+  "main": {
+    "size": 9737,
+    "modules": {
+      "self": {
+        "size": 354,
+        "percent": 4
+      },
+      "@recursive/assign": {
+        "size": 3398,
+        "percent": 35
+      },
+      "await-reduce": {
+        "size": 3516,
+        "percent": 36
+      },
+      "paraphrase": {
+        "size": 2469,
+        "percent": 25
+      }
+    }
+  }
+}
 ```
