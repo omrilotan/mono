@@ -2,7 +2,7 @@
 
 ## Summarise webpack entries from stats output file
 
-# CLI
+### CLI
 Pipe stats
 ```sh
 npm i -g chunkalyse
@@ -14,7 +14,7 @@ Pass file route
 webpack --config webpack.config.js --profile --json > stats.json
 npx chunkalyse stats.json
 ```
-## Example output (styled in CLI, descending)
+#### Example output (styled in CLI, descending)
 ```
 main (9.7 kB)
  • await-reduce: 3.5 kB (36%)
@@ -23,14 +23,14 @@ main (9.7 kB)
  • self: 354 B (4%)
 ```
 
-# Module delivers un-styled data
+### Module delivers un-styled data
 ```js
 const chunkalyse = require('chunkalyse');
 const stats = require('./stats.json');
 
 chunkalyse(stats); // Array of summaries (one for each entry point)
 ```
-## Output
+#### Output
 ```js
 {
   "main": {
