@@ -10,13 +10,13 @@ const {
  */
 module.exports = ({chunks}) => chunks
 	.map(
-		({id, size, modules}) => ({
-			id,
+		({names, size, modules}) => ({
+			id: names.shift(),
 			size,
 			modules: modules.reduce(
-				(accumulator, {id, size}) => Object.assign(
+				(accumulator, {name, size}) => Object.assign(
 					accumulator,
-					{[moduleName(id)]: (accumulator[moduleName(id)] || 0) + size}
+					{[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size}
 				),
 				{}
 			),
