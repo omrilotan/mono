@@ -15,6 +15,8 @@ const BUNDLED_FILES = [
  * @return {String}
  */
 module.exports = name => {
+	name = name.split(' ')[0]; // avoid comments like "./src/lib/index.js + 4 modules"
+
 	if (name.startsWith('external')) {
 		return 'external';
 	}

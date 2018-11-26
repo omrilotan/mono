@@ -1,6 +1,6 @@
 {
   "name": "chunkalyse",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "Summarise webpack stats output file",
   "keywords": [
     "webpack",
