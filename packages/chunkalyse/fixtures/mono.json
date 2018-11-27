@@ -1,0 +1,2019 @@
+{
+	"errors": [],
+	"warnings": [],
+	"version": "4.25.1",
+	"hash": "c2adc5dadbc87749c756",
+	"time": 2115,
+	"builtAt": 1543246551056,
+	"publicPath": "",
+	"outputPath": "/",
+	"assetsByChunkName": {
+		"/spaceship/mono/packages/assign/dist/index.js": "/spaceship/mono/packages/assign/dist/index.js",
+		"/spaceship/mono/packages/paraphrase/dist/index.js": "/spaceship/mono/packages/paraphrase/dist/index.js"
+	},
+	"assets": [
+		{
+			"name": "/spaceship/mono/packages/assign/dist/index.js",
+			"size": 3398,
+			"chunks": [
+				0
+			],
+			"chunkNames": [
+				"/spaceship/mono/packages/assign/dist/index.js"
+			],
+			"emitted": true
+		},
+		{
+			"name": "/spaceship/mono/packages/paraphrase/dist/index.js",
+			"size": 2469,
+			"chunks": [
+				1
+			],
+			"chunkNames": [
+				"/spaceship/mono/packages/paraphrase/dist/index.js"
+			],
+			"emitted": true
+		}
+	],
+	"filteredAssets": 0,
+	"entrypoints": {
+		"/spaceship/mono/packages/assign/dist/index.js": {
+			"chunks": [
+				0
+			],
+			"assets": [
+				"/spaceship/mono/packages/assign/dist/index.js"
+			],
+			"children": {},
+			"childAssets": {}
+		},
+		"/spaceship/mono/packages/paraphrase/dist/index.js": {
+			"chunks": [
+				1
+			],
+			"assets": [
+				"/spaceship/mono/packages/paraphrase/dist/index.js"
+			],
+			"children": {},
+			"childAssets": {}
+		}
+	},
+	"namedChunkGroups": {
+		"/spaceship/mono/packages/assign/dist/index.js": {
+			"chunks": [
+				0
+			],
+			"assets": [
+				"/spaceship/mono/packages/assign/dist/index.js"
+			],
+			"children": {},
+			"childAssets": {}
+		},
+		"/spaceship/mono/packages/paraphrase/dist/index.js": {
+			"chunks": [
+				1
+			],
+			"assets": [
+				"/spaceship/mono/packages/paraphrase/dist/index.js"
+			],
+			"children": {},
+			"childAssets": {}
+		}
+	},
+	"chunks": [
+		{
+			"id": 0,
+			"rendered": true,
+			"initial": true,
+			"entry": true,
+			"size": 7288,
+			"names": [
+				"/spaceship/mono/packages/assign/dist/index.js"
+			],
+			"files": [
+				"/spaceship/mono/packages/assign/dist/index.js"
+			],
+			"hash": "64c7ce21bdfdea05beda",
+			"siblings": [],
+			"parents": [],
+			"children": [],
+			"childrenByOrder": {},
+			"modules": [
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"index": 1,
+					"index2": 10,
+					"size": 1047,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"issuerId": 4,
+					"issuerName": "./packages/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						}
+					],
+					"profile": {
+						"factory": 47,
+						"building": 122
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 2,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+							"module": "./packages/assign/lib/assignKey/index.js",
+							"moduleName": "./packages/assign/lib/assignKey/index.js",
+							"type": "cjs require",
+							"userRequest": "../assign",
+							"loc": "16:43-63"
+						},
+						{
+							"moduleId": 4,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"module": "./packages/assign/index.js",
+							"moduleName": "./packages/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "./lib/assign",
+							"loc": "4:13-36"
+						},
+						{
+							"moduleId": 5,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+							"module": "./packages/assign/lib/assignArray/index.js",
+							"moduleName": "./packages/assign/lib/assignArray/index.js",
+							"type": "cjs require",
+							"userRequest": "../assign",
+							"loc": "13:59-79"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 1,
+					"source": "var assignArray = require('../assignArray');\n\nvar assignSet = require('../assignSet');\n\nvar assignMap = require('../assignMap');\n\nvar assignKeys = require('../assignKeys');\n\nvar assignSymbols = require('../assignSymbols');\n\nvar _require = require('../typeMatchers'),\n    isSet = _require.isSet,\n    isMap = _require.isMap;\n/**\n * Delegate to assign keys and symbols\n * @private\n * @param  {Object} target Target object to assign to\n * @param  {Object} source The object from which to assign respective values\n * @return {Object} Original to, assigned\n */\n\n\nmodule.exports = function assign(target, source) {\n  if (Array.isArray(target) && Array.isArray(source)) {\n    assignArray(target, source);\n    return target;\n  }\n\n  if (isSet(target) && isSet(source)) {\n    assignSet(target, source);\n    return target;\n  }\n\n  if (isMap(target) && isMap(source)) {\n    assignMap(target, source);\n    return target;\n  }\n\n  target = Object(target);\n  source = Object(source);\n  assignKeys(target, source);\n  assignSymbols(target, source);\n  return target;\n};"
+				},
+				{
+					"id": 1,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignable/index.js",
+					"name": "./packages/assign/lib/assignable/index.js",
+					"index": 3,
+					"index2": 0,
+					"size": 646,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"issuerId": 4,
+					"issuerName": "./packages/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						}
+					],
+					"profile": {
+						"factory": 47,
+						"building": 122
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 2,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+							"module": "./packages/assign/lib/assignKey/index.js",
+							"moduleName": "./packages/assign/lib/assignKey/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignable",
+							"loc": "1:17-41"
+						},
+						{
+							"moduleId": 4,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"module": "./packages/assign/index.js",
+							"moduleName": "./packages/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "./lib/assignable",
+							"loc": "6:17-44"
+						},
+						{
+							"moduleId": 5,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+							"module": "./packages/assign/lib/assignArray/index.js",
+							"moduleName": "./packages/assign/lib/assignArray/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignable",
+							"loc": "1:17-41"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 1,
+					"source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nvar OBJECT_TYPES = ['object', 'function'];\n/**\n * Checks this object is an assignable object\n * @private\n * @param  {Object} target\n * @return {Boolean} is this object \"assignable\"\n */\n\nmodule.exports = function (target) {\n  return OBJECT_TYPES.includes(_typeof(target)) && target !== null;\n};"
+				},
+				{
+					"id": 2,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"name": "./packages/assign/lib/assignKey/index.js",
+					"index": 7,
+					"index2": 6,
+					"size": 537,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"issuerId": 10,
+					"issuerName": "./packages/assign/lib/assignSymbols/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						},
+						{
+							"id": 10,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+							"name": "./packages/assign/lib/assignSymbols/index.js",
+							"profile": {
+								"factory": 25,
+								"building": 75,
+								"dependencies": 48
+							}
+						}
+					],
+					"profile": {
+						"factory": 52,
+						"building": 18,
+						"dependencies": 2
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 8,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKeys/index.js",
+							"module": "./packages/assign/lib/assignKeys/index.js",
+							"moduleName": "./packages/assign/lib/assignKeys/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignKey",
+							"loc": "1:16-39"
+						},
+						{
+							"moduleId": 10,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+							"module": "./packages/assign/lib/assignSymbols/index.js",
+							"moduleName": "./packages/assign/lib/assignSymbols/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignKey",
+							"loc": "1:16-39"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 3,
+					"source": "var assignable = require('../assignable');\n\nvar clone = require('../clone');\n/**\n * assign one key from one object to the target\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object to assign value\n * @param {String|Symbol} key\n * no return value\n */\n\n\nmodule.exports = function assignKey(target, source, key) {\n  var easyAssign = !target.hasOwnProperty(key) || !assignable(source[key]);\n  target[key] = easyAssign ? source[key] : require('../assign')(clone(target[key]), source[key]);\n};"
+				},
+				{
+					"id": 3,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/typeMatchers/index.js",
+					"name": "./packages/assign/lib/typeMatchers/index.js",
+					"index": 9,
+					"index2": 4,
+					"size": 1413,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../typeMatchers",
+							"loc": "11:15-41"
+						},
+						{
+							"moduleId": 9,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/clone/index.js",
+							"module": "./packages/assign/lib/clone/index.js",
+							"moduleName": "./packages/assign/lib/clone/index.js",
+							"type": "cjs require",
+							"userRequest": "../typeMatchers",
+							"loc": "1:15-41"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); }\n\nfunction _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n/**\n * @member {Function} isMap\n * @member {Function} isSet\n */\nmodule.exports = [[Map, 'Map'], [Set, 'Set']].reduce(function (accumulator, _ref) {\n  var _ref2 = _slicedToArray(_ref, 2),\n      constructor = _ref2[0],\n      name = _ref2[1];\n\n  return Object.assign(accumulator, _defineProperty({}, \"is\".concat(name), function is(item) {\n    return item instanceof constructor || item && typeof item.toString === 'function' && item.toString() === \"[object \".concat(name, \"]\");\n  }));\n}, {});"
+				},
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"index": 0,
+					"index2": 11,
+					"size": 754,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": null,
+					"issuerId": null,
+					"issuerName": null,
+					"issuerPath": null,
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": null,
+							"moduleIdentifier": null,
+							"module": null,
+							"moduleName": null,
+							"type": "single entry",
+							"userRequest": "/spaceship/mono/packages/assign/index.js",
+							"loc": "/spaceship/mono/packages/assign/dist/index.js"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 0,
+					"source": "/**\n * @module assign\n */\nvar assign = require('./lib/assign');\n\nvar assignable = require('./lib/assignable');\n/**\n * Deep object assignment\n * @param  {Object}    target Target object to assign to\n * @param  {...Object} others The objects from which to deep assign respective values\n * @return {Object} Original target, assigned\n *\n * @example assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}\n */\n\n\nmodule.exports = function (target) {\n  for (var _len = arguments.length, others = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    others[_key - 1] = arguments[_key];\n  }\n\n  assignable(target) && others.forEach(function (other) {\n    return assign(target, other);\n  });\n  return target;\n};"
+				},
+				{
+					"id": 5,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+					"name": "./packages/assign/lib/assignArray/index.js",
+					"index": 2,
+					"index2": 1,
+					"size": 476,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignArray",
+							"loc": "1:18-43"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "var assignable = require('../assignable');\n/**\n * Assign members of second array to first\n * @private\n * @param {Array} target\tTarget array to assign to\n * @param {Array} source\tThe array from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return source.forEach(function (item, index) {\n    return assignable(target[index]) && assignable(item) ? require('../assign')(target[index], item) : target.push(item);\n  });\n};"
+				},
+				{
+					"id": 6,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSet/index.js",
+					"name": "./packages/assign/lib/assignSet/index.js",
+					"index": 4,
+					"index2": 2,
+					"size": 311,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignSet",
+							"loc": "3:16-39"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "/**\n * Assign members of second array to first\n * @private\n * @param {Set} target\tTarget array to assign to\n * @param {Set} source\tThe set from which to assign respective values\n * no return value\n */\nmodule.exports = function (target, source) {\n  source.forEach(function (item) {\n    target.add(item);\n  });\n};"
+				},
+				{
+					"id": 7,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignMap/index.js",
+					"name": "./packages/assign/lib/assignMap/index.js",
+					"index": 5,
+					"index2": 3,
+					"size": 337,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignMap",
+							"loc": "5:16-39"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "/**\n * Assign members of second array to first\n * @private\n * @param {Map} target\tTarget array to assign to\n * @param {Map} source\tThe Map from which to assign respective values\n * no return value\n */\nmodule.exports = function (target, source) {\n  return source.forEach(function (key, value) {\n    return target.set(value, key);\n  });\n};"
+				},
+				{
+					"id": 8,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKeys/index.js",
+					"name": "./packages/assign/lib/assignKeys/index.js",
+					"index": 6,
+					"index2": 7,
+					"size": 399,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignKeys",
+							"loc": "7:17-41"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "var assignKey = require('../assignKey');\n/**\n * Assign second object keys to first\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return Object.keys(source).forEach(function (key) {\n    return assignKey(target, source, key);\n  });\n};"
+				},
+				{
+					"id": 9,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/clone/index.js",
+					"name": "./packages/assign/lib/clone/index.js",
+					"index": 8,
+					"index2": 5,
+					"size": 597,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"issuerId": 2,
+					"issuerName": "./packages/assign/lib/assignKey/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						},
+						{
+							"id": 10,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+							"name": "./packages/assign/lib/assignSymbols/index.js",
+							"profile": {
+								"factory": 25,
+								"building": 75,
+								"dependencies": 48
+							}
+						},
+						{
+							"id": 2,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+							"name": "./packages/assign/lib/assignKey/index.js",
+							"profile": {
+								"factory": 52,
+								"building": 18,
+								"dependencies": 2
+							}
+						}
+					],
+					"profile": {
+						"factory": 7,
+						"building": 6,
+						"dependencies": 1
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 2,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+							"module": "./packages/assign/lib/assignKey/index.js",
+							"moduleName": "./packages/assign/lib/assignKey/index.js",
+							"type": "cjs require",
+							"userRequest": "../clone",
+							"loc": "3:12-31"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 4,
+					"source": "var _require = require('../typeMatchers'),\n    isSet = _require.isSet,\n    isMap = _require.isMap;\n/**\n * Create a shallow clone of a given Object or Array\n * @private\n * @param  {Object|Array|Set|Map} instance Object or Array or Set or Map to clone\n * @return {Object|Array|Set|Map} (respectively) a shallow clone\n */\n\n\nmodule.exports = function clone(instance) {\n  if (Array.isArray(instance)) {\n    return instance.slice(0);\n  } else if (isSet(instance)) {\n    return new Set(instance);\n  } else if (isMap(instance)) {\n    return new Map(instance);\n  }\n\n  return Object.assign({}, instance);\n};"
+				},
+				{
+					"id": 10,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"name": "./packages/assign/lib/assignSymbols/index.js",
+					"index": 10,
+					"index2": 9,
+					"size": 484,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"issuerId": 0,
+					"issuerName": "./packages/assign/lib/assign/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						}
+					],
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 0,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"module": "./packages/assign/lib/assign/index.js",
+							"moduleName": "./packages/assign/lib/assign/index.js",
+							"type": "cjs require",
+							"userRequest": "../assignSymbols",
+							"loc": "9:20-47"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 2,
+					"source": "var assignKey = require('../assignKey');\n\nvar getOwnPropertySymbols = require('../getOwnPropertySymbols');\n/**\n * Assign second object symbols to first\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return getOwnPropertySymbols(source).forEach(function (symbol) {\n    return assignKey(target, source, symbol);\n  });\n};"
+				},
+				{
+					"id": 11,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/getOwnPropertySymbols/index.js",
+					"name": "./packages/assign/lib/getOwnPropertySymbols/index.js",
+					"index": 11,
+					"index2": 8,
+					"size": 287,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						0
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"issuerId": 10,
+					"issuerName": "./packages/assign/lib/assignSymbols/index.js",
+					"issuerPath": [
+						{
+							"id": 4,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+							"name": "./packages/assign/index.js",
+							"profile": {
+								"factory": 176,
+								"building": 1066
+							}
+						},
+						{
+							"id": 0,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+							"name": "./packages/assign/lib/assign/index.js",
+							"profile": {
+								"factory": 47,
+								"building": 122
+							}
+						},
+						{
+							"id": 10,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+							"name": "./packages/assign/lib/assignSymbols/index.js",
+							"profile": {
+								"factory": 25,
+								"building": 75,
+								"dependencies": 48
+							}
+						}
+					],
+					"profile": {
+						"factory": 52,
+						"building": 18,
+						"dependencies": 2
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 10,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+							"module": "./packages/assign/lib/assignSymbols/index.js",
+							"moduleName": "./packages/assign/lib/assignSymbols/index.js",
+							"type": "cjs require",
+							"userRequest": "../getOwnPropertySymbols",
+							"loc": "3:28-63"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 3,
+					"source": "/**\n * Perform getOwnPropertySymbols when available\n * @private\n * @param  {Object} object\n * @return {Array} List of symbol keys (falls back to an empty array)\n */\nmodule.exports = function (object) {\n  return Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(object) : [];\n};"
+				}
+			],
+			"filteredModules": 0,
+			"origins": [
+				{
+					"module": "",
+					"moduleIdentifier": "",
+					"moduleName": "",
+					"loc": "/spaceship/mono/packages/assign/dist/index.js",
+					"request": "/spaceship/mono/packages/assign/index.js",
+					"reasons": []
+				}
+			]
+		},
+		{
+			"id": 1,
+			"rendered": true,
+			"initial": true,
+			"entry": true,
+			"size": 4188,
+			"names": [
+				"/spaceship/mono/packages/paraphrase/dist/index.js"
+			],
+			"files": [
+				"/spaceship/mono/packages/paraphrase/dist/index.js"
+			],
+			"hash": "065e078fbf59bd5c5cc7",
+			"siblings": [],
+			"parents": [],
+			"children": [],
+			"childrenByOrder": {},
+			"modules": [
+				{
+					"id": 12,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+					"name": "./packages/paraphrase/index.js",
+					"index": 12,
+					"index2": 13,
+					"size": 2651,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						1
+					],
+					"issuer": null,
+					"issuerId": null,
+					"issuerName": null,
+					"issuerPath": null,
+					"profile": {
+						"factory": 61,
+						"building": 1129
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": null,
+							"moduleIdentifier": null,
+							"module": null,
+							"moduleName": null,
+							"type": "single entry",
+							"userRequest": "/spaceship/mono/packages/paraphrase/index.js",
+							"loc": "/spaceship/mono/packages/paraphrase/dist/index.js"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 0,
+					"source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n/**\n * @module paraphrase\n * @since 1.0.0\n */\nvar notate = require('notate');\n/**\n * Valid types of results for the interpolated string\n * @private\n * @type {Array}\n * @member {String|Number}\n */\n\n\nvar VALID_RESULT_TYPES = Object.seal(['string', 'number']);\n/**\n * Create new paraphrase method instance\n * @param  {...RegExp[]} replacers\n * @returns {Function} phraser function instance\n *\n * @example const phraser = paraphrase(/\\${([^{}]*)}/gm);\n *\n * phraser('Hello, ${name}', {name: 'Martin'})\n */\n\nmodule.exports = function paraphrase() {\n  for (var _len = arguments.length, replacers = new Array(_len), _key = 0; _key < _len; _key++) {\n    replacers[_key] = arguments[_key];\n  }\n\n  /**\n   * phraser description\n   * @param  {String}                 string       Template\n   * @param  {Object|(String|number)} data         Data for filling\n   * @param  {...(String|number)}     replacements Replacement for filling\n   * @return {String}                              Result\n   */\n  function phraser() {\n    var string = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n    var data = arguments.length > 1 ? arguments[1] : undefined;\n\n    if (typeof string !== 'string') {\n      throw new TypeError(\"paraphrase expects first argument to be a string, got a \".concat(_typeof(string)));\n    }\n\n    if (!data) {\n      return string;\n    }\n\n    if (VALID_RESULT_TYPES.includes(_typeof(data))) {\n      for (var _len2 = arguments.length, replacements = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {\n        replacements[_key2 - 2] = arguments[_key2];\n      }\n\n      data = [data].concat(replacements);\n    }\n    /**\n     * Replace method build with internal reference to the passed in data structure\n     * @param  {String} haystack The full string match\n     * @param  {String} needle   The content to identify as data member\n     * @return {String}         Found value\n     */\n\n\n    function replace(haystack, needle) {\n      var replacement = notate(data, needle.trim());\n      return VALID_RESULT_TYPES.includes(_typeof(replacement)) ? replacement : haystack;\n    }\n\n    return replacers.reduce(function (string, replacer) {\n      return string.replace(replacer, replace);\n    }, string);\n  }\n\n  phraser.patterns = replacers;\n  return phraser;\n};"
+				},
+				{
+					"id": 13,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/node_modules/notate/dist/index.js",
+					"name": "./packages/paraphrase/node_modules/notate/dist/index.js",
+					"index": 13,
+					"index2": 12,
+					"size": 1537,
+					"cacheable": true,
+					"built": true,
+					"optional": false,
+					"prefetched": false,
+					"chunks": [
+						1
+					],
+					"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+					"issuerId": 12,
+					"issuerName": "./packages/paraphrase/index.js",
+					"issuerPath": [
+						{
+							"id": 12,
+							"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+							"name": "./packages/paraphrase/index.js",
+							"profile": {
+								"factory": 61,
+								"building": 1129
+							}
+						}
+					],
+					"profile": {
+						"factory": 70,
+						"building": 99
+					},
+					"failed": false,
+					"errors": 0,
+					"warnings": 0,
+					"assets": [],
+					"reasons": [
+						{
+							"moduleId": 12,
+							"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+							"module": "./packages/paraphrase/index.js",
+							"moduleName": "./packages/paraphrase/index.js",
+							"type": "cjs require",
+							"userRequest": "notate",
+							"loc": "7:13-30"
+						}
+					],
+					"usedExports": true,
+					"providedExports": null,
+					"optimizationBailout": [
+						"ModuleConcatenation bailout: Module is not an ECMAScript module"
+					],
+					"depth": 1,
+					"source": "\"use strict\";\n\nfunction _typeof2(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof2(obj); }\n\nfunction _typeof(obj) {\n  if (typeof Symbol === \"function\" && _typeof2(Symbol.iterator) === \"symbol\") {\n    _typeof = function _typeof(obj) {\n      return _typeof2(obj);\n    };\n  } else {\n    _typeof = function _typeof(obj) {\n      return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : _typeof2(obj);\n    };\n  }\n\n  return _typeof(obj);\n}\n/**\n * Resolve dot notation strings\n *\n * @param  {Object} context     Object to start notation search (defaults to global scope)\n * @param  {String} [string=''] Dot notation representation\n * @return {Any}\t\t\t\tWhatever it finds / undefined\n *\n * @example\n * const obj = {\n *   top_level: {\n *     nested: {\n *       value: 'My Value'\n *     }\n *   }\n * };\n *\n * notate(obj, 'top_level.nested.value');\n * // 'My Value'\n *\n * notate(obj, 'top_level.missing.value');\n * // undefined\n */\n\n\nmodule.exports = function (source) {\n  var string = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';\n  return string.split('.').reduce(function (previous, current) {\n    return _typeof(previous) === 'object' ? previous[current] : previous;\n  }, source);\n};"
+				}
+			],
+			"filteredModules": 0,
+			"origins": [
+				{
+					"module": "",
+					"moduleIdentifier": "",
+					"moduleName": "",
+					"loc": "/spaceship/mono/packages/paraphrase/dist/index.js",
+					"request": "/spaceship/mono/packages/paraphrase/index.js",
+					"reasons": []
+				}
+			]
+		}
+	],
+	"modules": [
+		{
+			"id": 0,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"name": "./packages/assign/lib/assign/index.js",
+			"index": 1,
+			"index2": 10,
+			"size": 1047,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+			"issuerId": 4,
+			"issuerName": "./packages/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				}
+			],
+			"profile": {
+				"factory": 47,
+				"building": 122
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 2,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"module": "./packages/assign/lib/assignKey/index.js",
+					"moduleName": "./packages/assign/lib/assignKey/index.js",
+					"type": "cjs require",
+					"userRequest": "../assign",
+					"loc": "16:43-63"
+				},
+				{
+					"moduleId": 4,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"module": "./packages/assign/index.js",
+					"moduleName": "./packages/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "./lib/assign",
+					"loc": "4:13-36"
+				},
+				{
+					"moduleId": 5,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+					"module": "./packages/assign/lib/assignArray/index.js",
+					"moduleName": "./packages/assign/lib/assignArray/index.js",
+					"type": "cjs require",
+					"userRequest": "../assign",
+					"loc": "13:59-79"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 1,
+			"source": "var assignArray = require('../assignArray');\n\nvar assignSet = require('../assignSet');\n\nvar assignMap = require('../assignMap');\n\nvar assignKeys = require('../assignKeys');\n\nvar assignSymbols = require('../assignSymbols');\n\nvar _require = require('../typeMatchers'),\n    isSet = _require.isSet,\n    isMap = _require.isMap;\n/**\n * Delegate to assign keys and symbols\n * @private\n * @param  {Object} target Target object to assign to\n * @param  {Object} source The object from which to assign respective values\n * @return {Object} Original to, assigned\n */\n\n\nmodule.exports = function assign(target, source) {\n  if (Array.isArray(target) && Array.isArray(source)) {\n    assignArray(target, source);\n    return target;\n  }\n\n  if (isSet(target) && isSet(source)) {\n    assignSet(target, source);\n    return target;\n  }\n\n  if (isMap(target) && isMap(source)) {\n    assignMap(target, source);\n    return target;\n  }\n\n  target = Object(target);\n  source = Object(source);\n  assignKeys(target, source);\n  assignSymbols(target, source);\n  return target;\n};"
+		},
+		{
+			"id": 1,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignable/index.js",
+			"name": "./packages/assign/lib/assignable/index.js",
+			"index": 3,
+			"index2": 0,
+			"size": 646,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+			"issuerId": 4,
+			"issuerName": "./packages/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				}
+			],
+			"profile": {
+				"factory": 47,
+				"building": 122
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 2,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"module": "./packages/assign/lib/assignKey/index.js",
+					"moduleName": "./packages/assign/lib/assignKey/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignable",
+					"loc": "1:17-41"
+				},
+				{
+					"moduleId": 4,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"module": "./packages/assign/index.js",
+					"moduleName": "./packages/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "./lib/assignable",
+					"loc": "6:17-44"
+				},
+				{
+					"moduleId": 5,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+					"module": "./packages/assign/lib/assignArray/index.js",
+					"moduleName": "./packages/assign/lib/assignArray/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignable",
+					"loc": "1:17-41"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 1,
+			"source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nvar OBJECT_TYPES = ['object', 'function'];\n/**\n * Checks this object is an assignable object\n * @private\n * @param  {Object} target\n * @return {Boolean} is this object \"assignable\"\n */\n\nmodule.exports = function (target) {\n  return OBJECT_TYPES.includes(_typeof(target)) && target !== null;\n};"
+		},
+		{
+			"id": 2,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+			"name": "./packages/assign/lib/assignKey/index.js",
+			"index": 7,
+			"index2": 6,
+			"size": 537,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+			"issuerId": 10,
+			"issuerName": "./packages/assign/lib/assignSymbols/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				},
+				{
+					"id": 10,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"name": "./packages/assign/lib/assignSymbols/index.js",
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					}
+				}
+			],
+			"profile": {
+				"factory": 52,
+				"building": 18,
+				"dependencies": 2
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 8,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKeys/index.js",
+					"module": "./packages/assign/lib/assignKeys/index.js",
+					"moduleName": "./packages/assign/lib/assignKeys/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignKey",
+					"loc": "1:16-39"
+				},
+				{
+					"moduleId": 10,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"module": "./packages/assign/lib/assignSymbols/index.js",
+					"moduleName": "./packages/assign/lib/assignSymbols/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignKey",
+					"loc": "1:16-39"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 3,
+			"source": "var assignable = require('../assignable');\n\nvar clone = require('../clone');\n/**\n * assign one key from one object to the target\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object to assign value\n * @param {String|Symbol} key\n * no return value\n */\n\n\nmodule.exports = function assignKey(target, source, key) {\n  var easyAssign = !target.hasOwnProperty(key) || !assignable(source[key]);\n  target[key] = easyAssign ? source[key] : require('../assign')(clone(target[key]), source[key]);\n};"
+		},
+		{
+			"id": 3,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/typeMatchers/index.js",
+			"name": "./packages/assign/lib/typeMatchers/index.js",
+			"index": 9,
+			"index2": 4,
+			"size": 1413,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../typeMatchers",
+					"loc": "11:15-41"
+				},
+				{
+					"moduleId": 9,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/clone/index.js",
+					"module": "./packages/assign/lib/clone/index.js",
+					"moduleName": "./packages/assign/lib/clone/index.js",
+					"type": "cjs require",
+					"userRequest": "../typeMatchers",
+					"loc": "1:15-41"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); }\n\nfunction _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n/**\n * @member {Function} isMap\n * @member {Function} isSet\n */\nmodule.exports = [[Map, 'Map'], [Set, 'Set']].reduce(function (accumulator, _ref) {\n  var _ref2 = _slicedToArray(_ref, 2),\n      constructor = _ref2[0],\n      name = _ref2[1];\n\n  return Object.assign(accumulator, _defineProperty({}, \"is\".concat(name), function is(item) {\n    return item instanceof constructor || item && typeof item.toString === 'function' && item.toString() === \"[object \".concat(name, \"]\");\n  }));\n}, {});"
+		},
+		{
+			"id": 4,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+			"name": "./packages/assign/index.js",
+			"index": 0,
+			"index2": 11,
+			"size": 754,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": null,
+			"issuerId": null,
+			"issuerName": null,
+			"issuerPath": null,
+			"profile": {
+				"factory": 176,
+				"building": 1066
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": null,
+					"moduleIdentifier": null,
+					"module": null,
+					"moduleName": null,
+					"type": "single entry",
+					"userRequest": "/spaceship/mono/packages/assign/index.js",
+					"loc": "/spaceship/mono/packages/assign/dist/index.js"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 0,
+			"source": "/**\n * @module assign\n */\nvar assign = require('./lib/assign');\n\nvar assignable = require('./lib/assignable');\n/**\n * Deep object assignment\n * @param  {Object}    target Target object to assign to\n * @param  {...Object} others The objects from which to deep assign respective values\n * @return {Object} Original target, assigned\n *\n * @example assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}\n */\n\n\nmodule.exports = function (target) {\n  for (var _len = arguments.length, others = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    others[_key - 1] = arguments[_key];\n  }\n\n  assignable(target) && others.forEach(function (other) {\n    return assign(target, other);\n  });\n  return target;\n};"
+		},
+		{
+			"id": 5,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignArray/index.js",
+			"name": "./packages/assign/lib/assignArray/index.js",
+			"index": 2,
+			"index2": 1,
+			"size": 476,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignArray",
+					"loc": "1:18-43"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "var assignable = require('../assignable');\n/**\n * Assign members of second array to first\n * @private\n * @param {Array} target\tTarget array to assign to\n * @param {Array} source\tThe array from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return source.forEach(function (item, index) {\n    return assignable(target[index]) && assignable(item) ? require('../assign')(target[index], item) : target.push(item);\n  });\n};"
+		},
+		{
+			"id": 6,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSet/index.js",
+			"name": "./packages/assign/lib/assignSet/index.js",
+			"index": 4,
+			"index2": 2,
+			"size": 311,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignSet",
+					"loc": "3:16-39"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "/**\n * Assign members of second array to first\n * @private\n * @param {Set} target\tTarget array to assign to\n * @param {Set} source\tThe set from which to assign respective values\n * no return value\n */\nmodule.exports = function (target, source) {\n  source.forEach(function (item) {\n    target.add(item);\n  });\n};"
+		},
+		{
+			"id": 7,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignMap/index.js",
+			"name": "./packages/assign/lib/assignMap/index.js",
+			"index": 5,
+			"index2": 3,
+			"size": 337,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignMap",
+					"loc": "5:16-39"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "/**\n * Assign members of second array to first\n * @private\n * @param {Map} target\tTarget array to assign to\n * @param {Map} source\tThe Map from which to assign respective values\n * no return value\n */\nmodule.exports = function (target, source) {\n  return source.forEach(function (key, value) {\n    return target.set(value, key);\n  });\n};"
+		},
+		{
+			"id": 8,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKeys/index.js",
+			"name": "./packages/assign/lib/assignKeys/index.js",
+			"index": 6,
+			"index2": 7,
+			"size": 399,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignKeys",
+					"loc": "7:17-41"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "var assignKey = require('../assignKey');\n/**\n * Assign second object keys to first\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return Object.keys(source).forEach(function (key) {\n    return assignKey(target, source, key);\n  });\n};"
+		},
+		{
+			"id": 9,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/clone/index.js",
+			"name": "./packages/assign/lib/clone/index.js",
+			"index": 8,
+			"index2": 5,
+			"size": 597,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+			"issuerId": 2,
+			"issuerName": "./packages/assign/lib/assignKey/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				},
+				{
+					"id": 10,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"name": "./packages/assign/lib/assignSymbols/index.js",
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					}
+				},
+				{
+					"id": 2,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"name": "./packages/assign/lib/assignKey/index.js",
+					"profile": {
+						"factory": 52,
+						"building": 18,
+						"dependencies": 2
+					}
+				}
+			],
+			"profile": {
+				"factory": 7,
+				"building": 6,
+				"dependencies": 1
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 2,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignKey/index.js",
+					"module": "./packages/assign/lib/assignKey/index.js",
+					"moduleName": "./packages/assign/lib/assignKey/index.js",
+					"type": "cjs require",
+					"userRequest": "../clone",
+					"loc": "3:12-31"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 4,
+			"source": "var _require = require('../typeMatchers'),\n    isSet = _require.isSet,\n    isMap = _require.isMap;\n/**\n * Create a shallow clone of a given Object or Array\n * @private\n * @param  {Object|Array|Set|Map} instance Object or Array or Set or Map to clone\n * @return {Object|Array|Set|Map} (respectively) a shallow clone\n */\n\n\nmodule.exports = function clone(instance) {\n  if (Array.isArray(instance)) {\n    return instance.slice(0);\n  } else if (isSet(instance)) {\n    return new Set(instance);\n  } else if (isMap(instance)) {\n    return new Map(instance);\n  }\n\n  return Object.assign({}, instance);\n};"
+		},
+		{
+			"id": 10,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+			"name": "./packages/assign/lib/assignSymbols/index.js",
+			"index": 10,
+			"index2": 9,
+			"size": 484,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+			"issuerId": 0,
+			"issuerName": "./packages/assign/lib/assign/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				}
+			],
+			"profile": {
+				"factory": 25,
+				"building": 75,
+				"dependencies": 48
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 0,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"module": "./packages/assign/lib/assign/index.js",
+					"moduleName": "./packages/assign/lib/assign/index.js",
+					"type": "cjs require",
+					"userRequest": "../assignSymbols",
+					"loc": "9:20-47"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 2,
+			"source": "var assignKey = require('../assignKey');\n\nvar getOwnPropertySymbols = require('../getOwnPropertySymbols');\n/**\n * Assign second object symbols to first\n * @private\n * @param {Object} target Target object to assign to\n * @param {Object} source The object from which to assign respective values\n * no return value\n */\n\n\nmodule.exports = function (target, source) {\n  return getOwnPropertySymbols(source).forEach(function (symbol) {\n    return assignKey(target, source, symbol);\n  });\n};"
+		},
+		{
+			"id": 11,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/getOwnPropertySymbols/index.js",
+			"name": "./packages/assign/lib/getOwnPropertySymbols/index.js",
+			"index": 11,
+			"index2": 8,
+			"size": 287,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				0
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+			"issuerId": 10,
+			"issuerName": "./packages/assign/lib/assignSymbols/index.js",
+			"issuerPath": [
+				{
+					"id": 4,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/index.js",
+					"name": "./packages/assign/index.js",
+					"profile": {
+						"factory": 176,
+						"building": 1066
+					}
+				},
+				{
+					"id": 0,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assign/index.js",
+					"name": "./packages/assign/lib/assign/index.js",
+					"profile": {
+						"factory": 47,
+						"building": 122
+					}
+				},
+				{
+					"id": 10,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"name": "./packages/assign/lib/assignSymbols/index.js",
+					"profile": {
+						"factory": 25,
+						"building": 75,
+						"dependencies": 48
+					}
+				}
+			],
+			"profile": {
+				"factory": 52,
+				"building": 18,
+				"dependencies": 2
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 10,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/assign/lib/assignSymbols/index.js",
+					"module": "./packages/assign/lib/assignSymbols/index.js",
+					"moduleName": "./packages/assign/lib/assignSymbols/index.js",
+					"type": "cjs require",
+					"userRequest": "../getOwnPropertySymbols",
+					"loc": "3:28-63"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 3,
+			"source": "/**\n * Perform getOwnPropertySymbols when available\n * @private\n * @param  {Object} object\n * @return {Array} List of symbol keys (falls back to an empty array)\n */\nmodule.exports = function (object) {\n  return Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(object) : [];\n};"
+		},
+		{
+			"id": 12,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+			"name": "./packages/paraphrase/index.js",
+			"index": 12,
+			"index2": 13,
+			"size": 2651,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				1
+			],
+			"issuer": null,
+			"issuerId": null,
+			"issuerName": null,
+			"issuerPath": null,
+			"profile": {
+				"factory": 61,
+				"building": 1129
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": null,
+					"moduleIdentifier": null,
+					"module": null,
+					"moduleName": null,
+					"type": "single entry",
+					"userRequest": "/spaceship/mono/packages/paraphrase/index.js",
+					"loc": "/spaceship/mono/packages/paraphrase/dist/index.js"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 0,
+			"source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n/**\n * @module paraphrase\n * @since 1.0.0\n */\nvar notate = require('notate');\n/**\n * Valid types of results for the interpolated string\n * @private\n * @type {Array}\n * @member {String|Number}\n */\n\n\nvar VALID_RESULT_TYPES = Object.seal(['string', 'number']);\n/**\n * Create new paraphrase method instance\n * @param  {...RegExp[]} replacers\n * @returns {Function} phraser function instance\n *\n * @example const phraser = paraphrase(/\\${([^{}]*)}/gm);\n *\n * phraser('Hello, ${name}', {name: 'Martin'})\n */\n\nmodule.exports = function paraphrase() {\n  for (var _len = arguments.length, replacers = new Array(_len), _key = 0; _key < _len; _key++) {\n    replacers[_key] = arguments[_key];\n  }\n\n  /**\n   * phraser description\n   * @param  {String}                 string       Template\n   * @param  {Object|(String|number)} data         Data for filling\n   * @param  {...(String|number)}     replacements Replacement for filling\n   * @return {String}                              Result\n   */\n  function phraser() {\n    var string = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';\n    var data = arguments.length > 1 ? arguments[1] : undefined;\n\n    if (typeof string !== 'string') {\n      throw new TypeError(\"paraphrase expects first argument to be a string, got a \".concat(_typeof(string)));\n    }\n\n    if (!data) {\n      return string;\n    }\n\n    if (VALID_RESULT_TYPES.includes(_typeof(data))) {\n      for (var _len2 = arguments.length, replacements = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {\n        replacements[_key2 - 2] = arguments[_key2];\n      }\n\n      data = [data].concat(replacements);\n    }\n    /**\n     * Replace method build with internal reference to the passed in data structure\n     * @param  {String} haystack The full string match\n     * @param  {String} needle   The content to identify as data member\n     * @return {String}         Found value\n     */\n\n\n    function replace(haystack, needle) {\n      var replacement = notate(data, needle.trim());\n      return VALID_RESULT_TYPES.includes(_typeof(replacement)) ? replacement : haystack;\n    }\n\n    return replacers.reduce(function (string, replacer) {\n      return string.replace(replacer, replace);\n    }, string);\n  }\n\n  phraser.patterns = replacers;\n  return phraser;\n};"
+		},
+		{
+			"id": 13,
+			"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/node_modules/notate/dist/index.js",
+			"name": "./packages/paraphrase/node_modules/notate/dist/index.js",
+			"index": 13,
+			"index2": 12,
+			"size": 1537,
+			"cacheable": true,
+			"built": true,
+			"optional": false,
+			"prefetched": false,
+			"chunks": [
+				1
+			],
+			"issuer": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+			"issuerId": 12,
+			"issuerName": "./packages/paraphrase/index.js",
+			"issuerPath": [
+				{
+					"id": 12,
+					"identifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+					"name": "./packages/paraphrase/index.js",
+					"profile": {
+						"factory": 61,
+						"building": 1129
+					}
+				}
+			],
+			"profile": {
+				"factory": 70,
+				"building": 99
+			},
+			"failed": false,
+			"errors": 0,
+			"warnings": 0,
+			"assets": [],
+			"reasons": [
+				{
+					"moduleId": 12,
+					"moduleIdentifier": "/spaceship/mono/node_modules/babel-loader/lib/index.js??ref--4!/spaceship/mono/packages/paraphrase/index.js",
+					"module": "./packages/paraphrase/index.js",
+					"moduleName": "./packages/paraphrase/index.js",
+					"type": "cjs require",
+					"userRequest": "notate",
+					"loc": "7:13-30"
+				}
+			],
+			"usedExports": true,
+			"providedExports": null,
+			"optimizationBailout": [
+				"ModuleConcatenation bailout: Module is not an ECMAScript module"
+			],
+			"depth": 1,
+			"source": "\"use strict\";\n\nfunction _typeof2(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof2(obj); }\n\nfunction _typeof(obj) {\n  if (typeof Symbol === \"function\" && _typeof2(Symbol.iterator) === \"symbol\") {\n    _typeof = function _typeof(obj) {\n      return _typeof2(obj);\n    };\n  } else {\n    _typeof = function _typeof(obj) {\n      return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : _typeof2(obj);\n    };\n  }\n\n  return _typeof(obj);\n}\n/**\n * Resolve dot notation strings\n *\n * @param  {Object} context     Object to start notation search (defaults to global scope)\n * @param  {String} [string=''] Dot notation representation\n * @return {Any}\t\t\t\tWhatever it finds / undefined\n *\n * @example\n * const obj = {\n *   top_level: {\n *     nested: {\n *       value: 'My Value'\n *     }\n *   }\n * };\n *\n * notate(obj, 'top_level.nested.value');\n * // 'My Value'\n *\n * notate(obj, 'top_level.missing.value');\n * // undefined\n */\n\n\nmodule.exports = function (source) {\n  var string = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';\n  return string.split('.').reduce(function (previous, current) {\n    return _typeof(previous) === 'object' ? previous[current] : previous;\n  }, source);\n};"
+		}
+	],
+	"filteredModules": 0,
+	"children": []
+}

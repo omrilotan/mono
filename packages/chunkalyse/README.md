@@ -56,3 +56,9 @@ chunkalyse(stats); // Array of summaries (one for each entry point)
   }
 }
 ```
+
+### Thanks
+I've been using other people's webpack stats for testing fixtures, so thanks to
+- [butter-toast](https://github.com/ealush/butter-toast)
+- [emoji-picker-react](https://github.com/ealush/emoji-picker-react)
+- [react-dates](https://github.com/airbnb/react-dates)

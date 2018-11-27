@@ -21,8 +21,10 @@ module.exports = name => {
 		return 'external';
 	}
 
-	if (!isBundled(name)) {
-		return null;
+	const ext = extname(name).replace(/^\./, '');
+
+	if (!BUNDLED_FILES.includes(ext)) {
+		return `${ext} files`;
 	}
 
 	const parts = name.split('/');
@@ -38,5 +40,3 @@ module.exports = name => {
 		.slice(_from, _until)
 		.join('/');
 };
-
-const isBundled = name => BUNDLED_FILES.includes(extname(name).replace(/^\./, ''));
