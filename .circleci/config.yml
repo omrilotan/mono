@@ -3,7 +3,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:10-browsers
 
-version: 2
+version: 2.1
 jobs:
   install:
     <<: *defaults
@@ -19,15 +19,15 @@ jobs:
           paths:
             - ./node_modules
       - save_cache:
-          key: install-cache-{{ .Revision }}
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ../app
+            - ./packages
   lint:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: install-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Check code syntax
           command: npm run lint
@@ -36,7 +36,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: install-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Test
           command: npm run test
@@ -52,7 +54,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: install-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Create this repo's readme
           command: npm run readme
@@ -67,19 +71,24 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: install-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Create distribution files
           command: npm run dist
       - save_cache:
-          key: bundle-cache-{{ .Revision }}
+          key: bundle-cache-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ../app
+            - ./packages
   publish:
     <<: *defaults
     steps:
+      - checkout
       - restore_cache:
-          key: bundle-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: bundle-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Set NPM tokens
           command: echo -e $NPMRC > ~/.npmrc
@@ -91,7 +100,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: bundle-cache-{{ .Revision }}
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Create the docs
           command: npm run doc
@@ -112,7 +123,6 @@ jobs:
   omrilotan:
     <<: *defaults
     steps:
-      - checkout
       - run:
           name: Trigger build for omrilotan.com
           command: |
@@ -137,7 +147,7 @@ jobs:
           command: curl ci-cd.net/v1/gh/add-pr | bash -s $GIT_AUTH_TOKEN "⬆ Dependencies updates"
 
 workflows:
-  version: 2
+  version: 2.1
   ci-cd:
     jobs:
       - install:
