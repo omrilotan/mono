@@ -28,6 +28,7 @@ const reduce = require('../packages/await-reduce');
 						dir,
 						name,
 						description,
+						version,
 					],
 				];
 			} catch (error) {
@@ -56,7 +57,7 @@ ${description}
 | Name | Description | Link
 | --- | --- | ---
 ${packages.map(
-		([dir, pkg, description]) => `| **\`${pkg}\`** | [${description}](./packages/${dir}#readme) | [![](https://img.shields.io/npm/v/${pkg}.svg)](https://www.npmjs.com/package/${pkg})`
+		([dir, pkg, description, version]) => `| **\`${pkg}\`** | [${description}](./packages/${dir}#readme) | [![${version}](https://img.shields.io/npm/v/${pkg}.svg)](https://www.npmjs.com/package/${pkg})`
 	).join('\n')}
 `;
 }
