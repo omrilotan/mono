@@ -1,0 +1,22 @@
+{
+  "name": "markdownise",
+  "version": "0.0.0",
+  "description": "Represent data structures in markdown",
+  "keywords": [
+    "markdown",
+    "data",
+    "convert"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/markdownise/",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "test": "cd ../../; npm t markdownise; cd -"
+  }
+}
