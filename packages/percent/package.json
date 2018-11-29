@@ -1,0 +1,17 @@
+{
+  "name": "@does/percent",
+  "version": "0.0.0",
+  "description": "Calculate one part's percentage of the whole",
+  "keywords": [
+    "percent",
+    "percentage",
+    "calculate"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/percent/"
+}
