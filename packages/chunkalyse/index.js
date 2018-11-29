@@ -1,14 +1,13 @@
-const {
-	moduleName,
-	percent,
-} = require('./lib');
+const percent = require('@does/percent');
+const jsoncopy = require('jsoncopy');
+const {moduleName} = require('./lib');
 
 /**
  * chunkalyse: summarise stats
  * @param  {Array} data.chunks
  * @return {Object}
  */
-module.exports = ({chunks}) => chunks
+module.exports = ({chunks}) => jsoncopy(chunks)
 	.reduce(
 		(accumulator, {names, size, modules}) => Object.assign(
 			accumulator,
@@ -25,7 +24,8 @@ module.exports = ({chunks}) => chunks
 							),
 							{}
 						)
-					).reduce(
+					)
+					.reduce(
 						(accumulator, [name, _size]) => Object.assign(
 							accumulator,
 							{

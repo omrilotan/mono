@@ -1,13 +1,46 @@
-const {extname} = require('path');
+const {sep} = require('path');
 
-const BUNDLED_FILES = [
-	'',
-	'js',
-	'mjs',
-	'jsx',
-	'ts',
-	'json',
-];
+/**
+ * node modules directory name
+ * @type {String}
+ */
+const MODULES_DIRNAME = 'node_modules';
+
+/**
+ * Webpack "externals" entry pattern
+ * @example 'external "module-name"'
+ * @type {RegExp}
+ */
+const EXTERNAL_PATTERN = /^external /;
+
+/**
+ * Output name for "external" entries
+ * @type {String}
+ */
+const LITERNAL_NAME_EXTERNAL = 'external';
+
+/**
+ * Output name for parent component
+ * @type {String}
+ */
+const LITERNAL_NAME_SELF = 'self';
+
+/**
+ * Clean name from pre defined patterns:
+ *  - (.*!): Extract filename from loaders: '(<loader expression>!)?/path/to/module.js'
+ *  - (\s.*): Avoid omitted modules: './src/lib/index.js + 4 modules'
+ * @param  {String} name
+ * @return {String}
+ */
+const clean =  name => name.replace(/.*!|\s.*/, '');
+
+// Org module name consists of two parts: '@org-name/module-name'
+/**
+ * [description]
+ * @param  {String} string
+ * @return {Boolean}
+ */
+const org = string => string.startsWith('@');
 
 /**
  * Get the module name from the module path
@@ -15,28 +48,19 @@ const BUNDLED_FILES = [
  * @return {String}
  */
 module.exports = name => {
-	name = name.split(' ')[0]; // avoid comments like "./src/lib/index.js + 4 modules"
-
-	if (name.startsWith('external')) {
-		return 'external';
+	if (EXTERNAL_PATTERN.test(name)) {
+		return LITERNAL_NAME_EXTERNAL;
 	}
 
-	const ext = extname(name).replace(/^\./, '');
+	name = clean(name);
 
-	if (!BUNDLED_FILES.includes(ext)) {
-		return `${ext} files`;
-	}
+	const parts = name.split(sep);
+	const a = parts.findIndex(item => item === MODULES_DIRNAME) + 1
 
-	const parts = name.split('/');
-	const _from = parts.findIndex(item => item === 'node_modules') + 1;
-
-	if (_from === 0) {
-		return 'self';
-	}
-
-	const _until = _from + (parts[_from].startsWith('@') ? 2 : 1);
-
-	return parts
-		.slice(_from, _until)
-		.join('/');
+	return a
+		?
+		parts.slice(a, a + (org(parts[a]) ? 2 : 1)).join(sep)
+		:
+		LITERNAL_NAME_SELF
+	;
 };

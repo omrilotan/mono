@@ -37,12 +37,30 @@ describe('moduleName', () => {
 		).to.equal('external');
 	});
 
-	it('Should include only js css files', () => {
+	it('Should include only css files in sum', () => {
 		expect(
 			moduleName('./src/shared/delivery_time/style.scss')
-		).to.equal(null);
+		).to.equal('self');
+	});
+
+	it('Should extract org level module names', () => {
 		expect(
 			moduleName('./node_modules/@fiverr-private/futile/lib/__alias/index.mjs')
 		).to.equal('@fiverr-private/futile');
+	});
+
+	it('Should include "+ n modules" comments', () => {
+		expect(
+			moduleName('./node_modules/my-module-name/dist/some-file.esm.js + 1 modules')
+		).to.equal('my-module-name');
+	});
+
+	it('Should associate code loaded by loaders to it\'s owner', () => {
+		expect(
+			moduleName('./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./src/Component/style.scss')
+		).to.equal('self');
+		expect(
+			moduleName('./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./node_modules/my-module-name/dist/some-file.scss')
+		).to.equal('my-module-name');
 	});
 });
