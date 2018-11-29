@@ -44,10 +44,10 @@ const [name] = argv;
 				url: 'git+https://github.com/omrilotan/mono.git',
 			},
 			homepage: `https://omrilotan.com/mono/${name}/`,
-  		main: 'index.js',
-		  scripts: {
-		    test: `cd ../../; npm t ${name}; cd -`
-		  }
+			main: 'index.js',
+			scripts: {
+				test: `cd ../../; npm t ${name}; cd -`,
+			},
 		},
 		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test'],
 		2
