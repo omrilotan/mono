@@ -1,6 +1,6 @@
 {
   "name": "@does/percent",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Calculate one part's percentage of the whole",
   "keywords": [
     "percent",
@@ -13,5 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.com/mono/percent/"
+  "homepage": "https://omrilotan.com/mono/percent/",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t percent; cd -"
+  }
 }
