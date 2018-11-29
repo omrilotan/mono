@@ -29,5 +29,6 @@ Mono repo holding multiple packages
 | **`perfrep`** | [Host Performance Report in Percent](./packages/perfrep#readme) | [![](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
 | **`run-all-the-things`** | [Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`selenium-chrome-clear-cache`** | [Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
+| **`@does/sortby`** | [Sort array of objects by key or function](./packages/sortby#readme) | [![](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
 | **`transparent-pixel`** | [One transparent pixel](./packages/transparent-pixel#readme) | [![](https://img.shields.io/npm/v/transparent-pixel.svg)](https://www.npmjs.com/package/transparent-pixel)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
