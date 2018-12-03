@@ -1,8 +1,18 @@
 const chunkalyse = require('.');
 
+const FIXTURES = [
+	'butter-toast',
+	'emoji-picker-react',
+	'react-dates',
+];
+
+const FIXTURES_CHUNKALISED = [
+	'emoji-picker-react',
+]
+
 describe('chunkalyse fixtures', () => {
 	it('Should not mutate the original object', () => {
-		const stats = require('./fixtures/emoji-picker-react.json');
+		const stats = require(`./fixtures/${FIXTURES[0]}.json`);
 
 		const before = JSON.stringify(stats);
 		chunkalyse(stats);
@@ -11,9 +21,7 @@ describe('chunkalyse fixtures', () => {
 		expect(before).to.equal(after);
 	});
 
-	[
-		'emoji-picker-react',
-	].forEach(
+	FIXTURES_CHUNKALISED.forEach(
 		fixture => {
 			it(`[Degregation] Should match fixture stats with expected result for "${fixture}"`, () => {
 				expect(
@@ -25,19 +33,23 @@ describe('chunkalyse fixtures', () => {
 		}
 	);
 
-	[
-		'butter-toast',
-		'emoji-picker-react',
-		'react-dates',
-	].forEach(lib => {
-		it(`Should calculate all the parts of the application to reach its sum (${lib})`, () => {
-			const chunks = chunkalyse(require(`./fixtures/${lib}.json`));
-			const summary = Object.values(chunks)[0];
-			const sum = Object.values(summary.modules).map(v => v.size).reduce(
-				(sum, i) => sum + i,
-				0
+	FIXTURES.forEach(lib => {
+		describe(`Application size and modules size (${lib})`, () => {
+			const results = chunkalyse(require(`./fixtures/${lib}.json`));
+
+			Object.entries(results).forEach(
+				([name, {size, modules}]) =>
+				{
+					it(`Should reach full application size by modules sizes (${lib}/${name})`, () => {
+						const sum = Object.values(modules)
+							.map(({size}) => size).reduce(
+								(sum, i) => sum + i,
+								0
+							);
+						expect(sum).to.equal(size);
+					});
+				}
 			);
-			expect(sum).to.equal(summary.size);
 
 		});
 	});
