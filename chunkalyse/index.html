@@ -11,11 +11,19 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="chunkalyse-">chunkalyse <a href="https://www.npmjs.com/package/chunkalyse"><img src="https://img.shields.io/npm/v/chunkalyse.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/chunkalyse"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
-<h2 id="-summarise-webpack-entries-from-stats-output-file">👓 Summarise webpack entries from stats output file</h2>
+<h2 id="-summarise-webpack-entries-from-stats-output-file">🍰 Summarise webpack entries from stats output file</h2>
+<table>
+<thead>
+<tr>
+<th><img width="260" src="https://user-images.githubusercontent.com/516342/49396538-12cb0f80-f742-11e8-8503-8a459761c9fb.png"></th>
+</tr>
+</thead>
+</table>
 <p>Supports:</p>
 <ul>
 <li>✔︎ webpack stats</li>
 <li>✔︎ multiple entries</li>
+<li>✔︎ <a href="https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations">multiple configurations</a></li>
 <li>✔︎ loaders</li>
 <li>✔︎ output formats</li>
 </ul>
@@ -29,11 +37,11 @@ npx chunkalyse stats.json</code></pre>
 <pre><code class="language-sh">npm i -g chunkalyse
 webpack --config webpack.config.js --profile --json | chunkalyse</code></pre>
 <h4 id="example-output-styled-in-cli-descending-">Example output (styled in CLI, descending)</h4>
-<pre><code>main (9.7 kB)
- • await-reduce: 3.5 kB (36%)
- • @recursive/assign: 3.4 kB (35%)
- • paraphrase: 2.5 kB (25%)
- • self: 354 B (4%)</code></pre><h5 id="cli-output-formats">CLI output formats</h5>
+<pre><code>main (331.2 kB)
+ • self: 243.8 kB (74%)
+ • core-js: 38.8 kB (12%)
+ • prop-types: 26.5 kB (8%)
+ ...</code></pre><h5 id="cli-output-formats">CLI output formats</h5>
 <ul>
 <li><code>human</code> (default, see above)</li>
 <li><code>json</code></li>
@@ -48,32 +56,29 @@ chunkalyse(stats); // Named summaries (one for each entry point)
 
 {
   main: {
-    size: 9737,
+    size: 331215,
     modules: {
+      &#39;core-js&#39;: {
+        size: 38776,
+        percent: 12
+      },
       self: {
-        size: 354,
+        size: 243771,
+        percent: 74
+      },
+      &#39;style-loader&#39;: {
+        size: 12465,
         percent: 4
       },
-      &quot;@recursive/assign&quot;: {
-        size: 3398,
-        percent: 35
-      },
-      &quot;await-reduce&quot;: {
-        size: 3516,
-        percent: 36
-      },
-      paraphrase: {
-        size: 2469,
-        percent: 25
-      }
+      ...
     }
   }
 }</code></pre>
-<h3 id="multiple-entries-object-example">Multiple entries object example</h3>
+<h3 id="multiple-entries-or-multiple-configurations-example">Multiple entries or <a href="https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations">multiple configurations</a> example</h3>
 <pre><code class="language-js">{
-  assign: { size: 3461, modules: { ... } },
-  paraphrase: { size: 2533, modules: { ... } },
-  reduce: { size: 3574, modules: { ... } }
+  moduleA: { size: 3461, modules: { ... } },
+  moduleB: { size: 2533, modules: { ... } },
+  moduleC: { size: 3574, modules: { ... } }
 }</code></pre>
 <h3 id="thanks">Thanks</h3>
 <p>This project uses stats from other projects for research and testing purposes:</p>
