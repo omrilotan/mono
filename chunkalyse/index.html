@@ -11,47 +11,76 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="chunkalyse-">chunkalyse <a href="https://www.npmjs.com/package/chunkalyse"><img src="https://img.shields.io/npm/v/chunkalyse.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/chunkalyse"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
-<h2 id="summarise-webpack-entries-from-stats-output-file">Summarise webpack entries from stats output file</h2>
+<h2 id="-summarise-webpack-entries-from-stats-output-file">👓 Summarise webpack entries from stats output file</h2>
+<p>Supports:</p>
+<ul>
+<li>✔︎ webpack stats</li>
+<li>✔︎ multiple entries</li>
+<li>✔︎ loaders</li>
+<li>✔︎ output formats</li>
+</ul>
 <h3 id="cli">CLI</h3>
 <p>Pipe stats</p>
-<pre><code class="language-sh">npm i -g chunkalyse
-webpack --config webpack.config.js --profile --json | chunkalyse</code></pre>
+<pre><code class="language-sh">webpack --config webpack.config.js --profile --json | npx chunkalyse</code></pre>
 <p>Pass file route</p>
 <pre><code class="language-sh">webpack --config webpack.config.js --profile --json &gt; stats.json
 npx chunkalyse stats.json</code></pre>
+<p>Install globally for continues use</p>
+<pre><code class="language-sh">npm i -g chunkalyse
+webpack --config webpack.config.js --profile --json | chunkalyse</code></pre>
 <h4 id="example-output-styled-in-cli-descending-">Example output (styled in CLI, descending)</h4>
 <pre><code>main (9.7 kB)
  • await-reduce: 3.5 kB (36%)
  • @recursive/assign: 3.4 kB (35%)
  • paraphrase: 2.5 kB (25%)
- • self: 354 B (4%)</code></pre><h3 id="module-delivers-un-styled-data">Module delivers un-styled data</h3>
+ • self: 354 B (4%)</code></pre><h5 id="cli-output-formats">CLI output formats</h5>
+<ul>
+<li><code>human</code> (default, see above)</li>
+<li><code>json</code></li>
+</ul>
+<p>Example</p>
+<pre><code class="language-sh">chunkalyse stats.json --format json &gt; chunkalised.json</code></pre>
+<h3 id="module-delivers-object-with-named-entries">Module delivers object with named entries</h3>
 <pre><code class="language-js">const chunkalyse = require(&#39;chunkalyse&#39;);
 const stats = require(&#39;./stats.json&#39;);
 
-chunkalyse(stats); // Array of summaries (one for each entry point)</code></pre>
-<h4 id="output">Output</h4>
-<pre><code class="language-js">{
-  &quot;main&quot;: {
-    &quot;size&quot;: 9737,
-    &quot;modules&quot;: {
-      &quot;self&quot;: {
-        &quot;size&quot;: 354,
-        &quot;percent&quot;: 4
+chunkalyse(stats); // Named summaries (one for each entry point)
+
+{
+  main: {
+    size: 9737,
+    modules: {
+      self: {
+        size: 354,
+        percent: 4
       },
       &quot;@recursive/assign&quot;: {
-        &quot;size&quot;: 3398,
-        &quot;percent&quot;: 35
+        size: 3398,
+        percent: 35
       },
       &quot;await-reduce&quot;: {
-        &quot;size&quot;: 3516,
-        &quot;percent&quot;: 36
+        size: 3516,
+        percent: 36
       },
-      &quot;paraphrase&quot;: {
-        &quot;size&quot;: 2469,
-        &quot;percent&quot;: 25
+      paraphrase: {
+        size: 2469,
+        percent: 25
       }
     }
   }
 }</code></pre>
+<h3 id="multiple-entries-object-example">Multiple entries object example</h3>
+<pre><code class="language-js">{
+  assign: { size: 3461, modules: { ... } },
+  paraphrase: { size: 2533, modules: { ... } },
+  reduce: { size: 3574, modules: { ... } }
+}</code></pre>
+<h3 id="thanks">Thanks</h3>
+<p>This project uses stats from other projects for research and testing purposes:</p>
+<ul>
+<li><a href="https://github.com/ealush/butter-toast">butter-toast</a></li>
+<li><a href="https://github.com/ealush/emoji-picker-react">emoji-picker-react</a></li>
+<li><a href="https://github.com/airbnb/react-dates">react-dates</a></li>
+</ul>
 	</body>
 </html>
