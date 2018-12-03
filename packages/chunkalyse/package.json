@@ -1,7 +1,7 @@
 {
   "name": "chunkalyse",
-  "version": "0.0.1",
-  "description": "Summarise webpack stats output file",
+  "version": "0.0.3",
+  "description": "👓 Summarise webpack stats output file",
   "keywords": [
     "webpack",
     "stats",
@@ -11,7 +11,8 @@
     "modules",
     "size",
     "percent",
-    "chunks"
+    "chunks",
+    "👓"
   ],
   "author": "omrilotan",
   "license": "MIT",
@@ -23,15 +24,15 @@
   "main": "index.js",
   "bin": "bin/chunkalyse.js",
   "scripts": {
-    "build": "./fixtures/scripts/prepare.sh",
-    "postbuild": "npm run inspect-single && npm run inspect-multi",
-    "inspect-single": "./bin/chunkalyse.js fixtures/stats.json",
-    "inspect-multi": "./bin/chunkalyse.js fixtures/stats.multi.json",
+    "pretest": "./fixtures/scripts/pretest.sh",
     "test": "cd ../../; npm t chunkalyse; cd -"
   },
   "dependencies": {
+    "@does/percent": "0.0.0",
     "byte-size": "^4.0.4",
-    "index-require": "^0.1.0"
+    "index-require": "^0.1.0",
+    "jsoncopy": "^1.0.0",
+    "yargs": "^12.0.5"
   },
   "devDependencies": {
     "@recursive/assign": "^1.2.3",
