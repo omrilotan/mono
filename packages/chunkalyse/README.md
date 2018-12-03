@@ -7,6 +7,7 @@ Supports:
 - ✔︎ webpack stats
 - ✔︎ multiple entries
 - ✔︎ loaders
+- ✔︎ output formats
 
 ### CLI
 Pipe stats
@@ -32,6 +33,15 @@ main (9.7 kB)
  • @recursive/assign: 3.4 kB (35%)
  • paraphrase: 2.5 kB (25%)
  • self: 354 B (4%)
+```
+
+##### CLI output formats
+- `human` (default, see above)
+- `json`
+
+Example
+```sh
+chunkalyse stats.json --format json > chunkalised.json
 ```
 
 ### Module delivers object with named entries

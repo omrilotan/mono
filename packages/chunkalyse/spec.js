@@ -6,10 +6,6 @@ const FIXTURES = [
 	'react-dates',
 ];
 
-const FIXTURES_CHUNKALISED = [
-	'emoji-picker-react',
-]
-
 describe('chunkalyse fixtures', () => {
 	it('Should not mutate the original object', () => {
 		const stats = require(`./fixtures/${FIXTURES[0]}.json`);
@@ -21,7 +17,7 @@ describe('chunkalyse fixtures', () => {
 		expect(before).to.equal(after);
 	});
 
-	FIXTURES_CHUNKALISED.forEach(
+	FIXTURES.forEach(
 		fixture => {
 			it(`[Degregation] Should match fixture stats with expected result for "${fixture}"`, () => {
 				expect(

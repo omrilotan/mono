@@ -24,13 +24,15 @@
   "main": "index.js",
   "bin": "bin/chunkalyse.js",
   "scripts": {
+    "pretest": "./fixtures/scripts/pretest.sh",
     "test": "cd ../../; npm t chunkalyse; cd -"
   },
   "dependencies": {
     "@does/percent": "0.0.0",
     "byte-size": "^4.0.4",
     "index-require": "^0.1.0",
-    "jsoncopy": "^1.0.0"
+    "jsoncopy": "^1.0.0",
+    "yargs": "^12.0.5"
   },
   "devDependencies": {
     "@recursive/assign": "^1.2.3",
