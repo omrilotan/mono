@@ -1,7 +1,7 @@
 {
   "name": "chunkalyse",
-  "version": "0.0.3",
-  "description": "👓 Summarise webpack stats output file",
+  "version": "0.0.4",
+  "description": "🍰 Summarise webpack stats output file",
   "keywords": [
     "webpack",
     "stats",
@@ -12,6 +12,9 @@
     "size",
     "percent",
     "chunks",
+    "🍰",
+    "📊",
+    "🔢",
     "👓"
   ],
   "author": "omrilotan",

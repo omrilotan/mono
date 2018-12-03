@@ -1,11 +1,15 @@
 # chunkalyse [![](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/chunkalyse)
 
-## 👓 Summarise webpack entries from stats output file
+## 🍰 Summarise webpack entries from stats output file
+
+| <img width="260" src="https://user-images.githubusercontent.com/516342/49396538-12cb0f80-f742-11e8-8503-8a459761c9fb.png">
+| -
 
 Supports:
 
 - ✔︎ webpack stats
 - ✔︎ multiple entries
+- ✔︎ [multiple configurations](https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations)
 - ✔︎ loaders
 - ✔︎ output formats
 
@@ -28,11 +32,11 @@ webpack --config webpack.config.js --profile --json | chunkalyse
 
 #### Example output (styled in CLI, descending)
 ```
-main (9.7 kB)
- • await-reduce: 3.5 kB (36%)
- • @recursive/assign: 3.4 kB (35%)
- • paraphrase: 2.5 kB (25%)
- • self: 354 B (4%)
+main (331.2 kB)
+ • self: 243.8 kB (74%)
+ • core-js: 38.8 kB (12%)
+ • prop-types: 26.5 kB (8%)
+ ...
 ```
 
 ##### CLI output formats
@@ -53,35 +57,32 @@ chunkalyse(stats); // Named summaries (one for each entry point)
 
 {
   main: {
-    size: 9737,
+    size: 331215,
     modules: {
+      'core-js': {
+        size: 38776,
+        percent: 12
+      },
       self: {
-        size: 354,
+        size: 243771,
+        percent: 74
+      },
+      'style-loader': {
+        size: 12465,
         percent: 4
       },
-      "@recursive/assign": {
-        size: 3398,
-        percent: 35
-      },
-      "await-reduce": {
-        size: 3516,
-        percent: 36
-      },
-      paraphrase: {
-        size: 2469,
-        percent: 25
-      }
+      ...
     }
   }
 }
 ```
 
-### Multiple entries object example
+### Multiple entries or [multiple configurations](https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations) example
 ```js
 {
-  assign: { size: 3461, modules: { ... } },
-  paraphrase: { size: 2533, modules: { ... } },
-  reduce: { size: 3574, modules: { ... } }
+  moduleA: { size: 3461, modules: { ... } },
+  moduleB: { size: 2533, modules: { ... } },
+  moduleC: { size: 3574, modules: { ... } }
 }
 ```
 

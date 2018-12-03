@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "description": "Dummy fixtures for chunkalyse testing",
   "scripts": {
-    "start": "./scripts/prepare.sh"
+    "prestart": "rm -rf ./dist && mkdir ./dist",
+    "start": "webpack --config webpack.config.js --profile --json > ./dist/stats.json",
+    "test": "../bin/chunkalyse.js ./dist/stats.json"
   },
   "dependencies": {
-    "@recursive/assign": "*",
-    "await-reduce": "*",
-    "paraphrase": "*"
+    "@recursive/assign": "^1.2.3",
+    "await-reduce": "^1.2.3",
+    "paraphrase": "^1.5.0"
   },
   "private": true
 }
