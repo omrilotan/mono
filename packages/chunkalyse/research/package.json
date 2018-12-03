@@ -1,0 +1,14 @@
+{
+  "name": "fixtures",
+  "version": "0.0.0",
+  "description": "Dummy fixtures for chunkalyse testing",
+  "scripts": {
+    "start": "./scripts/prepare.sh"
+  },
+  "dependencies": {
+    "@recursive/assign": "*",
+    "await-reduce": "*",
+    "paraphrase": "*"
+  },
+  "private": true
+}

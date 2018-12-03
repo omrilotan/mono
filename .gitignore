@@ -8,7 +8,5 @@ junit
 dist/
 
 # Chunkalyse
-packages/chunkalyse/fixtures/stats.json
-packages/chunkalyse/fixtures/stats.multi.json
-packages/chunkalyse/fixtures/*.chunkalised.json
+*.chunkalised.json
 

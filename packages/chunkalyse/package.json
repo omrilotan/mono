@@ -24,7 +24,7 @@
   "main": "index.js",
   "bin": "bin/chunkalyse.js",
   "scripts": {
-    "pretest": "./fixtures/scripts/pretest.sh",
+    "pretest": "./scripts/pretest.sh",
     "test": "cd ../../; npm t chunkalyse; cd -"
   },
   "dependencies": {
@@ -33,12 +33,5 @@
     "index-require": "^0.1.0",
     "jsoncopy": "^1.0.0",
     "yargs": "^12.0.5"
-  },
-  "devDependencies": {
-    "@recursive/assign": "^1.2.3",
-    "await-reduce": "^1.2.3",
-    "paraphrase": "^1.5.0",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
   }
 }

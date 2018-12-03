@@ -2,4 +2,5 @@
 *.log
 spec.js
 fixtures
-research.md
+scripts
+research

@@ -8,7 +8,7 @@
 process.on('unhandledRejection', console.error);
 
 const {resolve} = require('path');
-const argv = require('yargs').argv;
+const {argv} = require('yargs');
 const chunkalyse = require('..');
 
 (() => {
@@ -30,7 +30,7 @@ const chunkalyse = require('..');
 
 function start(stats) {
 	const result = chunkalyse(stats);
-	const {format} = argv;
+	const {format = 'human'} = argv;
 	let output;
 
 	switch (format) {
