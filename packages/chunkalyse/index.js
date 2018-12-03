@@ -19,13 +19,12 @@ module.exports = ({chunks}) => jsoncopy(chunks)
 							(accumulator, {name, size}) => Object.assign(
 								accumulator,
 								{
-									[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size
+									[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
 								}
 							),
 							{}
 						)
-					)
-					.reduce(
+					).reduce(
 						(accumulator, [name, _size]) => Object.assign(
 							accumulator,
 							{

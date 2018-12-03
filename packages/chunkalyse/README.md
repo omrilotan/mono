@@ -69,7 +69,7 @@ chunkalyse(stats); // Named summaries (one for each entry point)
 ### Multiple entries object example
 ```js
 {
-	assign: { size: 3461, modules: { ... } },
+  assign: { size: 3461, modules: { ... } },
   paraphrase: { size: 2533, modules: { ... } },
   reduce: { size: 3574, modules: { ... } }
 }
