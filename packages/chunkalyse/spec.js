@@ -67,8 +67,6 @@ describe('chunkalyse fixtures', () => {
 		'butter-toast',
 		'emoji-picker-react',
 		'react-dates',
-		'stats',
-		'stats.multi',
 	].forEach(lib => {
 		it(`Should calculate all the parts of the application to reach its sum (${lib})`, () => {
 			const chunks = chunkalyse(require(`./fixtures/${lib}.json`));

@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.26.0",
   "hash": "357bcb918003ca364d5b",
-  "time": 226,
-  "builtAt": 1543009893454,
+  "time": 1212,
+  "builtAt": 1543838718694,
   "publicPath": "",
   "outputPath": "/spaceship/mono/packages/chunkalyse/fixtures/dist",
   "assetsByChunkName": {
@@ -150,8 +150,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 35,
-            "building": 12
+            "factory": 338,
+            "building": 53
           },
           "failed": false,
           "errors": 0,
@@ -199,14 +199,14 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/assign.js",
               "name": "./fixtures/src/modules/assign.js",
               "profile": {
-                "factory": 35,
-                "building": 12
+                "factory": 338,
+                "building": 53
               }
             }
           ],
           "profile": {
-            "factory": 12,
-            "building": 40
+            "factory": 230,
+            "building": 127
           },
           "failed": false,
           "errors": 0,
@@ -290,8 +290,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 29,
-            "building": 13
+            "factory": 246,
+            "building": 252
           },
           "failed": false,
           "errors": 0,
@@ -339,14 +339,14 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/paraphrase.js",
               "name": "./fixtures/src/modules/paraphrase.js",
               "profile": {
-                "factory": 29,
-                "building": 13
+                "factory": 246,
+                "building": 252
               }
             }
           ],
           "profile": {
-            "factory": 10,
-            "building": 19
+            "factory": 13,
+            "building": 248
           },
           "failed": false,
           "errors": 0,
@@ -430,8 +430,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 30,
-            "building": 13
+            "factory": 246,
+            "building": 254
           },
           "failed": false,
           "errors": 0,
@@ -479,14 +479,14 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/reduce.js",
               "name": "./fixtures/src/modules/reduce.js",
               "profile": {
-                "factory": 30,
-                "building": 13
+                "factory": 246,
+                "building": 254
               }
             }
           ],
           "profile": {
-            "factory": 9,
-            "building": 46
+            "factory": 13,
+            "building": 256
           },
           "failed": false,
           "errors": 0,
@@ -554,8 +554,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 35,
-        "building": 12
+        "factory": 338,
+        "building": 53
       },
       "failed": false,
       "errors": 0,
@@ -599,8 +599,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 29,
-        "building": 13
+        "factory": 246,
+        "building": 252
       },
       "failed": false,
       "errors": 0,
@@ -644,8 +644,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 30,
-        "building": 13
+        "factory": 246,
+        "building": 254
       },
       "failed": false,
       "errors": 0,
@@ -693,14 +693,14 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/assign.js",
           "name": "./fixtures/src/modules/assign.js",
           "profile": {
-            "factory": 35,
-            "building": 12
+            "factory": 338,
+            "building": 53
           }
         }
       ],
       "profile": {
-        "factory": 12,
-        "building": 40
+        "factory": 230,
+        "building": 127
       },
       "failed": false,
       "errors": 0,
@@ -757,14 +757,14 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/reduce.js",
           "name": "./fixtures/src/modules/reduce.js",
           "profile": {
-            "factory": 30,
-            "building": 13
+            "factory": 246,
+            "building": 254
           }
         }
       ],
       "profile": {
-        "factory": 9,
-        "building": 46
+        "factory": 13,
+        "building": 256
       },
       "failed": false,
       "errors": 0,
@@ -821,14 +821,14 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/modules/paraphrase.js",
           "name": "./fixtures/src/modules/paraphrase.js",
           "profile": {
-            "factory": 29,
-            "building": 13
+            "factory": 246,
+            "building": 252
           }
         }
       ],
       "profile": {
-        "factory": 10,
-        "building": 19
+        "factory": 13,
+        "building": 248
       },
       "failed": false,
       "errors": 0,

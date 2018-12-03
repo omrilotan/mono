@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.26.0",
   "hash": "9f099addcdffd7be8ab6",
-  "time": 305,
-  "builtAt": 1543009892560,
+  "time": 485,
+  "builtAt": 1543838714765,
   "publicPath": "",
   "outputPath": "/spaceship/mono/packages/chunkalyse/fixtures/dist",
   "assetsByChunkName": {
@@ -86,8 +86,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           },
           "failed": false,
           "errors": 0,
@@ -137,8 +137,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             }
           ],
@@ -203,8 +203,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             }
           ],
@@ -269,8 +269,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             }
           ],
@@ -335,8 +335,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             },
             {
@@ -350,8 +350,8 @@
             }
           ],
           "profile": {
-            "factory": 10,
-            "building": 24
+            "factory": 13,
+            "building": 78
           },
           "failed": false,
           "errors": 0,
@@ -408,8 +408,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             },
             {
@@ -423,8 +423,8 @@
             }
           ],
           "profile": {
-            "factory": 9,
-            "building": 58
+            "factory": 12,
+            "building": 110
           },
           "failed": false,
           "errors": 0,
@@ -481,8 +481,8 @@
               "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
               "name": "./fixtures/src/index.js",
               "profile": {
-                "factory": 35,
-                "building": 13
+                "factory": 145,
+                "building": 14
               }
             },
             {
@@ -496,8 +496,8 @@
             }
           ],
           "profile": {
-            "factory": 8,
-            "building": 46
+            "factory": 11,
+            "building": 99
           },
           "failed": false,
           "errors": 0,
@@ -565,8 +565,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 35,
-        "building": 13
+        "factory": 145,
+        "building": 14
       },
       "failed": false,
       "errors": 0,
@@ -616,8 +616,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         }
       ],
@@ -682,8 +682,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         }
       ],
@@ -748,8 +748,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         }
       ],
@@ -814,8 +814,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         },
         {
@@ -829,8 +829,8 @@
         }
       ],
       "profile": {
-        "factory": 10,
-        "building": 24
+        "factory": 13,
+        "building": 78
       },
       "failed": false,
       "errors": 0,
@@ -887,8 +887,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         },
         {
@@ -902,8 +902,8 @@
         }
       ],
       "profile": {
-        "factory": 9,
-        "building": 58
+        "factory": 12,
+        "building": 110
       },
       "failed": false,
       "errors": 0,
@@ -960,8 +960,8 @@
           "identifier": "/spaceship/mono/packages/chunkalyse/fixtures/src/index.js",
           "name": "./fixtures/src/index.js",
           "profile": {
-            "factory": 35,
-            "building": 13
+            "factory": 145,
+            "building": 14
           }
         },
         {
@@ -975,8 +975,8 @@
         }
       ],
       "profile": {
-        "factory": 8,
-        "building": 46
+        "factory": 11,
+        "building": 99
       },
       "failed": false,
       "errors": 0,
