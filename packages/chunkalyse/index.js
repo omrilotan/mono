@@ -3,11 +3,30 @@ const jsoncopy = require('jsoncopy');
 const {moduleName} = require('./lib');
 
 /**
- * chunkalyse: summarise stats
+ * Chunkalyse stats file. for multiple entries fallback to children
+ * @param  {Object} stats
+ * @return {Object}
+ */
+module.exports = stats => {
+	if (stats.hasOwnProperty('chunks')) {
+		return analyse(stats);
+	}
+
+	return stats.children.reduce(
+		(accumulator, child) => Object.assign(
+			accumulator,
+			analyse(child)
+		),
+		{}
+	);
+}
+
+/**
+ * analyse: summarise chunks
  * @param  {Array} data.chunks
  * @return {Object}
  */
-module.exports = ({chunks}) => jsoncopy(chunks)
+const analyse = ({chunks}) => jsoncopy(chunks)
 	.reduce(
 		(accumulator, {names, size, modules}) => Object.assign(
 			accumulator,

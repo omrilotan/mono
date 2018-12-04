@@ -38,43 +38,23 @@ const chunkalyse = require('..');
  * no return value
  */
 function start(stats) {
-	const result = chunks(stats);
-	const {format = 'human'} = argv;
-	let output;
-
-	switch (format) {
-		case 'json':
-			output = JSON.stringify(result, null, 2);
-			break;
-		case 'human':
-		default:
-			output = require('../lib/humanise')(result);
-	}
-
-	console.log(output);
-}
-
-/**
- * Chunkalyse stats file. for multiple entries fallback to children
- * @param  {Object} stats
- * @return {Object}
- */
-function chunks(stats) {
 	try {
-		if (stats.hasOwnProperty('chunks')) {
-			return chunkalyse(stats);
+		const result = chunkalyse(stats);
+		const {format = 'human'} = argv;
+		let output;
+
+		switch (format) {
+			case 'json':
+				output = JSON.stringify(result, null, 2);
+				break;
+			case 'human':
+			default:
+				output = require('../lib/humanise')(result);
 		}
 
-		return stats.children.reduce(
-			(accumulator, child) => Object.assign(
-				accumulator,
-				chunkalyse(child)
-			),
-			{}
-		);
+		console.log(output);
 	} catch (error) {
 		console.log('I\'ve had trouble finding the chunks\n');
-
 		throw error;
 	}
 }
