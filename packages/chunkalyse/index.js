@@ -8,25 +8,32 @@ const {moduleName} = require('./lib');
  * @return {Object}
  */
 module.exports = stats => {
+
+	// Legacy: For single entry we use the more detailed 'modules' entry
+	const entries = Object.keys(stats.entrypoints || {});
+	if (entries.length === 1) {
+		return analyseModules(entries[0], stats);
+	}
+
 	if (stats.hasOwnProperty('chunks')) {
-		return analyse(stats);
+		return analyseChunks(stats);
 	}
 
 	return stats.children.reduce(
 		(accumulator, child) => Object.assign(
 			accumulator,
-			analyse(child)
+			analyseChunks(child)
 		),
 		{}
 	);
 }
 
 /**
- * analyse: summarise chunks
+ * summarise chunks
  * @param  {Array} data.chunks
  * @return {Object}
  */
-const analyse = ({chunks}) => jsoncopy(chunks)
+const analyseChunks = ({chunks}) => jsoncopy(chunks)
 	.reduce(
 		(accumulator, {names, size, modules}) => Object.assign(
 			accumulator,
@@ -60,3 +67,37 @@ const analyse = ({chunks}) => jsoncopy(chunks)
 		),
 		{}
 	);
+
+/**
+ * summarise modules
+ * @param  {String} name
+ * @param  {Array}  data.modules
+ * @return {Object}
+ */
+const analyseModules = (name, {modules}, total = 0) => ({
+	[name]: {
+		modules: Object.entries(
+			jsoncopy(modules).reduce(
+				(accumulator, {name, size}) => (total = total + size) && Object.assign(
+					accumulator,
+					{
+						[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
+					}
+				),
+				{}
+			)
+		).reduce(
+			(accumulator, [name, size]) => typeof size === 'number' ? Object.assign(
+				accumulator,
+				{
+					[name]: {
+						size,
+						percent: percent(size, total),
+					},
+				}
+			) : accumulator,
+			{}
+		),
+		size: total,
+	},
+});

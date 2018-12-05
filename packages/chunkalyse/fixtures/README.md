@@ -9,4 +9,6 @@
 # Create chunks for testing
 ```
 cat ./fixtures/butter-toast.json > ./fixtures/butter-toast.chunkalised.json
+cat ./fixtures/butter-toast.json > ./fixtures/emoji-picker-react.chunkalised.json
+cat ./fixtures/butter-toast.json > ./fixtures/react-dates.chunkalised.json
 ```
