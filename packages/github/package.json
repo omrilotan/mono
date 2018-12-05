@@ -1,0 +1,20 @@
+{
+  "name": "@lets/github",
+  "version": "0.0.0-alpha",
+  "description": "Semi-Automatic GitHub Operations",
+  "keywords": [],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/github/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t github; cd -"
+  },
+  "dependencies": {
+    "gofor": "^2.0.5"
+  }
+}
