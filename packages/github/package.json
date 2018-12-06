@@ -16,5 +16,6 @@
   },
   "dependencies": {
     "gofor": "^2.0.5"
-  }
+  },
+  "private": true
 }

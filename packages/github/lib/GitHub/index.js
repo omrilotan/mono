@@ -1,5 +1,5 @@
 const {join} = require('path');
-const {Gofor} = require('gofor/server');
+const Gofor = require('gofor/server');
 
 /**
  * Github's API domain
@@ -17,9 +17,11 @@ module.exports = class GitHub {
 	constructor({token} = {}) {
 		this.token = token;
 		this.gofor = new Gofor({
-			'Accept': 'application/json',
-			'Authorization': `token ${this.token}`,
-		}});
+			headers: {
+				'Accept': 'application/json',
+				'Authorization': `token ${this.token}`,
+			},
+		}).fetch;
 		this.request = this.request.bind(this);
 	}
 
