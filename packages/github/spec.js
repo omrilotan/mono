@@ -6,7 +6,7 @@ function cleanup() {
 	delete require.cache[require.resolve('.')];
 }
 
-describe('github/GitHub (path)', () => {
+describe('github (path)', () => {
 	let request;
 	beforeEach(cleanup);
 	after(cleanup);
@@ -43,14 +43,14 @@ describe('github/GitHub (path)', () => {
 		}
 
 		await request('some_function');
-		expect(url).to.equal('https:/api.github.com/some_function');
+		expect(url).to.equal('https://api.github.com/some_function');
 
 		await request('/other/function');
-		expect(url).to.equal('https:/api.github.com/other/function');
+		expect(url).to.equal('https://api.github.com/other/function');
 	});
 });
 
-describe('github/GitHub (defaults)', () => {
+describe('github (defaults)', () => {
 	let request;
 	beforeEach(cleanup);
 	after(cleanup);

@@ -1,7 +1,8 @@
-Use the GitHub instance to create automated comments on pull requests
+/**
+ * Use the GitHub instance to create automated comments on pull requests
+ */
 
-```js
-const {GitHub} = require('@lets/GitHub');
+const GitHub = require('../');
 const {join} = require('path');
 
 /**
@@ -30,8 +31,10 @@ module.exports = async function pull({token, owner, repo, pr, comment, identifie
 		safe('repos', owner, repo, 'issues', pr, 'comments')
 	);
 
+	const uniqueIdentifier = identifier ? identify(identifier) : null;
+
 	const {id = ''} = identifier ? comments.find(
-		comment => comment.body.includes(identify(identifier))
+		comment => comment.body.includes(uniqueIdentifier)
 	) || {} : {};
 
 	const url = id ?
@@ -43,10 +46,15 @@ module.exports = async function pull({token, owner, repo, pr, comment, identifie
 		{
 			method: id ? 'PATCH' : 'POST',
 			body: JSON.stringify({
-				body: [
-					`<!-- ${UNIQUE_IDENTIFIER} -->`,
-					comment,
-				].join('\n'),
+				body: uniqueIdentifier
+					?
+					[
+						`<!-- ${uniqueIdentifier} -->`,
+						comment,
+					].join('\n')
+					:
+					comment
+				,
 			}),
 		}
 	);
@@ -65,4 +73,3 @@ const safe = (...args) => join(...args.map(i => i.toString()));
  * @return {String}
  */
 const identify = identifier => Buffer.from(identifier).toString('base64');
-```
