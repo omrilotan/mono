@@ -43,6 +43,12 @@
 			"rules": {
 				"no-console": 0
 			}
+		},
+		{
+			"files": [ "**/example.js" ],
+			"rules": {
+				"no-console": 0
+			}
 		}
 	]
 }

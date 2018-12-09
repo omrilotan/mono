@@ -1,0 +1,24 @@
+{
+  "name": "stdline",
+  "version": "0.0.0",
+  "description": "Update current STDOUT line",
+  "keywords": [
+    "stdout",
+    "printline",
+    "console.log",
+    "cli",
+    "message",
+    "update"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/stdline/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"I have on tests 😞\""
+  }
+}
