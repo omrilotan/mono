@@ -1,5 +1,6 @@
 const WHEREAMI = 'rev-parse --abbrev-ref HEAD';
 const set_current_branch = `local current_branch=$(git ${WHEREAMI})`;
+const repository = '$(git remote get-url origin)';
 
 module.exports = [
 	{
@@ -26,6 +27,11 @@ module.exports = [
 		key: 'please',
 		desc: 'git push <this_branch> --force-with-lease',
 		value: `!f() { ${set_current_branch}; git push origin $current_branch --force-with-lease; }; f`,
+	},
+	{
+		key: 'sum',
+		desc: 'Generate a summary of pending changes',
+		value: `!f() { ${set_current_branch}; git request-pull $\{1:-"master"} ${repository} $current_branch; }; f`,
 	},
 	{
 		key: 'trash',
