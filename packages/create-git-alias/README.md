@@ -8,3 +8,24 @@ npm create git-alias
 ```
 
 <img src="https://user-images.githubusercontent.com/516342/48844024-713ada00-eda1-11e8-9eb3-5b2d0b4bdeb8.png" width="600">
+
+## aliases
+
+| alias | Description
+| - | -
+| aliases | print all git aliases
+| feature | Create a branch starting with today's date
+| fix | add, ammend the current commit and push some fixes
+| from | how many commit since <commit id>
+| get | start a repo by remote URL
+| l | pretty log
+| merged | After remote merge, trash current branch and pull from master
+| please | git push <this_branch> --force-with-lease
+| pruner | prune aggressive
+| purge | remove local and remote branches (accepts many)
+| s | Short status with branch name
+| sum | Generate a summary of pending changes
+| trash | Move to master and delete current local branch
+| whereami | What branch am I on?
+| wip | a wip commit with a random commit message
+| yolo | a commit with a random commit message from whatthecommit

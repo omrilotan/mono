@@ -1,6 +1,6 @@
 {
 	"name": "create-git-alias",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "CLI tool to apply some useful git aliases (interactive)",
 	"keywords": [
 		"git",
@@ -19,6 +19,7 @@
 	"main": "index.js",
 	"bin": "bin/create-git-alias.js",
 	"scripts": {
+    "readme": "node scripts/update-readme",
 		"start": "./bin/create-git-alias.js"
 	},
 	"dependencies": {
