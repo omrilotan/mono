@@ -19,7 +19,7 @@
 	"main": "index.js",
 	"bin": "bin/create-git-alias.js",
 	"scripts": {
-    "readme": "node scripts/update-readme",
+		"readme": "node scripts/update-readme",
 		"start": "./bin/create-git-alias.js"
 	},
 	"dependencies": {
