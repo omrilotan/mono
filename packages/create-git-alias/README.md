@@ -14,6 +14,7 @@ npm create git-alias
 | alias | Description
 | - | -
 | aliases | print all git aliases
+| far | fetch from remote master and rebase
 | feature | Create a branch starting with today's date
 | fix | add, ammend the current commit and push some fixes
 | from | how many commit since <commit id>
