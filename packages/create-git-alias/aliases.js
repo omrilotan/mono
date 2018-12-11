@@ -83,4 +83,9 @@ module.exports = [
 		desc: 'add, ammend the current commit and push some fixes',
 		value: `!f() { git add . && git commit --amend --no-edit && git please && ${set_current_branch} && git push origin $current_branch --force-with-lease; }; f`,
 	},
+	{
+		key: 'far',
+		desc: 'fetch from remote master and rebase',
+		value: '!f() { git checkout master && git pull origin master && git checkout - && git rebase master; }; f',
+	},
 ];
