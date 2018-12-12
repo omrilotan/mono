@@ -29,5 +29,9 @@ flatten([
     ],
 ]);
 // [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]</code></pre>
+<h2 id="transpiled-version">Transpiled version</h2>
+<p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
+<p>Also available for explicit import:</p>
+<pre><code class="language-js">const flatten = require(&#39;@recursive/flatten/dist&#39;);</code></pre>
 	</body>
 </html>
