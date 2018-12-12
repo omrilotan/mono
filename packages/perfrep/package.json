@@ -12,7 +12,7 @@
 		"monitoring",
 		"usage",
 		"stats",
-    "🐎"
+		"🐎"
 	],
 	"author": "omrilotan",
 	"license": "MIT",
@@ -22,9 +22,9 @@
 	},
 	"homepage": "https://omrilotan.com/mono/perfrep/",
 	"main": "index.js",
-  "bin": "bin/index.js",
+	"bin": "bin/index.js",
 	"scripts": {
-    "start": "node bin",
+		"start": "node bin",
 		"test": "cd ../../; npm t perfrep; cd -"
 	},
 	"dependencies": {
