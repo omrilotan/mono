@@ -27,7 +27,7 @@ Mono repo holding multiple packages
 | **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![1.5.0](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.0](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
-| **`run-all-the-things`** | [Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.1.2](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
+| **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`selenium-chrome-clear-cache`** | [Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.1.3](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
 | **`@does/sortby`** | [Sort array of objects by key or function](./packages/sortby#readme) | [![0.0.1](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
 | **`stdline`** | [Update current STDOUT line](./packages/stdline#readme) | [![0.0.0](https://img.shields.io/npm/v/stdline.svg)](https://www.npmjs.com/package/stdline)
