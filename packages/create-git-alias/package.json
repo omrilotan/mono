@@ -16,10 +16,10 @@
 		"url": "git+https://github.com/omrilotan/mono.git"
 	},
 	"homepage": "https://omrilotan.com/mono/create-git-alias/",
-	"bin": "index.js",
+	"bin": "bin.js",
 	"scripts": {
 		"readme": "node scripts/update-readme",
-		"start": "./index.js",
+		"start": "./bin.js",
     "test": "cd ../../; npm t create-git-alias; cd -"
 	},
 	"dependencies": {
