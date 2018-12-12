@@ -18,7 +18,7 @@
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
     "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
-    "dist": "./packages/run-all-the-things/index.js webpack babel",
+    "dist": "./packages/run-all-the-things/bin/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
     "babel": "./scripts/foreach.sh '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",
     "postdist": "npx mocha dists/test.js",
