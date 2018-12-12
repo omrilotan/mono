@@ -13,7 +13,7 @@ npm create git-alias
 Show all choices - even ones that are identical to the ones I have
 
 ```
-npm create git-alias -a
+npm create git-alias --all
 ```
 
 <img src="https://user-images.githubusercontent.com/516342/48844024-713ada00-eda1-11e8-9eb3-5b2d0b4bdeb8.png" width="600">
