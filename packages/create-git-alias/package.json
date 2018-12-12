@@ -20,7 +20,7 @@
 	"scripts": {
 		"readme": "node scripts/update-readme",
 		"start": "./bin.js",
-    "test": "cd ../../; npm t create-git-alias; cd -"
+		"test": "cd ../../; npm t create-git-alias; cd -"
 	},
 	"dependencies": {
 		"async-execute": "^1.0.1",
