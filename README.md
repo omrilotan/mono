@@ -12,7 +12,7 @@ Mono repo holding multiple packages
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.2](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.0.6](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
-| **`create-git-alias`** | [CLI tool to apply some useful git aliases (interactive)](./packages/create-git-alias#readme) | [![0.0.4](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
+| **`create-git-alias`** | [👨🏻 CLI tool to apply some useful git aliases (interactive)](./packages/create-git-alias#readme) | [![0.0.5](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.2](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.1](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`@recursive/flatten`** | [Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![0.0.0](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
