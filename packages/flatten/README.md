@@ -20,3 +20,11 @@ flatten([
 ]);
 // [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
 ```
+
+## Transpiled version
+Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
+
+Also available for explicit import:
+```js
+const flatten = require('@recursive/flatten/dist');
+```

@@ -4,7 +4,7 @@
  * @param  {Number} whole
  * @return {Number}
  */
-module.exports = (part, whole) => {
+module.exports = function percent(part, whole) {
 	if (part === 0 || whole === 0) {
 		return part === whole ? 0 : part > whole ? 100 : 0;
 	}
