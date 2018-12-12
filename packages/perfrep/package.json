@@ -1,7 +1,7 @@
 {
 	"name": "perfrep",
-	"version": "0.1.0",
-	"description": "Host Performance Report in Percent",
+	"version": "0.2.0",
+	"description": "🐎 Host Performance Report in Percent",
 	"keywords": [
 		"cpu",
 		"heap",
@@ -11,7 +11,8 @@
 		"report",
 		"monitoring",
 		"usage",
-		"stats"
+		"stats",
+    "🐎"
 	],
 	"author": "omrilotan",
 	"license": "MIT",
@@ -21,7 +22,13 @@
 	},
 	"homepage": "https://omrilotan.com/mono/perfrep/",
 	"main": "index.js",
+  "bin": "bin/index.js",
 	"scripts": {
+    "start": "node bin",
 		"test": "cd ../../; npm t perfrep; cd -"
+	},
+	"dependencies": {
+		"@does/percent": "0.0.2",
+		"@lets/wait": "0.0.0"
 	}
 }

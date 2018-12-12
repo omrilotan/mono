@@ -1,3 +1,6 @@
+const percent = require('@does/percent');
+const wait = require('@lets/wait');
+
 const {
 	cpus,
 	freemem,
@@ -35,18 +38,3 @@ const info = () => cpus().reduce(
 		total: 0,
 	}
 );
-
-/**
-* A waiting promise
-* @param  {Number} ms
-* @return {Promise}
-*/
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-/**
- * Calculate percent of a pert from the whole
- * @param  {Number} part
- * @param  {Number} whole
- * @return {Number}
- */
-const percent = (part, whole) => Math.round(part / whole * 100);

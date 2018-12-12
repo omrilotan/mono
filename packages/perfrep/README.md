@@ -16,3 +16,14 @@ logMetrics(
 	)
 );
 ```
+
+![](https://user-images.githubusercontent.com/516342/49897016-9af59700-fe5d-11e8-9af3-9013809a6a94.png)
+
+Or take a glance at your own machine
+```
+npm i -g perfrep
+
+perfrep
+```
+
+![](https://user-images.githubusercontent.com/516342/49897116-e740d700-fe5d-11e8-8d59-903bbaf73cfe.png)
