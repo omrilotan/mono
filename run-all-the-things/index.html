@@ -11,10 +11,18 @@
 	<body>
 		<a href="../">↩︎</a>
 		<h1 id="run-all-the-things-">run-all-the-things <a href="https://www.npmjs.com/package/run-all-the-things"><img src="https://img.shields.io/npm/v/run-all-the-things.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/run-all-the-things"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
-<p>Run NPM scripts in parallel</p>
-<h3 id="install-as-dev-dependency">Install as dev dependency</h3>
+<h2 id="-run-scripts-in-parallel">👟 Run scripts in parallel</h2>
+<h3 id="cli-runs-npm-scripts">CLI runs NPM scripts</h3>
 <pre><code>npm i run-all-the-things -D</code></pre><p>And run in NPM scripts</p>
-<pre><code>things test lint</code></pre><h3 id="use-as-an-npx-module-without-installing-">Use as an NPX module (without installing)</h3>
-<pre><code>npx run-all-the-things test lint</code></pre>
+<pre><code>things test lint</code></pre><h3 id="use-as-an-npx-module-without-installing">Use as an NPX module without installing</h3>
+<pre><code>npx run-all-the-things test lint</code></pre><h3 id="package-executes-shell-commands-in-parallel">Package executes shell commands in parallel</h3>
+<pre><code class="language-js">const run = require(&#39;run-all-the-things&#39;);
+
+await run([
+    &#39;npm t&#39;,
+    &#39;npm run lint&#39;,
+    &#39;echo &quot;number three&quot;&#39;
+]);
+</code></pre>
 	</body>
 </html>
