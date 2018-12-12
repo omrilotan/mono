@@ -1,10 +1,24 @@
+#!/usr/bin/env node
+
+process.on('unhandledRejection', console.error);
+
 const inquirer = require('inquirer');
 const execute = require('async-execute');
 require('colors');
 
-module.exports = async() => {
+const OPTION_SHOW_ALL = ['all', 'show-all'];
+const opts = require('./lib/opts')(process.argv);
+const hasOption = options => options.some(opt => opts.includes(opt));
+
+(
+	async() => console.log(await app())
+)();
+
+async function app() {
 	let aliases = require('./aliases');
+	let match = false;
 	let hazard = false;
+	const showAll = hasOption(OPTION_SHOW_ALL);
 	const bulk = await execute('git config -l | grep alias | cut -c 7-');
 	const existing = bulk
 		.split('\n')
@@ -22,18 +36,22 @@ module.exports = async() => {
 
 		// Filter out existing and identical
 		.filter(
-			({key, value}) => existing[key] !== value
+			({key, value}) => showAll || existing[key] !== value
 		)
 
 		// Warn about existing but different
 		.map(
-			({key, desc, value}) => {
-				if (existing[key]) {
+			({key, desc, value, disabled = false}) => {
+				if (existing[key] === value) {
+					match = true;
+					disabled = true;
+					desc = `[🎀 ] ${desc}`;
+				} else if (existing[key]) {
 					hazard = true;
 					desc = `[☠️ ] ${desc}`;
 				}
 
-				return {key, desc, value};
+				return {key, desc, value, disabled};
 			}
 		)
 	;
@@ -44,15 +62,18 @@ module.exports = async() => {
 
 	const choices = aliases
 		.map(
-			({key, desc, value}) => ({
+			({key, desc, value, disabled}) => ({
 				name: `${key.yellow.bold}: ${desc}`,
 				value: [key, value],
 				checked: false,
+				disabled,
 			})
 		);
 
 	const message = ['Which git aliases would you like me to set for you?'];
 	hazard && message.push('[☠️ ] marks an alias you have with a different value'.dim);
+	match && message.push('[🎀️ ] marks an alias you have with the same value'.dim);
+	message.push('\t');
 
 	const answers = await inquirer
 		.prompt([

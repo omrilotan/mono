@@ -7,6 +7,15 @@ This is an interactive process. You get to choose what you want
 npm create git-alias
 ```
 
+### options
+
+#### `--all`
+Show all choices - even ones that are identical to the ones I have
+
+```
+npm create git-alias -a
+```
+
 <img src="https://user-images.githubusercontent.com/516342/48844024-713ada00-eda1-11e8-9eb3-5b2d0b4bdeb8.png" width="600">
 
 ## aliases
