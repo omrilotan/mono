@@ -1,0 +1,24 @@
+{
+  "name": "handle-rejection",
+  "version": "0.0.0",
+  "description": "💀 Handle unhandled rejections",
+  "keywords": [
+    "unhandledRejection",
+    "handle rejection",
+    "error",
+    "handler",
+    "process",
+    "💀"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/handle-rejection/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t handle-rejection; cd -"
+  }
+}

@@ -16,6 +16,7 @@ Mono repo holding multiple packages
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.2](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.1](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`@recursive/flatten`** | [Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![0.0.0](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
+| **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.0.0](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
 | **`hypertonia`** | [A theme for Hyper.](./packages/hypertonia#readme) | [![0.2.6](https://img.shields.io/npm/v/hypertonia.svg)](https://www.npmjs.com/package/hypertonia)
 | **`index-require`** | [Create an index for a lib directory](./packages/index-require#readme) | [![0.1.0](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
 | **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.2](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)

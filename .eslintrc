@@ -30,6 +30,9 @@
 				"assert": true,
 				"sleep": true,
 				"freeze": true
+			},
+			"rules": {
+				"no-console": 0
 			}
 		},
 		{
