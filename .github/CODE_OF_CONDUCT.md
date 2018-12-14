@@ -11,4 +11,3 @@ Be nice, helpful and, when needed, patient.
 Project maintainers are responsible for clarifying the standards of acceptable behaviour.
 
 Project maintainers have the right and responsibility to remove any content they consider inappropriate behaviour and to ban temporarily or permanently any contributor.
-

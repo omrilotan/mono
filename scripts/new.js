@@ -48,7 +48,7 @@ const [arg] = argv;
 			homepage: `https://omrilotan.com/mono/${name}/`,
 			main: 'index.js',
 			scripts: {
-				test: `cd ../../; npm t ${name}; cd -`,
+				test: `cd ../../; npm t packages/${name}; cd -`,
 			},
 		},
 		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test'],
