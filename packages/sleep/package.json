@@ -1,0 +1,24 @@
+{
+  "name": "@lets/sleep",
+  "version": "0.0.0",
+  "description": "🛌 Block the runtime for n milliseconds",
+  "keywords": [
+    "sleep",
+    "block",
+    "thread",
+    "🛌",
+    "😴",
+    "💤"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/sleep/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/sleep; cd -"
+  }
+}
