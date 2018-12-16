@@ -1,7 +1,7 @@
 {
 	"name": "async-git",
-	"version": "1.3.1",
-	"description": "Get some git info",
+	"version": "1.3.2",
+	"description": "👾 Get some git info",
 	"keywords": [
 		"git",
 		"github",
@@ -14,8 +14,7 @@
 		"branch",
 		"author",
 		"git log",
-		"source control",
-		"concurrencies"
+		"source control"
 	],
 	"author": "omrilotan",
 	"license": "MIT",
