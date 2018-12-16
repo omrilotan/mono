@@ -1,6 +1,6 @@
 {
   "name": "@lets/sleep",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "🛌 Block the runtime for n milliseconds",
   "keywords": [
     "sleep",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://omrilotan.com/mono/sleep/",
   "main": "index.js",
+  "browser": "index.js",
   "scripts": {
+    "dist": "echo 'index is suitable for browser entry'",
     "test": "cd ../../; npm t packages/sleep; cd -"
   }
 }
