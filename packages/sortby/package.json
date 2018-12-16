@@ -1,7 +1,7 @@
 {
   "name": "@does/sortby",
-  "version": "0.0.1",
-  "description": "Sort array of objects by key or function",
+  "version": "1.0.0",
+  "description": "⚔️ Sort array of objects by key or function",
   "keywords": [
     "objects",
     "array",

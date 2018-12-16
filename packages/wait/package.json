@@ -1,6 +1,6 @@
 {
   "name": "@lets/wait",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "⏲ A promising wait function",
   "keywords": [
     "wait",

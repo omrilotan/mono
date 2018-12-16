@@ -53,7 +53,7 @@ const dateformat = require('dateformat');
 	const head = links.join('\n');
 
 	const template = (await readFile('src/homepage.html')).toString();
-	const changed = `${await git.author}: "<b>${await git.message}</b>" <small>on ${dateformat(await git.date, 'dddd, mmmm dS, yyyy')}</small>`;
+	const changed = `${await git.author}: "<a href="https://github.com/omrilotan/mono/commit/${await git.sha}"><b>${await git.message}</b></a>" <small>on ${dateformat(await git.date, 'dddd, mmmm dS, yyyy')}</small>`;
 
 	const output = phrase(template, {
 		head,

@@ -1,6 +1,6 @@
 {
   "name": "@lets/sleep",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "🛌 Block the runtime for n milliseconds",
   "keywords": [
     "sleep",
