@@ -1,0 +1,22 @@
+{
+  "name": "rmext",
+  "version": "0.0.1",
+  "description": "✂️ Remove file extension",
+  "keywords": [
+    "remove",
+    "file",
+    "extension",
+    "extname"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/rmext/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/rmext; cd -"
+  }
+}
