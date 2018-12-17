@@ -8,14 +8,14 @@ const exec = require('async-execute');
 module.exports = async function(tag) {
 	const { message, author, email } = this;
 
-  try {
-  	await Promise.all([
-  		exec(`git config user.name "${await author}"`),
-  		exec(`git config user.email "${await email}"`),
+	try {
+		await Promise.all([
+			exec(`git config user.name "${await author}"`),
+			exec(`git config user.email "${await email}"`),
 		]);
-    await exec(`git tag -a ${tag} -m "${await message}"`);
-    await exec(`git push origin refs/tags/${tag}`);
-  } catch (error) {
-    throw error;
-  }
+		await exec(`git tag -a ${tag} -m "${await message}"`);
+		await exec(`git push origin refs/tags/${tag}`);
+	} catch (error) {
+		throw error;
+	}
 }

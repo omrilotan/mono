@@ -1,4 +1,3 @@
-const exec = require('async-execute');
 const show = require('./lib/show');
 const name = require('./lib/name');
 const branch = require('./lib/branch');
