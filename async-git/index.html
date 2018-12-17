@@ -13,74 +13,102 @@
 		<a href="../">↩︎</a>
 		<h1 id="async-git-">async-git <a href="https://www.npmjs.com/package/async-git"><img src="https://img.shields.io/npm/v/async-git.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/async-git"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <h2 id="-retrieve-data-from-current-git-repository">👾 Retrieve data from current git repository</h2>
-<blockquote>
-<p>Properties are async (getters)</p>
-</blockquote>
+<p>* Properties are async (getters) <a href="https://medium.com/@omrilotan/javascript-async-variables-686dc5f03cb2">more on async properties</a></p>
 <pre><code class="language-js">const git = require(&#39;async-git&#39;);
 
 `${await git.author} committed ${await git.message}` // Omri committed Some changes</code></pre>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Type</th>
 <th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>name</td>
 <td>String</td>
 <td>Project name</td>
+<td><code>await git.name</code></td>
 </tr>
 <tr>
 <td>branch</td>
 <td>String</td>
 <td>Current branch name</td>
+<td><code>await git.branch</code></td>
 </tr>
 <tr>
 <td>author</td>
 <td>String</td>
 <td>Author name of the last commit</td>
+<td><code>await git.author</code></td>
 </tr>
 <tr>
 <td>comitter</td>
 <td>String</td>
 <td>Comitter name of the last commit</td>
+<td><code>await git.comitter</code></td>
 </tr>
 <tr>
 <td>email</td>
 <td>String</td>
 <td>Author email of the last commit</td>
+<td><code>await git.email</code></td>
 </tr>
 <tr>
 <td>sha</td>
 <td>String</td>
 <td>Unique identifier of the last commit</td>
+<td><code>await git.sha</code></td>
 </tr>
 <tr>
 <td>short</td>
 <td>String</td>
 <td>7 Character Unique identifier of the last commit</td>
+<td><code>await git.short</code></td>
 </tr>
 <tr>
 <td>message</td>
 <td>String</td>
 <td>Most recent commit full message (subject and body)</td>
+<td><code>await git.message</code></td>
 </tr>
 <tr>
 <td>subject</td>
 <td>String</td>
 <td>Most recent commit subject</td>
+<td><code>await git.subject</code></td>
 </tr>
 <tr>
 <td>body</td>
 <td>String</td>
 <td>Most recent commit message body</td>
+<td><code>await git.body</code></td>
 </tr>
 <tr>
 <td>date</td>
 <td>Date</td>
 <td>Date of the last change</td>
+<td><code>await git.date</code></td>
+</tr>
+</tbody></table>
+<h3 id="functions">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Parameters</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tag</td>
+<td>{String} version</td>
+<td>Create a tag using the last commit message</td>
+<td><code>await git.tag(&#39;1.2.3&#39;)</code></td>
 </tr>
 </tbody></table>
 	</body>
