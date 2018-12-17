@@ -7,7 +7,7 @@ Mono repo holding multiple packages
 | --- | --- | ---
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![1.0.1](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
-| **`async-git`** | [Get some git info](./packages/async-git#readme) | [![1.3.1](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
+| **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.4.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![1.2.3](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.2](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
