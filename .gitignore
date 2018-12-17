@@ -6,7 +6,3 @@ package-lock.json
 docs
 junit
 dist/
-
-# Chunkalyse
-*.chunkalised.json
-

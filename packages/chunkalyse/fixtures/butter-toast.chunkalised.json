@@ -1,0 +1,166 @@
+{
+  "butter-toast.min": {
+    "size": 249397,
+    "modules": {
+      "@babel/runtime": {
+        "size": 5141,
+        "percent": 2
+      },
+      "external": {
+        "size": 84,
+        "percent": 0
+      },
+      "self": {
+        "size": 44334,
+        "percent": 18
+      },
+      "prop-types": {
+        "size": 2739,
+        "percent": 1
+      },
+      "styled-components": {
+        "size": 75901,
+        "percent": 30
+      },
+      "polished": {
+        "size": 93996,
+        "percent": 38
+      },
+      "classnames": {
+        "size": 1198,
+        "percent": 0
+      },
+      "stylis": {
+        "size": 12248,
+        "percent": 5
+      },
+      "react-is": {
+        "size": 2116,
+        "percent": 1
+      },
+      "memoize-one": {
+        "size": 896,
+        "percent": 0
+      },
+      "node-libs-browser": {
+        "size": 5418,
+        "percent": 2
+      },
+      "stylis-rule-sheet": {
+        "size": 1131,
+        "percent": 0
+      },
+      "@emotion/is-prop-valid": {
+        "size": 4195,
+        "percent": 2
+      }
+    }
+  },
+  "butter-toast": {
+    "size": 249397,
+    "modules": {
+      "@babel/runtime": {
+        "size": 5141,
+        "percent": 2
+      },
+      "external": {
+        "size": 84,
+        "percent": 0
+      },
+      "self": {
+        "size": 44334,
+        "percent": 18
+      },
+      "prop-types": {
+        "size": 2739,
+        "percent": 1
+      },
+      "styled-components": {
+        "size": 75901,
+        "percent": 30
+      },
+      "polished": {
+        "size": 93996,
+        "percent": 38
+      },
+      "classnames": {
+        "size": 1198,
+        "percent": 0
+      },
+      "stylis": {
+        "size": 12248,
+        "percent": 5
+      },
+      "react-is": {
+        "size": 2116,
+        "percent": 1
+      },
+      "memoize-one": {
+        "size": 896,
+        "percent": 0
+      },
+      "node-libs-browser": {
+        "size": 5418,
+        "percent": 2
+      },
+      "stylis-rule-sheet": {
+        "size": 1131,
+        "percent": 0
+      },
+      "@emotion/is-prop-valid": {
+        "size": 4195,
+        "percent": 2
+      }
+    }
+  },
+  "lean.min": {
+    "size": 31520,
+    "modules": {
+      "@babel/runtime": {
+        "size": 5141,
+        "percent": 16
+      },
+      "external": {
+        "size": 84,
+        "percent": 0
+      },
+      "self": {
+        "size": 22358,
+        "percent": 71
+      },
+      "prop-types": {
+        "size": 2739,
+        "percent": 9
+      },
+      "classnames": {
+        "size": 1198,
+        "percent": 4
+      }
+    }
+  },
+  "lean": {
+    "size": 31520,
+    "modules": {
+      "@babel/runtime": {
+        "size": 5141,
+        "percent": 16
+      },
+      "external": {
+        "size": 84,
+        "percent": 0
+      },
+      "self": {
+        "size": 22358,
+        "percent": 71
+      },
+      "prop-types": {
+        "size": 2739,
+        "percent": 9
+      },
+      "classnames": {
+        "size": 1198,
+        "percent": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "main": {
+    "modules": {
+      "prop-types": {
+        "size": 2739,
+        "percent": 0
+      },
+      "moment": {
+        "size": 541081,
+        "percent": 45
+      },
+      "react": {
+        "size": 6428,
+        "percent": 1
+      },
+      "airbnb-prop-types": {
+        "size": 1149,
+        "percent": 0
+      },
+      "react-with-styles": {
+        "size": 12948,
+        "percent": 1
+      },
+      "react-addons-shallow-compare": {
+        "size": 663,
+        "percent": 0
+      },
+      "react-moment-proptypes": {
+        "size": 5096,
+        "percent": 0
+      },
+      "is-touch-device": {
+        "size": 443,
+        "percent": 0
+      },
+      "consolidated-events": {
+        "size": 6340,
+        "percent": 1
+      },
+      "react-dom": {
+        "size": 101360,
+        "percent": 8
+      },
+      "react-outside-click-handler": {
+        "size": 7305,
+        "percent": 1
+      },
+      "object.values": {
+        "size": 1254,
+        "percent": 0
+      },
+      "has": {
+        "size": 129,
+        "percent": 0
+      },
+      "function-bind": {
+        "size": 1589,
+        "percent": 0
+      },
+      "lodash": {
+        "size": 15986,
+        "percent": 1
+      },
+      "is-callable": {
+        "size": 1113,
+        "percent": 0
+      },
+      "object-assign": {
+        "size": 2108,
+        "percent": 0
+      },
+      "define-properties": {
+        "size": 1608,
+        "percent": 0
+      },
+      "es-to-primitive": {
+        "size": 3527,
+        "percent": 0
+      },
+      "self": {
+        "size": 429773,
+        "percent": 36
+      },
+      "es-abstract": {
+        "size": 38336,
+        "percent": 3
+      },
+      "react-portal": {
+        "size": 5257,
+        "percent": 0
+      },
+      "fbjs": {
+        "size": 1616,
+        "percent": 0
+      },
+      "hoist-non-react-statics": {
+        "size": 2073,
+        "percent": 0
+      },
+      "deepmerge": {
+        "size": 3309,
+        "percent": 0
+      },
+      "react-with-direction": {
+        "size": 623,
+        "percent": 0
+      },
+      "object-keys": {
+        "size": 3995,
+        "percent": 0
+      },
+      "is-date-object": {
+        "size": 551,
+        "percent": 0
+      },
+      "is-symbol": {
+        "size": 767,
+        "percent": 0
+      },
+      "has-symbols": {
+        "size": 2134,
+        "percent": 0
+      },
+      "is-regex": {
+        "size": 918,
+        "percent": 0
+      },
+      "scheduler": {
+        "size": 5012,
+        "percent": 0
+      }
+    },
+    "size": 1207230
+  }
+}

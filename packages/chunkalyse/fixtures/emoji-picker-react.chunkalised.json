@@ -1,0 +1,39 @@
+{
+  "main": {
+    "modules": {
+      "core-js": {
+        "size": 38776,
+        "percent": 12
+      },
+      "self": {
+        "size": 243771,
+        "percent": 74
+      },
+      "css-loader": {
+        "size": 2260,
+        "percent": 1
+      },
+      "style-loader": {
+        "size": 12465,
+        "percent": 4
+      },
+      "external": {
+        "size": 84,
+        "percent": 0
+      },
+      "prop-types": {
+        "size": 26510,
+        "percent": 8
+      },
+      "babel-runtime": {
+        "size": 5241,
+        "percent": 2
+      },
+      "object-assign": {
+        "size": 2108,
+        "percent": 1
+      }
+    },
+    "size": 331215
+  }
+}
