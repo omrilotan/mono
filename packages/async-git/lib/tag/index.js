@@ -6,6 +6,10 @@ const exec = require('async-execute');
  * no return value
  */
 module.exports = async function(tag) {
+	if (!tag || !['string', 'number'].includes(typeof tag)) {
+		throw new TypeError(`string was expected, instead got ${tag}`);
+	}
+
 	const { message, author, email } = this;
 
 	try {
