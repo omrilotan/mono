@@ -1,4 +1,9 @@
 const exec = require('async-execute');
+const show = require('./lib/show');
+const name = require('./lib/name');
+const branch = require('./lib/branch');
+const date = require('./lib/date');
+const tag = require('./lib/tag');
 
 const formats = [
 	['author'  , 'an'],
@@ -11,18 +16,20 @@ const formats = [
 	['body'    , 'b' ],
 ];
 
-const show = async item => await exec(`git show -s --format=%${item}`);
-
 const getters = Object.assign(
 	{
-		name: exec.bind(null, 'basename -s .git `git config --get remote.origin.url`'),
-		branch: exec.bind(null, 'git rev-parse --abbrev-ref HEAD'),
-		date: async () => new Date(parseInt(await show('at')) * 1000),
+		name,
+		branch,
+		date,
 	},
 	...formats.map(
 		([key, value]) => ({[key]: show.bind(null, value)})
 	)
 );
+
+const functions = {
+	tag,
+};
 
 /**
  * @typedef     asyncGit
@@ -41,9 +48,9 @@ const getters = Object.assign(
  */
 Object.defineProperties(
 	module.exports,
-	Object.entries(getters).reduce(
-		(props, [key, value]) => {
-			return Object.assign(
+	Object.assign(
+		Object.entries(getters).reduce(
+			(props, [key, value]) => Object.assign(
 				props,
 				{
 					[key]: {
@@ -51,8 +58,20 @@ Object.defineProperties(
 						configurable: true,
 					},
 				}
-			)
-		},
-		{}
+			),
+			{}
+		),
+		Object.entries(functions).reduce(
+			(props, [key, value]) => Object.assign(
+				props,
+				{
+					[key]: {
+						value,
+						configurable: true,
+					},
+				}
+			),
+			{}
+		)
 	)
 );
