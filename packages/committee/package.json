@@ -1,0 +1,23 @@
+{
+  "name": "committee",
+  "version": "0.0.0",
+  "description": "🕶 Commit as someone else",
+  "keywords": [
+    "commit",
+    "imposter",
+    "impersonate",
+    "identity theft",
+    "🕶"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/committee/",
+  "bin": "committee.sh",
+  "scripts": {
+    "start": "./committee.sh octocat 🐙 just checking this out"
+  }
+}
