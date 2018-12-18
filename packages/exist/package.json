@@ -1,0 +1,22 @@
+{
+  "name": "@does/exist",
+  "version": "1.0.0",
+  "description": "🗄 Check if a file exists",
+  "keywords": [
+    "file",
+    "exists",
+    "node",
+    "fs"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/exist/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/exist; cd -"
+  }
+}
