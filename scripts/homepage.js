@@ -25,6 +25,7 @@ const dateformat = require('dateformat');
 					description,
 					version,
 					browser,
+					bin,
 				} = pkg;
 
 				if (pkg.private || version.includes('alpha') || version.includes('beta')) {
@@ -32,11 +33,14 @@ const dateformat = require('dateformat');
 				}
 
 				const link = `./${item}/`;
+				const icons = [];
+				browser && icons.push('<i title="includes browser entry">🖥</i>');
+				bin && icons.push('<i title="includes CLI program">🤖</i>');
 
 				rows.push(`
 <tr>
 	<td><a href="${link}">${name}</a></td>
-	<td>${description}${browser ? ' <i title="includes browser entry">🖥</i>' : ''}</td>
+	<td>${description}${icons.join(' ')}</td>
 	<td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
 </tr>
 `);
