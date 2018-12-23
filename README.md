@@ -27,7 +27,7 @@ Mono repo holding multiple packages
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.0](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![1.1.2](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![1.0.1](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
-| **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![1.5.0](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
+| **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![1.6.0](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.0](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
