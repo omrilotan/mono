@@ -69,6 +69,7 @@ describe('paraphrase', () => {
 
 	describe('Resolve nested data', () => {
 		const phrase = paraphrase(/\${([^{}]*)}/g);
+		const phraseNoResolve = paraphrase(/\${([^{}]*)}/g, {resolve: false});
 
 		it('resolves dot notation', () => {
 			const string = 'Hello, ${name.first} ${name.last}';
@@ -90,6 +91,26 @@ describe('paraphrase', () => {
 			];
 
 			expect(phrase(string, name)).to.equal('Hello, Martin Prince');
+		});
+
+		it('misses keys with dots', () => {
+			const string = 'Hello, ${name.first} ${name.last}';
+			const data = {
+				'name.first': 'Martin',
+				'name.last': 'Prince',
+			};
+
+			expect(phrase(string, data)).to.equal('Hello, ${name.first} ${name.last}');
+		});
+
+		it('does not resolve dot notation (explicit)', () => {
+			const string = 'Hello, ${name.first} ${name.last}';
+			const data = {
+				'name.first': 'Martin',
+				'name.last': 'Prince',
+			};
+
+			expect(phraseNoResolve(string, data)).to.equal('Hello, Martin Prince');
 		});
 	});
 

@@ -24,6 +24,12 @@ const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
  */
 
 module.exports = function paraphrase(...replacers) {
+	const options = {
+		resolve: true,
+	};
+	if (replacers.length && isObject(replacers[replacers.length - 1])) {
+		Object.assign(options, replacers.pop());
+	}
 
 	/**
 	 * phraser description
@@ -52,7 +58,7 @@ module.exports = function paraphrase(...replacers) {
 		 * @return {String}         Found value
 		 */
 		function replace(haystack, needle) {
-			const replacement = notate(data, needle.trim());
+			const replacement = options.resolve ? notate(data, needle.trim()) : data[needle.trim()];
 
 			return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : haystack;
 		}
@@ -64,3 +70,5 @@ module.exports = function paraphrase(...replacers) {
 
 	return phraser;
 };
+
+const isObject = obj => `${obj}` === '[object Object]';

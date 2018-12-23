@@ -17,6 +17,19 @@ phrase('Hello, ${name}', {name: 'Martin'}); // Hello, Martin
 
 Acceptable replacements (values) are strings and numbers
 
+### Arguments
+One or more replacers, an optional options object at the end
+```js
+const phrase = paraphrase(/\${([^{}]*)}/gm, /\{{([^{}]*)}}/gm, {resolve: false});
+
+phrase('Hello, ${name} {{last.name}}', {name: 'Martin', 'last.name': 'Prince'}); // Hello, Martin Prince
+```
+
+### Options
+| option | meaning | type | default
+| - | - | - | -
+| resolve | Resolve dot notations | `Boolean` | `true`
+
 ## Examples
 ### Objects
 
