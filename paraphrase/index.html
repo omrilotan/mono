@@ -20,6 +20,28 @@ const phrase = paraphrase(/\${([^{}]*)}/gm); // Create a new phrase function usi
 
 phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
 <p>Acceptable replacements (values) are strings and numbers</p>
+<h3 id="arguments">Arguments</h3>
+<p>One or more replacers, an optional options object at the end</p>
+<pre><code class="language-js">const phrase = paraphrase(/\${([^{}]*)}/gm, /\{{([^{}]*)}}/gm, {resolve: false});
+
+phrase(&#39;Hello, ${name} {{last.name}}&#39;, {name: &#39;Martin&#39;, &#39;last.name&#39;: &#39;Prince&#39;}); // Hello, Martin Prince</code></pre>
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>meaning</th>
+<th>type</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>resolve</td>
+<td>Resolve dot notations</td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
 <h2 id="examples">Examples</h2>
 <h3 id="objects">Objects</h3>
 <pre><code class="language-js">phrase(&#39;Hello, ${name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
