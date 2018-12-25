@@ -86,22 +86,28 @@ async function app() {
 			},
 		]);
 
+	const output = outputMessage(answers);
+
 	try {
-		await Promise.all(
-			answers.aliases.map(
-				([key, value]) => execute(`git config --global alias.${key} '${value}'`)
-			)
-		);
+		while (answers.aliases.length) {
+			const [key, value] = answers.aliases.shift();
+			console.log(`Applying alias ${key}`);
+			await execute(`git config --global alias.${key} '${value}'`);
+		}
 	} catch (error) {
 		throw error;
 	}
 
-	switch (answers.aliases.length) {
+	return output;
+}
+
+function outputMessage({aliases}) {
+	switch (aliases.length) {
 		case 0:
 			return 'I\'ve set up no aliases for you today 😕';
 		case 1:
-			return `I've set up the alias ${answers.aliases[0][0].bold} for you 😉`;
+			return `I've set up the alias ${aliases[0][0].bold} for you 😉`;
 		default:
-			return `I've set up these aliases for you: ${answers.aliases.map(([key]) => key).join(', ').bold} 😃`;
+			return `I've set up these aliases for you: ${aliases.map(([key]) => key).join(', ').bold} 😃`;
 	}
 }
