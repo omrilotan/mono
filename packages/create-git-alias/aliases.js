@@ -88,4 +88,9 @@ module.exports = [
 		desc: 'fetch from remote master and rebase',
 		value: '!f() { git checkout master && git pull origin master && git checkout - && git rebase master; }; f',
 	},
+	{
+		key: 'animal',
+		desc: 'commit with a message of one animal emoji',
+		value: '!f() { local m=(🙈 🙉 🙊 🐵 🐒 🦍 🐶 🐕 🐩 🐺 🦊 🐱 🐈 🦁 🐯 🐅 🐆 🐴 🐎 🦄 🐮 🐂 🐃 🐄 🐷 🐖 🐗 🐽 🐏 🐑 🐐 🐪 🐫 🐘 🦏 🐭 🐁 🐀 🐹 🐰 🐇 🐿 🦇 🐻 🐨 🐼 🐾 🦃 🐔 🐓 🐣 🐤 🐥 🐦 🐧 🕊 🦅 🦆 🦉 🐸 🐊 🐢 🦎 🐍 🐲 🐉 🐳 🐋 🐬 🐟 🐠 🐡 🦈 🐙 🐚 🦀 🦐 🦑 🐌 🦋 🐛 🐜 🐝 🐞 🕷 🕸 🦂); local R=$$$(date +%s); git commit -m ${m[$R % ${#m[@]} ]};  }; f',
+	},
 ];
