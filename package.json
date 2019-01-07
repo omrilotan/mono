@@ -22,7 +22,7 @@
     "webpack": "webpack --config webpack.config.js",
     "babel": "./scripts/foreach.sh '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",
     "postdist": "npx mocha dists/test.js",
-    "publish-packages": "./scripts/foreach.js \"npx published\"",
+    "publish-packages": "./scripts/foreach.js \"published\"",
     "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",
     "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",

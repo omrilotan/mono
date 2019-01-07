@@ -93,6 +93,9 @@ jobs:
           name: Set NPM tokens
           command: echo -e $NPMRC > ~/.npmrc
       - run:
+          name: Install published
+          command: sudo npm i -g published
+      - run:
           name: Publish to NPM
           command: npm run publish-packages
   docs:
