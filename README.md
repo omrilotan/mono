@@ -23,6 +23,7 @@ Mono repo holding multiple packages
 | **`index-require`** | [☝️ Create an index for a lib directory](./packages/index-require#readme) | [![1.0.0](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
 | **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.2](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
 | **`jsoncopy`** | [Create a deep clone of an object using JSON functionalities.](./packages/jsoncopy#readme) | [![1.0.0](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy)
+| **`levelheaded`** | [⚖️ Generate object containing functions deemed operational by level](./packages/levelheaded#readme) | [![0.0.0](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded)
 | **`markdownise`** | [Represent data structures in markdown](./packages/markdownise#readme) | [![0.0.0](https://img.shields.io/npm/v/markdownise.svg)](https://www.npmjs.com/package/markdownise)
 | **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.0](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![1.1.2](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
