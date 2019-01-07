@@ -39,4 +39,15 @@ describe('levelheaded', () => {
 		tester.warn('somwthing');
 		expect(result.level).to.equal('warn');
 	});
+	it('Should expose default level methods', () => {
+		const tester = levelheaded();
+		[
+			tester.debug,
+			tester.verbose,
+			tester.info,
+			tester.warn,
+			tester.error,
+			tester.critical,
+		].forEach(fn => expect(fn).to.be.a('function'));
+	});
 });
