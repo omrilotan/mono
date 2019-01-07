@@ -1,0 +1,26 @@
+{
+  "name": "levelheaded",
+  "version": "0.0.0",
+  "description": "⚖️ Generate object containing functions deemed operational by level",
+  "keywords": [
+    "levels",
+    "log level",
+    "minimal",
+    "enough",
+    "equivalent",
+    "⚖️"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/levelheaded/",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t packages/levelheaded; cd -"
+  }
+}
