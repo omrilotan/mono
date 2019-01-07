@@ -1,4 +1,4 @@
-# percent [![](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/percent)
+# percent [![](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/percent) [![](https://badgen.net/bundlephobia/minzip/@does/percent)](https://bundlephobia.com/result?p=@does/percent)
 
 ## A round percentage of a number from the whole
 

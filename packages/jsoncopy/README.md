@@ -1,4 +1,4 @@
-# jsoncopy [![](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/jsoncopy)
+# jsoncopy [![](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/jsoncopy) [![](https://badgen.net/bundlephobia/minzip/jsoncopy)](https://bundlephobia.com/result?p=jsoncopy)
 
 Create a deep clone of an object using JSON functionalities. Very efficient and quick, not a comprehensive copyier (can't copy functions, circular references)
 

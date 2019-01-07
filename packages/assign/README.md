@@ -1,4 +1,4 @@
-# assign <a href="https://www.npmjs.com/package/@recursive/assign"><img src="https://img.shields.io/npm/v/@recursive/assign.svg"></a> [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/assign)
+# assign <a href="https://www.npmjs.com/package/@recursive/assign"><img src="https://img.shields.io/npm/v/@recursive/assign.svg"></a> [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/assign) [![](https://badgen.net/bundlephobia/minzip/@recursive/assign)](https://bundlephobia.com/result?p=@recursive/assign)
 
 Recursive assign for objects, arrays and more
 

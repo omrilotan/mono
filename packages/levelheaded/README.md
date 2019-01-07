@@ -1,4 +1,4 @@
-# levelheaded [![](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/levelheaded)
+# levelheaded [![](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/levelheaded) [![](https://badgen.net/bundlephobia/minzip/levelheaded)](https://bundlephobia.com/result?p=levelheaded)
 
 ## ⚖️ Generate object containing functions deemed operational by level
 

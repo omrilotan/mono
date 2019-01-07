@@ -1,4 +1,4 @@
-# sortby [![](https://img.shields.io/npm/v/sortby.svg)](https://www.npmjs.com/package/sortby) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/sortby)
+# sortby [![](https://img.shields.io/npm/v/sortby.svg)](https://www.npmjs.com/package/sortby) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/sortby) [![](https://badgen.net/bundlephobia/minzip/@does/sortby)](https://bundlephobia.com/result?p=@does/sortby)
 
 ## ⚔️ Sort array of objects by key or function
 
