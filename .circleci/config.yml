@@ -122,7 +122,7 @@ jobs:
              -H "X-Auth-Email: ${CF_EMAIL}" \
              -H "X-Auth-Key: ${CF_API_KEY}" \
              -H "Content-Type: application/json" \
-             --data '{"files":["https://omrilotan.com/mono/inde.html"]}'
+             --data '{"files":["https://omrilotan.com/mono"]}'
   omrilotan:
     <<: *defaults
     steps:
