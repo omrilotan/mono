@@ -7,7 +7,7 @@ const DEFAULT_LEVELS = [
 	'critical',
 ];
 
-const noop = function() {};
+function noop() {};
 
 module.exports = function levelheaded({
 	levels = DEFAULT_LEVELS,
