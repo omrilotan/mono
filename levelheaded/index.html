@@ -13,6 +13,7 @@
 		<a href="../">↩︎</a>
 		<h1 id="levelheaded-">levelheaded <a href="https://www.npmjs.com/package/levelheaded"><img src="https://img.shields.io/npm/v/levelheaded.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/levelheaded"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a> <a href="https://bundlephobia.com/result?p=levelheaded"><img src="https://badgen.net/bundlephobia/minzip/levelheaded" alt=""></a></h1>
 <h2 id="-generate-object-containing-functions-deemed-operational-by-level">⚖️ Generate object containing functions deemed operational by level</h2>
+<p>Assigns functions by level. Functions lower than the minimal level will be assigned with _no operation_, while minimal level and above are assigned the desired operation.</p>
 <table>
 <thead>
 <tr>
@@ -40,10 +41,19 @@
 <td>The action to execute when minimal level was matched</td>
 <td><code>console.log</code></td>
 </tr>
+<tr>
+<td>object</td>
+<td>Object</td>
+<td>An object to assign the functions on</td>
+<td><code>{}</code></td>
+</tr>
 </tbody></table>
+<blockquote>
+<p>ℹ️ All options are optional</p>
+</blockquote>
 <pre><code class="language-js">import levelheaded from &#39;levelheaded&#39;;
 
-const log = levelheaded({
+const logger = levelheaded({
     minimal: isDevelopment() ? &#39;debug&#39; : &#39;warn&#39;,
     action: function (message) {
         fetch(
@@ -60,16 +70,16 @@ const log = levelheaded({
     }
 })
 
-log.debug(&#39;Something trivial&#39;); // ⛔️ Won&#39;t fire
-log.error(&#39;Something I need to know&#39;); // ✅ Will fire</code></pre>
+logger.debug(&#39;Something trivial&#39;); // ⛔️ Won&#39;t fire
+logger.error(&#39;Something I need to know&#39;); // ✅ Will fire</code></pre>
 <h2 id="custom-levels">Custom levels</h2>
-<pre><code class="language-js">const log = levelheaded({
+<pre><code class="language-js">const logger = levelheaded({
     levels: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;],
     minimal: &#39;b&#39;,
 });
 
-log.a(&#39;Something&#39;); // ⛔️ Won&#39;t fire
-log.b(&#39;Something&#39;); // ✅ Will fire</code></pre>
+logger.a(&#39;Something&#39;); // ⛔️ Won&#39;t fire
+logger.b(&#39;Something&#39;); // ✅ Will fire</code></pre>
 <h2 id="transpiled-version">Transpiled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
 <p>Also available for explicit import:</p>
