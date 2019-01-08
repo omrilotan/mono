@@ -50,4 +50,11 @@ describe('levelheaded', () => {
 			tester.critical,
 		].forEach(fn => expect(fn).to.be.a('function'));
 	});
+	it('Should extend existing object', () => {
+		const object = {nolevel: () => null}
+		levelheaded({object});
+
+		expect(object.nolevel).to.be.a('function');
+		expect(object.debug).to.be.a('function');
+	});
 });

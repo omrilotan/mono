@@ -2,16 +2,21 @@
 
 ## ⚖️ Generate object containing functions deemed operational by level
 
+Assigns functions by level. Functions lower than the minimal level will be assigned with _no operation_, while minimal level and above are assigned the desired operation.
+
 | Option | Type | Meaning | Default
 | - | - | - | -
 | levels | Array[String] | Levels will become functions | `[ 'debug', 'verbose', 'info', 'warn', 'error', 'critical' ]`
 | minimal | String | Minimal level to execute | `levels[0]`
 | action | Function | The action to execute when minimal level was matched | `console.log`
+| object | Object | An object to assign the functions on | `{}`
+
+> ℹ️ All options are optional
 
 ```js
 import levelheaded from 'levelheaded';
 
-const log = levelheaded({
+const logger = levelheaded({
 	minimal: isDevelopment() ? 'debug' : 'warn',
 	action: function (message) {
 		fetch(
@@ -28,19 +33,19 @@ const log = levelheaded({
 	}
 })
 
-log.debug('Something trivial'); // ⛔️ Won't fire
-log.error('Something I need to know'); // ✅ Will fire
+logger.debug('Something trivial'); // ⛔️ Won't fire
+logger.error('Something I need to know'); // ✅ Will fire
 ```
 
 ## Custom levels
 ```js
-const log = levelheaded({
+const logger = levelheaded({
 	levels: ['a', 'b', 'c'],
 	minimal: 'b',
 });
 
-log.a('Something'); // ⛔️ Won't fire
-log.b('Something'); // ✅ Will fire
+logger.a('Something'); // ⛔️ Won't fire
+logger.b('Something'); // ✅ Will fire
 ```
 
 ## Transpiled version
