@@ -1,4 +1,4 @@
-# A1vy [![](https://img.shields.io/badge/a1vy--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/a1vy) [![](https://nodei.co/npm/a1vy.png?compact=true)](https://www.npmjs.com/package/a1vy)
+# A1vy [![](https://img.shields.io/badge/a1vy--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/a1vy) [![](https://nodei.co/npm/a1vy.png?compact=true)](https://www.npmjs.com/package/a1vy)
 
 ## 🤖 I help development by doing things
 
