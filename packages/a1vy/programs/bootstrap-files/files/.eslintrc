@@ -1,0 +1,34 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {},
+  "plugins": [],
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {},
+  "overrides": [
+    {
+      "files": [ "**/test.js", "**/spec.js" ],
+      "env": {
+        "mocha": true
+      },
+      "globals": {
+        "expect": true,
+        "assert": true
+      },
+      "rules": {
+        "no-empty-function": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "name": "NPM to tag",
+  "desc": "Create a tag based on the current package version"
+}

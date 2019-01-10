@@ -42,7 +42,7 @@
 			}
 		},
 		{
-			"files": [ "scripts/**", "**/bin/**", "**/bin.js" ],
+			"files": [ "scripts/**", "**/bin/**", "**/bin.js", "packages/a1vy/**/*" ],
 			"rules": {
 				"no-console": 0
 			}

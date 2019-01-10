@@ -1,0 +1,4 @@
+{
+  "name": "UDP Logger",
+  "desc": "Log incoming messages on a UDP socket"
+}

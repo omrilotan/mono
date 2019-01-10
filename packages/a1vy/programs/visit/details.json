@@ -1,0 +1,4 @@
+{
+  "name": "HTTP(S) traffic",
+  "desc": "Sustain concurrent open connections to http(s) URL"
+}

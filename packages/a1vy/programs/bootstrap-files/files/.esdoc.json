@@ -1,0 +1,20 @@
+{
+  "source": "./lib",
+  "destination": "./docs",
+  "includes": ["index\\.m?js$"],
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "brand": {
+          "title": "Project Title"
+        },
+        "test": {
+          "source": "./lib",
+          "interfaces": ["describe", "it"],
+          "includes": ["spec\\.js$"]
+        }
+      }
+    }
+  ]
+}

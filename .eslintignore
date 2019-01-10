@@ -1,3 +1,4 @@
 /node_modules/*
 **/node_modules/*
 **/dist/*
+/packages/a1vy/lib/terminal/index.js

@@ -1,0 +1,41 @@
+{
+  "name": "a1vy",
+  "version": "0.0.55",
+  "description": "🤖 I help development by doing things",
+  "keywords": [
+    "bot",
+    "automate",
+    "🤖"
+  ],
+  "author": "A1vy",
+  "license": "MIT",
+  "homepage": "https://omrilotan.com/mono/a1vy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "bin": {
+    "a1vy": "./bin.js"
+  },
+  "scripts": {
+    "start": "./bin.js",
+    "chmod": "find ./programs -type f -exec chmod +rx {} \\;",
+    "prepare": "npm run chmod",
+    "prepublishOnly": "npm run chmod"
+  },
+  "dependencies": {
+    "@lets/wait": "^1.0.0",
+    "async-execute": "^1.0.1",
+    "boxt": "^0.3.2",
+    "colors": "^1.3.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "inquirer": "^6.2.1",
+    "mime-types": "^2.1.21",
+    "npm-check": "^5.9.0",
+    "stdline": "0.0.0",
+    "upgradable": "0.0.6"
+  },
+  "preferGlobal": true
+}
