@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "gofor": "^2.0.5",
-    "index-require": "^0.1.0"
+    "index-require": "^1.0.0"
   },
   "private": true
 }

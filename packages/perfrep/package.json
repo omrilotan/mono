@@ -1,6 +1,6 @@
 {
 	"name": "perfrep",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "🐎 Host Performance Report in Percent",
 	"keywords": [
 		"cpu",
@@ -29,6 +29,6 @@
 	},
 	"dependencies": {
 		"@does/percent": "0.0.2",
-		"@lets/wait": "0.0.0"
+		"@lets/wait": "^1.0.0"
 	}
 }

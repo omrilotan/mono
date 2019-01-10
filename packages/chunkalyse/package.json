@@ -1,6 +1,6 @@
 {
   "name": "chunkalyse",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "🍰 Summarise webpack stats output file",
   "keywords": [
     "webpack",
@@ -31,9 +31,9 @@
     "test": "cd ../../; npm t chunkalyse; cd -"
   },
   "dependencies": {
-    "@does/percent": "0.0.0",
-    "byte-size": "^4.0.4",
-    "index-require": "^0.1.0",
+    "@does/percent": "0.0.2",
+    "byte-size": "^5.0.1",
+    "index-require": "^1.0.0",
     "jsoncopy": "^1.0.0",
     "yargs": "^12.0.5"
   }
