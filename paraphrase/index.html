@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="paraphrase-">paraphrase <a href="https://www.npmjs.com/package/paraphrase"><img src="https://img.shields.io/npm/v/paraphrase.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/paraphrase"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a> <a href="https://runkit.com/omrilotan/paraphrase"><img src="https://badge.runkitcdn.com/paraphrase.svg" alt=""></a> <a href="https://bundlephobia.com/result?p=paraphrase"><img src="https://badgen.net/bundlephobia/minzip/paraphrase" alt=""></a></h1>
+		<h1 id="paraphrase">paraphrase <a href="https://www.npmjs.com/package/paraphrase"><img src="https://img.shields.io/npm/v/paraphrase.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/paraphrase"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a> <a href="https://runkit.com/omrilotan/paraphrase"><img src="https://badge.runkitcdn.com/paraphrase.svg" alt=""></a> <a href="https://bundlephobia.com/result?p=paraphrase"><img src="https://badgen.net/bundlephobia/minzip/paraphrase" alt=""></a></h1>
 <h2 id="string-template-interpolation">String template interpolation</h2>
 <pre><code class="language-js">npm i -S paraphrase</code></pre>
 <p>Creates new paraphrase method instance</p>
@@ -67,11 +67,11 @@ phrase(&#39;Hello, {{name}}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</c
 <pre><code class="language-js">const phrase = require(&#39;paraphrase/single&#39;);
 
 phrase(&#39;Hello, {name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
-<h3 id="percent-i18n-style-">percent <code>%{...}</code> (i18n style)</h3>
+<h3 id="percent--i18n-style">percent <code>%{...}</code> (i18n style)</h3>
 <pre><code class="language-js">const phrase = require(&#39;paraphrase/percent&#39;);
 
 phrase(&#39;Hello, %{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
-<h3 id="hash-ruby-style-">hash <code>#{...}</code> (ruby style)</h3>
+<h3 id="hash--ruby-style">hash <code>#{...}</code> (ruby style)</h3>
 <pre><code class="language-js">const phrase = require(&#39;paraphrase/hash&#39;);
 
 phrase(&#39;Hello, #{name}&#39;, {name: &#39;Martin&#39;}); // Hello, Martin</code></pre>
