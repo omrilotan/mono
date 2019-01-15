@@ -10,9 +10,11 @@ const {
 const phrase = require('../packages/paraphrase/double');
 const git = require('../packages/async-git');
 const dateformat = require('dateformat');
+const downloadcount = name => `fetch('https://api.npmjs.org/downloads/point/last-week/${name}').then(result=>result.json()).then(({downloads}) => {window['downloadcount${name}'].innerText = downloads}).catch(error => { /* ignore */ });`
 
-(async () => {
-	const [rows, links] = [[], []];
+start();
+async function start() {
+	const [rows, links, scripts] = [[], [], []];
 
 	(await readdir('packages'))
 		.forEach(
@@ -42,9 +44,11 @@ const dateformat = require('dateformat');
 	<td><a href="${link}">${name}</a></td>
 	<td>${description}${icons.join(' ')}</td>
 	<td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
+	<td id="downloadcount${name}"></td>
 </tr>
 `);
 				links.push(`<link rel="prerender" href="${link}">`);
+				scripts.push(downloadcount(name));
 
 			}
 		)
@@ -54,7 +58,12 @@ const dateformat = require('dateformat');
 	const user = 'omrilotan';
 
 	const content = rows.join('');
-	const head = links.join('\n');
+	const head = [
+		...links,
+		'<script>',
+		...scripts,
+		'</script>',
+	].join('\n');
 
 	const template = (await readFile('src/homepage.html')).toString();
 	const changed = `${await git.author}: "<a href="https://github.com/omrilotan/mono/commit/${await git.sha}"><b>${await git.message}</b></a>" <small>on ${dateformat(await git.date, 'dddd, mmmm dS, yyyy')}</small>`;
@@ -69,4 +78,6 @@ const dateformat = require('dateformat');
 	});
 
 	await writeFile('docs/index.html', output);
-})();
+
+	console.log('Written ./docs/index.html');
+}
