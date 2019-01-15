@@ -12,7 +12,10 @@ module.exports = async ({host, port} = {}) => {
 	app.use(cookie());
 	app.use('*', (request, response) => {
 		const {
-			url,
+			baseUrl,
+			originalUrl,
+			params,
+			query,
 			method,
 			headers,
 			body,
@@ -20,7 +23,10 @@ module.exports = async ({host, port} = {}) => {
 		} = request;
 
 		const data = {
-			url,
+			baseUrl,
+			originalUrl,
+			params,
+			query,
 			method,
 			headers,
 			body,
