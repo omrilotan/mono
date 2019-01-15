@@ -57,4 +57,16 @@ describe('levelheaded', () => {
 		expect(object.nolevel).to.be.a('function');
 		expect(object.debug).to.be.a('function');
 	});
+	it('Should use custom noop', () => {
+		let result;
+		const tester = levelheaded({
+			minimal: 'warn',
+			noop: (...args) => { result = args; },
+		});
+
+		tester.error('B');
+		expect(result).to.not.deep.equal(['B']);
+		tester.info('A');
+		expect(result).to.deep.equal(['A']);
+	});
 });

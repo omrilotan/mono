@@ -10,6 +10,7 @@ Assigns functions by level. Functions lower than the minimal level will be assig
 | minimal | String | Minimal level to execute | `levels[0]`
 | action | Function | The action to execute when minimal level was matched | `console.log`
 | object | Object | An object to assign the functions on | `{}`
+| noop | Function | Function to call when event should **not** be triggered | `()=>undefined`
 
 > ℹ️ All options are optional
 
