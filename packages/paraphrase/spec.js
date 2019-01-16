@@ -67,50 +67,69 @@ describe('paraphrase', () => {
 		});
 	});
 
-	describe('Resolve nested data', () => {
-		const phrase = paraphrase(/\${([^{}]*)}/g);
-		const phraseNoResolve = paraphrase(/\${([^{}]*)}/g, {resolve: false});
+	describe('options', () => {
+		describe('resolve nested data', () => {
+			const phrase = paraphrase(/\${([^{}]*)}/g);
+			const phraseNoResolve = paraphrase(/\${([^{}]*)}/g, {resolve: false});
 
-		it('resolves dot notation', () => {
-			const string = 'Hello, ${name.first} ${name.last}';
-			const data = {
-				name: {
-					first: 'Martin',
-					last: 'Prince',
-				},
-			};
+			it('resolves dot notation', () => {
+				const string = 'Hello, ${name.first} ${name.last}';
+				const data = {
+					name: {
+						first: 'Martin',
+						last: 'Prince',
+					},
+				};
 
-			expect(phrase(string, data)).to.equal('Hello, Martin Prince');
+				expect(phrase(string, data)).to.equal('Hello, Martin Prince');
+			});
+
+			it('resolves arrays', () => {
+				const string = 'Hello, ${0} ${1}';
+				const name = [
+					'Martin',
+					'Prince',
+				];
+
+				expect(phrase(string, name)).to.equal('Hello, Martin Prince');
+			});
+
+			it('misses keys with dots', () => {
+				const string = 'Hello, ${name.first} ${name.last}';
+				const data = {
+					'name.first': 'Martin',
+					'name.last': 'Prince',
+				};
+
+				expect(phrase(string, data)).to.equal('Hello, ${name.first} ${name.last}');
+			});
+
+			it('does not resolve dot notation (explicit)', () => {
+				const string = 'Hello, ${name.first} ${name.last}';
+				const data = {
+					'name.first': 'Martin',
+					'name.last': 'Prince',
+				};
+
+				expect(phraseNoResolve(string, data)).to.equal('Hello, Martin Prince');
+			});
 		});
 
-		it('resolves arrays', () => {
-			const string = 'Hello, ${0} ${1}';
-			const name = [
-				'Martin',
-				'Prince',
-			];
+		describe('clean parsing', () => {
+			it('Should leave unmatched template combinations', () => {
+				const parser = paraphrase(/\${([^{}]*)}/g, {clean: false});
+				const string = 'Hello, ${name.first} ${name.last}';
+				const data = {};
 
-			expect(phrase(string, name)).to.equal('Hello, Martin Prince');
-		});
+				expect(parser(string, data)).to.equal('Hello, ${name.first} ${name.last}');
+			});
+			it('Should remove unmatched template combinations', () => {
+				const parser = paraphrase(/\${([^{}]*)}/g, {clean: true});
+				const string = 'Hello, ${name.first} ${name.last}';
+				const data = {};
 
-		it('misses keys with dots', () => {
-			const string = 'Hello, ${name.first} ${name.last}';
-			const data = {
-				'name.first': 'Martin',
-				'name.last': 'Prince',
-			};
-
-			expect(phrase(string, data)).to.equal('Hello, ${name.first} ${name.last}');
-		});
-
-		it('does not resolve dot notation (explicit)', () => {
-			const string = 'Hello, ${name.first} ${name.last}';
-			const data = {
-				'name.first': 'Martin',
-				'name.last': 'Prince',
-			};
-
-			expect(phraseNoResolve(string, data)).to.equal('Hello, Martin Prince');
+				expect(parser(string, data)).to.equal('Hello,  ');
+			});
 		});
 	});
 

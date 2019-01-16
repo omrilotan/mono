@@ -17,18 +17,37 @@ phrase('Hello, ${name}', {name: 'Martin'}); // Hello, Martin
 
 Acceptable replacements (values) are strings and numbers
 
-### Arguments
-One or more replacers, an optional options object at the end
-```js
-const phrase = paraphrase(/\${([^{}]*)}/gm, /\{{([^{}]*)}}/gm, {resolve: false});
+### Arguments and Options
+One or more RegExp replacers, an optional options object at the end
 
-phrase('Hello, ${name} {{last.name}}', {name: 'Martin', 'last.name': 'Prince'}); // Hello, Martin Prince
-```
-
-### Options
 | option | meaning | type | default
 | - | - | - | -
-| resolve | Resolve dot notations | `Boolean` | `true`
+| resolve | Should resolve dot notations within the template | `Boolean` | `true`
+| clean | Should remove unmatched template instances | `Boolean` | `false`
+
+
+##### Multiple replacers
+```js
+const phrase = paraphrase(/\${([^{}]*)}/gm, /\{{([^{}]*)}}/gm);
+
+phrase('Hello, ${firstname} {{lastname}}', {firstname: 'Martin', 'lastname': 'Prince'}); // Hello, Martin Prince
+```
+
+##### Dot notation resolve
+Treat dots as part of the key instead of notation marks
+```js
+const phrase = paraphrase(/\${([^{}]*)}/gm, {resolve: false});
+
+phrase('Hello, ${name} ${last.name}', {name: 'Martin', 'last.name': 'Prince'}); // Hello, Martin Prince
+```
+
+##### Unmatched cleanup
+Remove unmatched template instances from the result string
+```js
+const phrase = paraphrase(/\${([^{}]*)}/gm, {clean: true});
+
+phrase('Hello, ${firstname} ${lastname}', {firstname: 'Martin'}); // Hello, Martin
+```
 
 ## Examples
 ### Objects

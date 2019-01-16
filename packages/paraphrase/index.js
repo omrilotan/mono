@@ -16,6 +16,8 @@ const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
 /**
  * Create new paraphrase method instance
  * @param  {...RegExp[]} replacers
+ * @param  {Boolean}     [options.resolve=true] Should resolve dot notation within template
+ * @param  {Boolean}     [options.clean=false]  Should remove unmatched template instances
  * @returns {Function} phraser function instance
  *
  * @example const phraser = paraphrase(/\${([^{}]*)}/gm);
@@ -26,6 +28,7 @@ const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
 module.exports = function paraphrase(...replacers) {
 	const options = {
 		resolve: true,
+		clean: false,
 	};
 	if (replacers.length && isObject(replacers[replacers.length - 1])) {
 		Object.assign(options, replacers.pop());
@@ -60,7 +63,7 @@ module.exports = function paraphrase(...replacers) {
 		function replace(haystack, needle) {
 			const replacement = options.resolve ? notate(data, needle.trim()) : data[needle.trim()];
 
-			return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : haystack;
+			return VALID_RESULT_TYPES.includes(typeof replacement) ? replacement : options.clean ? '' : haystack;
 		}
 
 		return replacers.reduce((string, replacer) => string.replace(replacer, replace), string);
