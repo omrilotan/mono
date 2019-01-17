@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.56](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.57](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![1.0.1](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.4.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
@@ -26,10 +26,10 @@ Mono repo holding multiple packages
 | **`jsoncopy`** | [Create a deep clone of an object using JSON functionalities.](./packages/jsoncopy#readme) | [![1.0.0](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy)
 | **`levelheaded`** | [⚖️ Generate object containing functions deemed operational by level](./packages/levelheaded#readme) | [![1.2.0](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded)
 | **`markdownise`** | [Represent data structures in markdown](./packages/markdownise#readme) | [![0.0.0](https://img.shields.io/npm/v/markdownise.svg)](https://www.npmjs.com/package/markdownise)
-| **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.1](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
+| **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.2](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![1.1.2](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![1.0.1](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
-| **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![1.6.0](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
+| **`paraphrase`** | [Create flavoured string phraser](./packages/paraphrase#readme) | [![1.7.0](https://img.shields.io/npm/v/paraphrase.svg)](https://www.npmjs.com/package/paraphrase)
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.1](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
