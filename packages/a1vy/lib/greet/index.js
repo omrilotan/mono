@@ -1,6 +1,4 @@
-const { readFile } = require('fs');
-const { promisify } = require('util');
-const read = promisify(readFile);
+const { readFile } = require('fs').promises;
 const { resolve } = require('path');
 const ansiEscapes = require('ansi-escapes');
 const { name, version } = require('../../package.json');
@@ -32,7 +30,7 @@ module.exports = async function greet() {
               ${message.bold}
              ─────┬─${'─'.repeat(Math.max(message.length - 5, 1))}
                   ╯
-   ${ansiEscapes.image(await read(resolve(__dirname, '../../a1vy.png')))}  ${`${name} ${version}`.underline.yellow}
+   ${ansiEscapes.image(await readFile(resolve(__dirname, '../../a1vy.png')))}  ${`${name} ${version}`.underline.yellow}
     `
 	);
 }

@@ -1,10 +1,10 @@
-const { promisify } = require('util');
-const read = promisify(require('fs').readFile);
-const random = require('../random');
+const { readFile } = require('fs').promises;
+const { resolve } = require('path');
+const random = require('doamrn');
 
 module.exports = async () => {
-	const file = await read(`${__dirname}/greetings.txt`);
+	const file = await readFile(resolve(__dirname, 'greetings.txt'));
 	const greetings = file.toString().split('\n').filter(item => !!item && !item.startsWith('#'));
 
-	return random(greetings);
+	return random(...greetings);
 }
