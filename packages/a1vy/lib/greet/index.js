@@ -2,7 +2,7 @@ const { readFile } = require('fs').promises;
 const { resolve } = require('path');
 const ansiEscapes = require('ansi-escapes');
 const { name, version } = require('../../package.json');
-const greeting = require('../greeting');
+const random = require('doamrn');
 
 module.exports = async function greet() {
 	const useImage = process.env.TERM_PROGRAM === 'iTerm.app' && parseInt(process.env.TERM_PROGRAM_VERSION) >= 3;
@@ -33,4 +33,11 @@ module.exports = async function greet() {
    ${ansiEscapes.image(await readFile(resolve(__dirname, '../../a1vy.png')))}  ${`${name} ${version}`.underline.yellow}
     `
 	);
+}
+
+async function greeting () {
+	const file = await readFile(resolve(__dirname, 'greetings.txt'));
+	const greetings = file.toString().split('\n').filter(item => !!item && !item.startsWith('#'));
+
+	return random(...greetings);
 }

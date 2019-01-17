@@ -4,12 +4,8 @@
  * @return {String}
  */
 module.exports = data => {
-	if (!data.includes('{')) {
-		return data;
-	}
-
 	try {
-		return JSON.stringify(JSON.parse(data), null, 4);
+		return JSON.stringify(JSON.parse(data), null, 2);
 	} catch (error) {
 		return data;
 	}

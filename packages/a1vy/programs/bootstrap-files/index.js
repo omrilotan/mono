@@ -1,13 +1,7 @@
-require('colors');
+const { readdir, readFile, writeFile } = require('fs').promises;
 const boxt = require('boxt');
-const { promisify } = require('util');
-const { readdir, readFile, writeFile } = require('fs');
-
-const ls = promisify(readdir);
-const read = promisify(readFile);
-const write = promisify(writeFile);
-
 const inquirer = require('inquirer');
+require('colors');
 
 const fixFilename = file => file.replace(/^__/, '.');
 const sorter = (a, b) => {
@@ -19,7 +13,7 @@ const sorter = (a, b) => {
 
 module.exports = async () => {
 	const base = `${__dirname}/files`;
-	const files = await ls(base);
+	const files = await readdir(base);
 	const choices = await Promise.all(
 		files
 			.sort(sorter)
@@ -44,8 +38,8 @@ module.exports = async () => {
 		]);
 
 	const promises = answers.files.map(file => {
-		return read(`${base}/${file}`)
-			.then(data => write(`./${fixFilename(file)}`, data))
+		return readFile(`${base}/${file}`)
+			.then(data => writeFile(`./${fixFilename(file)}`, data))
 			.then(() => fixFilename(file))
 			.catch(error => {
 				throw error;
