@@ -15,8 +15,51 @@
 <h2 id="⚔️-sort-array-of-objects-by-key-or-function">⚔️ Sort array of objects by key or function</h2>
 <pre><code class="language-js">const sortby = require(&#39;@does/sortby&#39;);
 
-sortby([{name: &#39;Alfred&#39;, age: 10}, {name: &#39;John&#39;, age: 30}, {name: &#39;Paul&#39;, age: 20}], &#39;age&#39;, {order: &#39;desc&#39;});
-// [{name: &#39;John&#39;, age: 30}, {name: &#39;Paul&#39;, age: 20}, {name: &#39;Alfred&#39;, age: 10}]</code></pre>
+sortby(
+    [
+        {name: &#39;John&#39;, age: 30},
+        {name: &#39;Alfred&#39;, age: 10},
+        {name: &#39;Paul&#39;, age: 20}
+    ],
+    &#39;name&#39;,
+    {
+        order: &#39;desc&#39;,
+        modify: name =&gt; name.toLowerCase()
+    }
+);
+
+/*
+ * [
+ *     {name: &#39;Alfred&#39;, age: 10},
+ *     {name: &#39;John&#39;, age: 30},
+ *     {name: &#39;Paul&#39;, age: 20},
+ * ]
+ */</code></pre>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>type</th>
+<th>description</th>
+<th>default</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order</td>
+<td>{String} asc/desc</td>
+<td>Order of sorting</td>
+<td>asc</td>
+<td>{order: &#39;desc&#39;}</td>
+</tr>
+<tr>
+<td>modify</td>
+<td>{Function}</td>
+<td>modify value before sorting</td>
+<td>a =&gt; a</td>
+<td>{modify: a =&gt; a.toLowerCase()}</td>
+</tr>
+</tbody></table>
 <h2 id="transpiled-version">Transpiled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
 <p>Also available for explicit import:</p>
