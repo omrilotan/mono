@@ -46,4 +46,30 @@ describe('sortby', () => {
 			]
 		);
 	});
+	it('Should sort after using a modifier on the value', () => {
+		const array = 			[
+			{key: 'b'},
+			{key: 'A'},
+			{key: 'C'},
+		];
+		expect(
+			sortby(array, 'key')
+		).to.deep.equal(
+			[
+				{key: 'A'},
+				{key: 'C'},
+				{key: 'b'},
+			]
+		);
+
+		expect(
+			sortby(array, 'key', {modify: a => a.toLowerCase()})
+		).to.deep.equal(
+			[
+				{key: 'A'},
+				{key: 'b'},
+				{key: 'C'},
+			]
+		);
+	});
 });
