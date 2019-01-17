@@ -1,5 +1,6 @@
 const {
 	clearLine,
+	clearScreenDown,
 	cursorTo,
 } = require('readline');
 const { stdout } = process;
@@ -7,8 +8,9 @@ const { stdout } = process;
 Object.assign(
 	exports,
 	{
-		update,
+		clear,
 		end,
+		update,
 	}
 );
 
@@ -18,7 +20,8 @@ Object.assign(
  * no return value
  */
 function update(message) {
-	clear();
+	clearLine(stdout, 0); // Clear current STDOUT line
+	cursorTo(stdout, 0); // Place cursor at the start
 	stdout.write(message.toString());
 }
 
@@ -32,10 +35,10 @@ function end(message = '') {
 }
 
 /**
- * Clear current STDOUT line, places cursor at the start
+ * Clear current STDOUT stream
  * no return value
  */
 function clear() {
-	clearLine(stdout, 0);
-	cursorTo(stdout, 0);
+	cursorTo(stdout, 0, 0);
+	clearScreenDown(stdout);
 }

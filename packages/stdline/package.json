@@ -1,14 +1,15 @@
 {
   "name": "stdline",
-  "version": "0.0.0",
-  "description": "Update current STDOUT line",
+  "version": "0.1.0",
+  "description": "💬 Update current STDOUT stream",
   "keywords": [
     "stdout",
     "printline",
-    "console.log",
+    "console.clear",
     "cli",
     "message",
-    "update"
+    "update",
+    "💬"
   ],
   "author": "omrilotan",
   "license": "MIT",

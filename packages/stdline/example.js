@@ -1,9 +1,12 @@
 const {
-	update,
+	clear,
 	end,
+	update,
 } = require('.');
 
 const DELAY = 40;
+
+clear();
 
 console.log('processing:');
 
