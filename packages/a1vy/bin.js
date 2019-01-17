@@ -7,8 +7,8 @@ const { readdir } = require('fs');
 const { promisify } = require('util');
 const ls = promisify(readdir);
 const inquirer = require('inquirer');
-const { name, version } = require('./package.json');
 const { clear } = require('./lib/terminal');
+const greet = require('./lib/greet');
 
 clear();
 
@@ -21,23 +21,7 @@ try {
 }
 
 async function init() {
-
-	const greeting = await require('./lib/greet')();
-
-	console.log(
-		`
-         ${greeting.bold}
-        ─────┬─${'─'.repeat(Math.max(greeting.length - 5, 1))}
-    ╭──────╮ ╯
-    │ ◜   ◝│
-    │  ☉ ☉ │
-    ├┬┬┬┬┬┬┤
-    ├┴┴┴┴┴┴┤
-    ╰─╮  ╭─╯
-    ╭─╯  ╰─╮  ${`${name} ${version}`.underline.yellow}
-
-    `
-	);
+	await greet();
 
 	const programs = await ls(`${__dirname}/programs`);
 
