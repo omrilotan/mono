@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.58](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.62](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![1.0.1](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.4.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
@@ -36,7 +36,7 @@ Mono repo holding multiple packages
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`selenium-chrome-clear-cache`** | [Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.1.3](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
 | **`@lets/sleep`** | [🛌 Block the runtime for n milliseconds](./packages/sleep#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/sleep.svg)](https://www.npmjs.com/package/@lets/sleep)
-| **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
+| **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
 | **`stdline`** | [💬 Update current STDOUT stream](./packages/stdline#readme) | [![0.1.0](https://img.shields.io/npm/v/stdline.svg)](https://www.npmjs.com/package/stdline)
 | **`transparent-pixel`** | [One transparent pixel](./packages/transparent-pixel#readme) | [![1.0.0](https://img.shields.io/npm/v/transparent-pixel.svg)](https://www.npmjs.com/package/transparent-pixel)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![0.0.7](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
