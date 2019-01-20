@@ -6,6 +6,7 @@ const inquirer = require('inquirer');
 const greet = require('./lib/greet');
 const { clear } = require('stdline');
 const sortby = require('@does/sortby');
+const wait = require('@lets/wait');
 const sortByNameCaseInsensitive = (...array) => sortby(
 	array,
 	'name',
@@ -27,6 +28,7 @@ module.exports = async function a1vy() {
 }
 
 async function init() {
+	await wait(); // wait until after current logs are written (fs promises)
 	clear();
 
 	await greet();
