@@ -13,6 +13,7 @@
 		<a href="../">↩︎</a>
 		<h1 id="chunkalyse">chunkalyse <a href="https://www.npmjs.com/package/chunkalyse"><img src="https://img.shields.io/npm/v/chunkalyse.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/chunkalyse"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <h2 id="🍰-summarise-webpack-entries-from-stats-output-file">🍰 Summarise webpack entries from stats output file</h2>
+<p>Analyzes <a href="https://webpack.js.org/">Webpack</a> bundle size</p>
 <table>
 <thead>
 <tr>
@@ -20,13 +21,19 @@
 </tr>
 </thead>
 </table>
+<p>This utility uses <a href="https://webpack.js.org/api/stats/">Webpack&#39;s generated stats file</a>.</p>
+<pre><code>webpack --profile --json &gt; stats.json</code></pre><p>Is analyses chunks and modules according to the structure output from your Webpack version and configuration.</p>
 <p>Supports:</p>
 <ul>
-<li>✔︎ webpack stats</li>
-<li>✔︎ multiple entries</li>
-<li>✔︎ <a href="https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations">multiple configurations</a></li>
-<li>✔︎ loaders</li>
-<li>✔︎ output formats</li>
+<li>✔︎ Webpack stats 📦</li>
+<li>✔︎ multiple entries 👯</li>
+<li>✔︎ <a href="https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations">multiple configurations ⛓</a></li>
+<li>✔︎ loaders ⏳</li>
+<li>✔︎ CLI output formats 🖨<ul>
+<li><code>human</code> (default, see below)</li>
+<li><code>json</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="cli">CLI</h3>
 <p>Pipe stats</p>
@@ -37,18 +44,16 @@ npx chunkalyse stats.json</code></pre>
 <p>Install globally for continues use</p>
 <pre><code class="language-sh">npm i -g chunkalyse
 webpack --config webpack.config.js --profile --json | chunkalyse</code></pre>
-<h4 id="example-output-styled-in-cli-descending">Example output (styled in CLI, descending)</h4>
-<pre><code>main (331.2 kB)
+<h4 id="output-formats-examples">Output formats (examples)</h4>
+<h5 id="view-in-cli-descending-in-size">View in CLI, descending in size</h5>
+<pre><code>$ chunkalyse stats.json
+
+main (331.2 kB)
  • self: 243.8 kB (74%)
  • core-js: 38.8 kB (12%)
  • prop-types: 26.5 kB (8%)
- ...</code></pre><h5 id="cli-output-formats">CLI output formats</h5>
-<ul>
-<li><code>human</code> (default, see above)</li>
-<li><code>json</code></li>
-</ul>
-<p>Example</p>
-<pre><code class="language-sh">chunkalyse stats.json --format json &gt; chunkalised.json</code></pre>
+ ...</code></pre><h5 id="write-json-to-a-file">Write JSON to a file</h5>
+<pre><code class="language-sh">$ chunkalyse stats.json --format json &gt; chunkalised.json</code></pre>
 <h3 id="module-delivers-object-with-named-entries">Module delivers object with named entries</h3>
 <pre><code class="language-js">const chunkalyse = require(&#39;chunkalyse&#39;);
 const stats = require(&#39;./stats.json&#39;);
