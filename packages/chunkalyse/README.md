@@ -2,16 +2,28 @@
 
 ## 🍰 Summarise webpack entries from stats output file
 
+Analyzes [Webpack](https://webpack.js.org/) bundle size
+
 | <img width="260" src="https://user-images.githubusercontent.com/516342/49396538-12cb0f80-f742-11e8-8503-8a459761c9fb.png">
 | -
 
+This utility uses [Webpack's generated stats file](https://webpack.js.org/api/stats/).
+```
+webpack --profile --json > stats.json
+```
+
+Is analyses chunks and modules according to the structure output from your Webpack version and configuration.
+
 Supports:
 
-- ✔︎ webpack stats
-- ✔︎ multiple entries
-- ✔︎ [multiple configurations](https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations)
-- ✔︎ loaders
-- ✔︎ output formats
+- ✔︎ Webpack stats 📦
+- ✔︎ multiple entries 👯
+- ✔︎ [multiple configurations ⛓](https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations)
+- ✔︎ loaders ⏳
+- ✔︎ CLI output formats 🖨
+	- `human` (default, see below)
+	- `json`
+
 
 ### CLI
 Pipe stats
@@ -30,8 +42,12 @@ npm i -g chunkalyse
 webpack --config webpack.config.js --profile --json | chunkalyse
 ```
 
-#### Example output (styled in CLI, descending)
+#### Output formats (examples)
+
+##### View in CLI, descending in size
 ```
+$ chunkalyse stats.json
+
 main (331.2 kB)
  • self: 243.8 kB (74%)
  • core-js: 38.8 kB (12%)
@@ -39,13 +55,9 @@ main (331.2 kB)
  ...
 ```
 
-##### CLI output formats
-- `human` (default, see above)
-- `json`
-
-Example
+##### Write JSON to a file
 ```sh
-chunkalyse stats.json --format json > chunkalised.json
+$ chunkalyse stats.json --format json > chunkalised.json
 ```
 
 ### Module delivers object with named entries

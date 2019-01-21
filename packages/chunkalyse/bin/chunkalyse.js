@@ -9,7 +9,8 @@
 process.on('unhandledRejection', console.error);
 
 const {resolve} = require('path');
-const {argv} = require('yargs');
+const [,, ...args] = process.argv;
+const argv = require('yargs-parser')(args);
 const chunkalyse = require('..');
 
 /**
