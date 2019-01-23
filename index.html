@@ -20,6 +20,7 @@
 <link rel="prerender" href="./create-git-alias/">
 <link rel="prerender" href="./doamrn/">
 <link rel="prerender" href="./edit-package/">
+<link rel="prerender" href="./errobj/">
 <link rel="prerender" href="./exist/">
 <link rel="prerender" href="./flatten/">
 <link rel="prerender" href="./handle-rejection/">
@@ -57,6 +58,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/committee').then(result=>
 fetch('https://api.npmjs.org/downloads/point/last-week/create-git-alias').then(result=>result.json()).then(({downloads}) => {window['downloadcountcreate-git-alias'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/doamrn').then(result=>result.json()).then(({downloads}) => {window['downloadcountdoamrn'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/edit-package').then(result=>result.json()).then(({downloads}) => {window['downloadcountedit-package'].innerText = downloads}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/errobj').then(result=>result.json()).then(({downloads}) => {window['downloadcounterrobj'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/exist').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/exist'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@recursive/flatten').then(result=>result.json()).then(({downloads}) => {window['downloadcount@recursive/flatten'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/handle-rejection').then(result=>result.json()).then(({downloads}) => {window['downloadcounthandle-rejection'].innerText = downloads}).catch(error => { /* ignore */ });
@@ -182,6 +184,13 @@ fetch('https://api.npmjs.org/downloads/point/last-week/@lets/wait').then(result=
 	<td>Read, write and reset package.json</td>
 	<td><a href="https://www.npmjs.com/package/edit-package"><small>1.0.1</small></a></td>
 	<td id="downloadcountedit-package"></td>
+</tr>
+
+<tr>
+	<td><a href="./errobj/">errobj</a></td>
+	<td>☠️ Serialise errors to literal (JSONable) object<i title="includes browser entry">🖥</i></td>
+	<td><a href="https://www.npmjs.com/package/errobj"><small>0.0.0</small></a></td>
+	<td id="downloadcounterrobj"></td>
 </tr>
 
 <tr>
@@ -360,7 +369,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/@lets/wait').then(result=
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/48bb4f82b7e3f50fbcead6ded4f89ab84c36b510"><b>Refactor factories, revisit visitors</b></a>" <small>on Wednesday, January 23rd, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/e47d3084ee4c916ad9f012267b7e61ec22c4af09"><b>☠️  errobj - Serialise errors to literal (JSONable) object</b></a>" <small>on Wednesday, January 23rd, 2019</small></sup>
 		</blockquote>
 	</body>
 </html>
