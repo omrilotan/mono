@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const execute = require(`${process.env.ROOT}/lib/execute`);
+const execute = require('../../lib/execute');
 
 module.exports = async () => {
 	const version = await execute(`${__dirname}/get-version.sh`);
