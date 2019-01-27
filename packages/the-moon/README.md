@@ -1,6 +1,6 @@
-# the-moon [![](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/the-moon)
+# 🌕 the-moon [![](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/the-moon)
 
-## 🌕 Show me the moon
+## Show me the moon 🌑🌒🌓🌔🌕🌖🌗🌘🌑
 
 ```js
 const moon = require('the-moon');
@@ -28,3 +28,16 @@ moon({format: 'name'}); // 'Last Quarter Moon'
 | icon | 🌕
 | code | `full`
 | name | `Full Moon`
+
+## Moon Glossary
+
+| Icon | Name | Code
+| - | - | -
+| 🌑 | New Moon | `new`
+| 🌒 | Waxing Crescent Moon | `waxing-crescent`
+| 🌓 | Quarter Moon | `quarter`
+| 🌔 | Waxing Gibbous Moon | `waxing-gibbous`
+| 🌕 | Full Moon | `full`
+| 🌖 | Waning Gibbous Moon | `waning-gibbous`
+| 🌗 | Last Quarter Moon | `last-quarter`
+| 🌘 | Waning Crescent Moon | `waning-crescent`

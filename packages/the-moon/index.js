@@ -42,12 +42,16 @@ const FORMATS = [
 	FORMAT_NAME,
 ];
 
-const woralise = text => text.split('-').map(capitalise).join(' ');
-const capitalise = word => word.charAt(0).toUpperCase() + word.slice(1);
+const woralise = text => text
+	.split('-')
+	.map(
+		word => word.charAt(0).toUpperCase() + word.slice(1)
+	)
+	.join(' ');
 
-function theMoon(...args) {
+function moon(...args) {
 	const options = typeof args[args.length - 1] === 'object' ? args.pop() : {};
-	const {format = 'moon'} = options;
+	const {format = FORMAT_ICON} = options;
 	const now = new Date();
 	let [
 		year = now.getFullYear(),
@@ -60,8 +64,6 @@ function theMoon(...args) {
 		month += 12;
 	}
 
-	// ++month;
-
 	let total_days_elapsed = year * YEAR_CYCLE + MONTH_CYCLE * month + day - 694039.09;
 	total_days_elapsed /= MOON_CYCLE;
 	total_days_elapsed -= parseInt(total_days_elapsed); // subtract integer part to leave fractional part of original
@@ -73,14 +75,14 @@ function theMoon(...args) {
 		case FORMAT_CODE:
 			return PHASES_CODES[phase];
 		case FORMAT_NAME:
-			return theMoon.PHASES_NAMES[phase];
+			return moon.PHASES_NAMES[phase];
 		default:
 			return PHASES[phase];
 	}
 }
 
 module.exports = Object.defineProperties(
-	theMoon,
+	moon,
 	{
 		PHASES: {
 			value: PHASES,
@@ -91,7 +93,9 @@ module.exports = Object.defineProperties(
 			enumerable: true,
 		},
 		PHASES_NAMES: {
-			get: () => PHASES_CODES.map(name => woralise(name) + ' Moon'),
+			get: () => PHASES_CODES.map(
+				name => woralise(name) + ' Moon'
+			),
 			enumerable: true,
 		},
 		FORMATS: {
