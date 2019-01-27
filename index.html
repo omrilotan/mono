@@ -42,6 +42,7 @@
 <link rel="prerender" href="./sleep/">
 <link rel="prerender" href="./sortby/">
 <link rel="prerender" href="./stdline/">
+<link rel="prerender" href="./the-moon/">
 <link rel="prerender" href="./transparent-pixel/">
 <link rel="prerender" href="./upgradable/">
 <link rel="prerender" href="./wait/">
@@ -80,6 +81,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/selenium-chrome-clear-cac
 fetch('https://api.npmjs.org/downloads/point/last-week/@lets/sleep').then(result=>result.json()).then(({downloads}) => {window['downloadcount@lets/sleep'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/sortby').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/sortby'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/stdline').then(result=>result.json()).then(({downloads}) => {window['downloadcountstdline'].innerText = downloads}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/the-moon').then(result=>result.json()).then(({downloads}) => {window['downloadcountthe-moon'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/transparent-pixel').then(result=>result.json()).then(({downloads}) => {window['downloadcounttransparent-pixel'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/upgradable').then(result=>result.json()).then(({downloads}) => {window['downloadcountupgradable'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@lets/wait').then(result=>result.json()).then(({downloads}) => {window['downloadcount@lets/wait'].innerText = downloads}).catch(error => { /* ignore */ });
@@ -341,6 +343,13 @@ fetch('https://api.npmjs.org/downloads/point/last-week/@lets/wait').then(result=
 </tr>
 
 <tr>
+	<td><a href="./the-moon/">the-moon</a></td>
+	<td>🌕 Show me the moon</td>
+	<td><a href="https://www.npmjs.com/package/the-moon"><small>0.0.0</small></a></td>
+	<td id="downloadcountthe-moon"></td>
+</tr>
+
+<tr>
 	<td><a href="./transparent-pixel/">transparent-pixel</a></td>
 	<td>One transparent pixel</td>
 	<td><a href="https://www.npmjs.com/package/transparent-pixel"><small>1.0.0</small></a></td>
@@ -369,7 +378,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/@lets/wait').then(result=
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/e6b12c46b5af20c2fb382cf0b4faabc12dcf6f6e"><b>buenas those-things.</b></a>" <small>on Thursday, January 24th, 2019</small></sup>
+			<sup>Omri Lotan: "<a href="https://github.com/omrilotan/mono/commit/9cf0760200f8f96791e818812ec49ed2fde1241c"><b>🌕 the moon (#22)</b></a>" <small>on Sunday, January 27th, 2019</small></sup>
 		</blockquote>
 	</body>
 </html>
