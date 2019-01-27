@@ -1,0 +1,23 @@
+{
+  "name": "the-moon",
+  "version": "0.0.0",
+  "description": "🌕 Show me the moon",
+  "keywords": [
+    "🌕",
+    "moon",
+    "date",
+    "moon-phase",
+    "lunar"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/the-moon/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/the-moon; cd -"
+  }
+}
