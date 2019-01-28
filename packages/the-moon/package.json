@@ -1,6 +1,6 @@
 {
   "name": "the-moon",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "🌕 Show me the moon",
   "keywords": [
     "🌕",
@@ -17,7 +17,13 @@
   },
   "homepage": "https://omrilotan.com/mono/the-moon/",
   "main": "index.js",
+  "browser": "dist/index.js",
+  "bin": {
+    "moon": "./bin.js",
+    "the-moon": "./bin.js"
+  },
   "scripts": {
+    "start": "./bin.js",
     "test": "cd ../../; npm t packages/the-moon; cd -"
   }
 }

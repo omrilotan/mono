@@ -1,53 +1,21 @@
-module.exports = null
-
-const NEW = 'new';
-const WAXING_CRESCENT = 'waxing-crescent';
-const QUARTER = 'quarter';
-const WAXING_GIBBOUS = 'waxing-gibbous';
-const FULL = 'full';
-const WANING_GIBBOUS = 'waning-gibbous';
-const LAST_QUARTER = 'last-quarter';
-const WANING_CRESCENT = 'waning-crescent';
-
-const MOON_CYCLE = 29.5305882;
-const YEAR_CYCLE = 365.25;
-const MONTH_CYCLE = 30.6;
-const PHASES = [
-	'🌑',	// New Moon
-	'🌒',	// Waxing Crescent Moon
-	'🌓',	// Quarter Moon
-	'🌔',	// Waxing Gibbous Moon
-	'🌕',	// Full Moon
-	'🌖',	// Waning Gibbous Moon
-	'🌗',	// Last Quarter Moon
-	'🌘',	// Waning Crescent Moon
-];
-const PHASES_CODES = [
-	NEW,
-	WAXING_CRESCENT,
-	QUARTER,
-	WAXING_GIBBOUS,
-	FULL,
-	WANING_GIBBOUS,
-	LAST_QUARTER,
-	WANING_CRESCENT,
-];
-
-const FORMAT_ICON = 'icon';
-const FORMAT_CODE = 'code';
-const FORMAT_NAME = 'name';
-const FORMATS = [
+const {
+	MOON_CYCLE,
+	YEAR_CYCLE,
+	MONTH_CYCLE,
+} = require('./lib/cycles');
+const {
 	FORMAT_ICON,
 	FORMAT_CODE,
 	FORMAT_NAME,
-];
-
-const woralise = text => text
-	.split('-')
-	.map(
-		word => word.charAt(0).toUpperCase() + word.slice(1)
-	)
-	.join(' ');
+	FORMATS,
+} = require('./lib/formats');
+const {
+	ICONS,
+	CODES,
+} = require('./lib/names');
+const word = require('./lib/word');
+const NINETEEN_HUNDRED = 694039.09;
+const SUFFIX = 'Moon';
 
 function moon(...args) {
 	const options = typeof args[args.length - 1] === 'object' ? args.pop() : {};
@@ -64,37 +32,37 @@ function moon(...args) {
 		month += 12;
 	}
 
-	let total_days_elapsed = year * YEAR_CYCLE + MONTH_CYCLE * month + day - 694039.09;
+	let total_days_elapsed = year * YEAR_CYCLE + month * MONTH_CYCLE + day - NINETEEN_HUNDRED;
 	total_days_elapsed /= MOON_CYCLE;
 	total_days_elapsed -= parseInt(total_days_elapsed); // subtract integer part to leave fractional part of original
 
-	let phase = Math.round(total_days_elapsed * PHASES.length);
-	phase = phase >= PHASES.length ? 0 : phase; // turn 8 into 0
+	let phase = Math.round(total_days_elapsed * ICONS.length);
+	phase = phase >= ICONS.length ? 0 : phase; // turn 8 into 0
 
 	switch (format) {
 		case FORMAT_CODE:
-			return PHASES_CODES[phase];
+			return CODES[phase];
 		case FORMAT_NAME:
-			return moon.PHASES_NAMES[phase];
+			return [word(CODES[phase]), SUFFIX].join(' ');
 		default:
-			return PHASES[phase];
+			return ICONS[phase];
 	}
 }
 
 module.exports = Object.defineProperties(
 	moon,
 	{
-		PHASES: {
-			value: PHASES,
+		ICONS: {
+			value: ICONS,
 			enumerable: true,
 		},
-		PHASES_CODES: {
-			value: PHASES_CODES,
+		CODES: {
+			value: CODES,
 			enumerable: true,
 		},
-		PHASES_NAMES: {
-			get: () => PHASES_CODES.map(
-				name => woralise(name) + ' Moon'
+		NAMES: {
+			get: () => CODES.map(
+				name => [word(name), SUFFIX].join(' ')
 			),
 			enumerable: true,
 		},
