@@ -41,3 +41,9 @@ moon({format: 'name'}); // 'Last Quarter Moon'
 | 🌖 | Waning Gibbous Moon | `waning-gibbous`
 | 🌗 | Last Quarter Moon | `last-quarter`
 | 🌘 | Waning Crescent Moon | `waning-crescent`
+
+## CLI
+![](https://user-images.githubusercontent.com/516342/51849472-7c256400-2328-11e9-8223-accf0468ecfe.png)
+```
+npx the-moon
+```
