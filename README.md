@@ -1,4 +1,4 @@
-# mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/build-insights/gh/omrilotan/mono/master)
+# mono [![](https://circleci.com/gh/omrilotan/mono.svg?style=svg)](https://circleci.com/gh/omrilotan/workflows/mono) [![](https://img.shields.io/badge/-%F0%9F%93%8A-fff.svg)](https://circleci.com/build-insights/gh/omrilotan/mono/master)
 Mono repo holding multiple packages
 
 ## TOC
@@ -39,7 +39,7 @@ Mono repo holding multiple packages
 | **`@lets/sleep`** | [🛌 Block the runtime for n milliseconds](./packages/sleep#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/sleep.svg)](https://www.npmjs.com/package/@lets/sleep)
 | **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
 | **`stdline`** | [💬 Update current STDOUT stream](./packages/stdline#readme) | [![0.1.0](https://img.shields.io/npm/v/stdline.svg)](https://www.npmjs.com/package/stdline)
-| **`the-moon`** | [🌕 Show me the moon](./packages/the-moon#readme) | [![0.0.0](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon)
+| **`the-moon`** | [🌕 Show me the moon](./packages/the-moon#readme) | [![1.1.0](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon)
 | **`transparent-pixel`** | [One transparent pixel](./packages/transparent-pixel#readme) | [![1.0.0](https://img.shields.io/npm/v/transparent-pixel.svg)](https://www.npmjs.com/package/transparent-pixel)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![0.0.7](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
 | **`@lets/wait`** | [⏲ A promising wait function](./packages/wait#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/wait.svg)](https://www.npmjs.com/package/@lets/wait)
