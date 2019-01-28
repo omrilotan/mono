@@ -47,9 +47,11 @@ function output(packages) {
 	const { description, name } = require('../package.json');
 	const title = name.split('/').pop();
 	const badge = 'https://circleci.com/gh/omrilotan/mono.svg?style=svg';
-	const ciurl = 'https://circleci.com/build-insights/gh/omrilotan/mono/master';
+	const ciurl = 'https://circleci.com/gh/omrilotan/workflows/mono';
+	const insightsIcon = 'https://img.shields.io/badge/-%F0%9F%93%8A-fff.svg';
+	const insights = 'https://circleci.com/build-insights/gh/omrilotan/mono/master';
 
-	return `# ${title} [![](${badge})](${ciurl})
+	return `# ${title} [![](${badge})](${ciurl}) [![](${insightsIcon})](${insights})
 ${description}
 
 ## TOC
