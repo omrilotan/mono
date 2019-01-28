@@ -58,9 +58,9 @@ async function start() {
 	const user = 'omrilotan';
 
 	const content = rows.join('');
-	const head = [
-		...links,
-		'<script>',
+	const head = links.join('\n');
+	const bottom = [
+		'<script defer>',
 		...scripts,
 		'</script>',
 	].join('\n');
@@ -70,6 +70,7 @@ async function start() {
 
 	const output = phrase(template, {
 		head,
+		bottom,
 		title,
 		user,
 		content,
