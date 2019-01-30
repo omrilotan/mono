@@ -25,6 +25,16 @@ describe('error-notation', () => {
 		const {extra} = errobj(error);
 		expect(extra).to.equal('information');
 	});
+	it('Should include enrichment fields', () => {
+		const error = new RangeError('Nothing');
+		const {extra} = errobj(error, {extra: 'information'});
+		expect(extra).to.equal('information');
+	});
+	it('Should give precedence to enrichment fields over the native ones', () => {
+		const error = new RangeError('Nothing');
+		const {message} = errobj(error, {message: 'Something'});
+		expect(message).to.equal('Something');
+	});
 
 	it('Should find line and column from browser error stack', () => {
 		const error = new RangeError('Nothing');

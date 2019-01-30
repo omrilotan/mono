@@ -1,35 +1,26 @@
-const errorStackParser = require('error-stack-parser')
+const errorStackParser = require('error-stack-parser');
+const props = require('./lib/props');
+const verify = require('./lib/verify');
 
 const parse = errorStackParser.parse.bind(errorStackParser);
 
-const FIELDS = [
-	'message',
-	'stack',
+/**
+ * Serialise error
+ * @param  {Error}  error
+ * @param  {Object} [enrichment={}]
+ * @return {Object}
+ */
+module.exports = (error, enrichment = {}) => {
+	verify(error);
 
-	// inherited (not own property)
-	'name',
-
-	// optional
-	'code',
-	'details',
-
-	// non standard browser fields
-	'fileName',
-	'lineNumber',
-	'columnNumber',
-];
-
-module.exports = error => {
 	const parsedStack = parse(error);
-
 	error.details = Object.assign(
 		error.details || {},
 		{parsedStack}
 	);
 
-	return Object.getOwnPropertyNames(error)
-		.concat(FIELDS)
-		.reduce(
+	return Object.assign(
+		props(error).reduce(
 			(accumulator, key) => error[key]
 				?
 				Object.assign(
@@ -39,5 +30,7 @@ module.exports = error => {
 				:
 				accumulator,
 			{...parsedStack[0]}
-		);
+		),
+		enrichment
+	);
 };

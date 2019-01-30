@@ -6,26 +6,39 @@
 - ✔︎ Serialises errors to literal objects
 - ✔︎ Supports **any** properties attached to the error
 - ✔︎ Expands the error details with lineNumber, columnName, fileName, functionName, ...
+- ✔︎ Accepts an enrichment object
 - ✔︎ Parses the stack trace ([error-stack-parser](https://www.npmjs.com/package/error-stack-parser))
 - ✔︎ Isomorphic
+
+### TL;DR
+
+```js
+import errobj from 'errobj';
+
+try {
+	some broken code
+} catch (error) {
+	send(JSON.stringify(errobj(error)));
+}
+```
+
+#### Arguments
+1. `{Error}` (error) An error to be serialised
+2. `{Object}` (enrichment) [_optional_] - This object's field values will be assigned to the serialised error
+
+### Example: Sending uncaught error to an HTTP error logger
 
 ```js
 const errobj = require('errobj');
 
-const original_onerror = window.onerror;
+const original_onerror = window.onerror; // play nicely
 window.onerror = function(message, url, lineNumber, columnNumber, error) {
-
-	Object.assign(
-		error,
-		{message, url, lineNumber, columnNumber}
-	);
-
 	fetch(
 		'/error-logger',
 		{
 			method: 'POST',
 			body: JSON.stringify(
-				errobj(error)
+				errobj(error, {message, url, lineNumber, columnNumber, level: 'error'})
 			)
 		}
 	);
@@ -64,7 +77,8 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
 				source: 'at index.html:56'
 			}
 		]
-	}
+	},
+	level: 'error'
 }
 ```
 
