@@ -18,25 +18,34 @@
 <li>✔︎ Serialises errors to literal objects</li>
 <li>✔︎ Supports <strong>any</strong> properties attached to the error</li>
 <li>✔︎ Expands the error details with lineNumber, columnName, fileName, functionName, ...</li>
+<li>✔︎ Accepts an enrichment object</li>
 <li>✔︎ Parses the stack trace (<a href="https://www.npmjs.com/package/error-stack-parser">error-stack-parser</a>)</li>
 <li>✔︎ Isomorphic</li>
 </ul>
+<h3 id="tldr">TL;DR</h3>
+<pre><code class="language-js">import errobj from &#39;errobj&#39;;
+
+try {
+    some broken code
+} catch (error) {
+    send(JSON.stringify(errobj(error)));
+}</code></pre>
+<h4 id="arguments">Arguments</h4>
+<ol>
+<li><code>{Error}</code> (error) An error to be serialised</li>
+<li><code>{Object}</code> (enrichment) [_optional_] - This object&#39;s field values will be assigned to the serialised error</li>
+</ol>
+<h3 id="example-sending-uncaught-error-to-an-http-error-logger">Example: Sending uncaught error to an HTTP error logger</h3>
 <pre><code class="language-js">const errobj = require(&#39;errobj&#39;);
 
-const original_onerror = window.onerror;
+const original_onerror = window.onerror; // play nicely
 window.onerror = function(message, url, lineNumber, columnNumber, error) {
-
-    Object.assign(
-        error,
-        {message, url, lineNumber, columnNumber}
-    );
-
     fetch(
         &#39;/error-logger&#39;,
         {
             method: &#39;POST&#39;,
             body: JSON.stringify(
-                errobj(error)
+                errobj(error, {message, url, lineNumber, columnNumber, level: &#39;error&#39;})
             )
         }
     );
@@ -72,7 +81,8 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
                 source: &#39;at index.html:56&#39;
             }
         ]
-    }
+    },
+    level: &#39;error&#39;
 }</code></pre>
 <h2 id="bundled-version">Bundled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes a bundled ES5 commonjs module.</p>
