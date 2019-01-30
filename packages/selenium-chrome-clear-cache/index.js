@@ -53,20 +53,23 @@ function click(type, selector) {
 		return dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector(`[slot="${name}"]`)
 	}
 
+	function checkbox() {
+		const container = getSlot('body').children.tabs.children['basic-tab'].children[selector];
+		const row = findTag(container.shadowRoot.children, 'DIV');
+
+		row.children.checkbox.shadowRoot.children.checkbox.click();
+	}
+
+	const button = () => getSlot('button-container').children.clearBrowsingDataConfirm.click();
+
 	try {
 		switch (type) {
 			case 'checkbox':
-				const body = getSlot('body');
-				const container = body.children.tabs.children['basic-tab'].children[selector];
-				const row = findTag(container.shadowRoot.children, 'DIV');
-
-				row.children.checkbox.shadowRoot.children.checkbox.click();
+				checkbox();
 				break;
 			case 'button':
 			default:
-				const button = getSlot('button-container');
-
-				button.children.clearBrowsingDataConfirm.click();
+				button();
 				break;
 		}
 	} catch (error) {
