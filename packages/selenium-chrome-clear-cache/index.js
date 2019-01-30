@@ -8,49 +8,72 @@ const PAGE = 'chrome://settings/clearBrowserData';
  * Query selector for shadow DOM: checkbox for clear cookies
  * @type {String}
  */
-const COOKIES = '* /deep/ [id="cookiesCheckboxBasic"]';
+const COOKIES = 'cookiesCheckboxBasic';
 
 /**
  * Query selector for shadow DOM: checkbox for clear browsing data
  * @type {String}
  */
-const HISTORY = '* /deep/ [id="browsingCheckboxBasic"]';
+const HISTORY = 'browsingCheckboxBasic';
 
 /**
  * Query selector for shadow DOM: checkbox for clear cache
  * @type {String}
  */
-const CACHE = '* /deep/ [id="cacheCheckboxBasic"]';
-
-/**
- * Query selector for shadow DOM: Submit buttons
- * @type {String}
- */
-const BUTTON = '* /deep/ #clearBrowsingDataConfirm';
+const CACHE = 'cacheCheckboxBasic';
 
 /**
  * Query selector function
  * @param  {string} selector
  * @return {HTMLElement}
  */
-const find = selector => document.querySelector(selector);
-
-/**
- * Click an element
- * @param  {string} selector
- * no return value
- */
-function click(selector) {
-	document.querySelector(selector).click();
-}
+const find = selector => document.querySelector(selector)
 
 /**
  * Toggle a shadow checkbox
- * @param  {string} selector
+ * @param  {string} selector (browsingCheckbox, cookiesCheckbox, cacheCheckbox)
  * no return value
  */
 function toggleCheckbox(selector) {
-	document.querySelector(selector).querySelector('* /deep/ [id="checkbox"]').click();
+	try {
+		const main = document.querySelector('settings-ui').shadowRoot.children.container.children.main;
+		const settings = [...main.shadowRoot.children].find(i => i.tagName && i.tagName.toUpperCase() === 'SETTINGS-BASIC-PAGE');
+		const advancedPage = settings.shadowRoot.children.advancedPage;
+		const privacy = [...advancedPage.children].find(i => i.section === 'privacy');
+		const [page] = privacy.children;
+		const dialog = [...page.shadowRoot.children].find(i => i.tagName && i.tagName.toUpperCase() === 'SETTINGS-CLEAR-BROWSING-DATA-DIALOG');
+		const body = dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector('[slot="body"]');
+		const tab = body.children.tabs.children['basic-tab'];
+
+		const container = tab.children[selector];
+		const row = [...container.shadowRoot.children].find(i => i.tagName && i.tagName.toUpperCase() === 'DIV');
+
+		row.children.checkbox.shadowRoot.children.checkbox.click();
+	} catch (error) {
+		error.message = `Could not locate checkbox for ${selector}.\n ${error.message}`;
+		throw error;
+	}
+}
+
+/**
+ * Toggle the submit button
+ * no return value
+ */
+function submit() {
+	try {
+		const main = document.querySelector('settings-ui').shadowRoot.children.container.children.main;
+		const settings = [...main.shadowRoot.children].find(i => i.tagName && i.tagName.toUpperCase() === 'SETTINGS-BASIC-PAGE');
+		const advancedPage = settings.shadowRoot.children.advancedPage;
+		const privacy = [...advancedPage.children].find(i => i.section === 'privacy');
+		const [page] = privacy.children;
+		const dialog = [...page.shadowRoot.children].find(i => i.tagName && i.tagName.toUpperCase() === 'SETTINGS-CLEAR-BROWSING-DATA-DIALOG');
+		const container = dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector('[slot="button-container"]');
+
+		container.children.clearBrowsingDataConfirm.click();
+	} catch (error) {
+		error.message = `Could not locate submit button.\n ${error.message}`;
+		throw error;
+	}
 }
 
 /**
@@ -76,10 +99,12 @@ module.exports = async function clearCache({webdriver, driver}, {cookies = false
 
 	await driver.wait(
 		until.elementLocated(
-			By.js(find, BUTTON)
+			By.js(find, 'settings-ui')
 		),
 		3000
 	);
+
+	await driver.sleep(400);
 
 	await Promise.all(
 		[
@@ -95,8 +120,7 @@ module.exports = async function clearCache({webdriver, driver}, {cookies = false
 	);
 
 	driver.executeScript(
-		click,
-		BUTTON
+		submit
 	);
 
 	await driver.sleep(400);
