@@ -27,7 +27,7 @@ describe('selenium-chrome-clear-cache', async() => {
 
 	let i = 3;
 	while (i--) {
-		xit(`Load times should decrease with cache and increase after clearing it (${3 - i}/3)`, async() => {
+		it(`Load times should decrease with cache and increase after clearing it (${3 - i}/3)`, async() => {
 			const loadTimes = [];
 
 			await driver.get(`${LINK}?${i}`);
@@ -45,7 +45,7 @@ describe('selenium-chrome-clear-cache', async() => {
 			expect(loadTimes[2]).not.to.be.below(loadTimes[1]);
 		}).timeout(TIMEOUT).retries(RETRIES);
 
-		xit(`Load times should	decrease with cache and stay low after de-selecting history and cache (${3 - i}/3)`, async() => {
+		it(`Load times should	decrease with cache and stay low after de-selecting history and cache (${3 - i}/3)`, async() => {
 			const loadTimes = [];
 
 			await driver.get(`${LINK}?${i}`);
@@ -69,7 +69,7 @@ describe('selenium-chrome-clear-cache', async() => {
 		}).timeout(TIMEOUT).retries(RETRIES);
 	}
 
-	xit('Should not try to click the disabled button when no checkboxes are marked', async() => {
+	it('Should not try to click the disabled button when no checkboxes are marked', async() => {
 		try {
 			await clearCache({webdriver, driver}, {cache: false, history: false});
 		} catch (error) {
