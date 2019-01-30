@@ -1,8 +1,8 @@
 # selenium-chrome-clear-cache [![](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/selenium-chrome-clear-cache)
 
-Clear cache of a chrome browser in a Selenium flow
+## 🗑 Clear cache of a chrome browser in a Selenium flow
 
-![clear-cache](https://user-images.githubusercontent.com/516342/41310034-027fbc12-6e89-11e8-95b2-8506b7cd05bc.gif)
+![](https://user-images.githubusercontent.com/516342/41310034-027fbc12-6e89-11e8-95b2-8506b7cd05bc.gif)
 
 ```js
 const webdriver = require('selenium-webdriver');

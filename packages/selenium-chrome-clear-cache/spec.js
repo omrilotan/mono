@@ -4,6 +4,7 @@ const clearCache = require('.');
 
 const TIMEOUT = 30 * 1e3;
 const RETRIES = process.env.CI ? 2 : 1;
+const TIMES = process.env.CI ? 3 : 1;
 
 const LINK = 'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching';
 const MEASURE = 'return performance.timing.loadEventEnd - performance.timing.navigationStart;';
@@ -25,7 +26,7 @@ describe('selenium-chrome-clear-cache', async() => {
 		await sleep(1000);
 	});
 
-	let i = 3;
+	let i = TIMES;
 	while (i--) {
 		it(`Load times should decrease with cache and increase after clearing it (${3 - i}/3)`, async() => {
 			const loadTimes = [];
