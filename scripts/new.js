@@ -41,6 +41,9 @@ const [arg] = argv;
 			keywords: [],
 			author: 'omrilotan',
 			license: 'MIT',
+			publishConfig: {
+				access: 'public',
+			},
 			repository: {
 				type: 'git',
 				url: 'git+https://github.com/omrilotan/mono.git',
@@ -54,7 +57,7 @@ const [arg] = argv;
 		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test'],
 		2
 	);
-	files['.npmrc'] = 'package-lock=false\naccess=public';
+	files['.npmrc'] = 'package-lock=false';
 	files['.npmignore'] = '.*\n*.log\nspec.js';
 	files['.gitattributes'] = '* text eol=lf';
 	files['README.md'] = `# ${name} [![](https://img.shields.io/npm/v/${fullName}.svg)](https://www.npmjs.com/package/${fullName}) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/${name})`;
