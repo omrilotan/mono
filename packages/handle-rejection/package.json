@@ -1,6 +1,6 @@
 {
   "name": "handle-rejection",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "💀 Handle unhandled rejections",
   "keywords": [
     "unhandledRejection",
@@ -20,5 +20,6 @@
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t handle-rejection; cd -"
-  }
+  },
+  "dependencies": {}
 }
