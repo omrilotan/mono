@@ -1,4 +1,5 @@
 const BUILT_IN = [
+	'collect',
 	'console',
 	'exit',
 	'throw',
@@ -23,12 +24,10 @@ function bundle(...handlers) {
 	);
 }
 
-BUILT_IN.reduce(
+module.exports = BUILT_IN.reduce(
 	(accumulator, key) => Object.assign(
 		accumulator,
-		{[key]: handle(require(`./handlers/${key}`))}
+		{[key]: () => handle(require(`./handlers/${key}`))}
 	),
 	bundle
 );
-
-module.exports = bundle;

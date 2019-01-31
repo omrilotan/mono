@@ -35,6 +35,15 @@ describe('handle-rejection', async() => {
 
 		expect(called).to.be.true;
 		expect(consoled).to.be.true;
-
 	});
+
+	[
+		'collect',
+		'console',
+		'exit',
+		'throw',
+	].forEach(fn => it(
+		`Should expose built in function ${fn}`,
+		() => expect(handle[fn]).to.be.a('function')
+	));
 });
