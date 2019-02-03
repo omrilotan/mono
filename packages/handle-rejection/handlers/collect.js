@@ -9,12 +9,12 @@ process.on('beforeExit', () => {
 
 	const {log, error} = console;
 
-	log('╭───────────────╮');
-	log('│ Error Summary │');
-	log('╰───────────────╯');
+	log('╭─────────────────────────────╮');
+	log('│ Unhandled Rejection Summary │');
+	log('╰─────────────────────────────╯');
 
 	errors.forEach((e, i) => {
-		log(`\n❗️ Error ${i + 1}:`);
+		log(`\n❗️ Rejection ${i + 1}:`);
 		error(e);
 	});
 });

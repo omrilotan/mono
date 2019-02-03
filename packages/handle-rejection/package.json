@@ -1,6 +1,6 @@
 {
   "name": "handle-rejection",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "💀 Handle unhandled rejections",
   "keywords": [
     "unhandledRejection",

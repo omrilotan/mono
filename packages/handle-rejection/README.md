@@ -75,11 +75,11 @@ TypeError: Cannot read property 'ok' of undefined
 
   6 passing (110ms)
 
-╭───────────────╮
-│ Error Summary │
-╰───────────────╯
+╭─────────────────────────────╮
+│ Unhandled Rejection Summary │
+╰─────────────────────────────╯
 
-❗️ Error 1:
+❗️ Rejection 1:
 TypeError: Cannot read property 'ok' of undefined
     at ok (/workspace/package/spec.js:21:11)
     at tryCatch (/workspace/package/node_modules/regenerator-runtime/runtime.js:45:40)
