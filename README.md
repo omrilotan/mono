@@ -20,7 +20,7 @@ Mono repo holding multiple packages
 | **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![1.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
 | **`@recursive/flatten`** | [Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![0.0.0](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
-| **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.0](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
+| **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
 | **`hypertonia`** | [A theme for Hyper.](./packages/hypertonia#readme) | [![0.2.6](https://img.shields.io/npm/v/hypertonia.svg)](https://www.npmjs.com/package/hypertonia)
 | **`index-require`** | [☝️ Create an index for a lib directory](./packages/index-require#readme) | [![1.0.0](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
 | **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.3](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
