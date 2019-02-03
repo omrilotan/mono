@@ -14,6 +14,8 @@
   },
   "scripts": {
     "clean": "./scripts/foreach.js \"rm -rf dist\"",
+    "prermodules": "rm -rf node_modules",
+    "rmodules": "./scripts/foreach.js \"rm -rf node_modules\"",
     "new": "./scripts/new.js $@",
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
