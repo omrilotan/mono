@@ -25,6 +25,8 @@ try {
 #### Arguments
 1. `{Error}` (error) An error to be serialised
 2. `{Object}` (enrichment) [_optional_] - This object's field values will be assigned to the serialised error
+3. `{Object}` (options) [_optional_, _nullable_] - See details below
+	- `{Number}` (offset) [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.
 
 ### Example: Sending uncaught error to an HTTP error logger
 
@@ -80,6 +82,15 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
 	},
 	level: 'error'
 }
+```
+
+### Example for offset use
+```js
+function verboseLog(message) {
+	const error = new Error(message);
+	send(errobj(error, null, {offset: 1}));
+}
+
 ```
 
 ## Bundled version

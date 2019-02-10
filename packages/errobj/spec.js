@@ -100,4 +100,21 @@ at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`
 		expect(lineNumber).to.equal(2);
 		expect(columnNumber).to.equal(4);
 	});
+
+	it('Should offset the parsed stack trace', () => {
+		const error = new RangeError('Nothing');
+		error.stack = `TypeError: Cannot read property 'gf' of undefined
+at t.r.getPageLoadTime (https://cdn.website.com/assets/application.js:1:284663)
+at d (https://cdn.website.com/assets/business-logic.js:4:286145)
+at https://connect.facebook.net/en_US/fbevents.js:25:21849
+at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
+		let lineNumber, columnNumber;
+		({lineNumber, columnNumber} = errobj(error, null, {offset: 1}));
+		expect(lineNumber).to.equal(4);
+		expect(columnNumber).to.equal(286145);
+
+		({lineNumber, columnNumber} = errobj(error, null, {offset: 2}));
+		expect(lineNumber).to.equal(25);
+		expect(columnNumber).to.equal(21849);
+	});
 });

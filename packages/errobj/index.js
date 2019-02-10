@@ -8,12 +8,18 @@ const parse = errorStackParser.parse.bind(errorStackParser);
  * Serialise error
  * @param  {Error}  error
  * @param  {Object} [enrichment={}]
+ * @param  {Number} [options.offset=0] Number of rows to remove from stack top
  * @return {Object}
  */
-module.exports = (error, enrichment = {}) => {
+module.exports = (error, enrichment = {}, {offset = 0} = {}) => {
 	verify(error);
 
 	const parsedStack = parse(error);
+
+	if (typeof offset === 'number' && offset > 0) {
+		parsedStack.splice(0, offset);
+	}
+
 	error.details = Object.assign(
 		error.details || {},
 		{parsedStack}
