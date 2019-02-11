@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.65](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.66](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![1.0.1](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.4.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
@@ -17,7 +17,7 @@ Mono repo holding multiple packages
 | **`create-git-alias`** | [👨🏻 CLI tool to apply some useful git aliases (interactive)](./packages/create-git-alias#readme) | [![0.0.5](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.2](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.1](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
-| **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![1.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
+| **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
 | **`@recursive/flatten`** | [Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![0.0.0](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
 | **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
