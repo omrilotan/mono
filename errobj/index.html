@@ -34,6 +34,11 @@ try {
 <ol>
 <li><code>{Error}</code> (error) An error to be serialised</li>
 <li><code>{Object}</code> (enrichment) [_optional_] - This object&#39;s field values will be assigned to the serialised error</li>
+<li><code>{Object}</code> (options) [<em>optional</em>, _nullable_] - See details below<ul>
+<li><code>{Number}</code> offset [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.</li>
+<li><code>{Boolean}</code> parsedStack [_optional_] - Add a parsed stack of the error</li>
+</ul>
+</li>
 </ol>
 <h3 id="example-sending-uncaught-error-to-an-http-error-logger">Example: Sending uncaught error to an HTTP error logger</h3>
 <pre><code class="language-js">const errobj = require(&#39;errobj&#39;);
@@ -52,7 +57,8 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
 
     original_onerror(message, url, lineNumber, columnNumber, error);
 }</code></pre>
-<h3 id="example-serialised-error">Example serialised error</h3>
+<h2 id="examples">Examples</h2>
+<h3 id="the-serialised-error">The serialised error</h3>
 <pre><code class="language-js">{
     name: &#39;RangeError&#39;,
     message: &#39;Nothing&#39;,
@@ -62,27 +68,39 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
     fileName: &#39;index.html&#39;,
     functionName: &#39;change&#39;,
     source: &#39;at change (index.html:46)&#39;,
-    details: {
-        parsedStack: [
-            {
-                lineNumber: 46,
-                fileName: &#39;index.html&#39;,
-                functionName: &#39;change&#39;,
-                source: &#39;at change (index.html:46)&#39;
-            },
-            {
-                lineNumber: 53,
-                fileName: &#39;index.html&#39;,
-                source: &#39;at index.html:53&#39;
-            },
-            {
-                lineNumber: 56,
-                fileName: &#39;index.html&#39;,
-                source: &#39;at index.html:56&#39;
-            }
-        ]
-    },
     level: &#39;error&#39;
+}</code></pre>
+<h3 id="add-fields-to-the-parsed-object">Add fields to the parsed object</h3>
+<pre><code class="language-js">errobj(error, {flow: &#39;registration&#39;});</code></pre>
+<h3 id="option-offset">option: offset</h3>
+<pre><code class="language-js">function verboseLog(message) {
+    const error = new Error(message);
+    send(errobj(error, null, {offset: 1}));
+}</code></pre>
+<h3 id="option-parsedstack">option: parsedStack</h3>
+<pre><code class="language-js">errobj(error, null, {parsedStack: true});
+
+{
+    ...
+    parsedStack: [
+        {
+            lineNumber: 46,
+            fileName: &#39;index.html&#39;,
+            functionName: &#39;change&#39;,
+            source: &#39;at change (index.html:46)&#39;
+        },
+        {
+            lineNumber: 53,
+            fileName: &#39;index.html&#39;,
+            source: &#39;at index.html:53&#39;
+        },
+        {
+            lineNumber: 56,
+            fileName: &#39;index.html&#39;,
+            source: &#39;at index.html:56&#39;
+        }
+    ],
+    ...
 }</code></pre>
 <h2 id="bundled-version">Bundled version</h2>
 <p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes a bundled ES5 commonjs module.</p>
