@@ -87,11 +87,10 @@ async function app() {
 		]);
 
 	try {
-		await Promise.all(
-			answers.aliases.map(
-				([key, value]) => execute(`git config --global alias.${key} '${value}'`)
-			)
-		);
+		while (answers.aliases.length) {
+			const [key, value] = answers.aliases.shift();
+			await execute(`git config --global alias.${key} '${value}'`);
+		}
 	} catch (error) {
 		throw error;
 	}
