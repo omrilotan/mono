@@ -11,19 +11,16 @@ const parse = errorStackParser.parse.bind(errorStackParser);
  * @param  {Number} [options.offset=0] Number of rows to remove from stack top
  * @return {Object}
  */
-module.exports = (error, enrichment = {}, {offset = 0} = {}) => {
+module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStack = false} = {}) {
 	verify(error);
 
-	const parsedStack = parse(error);
+	const parsed = parse(error);
 
 	if (typeof offset === 'number' && offset > 0) {
-		parsedStack.splice(0, offset);
+		parsed.splice(0, offset);
 	}
 
-	error.details = Object.assign(
-		error.details || {},
-		{parsedStack}
-	);
+	parsedStack && Object.assign(error, {parsedStack: parsed});
 
 	return Object.assign(
 		props(error).reduce(
@@ -35,7 +32,7 @@ module.exports = (error, enrichment = {}, {offset = 0} = {}) => {
 				)
 				:
 				accumulator,
-			{...parsedStack[0]}
+			{...parsed[0]}
 		),
 		enrichment
 	);

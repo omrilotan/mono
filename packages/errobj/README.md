@@ -26,7 +26,8 @@ try {
 1. `{Error}` (error) An error to be serialised
 2. `{Object}` (enrichment) [_optional_] - This object's field values will be assigned to the serialised error
 3. `{Object}` (options) [_optional_, _nullable_] - See details below
-	- `{Number}` (offset) [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.
+	- `{Number}` offset [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.
+	- `{Boolean}` parsedStack [_optional_] - Add a parsed stack of the error
 
 ### Example: Sending uncaught error to an HTTP error logger
 
@@ -49,7 +50,9 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
 }
 ```
 
-### Example serialised error
+## Examples
+
+### The serialised error
 ```js
 {
 	name: 'RangeError',
@@ -60,37 +63,49 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
 	fileName: 'index.html',
 	functionName: 'change',
 	source: 'at change (index.html:46)',
-	details: {
-		parsedStack: [
-			{
-				lineNumber: 46,
-				fileName: 'index.html',
-				functionName: 'change',
-				source: 'at change (index.html:46)'
-			},
-			{
-				lineNumber: 53,
-				fileName: 'index.html',
-				source: 'at index.html:53'
-			},
-			{
-				lineNumber: 56,
-				fileName: 'index.html',
-				source: 'at index.html:56'
-			}
-		]
-	},
 	level: 'error'
 }
 ```
 
-### Example for offset use
+### Add fields to the parsed object
+```js
+errobj(error, {flow: 'registration'});
+```
+
+### option: offset
 ```js
 function verboseLog(message) {
 	const error = new Error(message);
 	send(errobj(error, null, {offset: 1}));
 }
+```
 
+### option: parsedStack
+```js
+errobj(error, null, {parsedStack: true});
+
+{
+	...
+	parsedStack: [
+		{
+			lineNumber: 46,
+			fileName: 'index.html',
+			functionName: 'change',
+			source: 'at change (index.html:46)'
+		},
+		{
+			lineNumber: 53,
+			fileName: 'index.html',
+			source: 'at index.html:53'
+		},
+		{
+			lineNumber: 56,
+			fileName: 'index.html',
+			source: 'at index.html:56'
+		}
+	],
+	...
+}
 ```
 
 ## Bundled version

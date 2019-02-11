@@ -48,13 +48,23 @@ at index.html:56`;
 		expect(columnNumber).to.be.undefined;
 	});
 
+	it('Should not attach parsedStack by default', () => {
+		const error = new RangeError('Nothing');
+		error.stack = `ReferenceError: something is not defined
+at change (index.html:46)
+at index.html:53
+at index.html:56`;
+		const {parsedStack} = errobj(error);
+		expect(parsedStack).to.be.undefined;
+	});
+
 	it('Should attach parsedStack to the details', () => {
 		const error = new RangeError('Nothing');
 		error.stack = `ReferenceError: something is not defined
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
-		const {details: {parsedStack}} = errobj(error);
+		const {parsedStack} = errobj(error, null, {parsedStack: true});
 		expect(parsedStack).to.be.an('array');
 	});
 
