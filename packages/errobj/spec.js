@@ -48,13 +48,23 @@ at index.html:56`;
 		expect(columnNumber).to.be.undefined;
 	});
 
+	it('Should not attach parsedStack by default', () => {
+		const error = new RangeError('Nothing');
+		error.stack = `ReferenceError: something is not defined
+at change (index.html:46)
+at index.html:53
+at index.html:56`;
+		const {parsedStack} = errobj(error);
+		expect(parsedStack).to.be.undefined;
+	});
+
 	it('Should attach parsedStack to the details', () => {
 		const error = new RangeError('Nothing');
 		error.stack = `ReferenceError: something is not defined
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
-		const {details: {parsedStack}} = errobj(error);
+		const {parsedStack} = errobj(error, null, {parsedStack: true});
 		expect(parsedStack).to.be.an('array');
 	});
 
@@ -99,5 +109,22 @@ at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`
 		const {lineNumber, columnNumber} = errobj(error);
 		expect(lineNumber).to.equal(2);
 		expect(columnNumber).to.equal(4);
+	});
+
+	it('Should offset the parsed stack trace', () => {
+		const error = new RangeError('Nothing');
+		error.stack = `TypeError: Cannot read property 'gf' of undefined
+at t.r.getPageLoadTime (https://cdn.website.com/assets/application.js:1:284663)
+at d (https://cdn.website.com/assets/business-logic.js:4:286145)
+at https://connect.facebook.net/en_US/fbevents.js:25:21849
+at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
+		let lineNumber, columnNumber;
+		({lineNumber, columnNumber} = errobj(error, null, {offset: 1}));
+		expect(lineNumber).to.equal(4);
+		expect(columnNumber).to.equal(286145);
+
+		({lineNumber, columnNumber} = errobj(error, null, {offset: 2}));
+		expect(lineNumber).to.equal(25);
+		expect(columnNumber).to.equal(21849);
 	});
 });
