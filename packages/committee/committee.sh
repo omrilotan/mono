@@ -1,6 +1,7 @@
 as=$1
 shift
 message=$@
+: ${message:="$(curl -s whatthecommit.com/index.txt)"}
 echo "I will now commit as $as: $message"
 myname=$(git config user.name)
 myemail=$(git config user.email)

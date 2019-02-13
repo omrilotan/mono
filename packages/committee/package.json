@@ -1,7 +1,7 @@
 {
   "name": "committee",
-  "version": "0.0.0",
-  "description": "🕶 Commit as someone else",
+  "version": "0.0.1",
+  "description": "🕶 `committee octocat` Commit as someone else",
   "keywords": [
     "commit",
     "imposter",
