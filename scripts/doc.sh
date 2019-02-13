@@ -6,7 +6,7 @@ function search {
 		if test -d "${1}/${FILE}"; then
 			echo -e "\033[1mWriting docs for ${FILE}\033[0m\n"
 			cd "${1}/${FILE}"
-			eval "../../packages/markt/bin/markt --destination ../../docs/${FILE}/index.html --template ../../src/index.html --title ${FILE} --description \"$(node -p 'require(`./package.json`).description')\""
+			eval "../../packages/markt/bin/markt --destination ../../docs/${FILE}/index.html --template ../../src/index.html --title ${FILE} --description \"$(node -p 'require(`./package.json`).description.replace(/\`/g, ``)')\""
 			cd -
 		fi
 	done
