@@ -1,4 +1,10 @@
 as=$1
+if [[ -z "$as" ]]; then
+	echo -n "username: "
+	read username
+	as=$username
+fi
+echo $as
 shift
 message=$@
 : ${message:="$(curl -s whatthecommit.com/index.txt)"}
