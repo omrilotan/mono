@@ -42,7 +42,7 @@ async function start() {
 				rows.push(`
 <tr>
 	<td><a href="${link}">${name}</a></td>
-	<td>${description}${icons.join(' ')}</td>
+	<td>${description.replace(/`[^`]+`/g, '').replace(/\s{2,}/g, ' ').trim()}${icons.join(' ')}</td>
 	<td><a href="https://www.npmjs.com/package/${name}"><small>${version}</small></a></td>
 	<td id="downloadcount${name}"></td>
 </tr>
