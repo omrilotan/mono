@@ -1,0 +1,27 @@
+{
+  "name": "create-npx",
+  "version": "0.0.0",
+  "description": "🔢 `npm create npx` bare bones bin wrapper for NPX",
+  "keywords": [
+    "bin",
+    "npx",
+    "executable",
+    "🔢"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/npxbin/",
+  "bin": "bin.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/npxbin; cd -"
+  },
+  "dependencies": {
+    "@does/exist": "^1.0.0",
+    "async-git": "^1.4.0",
+    "inquirer": "^6.2.2"
+  }
+}
