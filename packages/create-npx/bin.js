@@ -6,6 +6,19 @@ const { prompt } = require('inquirer');
 const git = require('async-git');
 const exist = require('@does/exist');
 
+const get = new Proxy(
+	git,
+	{
+		get: async function(obj, prop) {
+			try {
+				return await obj[prop];
+			} catch (error) {
+				return undefined;
+			}
+		},
+	}
+);
+
 (async () => {
 	const answers = await prompt([
 		{
@@ -18,14 +31,14 @@ const exist = require('@does/exist');
 			type: 'input',
 			name: 'name',
 			message: 'Your package name',
-			default: await git.name,
+			default: await get.name,
 			validate: value => !!value || 'This is a required field',
 		},
 		{
 			type: 'input',
 			name: 'author',
 			message: 'Your name',
-			default: await git.author,
+			default: await get.author,
 		},
 		{
 			type: 'input',

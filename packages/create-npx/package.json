@@ -1,6 +1,6 @@
 {
   "name": "create-npx",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "🔢 `npm create npx` bare bones bin wrapper for NPX",
   "keywords": [
     "bin",
