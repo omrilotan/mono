@@ -18,6 +18,7 @@
 <link rel="prerender" href="./chunkalyse/">
 <link rel="prerender" href="./committee/">
 <link rel="prerender" href="./create-git-alias/">
+<link rel="prerender" href="./create-npx/">
 <link rel="prerender" href="./doamrn/">
 <link rel="prerender" href="./edit-package/">
 <link rel="prerender" href="./errobj/">
@@ -122,16 +123,23 @@
 
 <tr>
 	<td><a href="./committee/">committee</a></td>
-	<td>🕶 Commit as someone else<i title="includes CLI program">🤖</i></td>
-	<td><a href="https://www.npmjs.com/package/committee"><small>0.0.0</small></a></td>
+	<td>🕶 `committee octocat` Commit as someone else<i title="includes CLI program">🤖</i></td>
+	<td><a href="https://www.npmjs.com/package/committee"><small>0.0.1</small></a></td>
 	<td id="downloadcountcommittee"></td>
 </tr>
 
 <tr>
 	<td><a href="./create-git-alias/">create-git-alias</a></td>
-	<td>👨🏻 CLI tool to apply some useful git aliases (interactive)<i title="includes CLI program">🤖</i></td>
-	<td><a href="https://www.npmjs.com/package/create-git-alias"><small>0.0.5</small></a></td>
+	<td>👨🏻 `npm create git-alias` - interactively apply useful git aliases<i title="includes CLI program">🤖</i></td>
+	<td><a href="https://www.npmjs.com/package/create-git-alias"><small>1.0.0</small></a></td>
 	<td id="downloadcountcreate-git-alias"></td>
+</tr>
+
+<tr>
+	<td><a href="./create-npx/">create-npx</a></td>
+	<td>🔢 `npm create npx` bare bones bin wrapper for NPX<i title="includes CLI program">🤖</i></td>
+	<td><a href="https://www.npmjs.com/package/create-npx"><small>0.1.0</small></a></td>
+	<td id="downloadcountcreate-npx"></td>
 </tr>
 
 <tr>
@@ -338,7 +346,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>Omri Lotan: "<a href="https://github.com/omrilotan/mono/commit/adeedf27e97a7a8a41c13ef76c9267d3f061e623"><b>☠️ errobj - Add stack offset (#28)</b></a>" <small>on Monday, February 11th, 2019</small></sup>
+			<sup>msil: "<a href="https://github.com/omrilotan/mono/commit/a6348d9ab79f794b82cfbf8b4269b02216869a01"><b>Nitpicking about alphabetizing methods, minor OCD thing</b></a>" <small>on Wednesday, February 13th, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads}).catch(error => { /* ignore */ });
@@ -351,6 +359,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/boxt').then(result=>resul
 fetch('https://api.npmjs.org/downloads/point/last-week/chunkalyse').then(result=>result.json()).then(({downloads}) => {window['downloadcountchunkalyse'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/committee').then(result=>result.json()).then(({downloads}) => {window['downloadcountcommittee'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/create-git-alias').then(result=>result.json()).then(({downloads}) => {window['downloadcountcreate-git-alias'].innerText = downloads}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/create-npx').then(result=>result.json()).then(({downloads}) => {window['downloadcountcreate-npx'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/doamrn').then(result=>result.json()).then(({downloads}) => {window['downloadcountdoamrn'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/edit-package').then(result=>result.json()).then(({downloads}) => {window['downloadcountedit-package'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/errobj').then(result=>result.json()).then(({downloads}) => {window['downloadcounterrobj'].innerText = downloads}).catch(error => { /* ignore */ });
