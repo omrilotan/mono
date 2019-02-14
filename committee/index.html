@@ -15,7 +15,12 @@
 <h2 id="🕶-commit-as-someone-else">🕶 Commit as someone else</h2>
 <pre><code>npx committee octocat 🐙 just checking this out
               ↑        ↑
-              username message</code></pre><p>Commit message is optional. In case no commit message was supplied, a random message will be pulled from <a href="https://whatthecommit.com/">whatthecommit.com</a></p>
-<img src="https://user-images.githubusercontent.com/516342/50175179-ca485000-0304-11e9-8409-76d3bb0e1cc9.png" width="450px">
+              username message</code></pre><h2 id="install-globally">Install globally</h2>
+<pre><code>npm i committee -g</code></pre><h3 id="arguments">Arguments</h3>
+<p>First: Author name (optional, default is octocat)
+Rest: Commit message (optional, default is a random message from <a href="https://whatthecommit.com/">whatthecommit.com</a>)</p>
+<h3 id="options">Options</h3>
+<p><code>--automate</code>: Prevent prompts (use defaults when arguments are missing)</p>
+<pre><code>committee --automate</code></pre><img src="https://user-images.githubusercontent.com/516342/50175179-ca485000-0304-11e9-8409-76d3bb0e1cc9.png" width="450px">
 	</body>
 </html>
