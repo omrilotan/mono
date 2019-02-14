@@ -4,9 +4,15 @@ if [[ -z "$as" ]]; then
 	read username
 	as=$username
 fi
-echo $as
+if [[ -z "$as" ]]; then
+	as="octocat"
+fi
 shift
 message=$@
+if [[ -z "$message" ]]; then
+	echo -n "commit message: "
+	read message
+fi
 : ${message:="$(curl -s whatthecommit.com/index.txt)"}
 echo "I will now commit as $as: $message"
 myname=$(git config user.name)
