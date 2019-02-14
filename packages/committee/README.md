@@ -8,6 +8,19 @@ npx committee octocat 🐙 just checking this out
               username message
 ```
 
-Commit message is optional. In case no commit message was supplied, a random message will be pulled from [whatthecommit.com](https://whatthecommit.com/)
+## Install globally
+```
+npm i committee -g
+```
+
+### Arguments
+First: Author name (optional, default is octocat)
+Rest: Commit message (optional, default is a random message from [whatthecommit.com](https://whatthecommit.com/))
+
+### Options
+`--automate`: Prevent prompts (use defaults when arguments are missing)
+```
+committee --automate
+```
 
 <img src="https://user-images.githubusercontent.com/516342/50175179-ca485000-0304-11e9-8409-76d3bb0e1cc9.png" width="450px">

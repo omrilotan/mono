@@ -1,24 +1,33 @@
-as=$1
-if [[ -z "$as" ]]; then
-	echo -n "username: "
-	read username
-	as=$username
+args=$@
+if [[ $args == *"--automate"* ]]; then
+	automate=true
+	args=${args/--automate}
 fi
-if [[ -z "$as" ]]; then
-	as="octocat"
+
+args=( $args )
+author=${args[0]}
+message=${args[@]:1}
+
+if [[ -z $automate ]]; then
+	if [[ -z "$author" ]]; then
+		echo -n "username: "
+		read username
+		author=$username
+	fi
+
+	if [[ -z "$message" ]]; then
+		echo -n "commit message: "
+		read message
+	fi
 fi
-shift
-message=$@
-if [[ -z "$message" ]]; then
-	echo -n "commit message: "
-	read message
-fi
+
+: ${author:="octocat"}
 : ${message:="$(curl -s whatthecommit.com/index.txt)"}
-echo "I will now commit as $as: $message"
+echo "I will now commit as $author: $message"
 myname=$(git config user.name)
 myemail=$(git config user.email)
-git config user.name $as --replace-all
-git config user.email "${as}@users.noreply.github.com" --replace-all
+git config user.name $author --replace-all
+git config user.email "${author}@users.noreply.github.com" --replace-all
 git commit -m "$message"
 git config user.name $myname --replace-all
 git config user.email $myemail --replace-all
