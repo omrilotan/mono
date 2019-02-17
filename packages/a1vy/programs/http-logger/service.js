@@ -4,8 +4,9 @@ const {json} = require('body-parser');
 const cookie = require('cookie-parser')
 const cors = require('cors');
 
-module.exports = async ({host, port} = {}) => {
+module.exports = async ({host, port, code} = {}) => {
 	const app = express();
+	code = code || 201;
 
 	app.use(cors({preflightContinue: true}));
 	app.use(json());
@@ -41,7 +42,7 @@ module.exports = async ({host, port} = {}) => {
 			'\n======================================\n'
 		);
 
-		response.status(201).end();
+		response.status(code).end();
 	})
 
 
