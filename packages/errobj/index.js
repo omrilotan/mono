@@ -5,13 +5,20 @@ const verify = require('./lib/verify');
 const parse = errorStackParser.parse.bind(errorStackParser);
 
 /**
+ * @typedef ParseOptions
+ * @type     {Object}
+ * @property {Number}  [options.offset=0] Number of rows to remove from stack top
+ * @property {Boolean} [options.parsedStack=false] Assign a "parsedStack" array to the object
+ */
+
+/**
  * Serialise error
- * @param  {Error}  error
- * @param  {Object} [enrichment={}]
- * @param  {Number} [options.offset=0] Number of rows to remove from stack top
+ * @param  {Error}        error
+ * @param  {Object}       [enrichment={}]
+ * @param  {ParseOptions} [options={}]
  * @return {Object}
  */
-module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStack = false} = {}) {
+function errobj(error, enrichment = {}, {offset = 0, parsedStack = false} = {}) {
 	verify(error);
 
 	const parsed = parse(error);
@@ -36,4 +43,13 @@ module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStac
 		),
 		enrichment
 	);
-};
+}
+
+/**
+ * Returns a function with the options saved
+ * @param  {ParseOptions} [options={}]
+ * @return {Function}
+ */
+errobj.config = (options = {}) => (error, enrichment = {}) => errobj(error, enrichment, options);
+
+module.exports = errobj;

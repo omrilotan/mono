@@ -64,6 +64,17 @@ at index.html:56`;
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
+		expect(errobj.config()).to.be.a('function');
+		const {parsedStack} = errobj.config({parsedStack: true})(error, null);
+		expect(parsedStack).to.be.an('array');
+	});
+
+	it('Should accept options as third argument (backward compatibility)', () => {
+		const error = new RangeError('Nothing');
+		error.stack = `ReferenceError: something is not defined
+at change (index.html:46)
+at index.html:53
+at index.html:56`;
 		const {parsedStack} = errobj(error, null, {parsedStack: true});
 		expect(parsedStack).to.be.an('array');
 	});
@@ -119,11 +130,11 @@ at d (https://cdn.website.com/assets/business-logic.js:4:286145)
 at https://connect.facebook.net/en_US/fbevents.js:25:21849
 at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
 		let lineNumber, columnNumber;
-		({lineNumber, columnNumber} = errobj(error, null, {offset: 1}));
+		({lineNumber, columnNumber} = errobj.config({offset: 1})(error, null));
 		expect(lineNumber).to.equal(4);
 		expect(columnNumber).to.equal(286145);
 
-		({lineNumber, columnNumber} = errobj(error, null, {offset: 2}));
+		({lineNumber, columnNumber} = errobj.config({offset: 2})(error, null));
 		expect(lineNumber).to.equal(25);
 		expect(columnNumber).to.equal(21849);
 	});

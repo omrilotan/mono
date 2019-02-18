@@ -24,10 +24,14 @@ try {
 
 #### Arguments
 1. `{Error}` (error) An error to be serialised
-2. `{Object}` (enrichment) [_optional_] - This object's field values will be assigned to the serialised error
-3. `{Object}` (options) [_optional_, _nullable_] - See details below
-	- `{Number}` offset [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.
-	- `{Boolean}` parsedStack [_optional_] - Add a parsed stack of the error
+2. `{Object}` (enrichment) [_optional_, _nullable_] - This object's field values will be assigned to the serialised error
+
+### Config options (all optional)
+```js
+errobj.config({...}); // returns parser functions
+```
+- offset `{Number} [0]` - Offset the parsed stack, and error position details. Good for middleware created error objects.
+- parsedStack `{Boolean} [false]` - Add a parsed stack of the error
 
 ### Example: Sending uncaught error to an HTTP error logger
 
@@ -76,13 +80,16 @@ errobj(error, {flow: 'registration'});
 ```js
 function verboseLog(message) {
 	const error = new Error(message);
-	send(errobj(error, null, {offset: 1}));
+	const record = errobj.config({offset: 1})(error);
+	send(record);
 }
 ```
 
 ### option: parsedStack
 ```js
-errobj(error, null, {parsedStack: true});
+const errobj = require('errobj').config({parsedStack: true});
+
+errobj(error);
 
 {
 	...
