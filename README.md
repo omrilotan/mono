@@ -18,7 +18,7 @@ Mono repo holding multiple packages
 | **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.0](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.2](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.1](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
-| **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
+| **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.1.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
 | **`@recursive/flatten`** | [Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![0.0.0](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
 | **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
