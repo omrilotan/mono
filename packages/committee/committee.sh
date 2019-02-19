@@ -29,5 +29,5 @@ myemail=$(git config user.email)
 git config user.name $author --replace-all
 git config user.email "${author}@users.noreply.github.com" --replace-all
 git commit -m "$message"
-git config user.name $myname --replace-all
-git config user.email $myemail --replace-all
+git config user.name "$myname" --replace-all
+git config user.email "$myemail" --replace-all
