@@ -47,6 +47,7 @@ const [arg] = argv;
 			repository: {
 				type: 'git',
 				url: 'git+https://github.com/omrilotan/mono.git',
+				directory: `packages/${name}`,
 			},
 			homepage: `https://omrilotan.com/mono/${name}/`,
 			main: 'index.js',

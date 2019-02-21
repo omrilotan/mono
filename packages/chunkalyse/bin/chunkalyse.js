@@ -9,8 +9,7 @@
 process.on('unhandledRejection', console.error);
 
 const {resolve} = require('path');
-const [,, ...args] = process.argv;
-const argv = require('yargs-parser')(args);
+const yargsParser = require('yargs-parser');
 const chunkalyse = require('..');
 
 /**
@@ -18,14 +17,11 @@ const chunkalyse = require('..');
  */
 (() => {
 	if (process.stdin.isTTY) {
-		const [file] = argv._;
-		const stats = require(
-			resolve(
-				process.cwd(),
-				file
-			)
-		);
-		start(stats);
+		const {argv: [,, ...args]} = process;
+		const argv = yargsParser(args) || {_: []};
+
+		sendHelp(argv);
+		start(getStats(argv), argv);
 	} else {
 		const chunks = [];
 		process.stdin.on('data', chunk => chunks.push(chunk.toString()));
@@ -34,17 +30,45 @@ const chunkalyse = require('..');
 })();
 
 /**
+ * Prints help to console if required.
+ * @param  {Boolean}  options.h
+ * @param  {Boolean}  options.help
+ * @param  {String[]} options._[file] stats file
+ * @return {Boolean}  Should the program continue
+ */
+function sendHelp({h, help, _: [file]} = {}) {
+	if (h || help || !file) {
+		require('./help');
+	}
+}
+
+/**
+ * Read stats json file
+ * @param  {String[]} options._[file] stats file
+ * @return {Object}
+ */
+function getStats({_: [file]} = {}) {
+	const route = resolve(process.cwd(), file);
+
+	try {
+		return require(route);
+	} catch (error) {
+		console.error(`The file "${route}" could not be properly parsed.`);
+		process.exit(1)
+	}
+}
+
+/**
  * Get the chunks and print them
  * @param  {Object} stats
  * no return value
  */
-function start(stats) {
+function start(stats, {f, format = 'human'} = {}) {
 	try {
 		const result = chunkalyse(stats);
-		const {format = 'human'} = argv;
 		let output;
 
-		switch (format) {
+		switch (f || format) {
 			case 'json':
 				output = JSON.stringify(result, null, 2);
 				break;

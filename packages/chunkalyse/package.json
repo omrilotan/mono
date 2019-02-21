@@ -1,6 +1,6 @@
 {
   "name": "chunkalyse",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "🍰 Summarise webpack stats output file",
   "keywords": [
     "webpack",
@@ -13,18 +13,24 @@
     "percent",
     "chunks",
     "🍰",
+    "📦",
     "📊",
     "🔢",
     "👓"
   ],
   "author": "omrilotan",
   "license": "MIT",
+  "access": "public",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
+    "url": "git+https://github.com/omrilotan/mono.git",
+    "directory": "packages/chunkalyse"
   },
   "homepage": "https://omrilotan.com/mono/chunkalyse/",
   "main": "index.js",
+  "engines": {
+    "node" : ">=8"
+  },
   "bin": "bin/chunkalyse.js",
   "scripts": {
     "pretest": "./scripts/pretest.sh",
@@ -35,6 +41,6 @@
     "byte-size": "^5.0.1",
     "index-require": "^1.0.0",
     "jsoncopy": "^1.0.0",
-    "yargs-parser": "^11.1.1"
+    "yargs-parser": "^13.0.0"
   }
 }
