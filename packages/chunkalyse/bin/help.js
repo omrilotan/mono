@@ -1,12 +1,12 @@
 const {name: [capital, ...rest], description} = require('../package.json');
 
-process.stdout.write(`
-${[capital.toUpperCase(), ...rest].join('')}
+console.log([capital.toUpperCase(), ...rest, ': ', description].join(''));
 
-${description}
+console.log(`
+Generate stats:   webpack --profile --json > stats.json
 
-Usage:   chunkalyse <FILENAME> [OPTIONS]
-Example: chunkalyse stats.json --format json
+Usage:            chunkalyse <FILENAME> [OPTIONS]
+Example:          chunkalyse stats.json --format json
 
 Options:
 --help            Print this help
