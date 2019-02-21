@@ -29,7 +29,7 @@
   "homepage": "https://omrilotan.com/mono/chunkalyse/",
   "main": "index.js",
   "engines": {
-    "node" : ">=8"
+    "node": ">=8"
   },
   "bin": "bin/chunkalyse.js",
   "scripts": {
