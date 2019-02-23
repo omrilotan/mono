@@ -86,6 +86,8 @@ async function app() {
 			},
 		]);
 
+	const selected = [...answers.aliases];
+
 	try {
 		while (answers.aliases.length) {
 			const [key, value] = answers.aliases.shift();
@@ -95,12 +97,12 @@ async function app() {
 		throw error;
 	}
 
-	switch (answers.aliases.length) {
+	switch (selected.length) {
 		case 0:
 			return 'I\'ve set up no aliases for you today 😕';
 		case 1:
-			return `I've set up the alias ${answers.aliases[0][0].bold} for you 😉`;
+			return `I've set up the alias "${selected[0][0].bold}" for you 😉`;
 		default:
-			return `I've set up these aliases for you: ${answers.aliases.map(([key]) => key).join(', ').bold} 😃`;
+			return `I've set up these aliases for you: ${selected.map(([key]) => `"${key.bold}"`).join(', ')} 😃`;
 	}
 }

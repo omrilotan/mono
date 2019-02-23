@@ -1,5 +1,6 @@
 const WHEREAMI = 'rev-parse --abbrev-ref HEAD';
-const set_current_branch = `local current_branch=$(git ${WHEREAMI})`;
+const current_branch = `$(git ${WHEREAMI})`;
+const what_the_commit = 'git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 const repository = '$(git remote get-url origin)';
 
 module.exports = [
@@ -26,17 +27,17 @@ module.exports = [
 	{
 		key: 'please',
 		desc: 'git push <this_branch> --force-with-lease',
-		value: `!f() { ${set_current_branch}; git push origin $current_branch --force-with-lease; }; f`,
+		value: `!f() { git push origin ${current_branch} --force-with-lease; }; f`,
 	},
 	{
 		key: 'sum',
 		desc: 'Generate a summary of pending changes',
-		value: `!f() { ${set_current_branch}; git request-pull $\{1:-"master"} ${repository} $current_branch; }; f`,
+		value: `!f() { git request-pull $\{1:-"master"} ${repository} ${current_branch}; }; f`,
 	},
 	{
 		key: 'trash',
 		desc: 'Move to master and delete current local branch',
-		value: `!f() { ${set_current_branch} && git checkout master && git branch -D $current_branch; };f`,
+		value: `!f() { local current_branch=${current_branch} && git checkout master && git branch -D $current_branch; };f`,
 	},
 	{
 		key: 'merged',
@@ -69,19 +70,19 @@ module.exports = [
 		value: '!f() { git rev-list --count HEAD ^"$@"; }; f',
 	},
 	{
-		key: 'wip',
-		desc: 'a wip commit with a random commit message',
-		value: '!f() { git commit -m "$(curl -s whatthecommit.com/index.txt)"; }; f',
-	},
-	{
 		key: 'yolo',
 		desc: 'a commit with a random commit message from whatthecommit',
-		value: '!f() { git commit -m "$(curl -s whatthecommit.com/index.txt)"; }; f',
+		value: `!f() { ${what_the_commit}; }; f`,
+	},
+	{
+		key: 'wip',
+		desc: 'add everything, commit with a random commit message and push to remote origin',
+		value: `!f() { git add . && ${what_the_commit} && git push origin ${current_branch}; }; f`,
 	},
 	{
 		key: 'fix',
 		desc: 'add, ammend the current commit and push some fixes',
-		value: `!f() { git add . && git commit --amend --no-edit && git please && ${set_current_branch} && git push origin $current_branch --force-with-lease; }; f`,
+		value: `!f() { git add . && git commit --amend --no-edit && git please && git push origin ${current_branch} --force-with-lease; }; f`,
 	},
 	{
 		key: 'far',
