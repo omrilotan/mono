@@ -1,4 +1,4 @@
-const errobj = require('.')
+const errobj = require('.');
 
 describe('error-notation', () => {
 	it('Should convert an error to an object', () => {

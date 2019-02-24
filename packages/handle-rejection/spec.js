@@ -24,7 +24,7 @@ describe('handle-rejection', async() => {
 
 		stubs.console = () => {
 			consoled = true;
-		}
+		};
 		function custom() {
 			called = true;
 		}

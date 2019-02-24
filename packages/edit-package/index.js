@@ -11,7 +11,7 @@ const {
 	readFile,
 	jsonCopy,
 	packageData,
-} = require('./utils')
+} = require('./utils');
 
 const merge = require('lodash.merge');
 
@@ -25,7 +25,7 @@ const suffix = async () => {
 		_suffix = contents.toString().endsWith('\n') ? '\n' : '';
 	}
 	return _suffix;
-}
+};
 
 
 

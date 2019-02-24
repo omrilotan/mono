@@ -1,7 +1,7 @@
 require('colors');
 const express = require('express');
 const {json} = require('body-parser');
-const cookie = require('cookie-parser')
+const cookie = require('cookie-parser');
 const cors = require('cors');
 
 module.exports = async ({host, port, code} = {}) => {
@@ -43,7 +43,7 @@ module.exports = async ({host, port, code} = {}) => {
 		);
 
 		response.status(code).end();
-	})
+	});
 
 
 	app.listen(parseInt(port, 10), host, () => {

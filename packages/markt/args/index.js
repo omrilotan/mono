@@ -30,4 +30,4 @@ module.exports = function args(...args) {
 	}
 
 	return {options, rest};
-}
+};

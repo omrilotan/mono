@@ -34,4 +34,4 @@ module.exports = function assign(target, source) {
 	assignSymbols(target, source);
 
 	return target;
-}
+};

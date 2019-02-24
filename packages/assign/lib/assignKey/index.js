@@ -16,4 +16,4 @@ module.exports = function assignKey(target, source, key) {
 		clone(target[key]),
 		source[key]
 	);
-}
+};

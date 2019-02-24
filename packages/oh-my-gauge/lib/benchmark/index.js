@@ -59,7 +59,7 @@ module.exports = class Benchmark {
 	measure(fn, iterations = 10000, message = fn.toString()) {
 		this.gauge(() => repeat(fn, iterations), message)();
 	}
-}
+};
 
 /**
  * Repeat a given function n times

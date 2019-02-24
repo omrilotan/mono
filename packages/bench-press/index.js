@@ -20,4 +20,4 @@ module.exports = function benchpress(fn, {message = 'Running ${iterations} times
 	const duration = Date.now() - start;
 
 	return phraser(message, {iterations, duration});
-}
+};

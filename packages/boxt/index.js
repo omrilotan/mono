@@ -1,6 +1,6 @@
 const colors = require('colors');
 const length = require('./lib/length');
-const themes = require('./themes.json')
+const themes = require('./themes.json');
 
 /**
  * Get the length of the longest item
@@ -122,7 +122,7 @@ module.exports = function boxed(message, {
 					return line.padStart(w, ' ');
 				case 'center':
 				default:
-					return line.padEnd(Math.ceil(w - (w - length(line)) / 2), ' ').padStart(w, ' ')
+					return line.padEnd(Math.ceil(w - (w - length(line)) / 2), ' ').padStart(w, ' ');
 			}
 		})();
 
@@ -152,4 +152,4 @@ module.exports = function boxed(message, {
 		[bl, times(h), br],
 		[''],
 	].map(item => item.join('')).join('\n');
-}
+};

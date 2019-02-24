@@ -17,4 +17,4 @@ module.exports = async function myRepos(token) {
 	const result = await paged('user/repos?sort=updated');
 
 	return result.map(({name}) => name);
-}
+};

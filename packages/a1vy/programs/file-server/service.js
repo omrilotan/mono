@@ -12,7 +12,7 @@ module.exports = async ({host, port, base, page} = {}) => {
 
 		function read(exists) {
 			if(!exists) {
-				handleError('Not Found', 404)
+				handleError('Not Found', 404);
 				return;
 			}
 
@@ -25,7 +25,7 @@ module.exports = async ({host, port, base, page} = {}) => {
 
 		function respond(error, file) {
 			if (error) {
-				handleError(error, 500)
+				handleError(error, 500);
 				return;
 			}
 

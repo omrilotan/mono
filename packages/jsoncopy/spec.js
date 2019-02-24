@@ -2,7 +2,7 @@ const jsoncopy = require('.');
 
 describe('jsoncopy', () => {
 	it('Should create a deep copy', () => {
-		const ref = {d: 4}
+		const ref = {d: 4};
 		const orig = {a: {b: 3}, c: ref};
 		const copy = jsoncopy(orig);
 

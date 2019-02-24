@@ -33,7 +33,7 @@ const len = string => Array.from(string.replace(pattern, '')).length;
  * @return {number}
  */
 module.exports = function length(string){
-	const split = string.strip.split(ZERO_WIDTH_JOINER)
+	const split = string.strip.split(ZERO_WIDTH_JOINER);
 	return split.reduce(
 		(sum, part) => sum + len(part),
 		0

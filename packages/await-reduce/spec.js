@@ -1,5 +1,5 @@
 const reduce = require('.');
-const result = () => new Promise(resolve => setTimeout(() => resolve('A'), 40))
+const result = () => new Promise(resolve => setTimeout(() => resolve('A'), 40));
 
 describe('await-reduce', async() => {
 	let array;
@@ -128,6 +128,6 @@ describe('await-reduce', async() => {
 			],
 			(collector, item) => [...collector, item],
 			[]
-		)).to.deep.equal(['A', 'B', 'C'])
+		)).to.deep.equal(['A', 'B', 'C']);
 	});
 });

@@ -12,4 +12,4 @@ module.exports = async function exists(file, {quiet = true} = {}) {
 		quiet || console.error(error); // eslint-disable-line no-console
 		return false;
 	}
-}
+};

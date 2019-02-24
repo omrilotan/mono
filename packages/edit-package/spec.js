@@ -74,5 +74,5 @@ describe('edit-package', () => {
 
 		// space after colon
 		expect(contents.split('":')[1][0]).to.equal(' ');
-	})
+	});
 });

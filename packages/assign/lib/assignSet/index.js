@@ -7,6 +7,6 @@
  */
 module.exports = (target, source) => {
 	source.forEach(item => {
-		target.add(item)
+		target.add(item);
 	});
-}
+};

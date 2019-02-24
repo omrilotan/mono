@@ -25,7 +25,7 @@ module.exports = async function a1vy() {
 	}
 
 	require('upgradable')(require('./package.json'));
-}
+};
 
 async function init() {
 	await wait(); // wait until after current logs are written (fs promises)

@@ -16,4 +16,4 @@ module.exports = function clone(instance) {
 	}
 
 	return Object.assign({}, instance);
-}
+};

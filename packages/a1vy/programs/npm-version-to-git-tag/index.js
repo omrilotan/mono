@@ -23,7 +23,7 @@ module.exports = async () => {
 		.then(async answers => {
 			const {version, message} = answers;
 
-			return execute(`${__dirname}/service.sh`, [version, `"${message}"`])
+			return execute(`${__dirname}/service.sh`, [version, `"${message}"`]);
 		})
 		.then(response => {
 			console.log(response);

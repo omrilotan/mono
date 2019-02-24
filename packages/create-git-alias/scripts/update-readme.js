@@ -25,4 +25,4 @@ const sortby = require('../../sortby');
 			'',
 		].join('\n')
 	);
-})()
+})();

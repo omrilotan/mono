@@ -4,4 +4,4 @@ module.exports = async () => {
 	require('npm-check/lib/out/interactive-update')(
 		await require('npm-check/lib')({update: true})
 	);
-}
+};

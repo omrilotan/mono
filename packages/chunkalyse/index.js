@@ -26,7 +26,7 @@ module.exports = stats => {
 		),
 		{}
 	);
-}
+};
 
 /**
  * summarise chunks

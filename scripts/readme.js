@@ -41,7 +41,7 @@ const reduce = require('../packages/await-reduce');
 	await fs.writeFile('./README.md', output(results));
 
 
-})()
+})();
 
 function output(packages) {
 	const { description, name } = require('../package.json');

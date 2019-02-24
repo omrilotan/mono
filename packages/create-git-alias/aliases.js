@@ -1,6 +1,6 @@
 const WHEREAMI = 'rev-parse --abbrev-ref HEAD';
 const current_branch = `$(git ${WHEREAMI})`;
-const what_the_commit = 'git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+const what_the_commit = 'git commit -m "$(curl -s whatthecommit.com/index.txt)"';
 const repository = '$(git remote get-url origin)';
 
 module.exports = [

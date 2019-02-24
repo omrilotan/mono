@@ -32,4 +32,4 @@ module.exports = async function reduce(array, reducer, initial) {
 	}
 
 	return accumulator;
-}
+};

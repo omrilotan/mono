@@ -17,5 +17,5 @@ Object.assign(
 async function apply(key, args) {
 	const instance = await npm();
 
-	return lib[key].apply(instance, args)
+	return lib[key].apply(instance, args);
 }

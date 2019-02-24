@@ -18,7 +18,7 @@ describe('assign/isSet', () => {
 		const set = new Set();
 
 		expect(isSet(set)).to.equal(true);
-	})
+	});
 
 });
 
@@ -40,6 +40,6 @@ describe('assign/isMap', () => {
 		const map = new Map();
 
 		expect(isMap(map)).to.equal(true);
-	})
+	});
 
 });

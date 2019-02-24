@@ -58,7 +58,7 @@ module.exports = async function pull({token, owner, repo, pr, comment, identifie
 			}),
 		}
 	);
-}
+};
 
 /**
  * Create a URL path (converts all types to string)

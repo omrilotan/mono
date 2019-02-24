@@ -19,13 +19,12 @@ module.exports = readdirSync(packageDir())
 				);
 
 				if (scripts.dist) {
-					throw new Error('I\'ll create my own dist files, thank you very much.')
+					throw new Error('I\'ll create my own dist files, thank you very much.');
 				}
 
-				const entry = browser && main ?
-					{[packageDir(pkg, browser)]: packageDir(pkg, main)}
-					:
-					{}
+				const entry = browser && main
+					? {[packageDir(pkg, browser)]: packageDir(pkg, main)}
+					: {}
 				;
 				return Object.assign(accumulator, entry);
 			} catch (error) {

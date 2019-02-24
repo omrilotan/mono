@@ -27,7 +27,7 @@ const CACHE = 'cacheCheckboxBasic';
  * @param  {string} selector
  * @return {HTMLElement}
  */
-const find = selector => document.querySelector(selector)
+const find = selector => document.querySelector(selector);
 
 function click(type, selector) {
 	/**
@@ -50,7 +50,7 @@ function click(type, selector) {
 		const [page] = [...advancedPage.children].find(i => i.section === 'privacy').children;
 		const dialog = findTag(page.shadowRoot.children, 'SETTINGS-CLEAR-BROWSING-DATA-DIALOG');
 
-		return dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector(`[slot="${name}"]`)
+		return dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector(`[slot="${name}"]`);
 	}
 
 	function checkbox() {

@@ -34,7 +34,7 @@ module.exports = async function(content, options = {}) {
 	options.content = (await marked(content, {})).trim();
 
 	return phrase(template, options);
-}
+};
 
 /**
  * Get a template string (work through the hierarchy)

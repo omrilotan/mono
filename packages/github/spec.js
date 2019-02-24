@@ -24,7 +24,7 @@ describe('github (path)', () => {
 					;
 				}
 			},
-		}
+		};
 
 		const GitHub = require('.');
 		request = new GitHub({token: 'FAKE_TOKEN'}).request;
@@ -32,7 +32,7 @@ describe('github (path)', () => {
 	afterEach(() => {
 		dummy.gofor = () => {
 			throw new Error('dummy.gofor was not defined');
-		}
+		};
 	});
 	it('Should add the API base to request routes', async() => {
 		let url;
@@ -40,7 +40,7 @@ describe('github (path)', () => {
 		dummy.gofor = path => {
 			url = path;
 			return 'anything';
-		}
+		};
 
 		await request('some_function');
 		expect(url).to.equal('https://api.github.com/some_function');
@@ -63,7 +63,7 @@ describe('github (defaults)', () => {
 				:
 				{ok: false, json: async() => null}
 			;
-		}
+		};
 		Object.assign(fetch, require('node-fetch'));
 		require.cache[require.resolve('node-fetch')].exports = fetch;
 
@@ -73,7 +73,7 @@ describe('github (defaults)', () => {
 	afterEach(() => {
 		dummy.fetch = () => {
 			throw new Error('dummy.fetch was not defined');
-		}
+		};
 	});
 
 	it('Should add authentication token to all requests', async() => {
@@ -82,7 +82,7 @@ describe('github (defaults)', () => {
 		dummy.fetch = (path, options) => {
 			headers = options.headers;
 			return 'anything';
-		}
+		};
 		await request('');
 		expect(headers.get('Authorization')).to.equal('token FAKE_TOKEN');
 	});

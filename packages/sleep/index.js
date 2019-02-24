@@ -6,4 +6,4 @@
 module.exports = function(ms) {
 	const wake = Date.now() + ms;
 	while (Date.now() < wake) {} // eslint-disable-line no-empty
-}
+};

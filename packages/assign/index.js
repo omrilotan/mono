@@ -17,4 +17,4 @@ module.exports = function(target, ...others) {
 	assignable(target) && others.forEach(other => assign(target, other));
 
 	return target;
-}
+};

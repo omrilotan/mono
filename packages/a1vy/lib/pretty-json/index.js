@@ -9,4 +9,4 @@ module.exports = data => {
 	} catch (error) {
 		return data;
 	}
-}
+};

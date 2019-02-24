@@ -16,7 +16,7 @@
     "new": "./scripts/new.js $@",
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
-    "lint": "eslint -c .eslintrc '*.js' '**/*.js' --quiet",
+    "lint": "eslint '*.js' 'dists/*.js' '**/*.js' -c .eslintrc",
     "dist": "./packages/run-all-the-things/bin/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
     "babel": "./scripts/foreach.sh '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",

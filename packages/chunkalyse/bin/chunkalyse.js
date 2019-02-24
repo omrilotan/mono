@@ -54,7 +54,7 @@ function getStats({_: [file]} = {}) {
 		return require(route);
 	} catch (error) {
 		console.error(`The file "${route}" could not be properly parsed.`);
-		process.exit(1)
+		process.exit(1);
 	}
 }
 

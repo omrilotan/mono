@@ -22,4 +22,4 @@ module.exports = async function(tag) {
 	} catch (error) {
 		throw error;
 	}
-}
+};

@@ -22,7 +22,7 @@ module.exports = async ({length = 7}) => {
 
 	console.log(results.join('').yellow.bold);
 	another();
-}
+};
 
 function another() {
 	inquirer

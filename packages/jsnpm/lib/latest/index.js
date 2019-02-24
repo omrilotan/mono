@@ -13,4 +13,4 @@ module.exports = async function latest(name) {
 	}
 
 	return latest;
-}
+};

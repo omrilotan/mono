@@ -25,7 +25,7 @@ describe('levelheaded', () => {
 		console.log = (...args) => {
 			result = args;
 			return log(...args);
-		}
+		};
 
 		const tester = levelheaded();
 		tester.info('done');
@@ -51,7 +51,7 @@ describe('levelheaded', () => {
 		].forEach(fn => expect(fn).to.be.a('function'));
 	});
 	it('Should extend existing object', () => {
-		const object = {nolevel: () => null}
+		const object = {nolevel: () => null};
 		levelheaded({object});
 
 		expect(object.nolevel).to.be.a('function');

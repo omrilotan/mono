@@ -22,7 +22,7 @@ module.exports = async function usage(){
 		memory: 100 - percent(freemem(), totalmem()),
 		heap: percent(heapUsed, heapTotal),
 	};
-}
+};
 
 /**
 * Get current idle and total CPU usage

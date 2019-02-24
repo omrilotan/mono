@@ -30,7 +30,7 @@ describe('bench-press', () => {
 	it('bench pressing runs the functions', () =>
 		assert(
 			benchpress(() => {
-				freeze(10)
+				freeze(10);
 			}, {iterations: 10, message: '${duration}'}) > 99
 		)
 	);

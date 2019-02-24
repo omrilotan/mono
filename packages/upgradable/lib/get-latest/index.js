@@ -14,4 +14,4 @@ module.exports = async function getLatest (name) {
 	}
 
 	return latest.version;
-}
+};

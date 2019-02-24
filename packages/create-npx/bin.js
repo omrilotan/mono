@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { writeFile } = require('fs').promises
+const { writeFile } = require('fs').promises;
 const { resolve } = require('path');
 const { prompt } = require('inquirer');
 const git = require('async-git');

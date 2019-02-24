@@ -55,7 +55,7 @@ module.exports = name => {
 	name = clean(name);
 
 	const parts = name.split(sep);
-	const a = parts.findIndex(item => item === MODULES_DIRNAME) + 1
+	const a = parts.findIndex(item => item === MODULES_DIRNAME) + 1;
 
 	return a
 		?

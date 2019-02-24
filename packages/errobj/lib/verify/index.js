@@ -7,4 +7,4 @@ module.exports = function verify(error) {
 	if (!(error instanceof Error)) {
 		throw new RangeError(`Expected an error. Insead got ${typeof error}: ${error}`);
 	}
-}
+};

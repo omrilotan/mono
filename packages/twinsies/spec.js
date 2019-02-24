@@ -36,7 +36,7 @@ describe('Twinsies', async() => {
 	});
 
 	it('creates an initial copy', done => {
-		twinsies.register(verify).start()
+		twinsies.register(verify).start();
 
 		function verify() {
 			assert(existsSync(`${target}example.json`));
@@ -81,7 +81,7 @@ describe('Twinsies', async() => {
 	});
 
 	it('Reports to registered function', done => {
-		twinsies.register(() => done()).start()
+		twinsies.register(() => done()).start();
 	});
 
 	it('watches for file changes', done => {

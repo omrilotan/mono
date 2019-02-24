@@ -12,4 +12,4 @@ module.exports = async function npm() {
 	} catch (error) {
 		throw error;
 	}
-}
+};

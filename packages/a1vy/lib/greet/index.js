@@ -33,7 +33,7 @@ module.exports = async function greet() {
    ${ansiEscapes.image(await readFile(resolve(__dirname, '../../a1vy.png')))}  ${`${name} ${version}`.underline.yellow}
     `
 	);
-}
+};
 
 async function greeting () {
 	const file = await readFile(resolve(__dirname, 'greetings.txt'));
