@@ -1,7 +1,7 @@
-module.exports = ({port = 2003, host = '127.0.0.1'} = {}, encoding = 'utf8') => {
-	const net = require('net');
+const {createServer} = require('net');
 
-	const server = net.createServer(socket => {
+module.exports = ({port = 2003, host = '127.0.0.1'} = {}, encoding = 'utf8') => {
+	const server = createServer(socket => {
 		socket.on('data', message => {
 			message = require('../../lib/pretty-json')(message.toString(encoding));
 

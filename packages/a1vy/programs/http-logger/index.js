@@ -1,4 +1,5 @@
 const { prompt } = require('inquirer');
+const ip = require('../../lib/ip');
 const [LOWEST_STATUS, HIGHEST_STATUS] = [100, 599];
 
 module.exports = async function() {
@@ -8,7 +9,7 @@ module.exports = async function() {
 				name: 'host',
 				message: 'On which host should the server run?',
 				type: 'input',
-				default: '127.0.0.1',
+				default: ip(),
 			},
 			{
 				name: 'port',
