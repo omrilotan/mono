@@ -16,14 +16,14 @@ module.exports = async() => {
 	const {script, args} = await prompt([
 		{
 			name: 'script',
-			message: 'Select script ro tun',
+			message: 'Select script to run',
 			type: 'list',
 			pageSize: '20',
 			choices,
 		},
 		{
 			name: 'args',
-			message: 'Add an args string',
+			message: 'Add an args string (optional)',
 			type: 'input',
 		},
 	]);
@@ -32,7 +32,7 @@ module.exports = async() => {
 		'npm',
 		'run',
 		script,
-		args ? `-- "${args}"` : ''
+		args ? `-- ${args}` : ''
 	].filter(Boolean).join(' ');
 
 	console.log(`Executing: ${command.bold}`);
