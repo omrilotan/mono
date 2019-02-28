@@ -17,6 +17,7 @@ OR
 | **HTTP Logger** | Run an Express server, log headers and body
 | **HTTP(S) traffic** | Sustain cuncurrent open connections to http(s) URL
 | **Logger service** | Log what you tell me to
+| **NPM run** | An interactive NPM run
 | **NPM to tag** | Create a tag based on the current package version
 | **NPM Update** | Check for updates in NPM dependencies, interactively suggest to update
 | **Random String** | Generate a random string (starts with a non numeric character)
