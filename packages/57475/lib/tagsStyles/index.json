@@ -1,0 +1,10 @@
+{
+	"DD": {
+		"TAGS_K_V": ":",
+		"TAGS_LIST": ","
+	},
+	"CC": {
+		"TAGS_K_V": "=",
+		"TAGS_LIST": ";"
+	}
+}

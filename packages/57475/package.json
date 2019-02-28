@@ -1,0 +1,27 @@
+{
+  "name": "57475",
+  "version": "0.0.0-alpha",
+  "description": "📈 A feature packed StatsD client with plenty of configuration options",
+  "keywords": [
+    "statsd",
+    "statsd-client",
+    "dogstatsd-client",
+    "carbon-cache",
+    "udp",
+    "ipv4",
+    "ipv6",
+    "📈"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git",
+    "directory": "packages/57475"
+  },
+  "homepage": "https://omrilotan.com/mono/57475/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/57475; cd -"
+  }
+}

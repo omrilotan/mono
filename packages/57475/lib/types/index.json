@@ -1,0 +1,7 @@
+{
+	"count": "c",
+	"time": "ms",
+	"gauge": "g",
+	"set": "s",
+	"histogram": "h"
+}

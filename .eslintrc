@@ -30,7 +30,8 @@
 				"expect": true,
 				"assert": true,
 				"sleep": true,
-				"freeze": true
+				"freeze": true,
+				"wait": true
 			},
 			"rules": {
 				"no-console": 0
