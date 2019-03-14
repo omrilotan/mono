@@ -1,14 +1,26 @@
-module.exports = async ({host, port, base, page} = {}) => {
-	const http = require('http');
-	const url  = require('url');
-	const path = require('path');
-	const fs   = require('fs');
+require('colors');
+const dd = num => num > 9 ? num : `0${num}`;
 
-	const mime = require('mime-types');
+module.exports = async ({host, port, base, page, delay = 0, cache} = {}) => {
+	const {createServer} = require('http');
+	const {parse} = require('url');
+	const {join} = require('path');
+	const {
+		exists,
+		readFile,
+		statSync,
+	} = require('fs');
+	const {lookup} = require('mime-types');
 
-	http.createServer((request, response) => {
-		const uri = base + url.parse(request.url).pathname;
-		let filename = path.join(process.cwd(), uri);
+	delay = Number(delay);
+	delay = Number.isNaN(delay)
+		? 0
+		: delay
+	;
+
+	createServer((request, response) => {
+		const uri = base + parse(request.url).pathname;
+		let filename = join(process.cwd(), uri);
 
 		function read(exists) {
 			if(!exists) {
@@ -16,11 +28,30 @@ module.exports = async ({host, port, base, page} = {}) => {
 				return;
 			}
 
-			if (fs.statSync(filename).isDirectory()) {
+			if (statSync(filename).isDirectory()) {
 				filename += `/${page}`;
 			}
 
-			fs.readFile(filename, 'binary', respond);
+			const date = new Date();
+			const time = [
+				date.getHours(),
+				date.getMinutes(),
+				date.getSeconds(),
+			].map(dd).join(':');
+
+			console.log(
+				[
+					`[${time}]`.yellow,
+					' ',
+					filename.replace(process.cwd(), '').bold,
+					delay
+						?  ` (~${delay}ms delay)`.dim
+						: ''
+					,
+				].join('')
+			);
+
+			readFile(filename, 'binary', respond);
 		}
 
 		function respond(error, file) {
@@ -29,9 +60,16 @@ module.exports = async ({host, port, base, page} = {}) => {
 				return;
 			}
 
-			response.writeHead(200, {'content-type': mime.lookup(filename)});
-			response.write(file, 'binary');
-			response.end();
+			setTimeout(() => {
+				response.writeHead(200, {
+					'Content-Type': lookup(filename),
+					'Cache-Control': cache
+						? 'private, max-age=240'
+						: 'no-cache',
+				});
+				response.write(file, 'binary');
+				response.end();
+			}, delay);
 		}
 
 		function handleError(error, code) {
@@ -41,7 +79,7 @@ module.exports = async ({host, port, base, page} = {}) => {
 			return;
 		}
 
-		fs.exists(filename, read);
+		exists(filename, read);
 
 	}).listen(parseInt(port, 10), host);
 
