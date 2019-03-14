@@ -1,0 +1,31 @@
+{
+  "name": "babelrc",
+  "version": "0.0.0",
+  "description": "🗼 My own babelrc file (=> ES5)",
+  "keywords": [
+    "babel",
+    "browser",
+    "config",
+    "🗼"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/babelrc/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/babelrc; cd -"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/plugin-transform-parameters": "^7.3.3",
+    "@babel/plugin-transform-spread": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
