@@ -5,11 +5,12 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.69](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.70](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [Executes script in a child process](./packages/async-execute#readme) | [![1.0.1](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.4.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![1.2.3](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
+| **`babelrc`** | [🗼 My own babelrc file (=> ES5)](./packages/babelrc#readme) | [![0.0.0](https://img.shields.io/npm/v/babelrc.svg)](https://www.npmjs.com/package/babelrc)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.2](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.5.1](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
