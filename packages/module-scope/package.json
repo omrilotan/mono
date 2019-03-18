@@ -1,13 +1,19 @@
 {
   "name": "module-scope",
-  "version": "0.0.0",
-  "description": "📍 Get `__dirname` and `__filename` in modules",
+  "version": "1.0.0",
+  "description": "📍 `__dirname` and `__filename` in harmony modules",
   "keywords": [
     "__dirname",
     "__filename",
     "harmony",
     "module",
     "scope",
+    "ES2015 ES6",
+    "ES2016 ES7",
+    "ES2017 ES8",
+    "ES2018 ES9",
+    "ES2019 ES10",
+    "ESNext",
     "📍"
   ],
   "author": "omrilotan",
