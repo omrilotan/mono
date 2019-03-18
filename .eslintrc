@@ -8,6 +8,7 @@
 		"es6": true
 	},
 	"extends": "eslint:recommended",
+	"parser": "babel-eslint",
 	"rules": {
 		"indent": [
 			"error", "tab", { "SwitchCase": 1, "FunctionDeclaration": { "body": 1, "parameters": 2 } },
@@ -22,7 +23,7 @@
 	},
 	"overrides": [
 		{
-			"files": [ "**/spec.js", "**/test.js" ],
+			"files": [ "**/spec.js", "**/spec.mjs", "**/test.js" ],
 			"env": {
 				"mocha": true
 			},
@@ -50,6 +51,12 @@
 		},
 		{
 			"files": [ "**/example.js" ],
+			"rules": {
+				"no-console": 0
+			}
+		},
+		{
+			"files": [ "tests.mjs" ],
 			"rules": {
 				"no-console": 0
 			}

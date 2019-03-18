@@ -1,0 +1,25 @@
+{
+  "name": "module-scope",
+  "version": "0.0.0",
+  "description": "📍 Get `__dirname` and `__filename` in modules",
+  "keywords": [
+    "__dirname",
+    "__filename",
+    "harmony",
+    "module",
+    "scope",
+    "📍"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git",
+    "directory": "packages/module-scope"
+  },
+  "homepage": "https://omrilotan.com/mono/module-scope/",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "cd ../../; npm t packages/module-scope; cd -"
+  }
+}

@@ -60,7 +60,6 @@ const [arg] = argv;
 	);
 	files['.npmrc'] = 'package-lock=false';
 	files['.npmignore'] = '.*\n*.log\nspec.js';
-	files['.gitattributes'] = '* text eol=lf';
 	files['README.md'] = `# ${name} [![](https://img.shields.io/npm/v/${fullName}.svg)](https://www.npmjs.com/package/${fullName}) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/${name})`;
 	files['index.js'] = 'module.exports = null';
 

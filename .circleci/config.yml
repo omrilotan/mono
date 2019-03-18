@@ -41,7 +41,7 @@ jobs:
           key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Test
-          command: npm run test
+          command: npm t
           environment:
             MOCHA_FILE: junit/test-results.xml
           when: always
@@ -49,6 +49,9 @@ jobs:
           path: ./junit
       - store_artifacts:
           path: ./junit
+      - run:
+          name: Test
+          command: npm run testes6
   readme:
     <<: *defaults
     steps:
