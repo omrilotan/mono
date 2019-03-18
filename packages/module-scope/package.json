@@ -1,7 +1,7 @@
 {
   "name": "module-scope",
   "version": "1.0.0",
-  "description": "📍 `__dirname` and `__filename` in harmony modules",
+  "description": "📍 '__dirname' and '__filename' in harmony modules",
   "keywords": [
     "__dirname",
     "__filename",
