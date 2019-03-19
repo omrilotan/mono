@@ -18,6 +18,7 @@ Mono repo holding multiple packages
 | **`create-git-alias`** | [👨🏻 - interactively apply useful git aliases](./packages/create-git-alias#readme) | [![1.1.0](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.0](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.2](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
+| **`double-digit`** | [0️⃣ Add leading zero to positive numbers under 10](./packages/double-digit#readme) | [![0.0.0](https://img.shields.io/npm/v/double-digit.svg)](https://www.npmjs.com/package/double-digit)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.1](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
