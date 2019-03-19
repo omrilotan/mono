@@ -1,0 +1,24 @@
+{
+  "name": "double-digit",
+  "version": "0.0.0",
+  "description": "0️⃣ Add leading zero to positive numbers under 10",
+  "keywords": [
+    "number",
+    "double-digit",
+    "two-digit",
+    "0️⃣"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/double-digit/",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t packages/double-digit; cd -"
+  }
+}
