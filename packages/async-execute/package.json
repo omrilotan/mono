@@ -1,7 +1,7 @@
 {
 	"name": "async-execute",
-	"version": "1.0.1",
-	"description": "Executes script in a child process",
+	"version": "1.1.0",
+	"description": "🦅 Execute command in a child process",
 	"keywords": [
 		"async",
 		"execute",

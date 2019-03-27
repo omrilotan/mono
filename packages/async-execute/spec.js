@@ -1,6 +1,13 @@
 const execute = require('./');
 
 describe('execute', async () => {
+	const {write: stdout} = process.stdout;
+	const {write: stderr} = process.stderr;
+	afterEach(() => {
+		process.stdout.write = stdout;
+		process.stderr.write = stderr;
+	});
+
 	it('Should return console output', async () =>
 		expect(await execute('echo "Hello"')).to.equal('Hello')
 	);
@@ -17,12 +24,42 @@ describe('execute', async () => {
 		expect(await execute('echo "hello" > /dev/null')).to.be.a('string')
 	);
 
+	it('Should pipe output', async () => {
+		let called = 0;
+		process.stdout.write = function(...args) {
+			++called;
+			stdout.apply(this, args);
+		};
+
+		const code = 'node -p "console.log(\'one\'); setTimeout(console.log, 100, \'two\'); \'end\'"';
+		const result = await execute(code, {pipe: true});
+		expect(called).to.be.at.least(2).and.at.most(3);
+		expect(result).to.equal('one\nend\ntwo');
+	});
+
+	it('Should pipe stderr', async () => {
+		let called = 0;
+		let outputs = [];
+		process.stderr.write = function(...args) {
+			outputs.push(...args);
+			++called;
+			stderr.apply(this, args);
+		};
+
+		const code = 'node -p "process.stderr.write(\'one\'); \'end\'"';
+		const result = await execute(code, {pipe: true});
+		expect(called).to.equal(1);
+		expect(outputs).to.deep.equal(['one']);
+		expect(result).to.equal('end');
+	});
+
 	it('Should throw an error', async () => {
 		let threw = false;
 		let err;
+		const cmd = 'echo "message content" >&2 ; exit 125';
 
 		try {
-			await execute('echo "message content" >&2 ; exit 125');
+			await execute(cmd);
 
 		} catch (error) {
 			err = error;
@@ -31,6 +68,7 @@ describe('execute', async () => {
 
 		expect(err.exitCode).to.equal(125);
 		expect(err.code).to.equal(125);
+		expect(err.cmd).to.equal(cmd);
 		expect(err.message).to.contain('message content');
 		assert(threw, 'Should have thrown an error');
 	});
