@@ -1,0 +1,31 @@
+{
+  "name": "@lets/run",
+  "version": "0.0.0",
+  "description": "👟 run npm scripts interactively",
+  "keywords": [
+    "npm",
+    "run",
+    "scripts",
+    "interactive",
+    "👟"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/run/",
+  "bin": {
+    "lets-run": "bin.js",
+    "run": "bin.js"
+  },
+  "scripts": {
+    "test": "cd ../../; npm t packages/run; cd -"
+  },
+  "dependencies": {
+    "async-execute": "^1.1.0",
+    "colors": "^1.3.3",
+    "inquirer": "^6.2.2"
+  }
+}
