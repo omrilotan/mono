@@ -36,5 +36,5 @@ module.exports = async() => {
 	].filter(Boolean).join(' ');
 
 	console.log(`Executing: ${command.bold}`);
-	console.log(await exec(command));
+	await exec(command, {pipe: true});
 };
