@@ -40,7 +40,9 @@ describe('sample-size', () => {
 			}
 		);
 	});
-	it('Should sample an array', () => {
+	it('Should sample an array', function() {
+		this.retries(2);
+
 		const filtered = new Array(100).fill(0).filter(() => sample(.2));
 		expect(filtered)
 			.to.have.lengthOf.at.least(15).and
