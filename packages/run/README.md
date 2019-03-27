@@ -6,19 +6,17 @@
 $ npm i -g @lets/run
 ```
 
-Then simply
+Simply run. You'll get an interactive menu.
 ```
 $ run
 ```
 
-Or with arguments:
+Pass arguments. Arguments will be forwarded to the selected script:
 ```
 run --color
 ```
 
-You'll get an interactive. The arguments will be forwarded to the selected script:
-
-![](https://user-images.githubusercontent.com/516342/55084108-5066f600-50ad-11e9-92ca-b8817ab7e098.gif)
+![](https://user-images.githubusercontent.com/516342/55142963-712f5a00-5146-11e9-80d1-b7d266ed490d.gif)
 
 ### aliases
 

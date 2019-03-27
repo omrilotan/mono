@@ -38,6 +38,7 @@ Mono repo holding multiple packages
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.1](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
+| **`@lets/run`** | [👟 run npm scripts interactively](./packages/run#readme) | [![0.0.0](https://img.shields.io/npm/v/@lets/run.svg)](https://www.npmjs.com/package/@lets/run)
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`sample-size`** | [🎲 pass/fail by sample size](./packages/sample-size#readme) | [![0.0.0](https://img.shields.io/npm/v/sample-size.svg)](https://www.npmjs.com/package/sample-size)
 | **`selenium-chrome-clear-cache`** | [🗑 Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.2.1](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
