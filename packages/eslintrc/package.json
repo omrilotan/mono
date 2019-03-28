@@ -1,0 +1,19 @@
+{
+  "name": "@omrilotan/eslint-config-rc",
+  "version": "0.1.0",
+  "description": "🔧 My usual eslint-config",
+  "keywords": [
+    "eslintrc",
+    "eslint-config",
+    "extends",
+    "🔧"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/eslintrc/",
+  "main": "index.js"
+}
