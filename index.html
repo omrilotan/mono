@@ -24,6 +24,7 @@
 <link rel="prerender" href="./double-digit/">
 <link rel="prerender" href="./edit-package/">
 <link rel="prerender" href="./errobj/">
+<link rel="prerender" href="./eslintrc/">
 <link rel="prerender" href="./exist/">
 <link rel="prerender" href="./flatten/">
 <link rel="prerender" href="./handle-rejection/">
@@ -180,6 +181,13 @@
 	<td>☠️ Serialise errors to literal (JSONable) object<i title="includes browser entry">🖥</i></td>
 	<td><a href="https://www.npmjs.com/package/errobj"><small>2.0.0</small></a></td>
 	<td id="downloadcounterrobj"></td>
+</tr>
+
+<tr>
+	<td><a href="./eslintrc/">@omrilotan/eslintrc</a></td>
+	<td>🔧 My usual eslintrc</td>
+	<td><a href="https://www.npmjs.com/package/@omrilotan/eslintrc"><small>0.0.0</small></a></td>
+	<td id="downloadcount@omrilotan/eslintrc"></td>
 </tr>
 
 <tr>
@@ -386,7 +394,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/7ab362084615aa20438116b29907f0f4f9a9af55"><b>:q!</b></a>" <small>on Wednesday, March 27th, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/363463dd585e62e74a2867864d6102f69bb68016"><b>🔧 My usual eslintrc</b></a>" <small>on Thursday, March 28th, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads}).catch(error => { /* ignore */ });
@@ -405,6 +413,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/doamrn').then(result=>res
 fetch('https://api.npmjs.org/downloads/point/last-week/double-digit').then(result=>result.json()).then(({downloads}) => {window['downloadcountdouble-digit'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/edit-package').then(result=>result.json()).then(({downloads}) => {window['downloadcountedit-package'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/errobj').then(result=>result.json()).then(({downloads}) => {window['downloadcounterrobj'].innerText = downloads}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/@omrilotan/eslintrc').then(result=>result.json()).then(({downloads}) => {window['downloadcount@omrilotan/eslintrc'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/exist').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/exist'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@recursive/flatten').then(result=>result.json()).then(({downloads}) => {window['downloadcount@recursive/flatten'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/handle-rejection').then(result=>result.json()).then(({downloads}) => {window['downloadcounthandle-rejection'].innerText = downloads}).catch(error => { /* ignore */ });
