@@ -24,6 +24,7 @@
 <link rel="prerender" href="./double-digit/">
 <link rel="prerender" href="./edit-package/">
 <link rel="prerender" href="./errobj/">
+<link rel="prerender" href="./eslint-plugin-log/">
 <link rel="prerender" href="./eslintrc/">
 <link rel="prerender" href="./exist/">
 <link rel="prerender" href="./flatten/">
@@ -181,6 +182,13 @@
 	<td>☠️ Serialise errors to literal (JSONable) object<i title="includes browser entry">🖥</i></td>
 	<td><a href="https://www.npmjs.com/package/errobj"><small>2.0.0</small></a></td>
 	<td id="downloadcounterrobj"></td>
+</tr>
+
+<tr>
+	<td><a href="./eslint-plugin-log/">eslint-plugin-log</a></td>
+	<td>👕 ESLint plugin: log the paths of all files being linted</td>
+	<td><a href="https://www.npmjs.com/package/eslint-plugin-log"><small>0.0.0</small></a></td>
+	<td id="downloadcounteslint-plugin-log"></td>
 </tr>
 
 <tr>
@@ -394,7 +402,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/72767403aaf7adfcd10547f75922663e2b929a74"><b>fixed mistaken bug</b></a>" <small>on Thursday, March 28th, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/e9aa42f17e94075451b756eb4d2b841c5c0774fe"><b>👕 ESLint plugin: log the paths of all files being linted</b></a>" <small>on Friday, March 29th, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads}).catch(error => { /* ignore */ });
@@ -413,6 +421,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/doamrn').then(result=>res
 fetch('https://api.npmjs.org/downloads/point/last-week/double-digit').then(result=>result.json()).then(({downloads}) => {window['downloadcountdouble-digit'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/edit-package').then(result=>result.json()).then(({downloads}) => {window['downloadcountedit-package'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/errobj').then(result=>result.json()).then(({downloads}) => {window['downloadcounterrobj'].innerText = downloads}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/eslint-plugin-log').then(result=>result.json()).then(({downloads}) => {window['downloadcounteslint-plugin-log'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@omrilotan/eslint-config-rc').then(result=>result.json()).then(({downloads}) => {window['downloadcount@omrilotan/eslint-config-rc'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/exist').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/exist'].innerText = downloads}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@recursive/flatten').then(result=>result.json()).then(({downloads}) => {window['downloadcount@recursive/flatten'].innerText = downloads}).catch(error => { /* ignore */ });
