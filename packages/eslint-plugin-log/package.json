@@ -1,0 +1,28 @@
+{
+  "name": "eslint-plugin-log",
+  "version": "0.0.0",
+  "description": "👕 ESLint plugin: log the paths of all files being linted",
+  "keywords": [
+    "eslint",
+    "plugin",
+    "log",
+    "filename",
+    "list",
+    "files",
+    "👕"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/eslint-plugin-log/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/eslint-plugin-log; cd -"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  }
+}

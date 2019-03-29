@@ -34,6 +34,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.1.2",
+    "@omrilotan/eslint-config-rc": "^0.1.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babelrc": "0.0.0",
@@ -43,6 +44,7 @@
     "dateformat": "^3.0.3",
     "dont-look-up": "^1.0.0",
     "eslint": "^5.8.0",
+    "eslint-plugin-log": "0.0.0",
     "esm": "^3.2.18",
     "find": "^0.2.9",
     "mocha": "^6.0.2",
