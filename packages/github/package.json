@@ -15,7 +15,7 @@
     "test": "cd ../../; npm t github; cd -"
   },
   "dependencies": {
-    "gofor": "^2.0.5",
+    "gofor": "^3.0.0",
     "index-require": "^1.0.0"
   },
   "private": true
