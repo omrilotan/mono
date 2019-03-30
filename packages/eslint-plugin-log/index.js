@@ -1,5 +1,9 @@
-const EXTENSIONS = require('./lib/extensions');
-const preprocess = require('./lib/preprocess');
+const extensions = require('./lib/extensions');
+const skip = require('./lib/skip');
+const preprocess = skip(process.argv)
+	? require('./lib/preprocess')
+	: require('./lib/log')
+;
 const postprocess = require('./lib/postprocess');
 
 const processor = {
@@ -8,7 +12,7 @@ const processor = {
 };
 
 const processors = Object.assign(
-	...EXTENSIONS.map(
+	...extensions.map(
 		extension => ({[extension]: processor})
 	)
 );

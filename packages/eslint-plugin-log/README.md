@@ -2,9 +2,11 @@
 
 ## 👕 ESLint plugin: log the paths of all files being linted
 
-ESLint does not provide a summary of which or how many files have actually been linted.
-Automatic updates and misconfiguration can easily lead to false positive results where not all intended files got actually checked.
-By including this plugin in an ESLint configuration, a full list of the files being linted will be output, regardless of (and additionally to) actual linting errors.
+ESLint does not provide a summary of which or how many files have actually been processed.
+
+Automatic updates and misconfiguration can easily lead to false positive results where not all intended files were actually checked.
+
+By including this plugin in an ESLint configuration, a full list of the files being linted will be output, regardless of (and additionally to) actual lint errors.
 
 ![](https://user-images.githubusercontent.com/516342/55211043-5f5bbe80-51fb-11e9-90af-89ebc75779aa.gif)
 
@@ -29,4 +31,7 @@ npm i -D eslint-plugin-log
 eslint --plugin log
 ```
 
-> If ESLint is run with the --format=checkstyle CLI option (as IntelliJ's ESLint integration does), logging filenames is skipped in order to not produce invalid checkstyle XML in the console.
+> Some of [ESLint's output formats](https://eslint.org/docs/user-guide/formatters) are structured (XML, HTML, json, etc.). We don't want to break those, so filename logging is omitted from formats **except** the following:
+> - compact
+> - stylish
+> - unix
