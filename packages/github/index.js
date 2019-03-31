@@ -1,4 +1,4 @@
-const Gofor = require('gofor/server');
+const Gofor = require('gofor');
 const {
 	base,
 	setParam,
