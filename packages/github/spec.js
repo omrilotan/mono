@@ -2,7 +2,7 @@ const dummy = {};
 
 function cleanup() {
 	delete require.cache[require.resolve('node-fetch')];
-	delete require.cache[require.resolve('gofor/server')];
+	delete require.cache[require.resolve('gofor')];
 	delete require.cache[require.resolve('.')];
 }
 
@@ -12,7 +12,7 @@ describe('github (path)', () => {
 	after(cleanup);
 
 	before(() => {
-		require.cache[require.resolve('gofor/server')] = {
+		require.cache[require.resolve('gofor')] = {
 			exports: class Gofor {
 				constructor() {}
 				fetch(...args) {
