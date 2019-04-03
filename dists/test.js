@@ -9,7 +9,7 @@ describe(
 				`Should expose "${pkg
 					.replace(resolve(__dirname, '../packages'), '')
 					.split('/')
-					.filter(i => !!i)
+					.filter(Boolean)
 					.shift()}" dist as a consumable module`,
 				() => {
 					if (typeof require(pkg) !== 'function') {

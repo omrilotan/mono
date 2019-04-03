@@ -22,11 +22,12 @@ module.exports = readdirSync(packageDir())
 					throw new Error('I\'ll create my own dist files, thank you very much.');
 				}
 
-				const entry = browser && main
-					? {[packageDir(pkg, browser)]: packageDir(pkg, main)}
-					: {}
-				;
-				return Object.assign(accumulator, entry);
+				browser && main && Object.assign(
+					accumulator,
+					{[packageDir(pkg, browser)]: packageDir(pkg, main)}
+				);
+
+				return accumulator;
 			} catch (error) {
 				return accumulator;
 			}

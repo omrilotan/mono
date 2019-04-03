@@ -31,7 +31,10 @@ const [command] = argv;
 							resolve(__dirname, '../', 'packages', pkg),
 							'&&',
 							command,
-						].join(' ')
+						].join(' '),
+						{
+							pipe: true,
+						}
 					)
 				)
 		)).join('\n')
