@@ -13,13 +13,5 @@ Environments which exclude node_modules from the transpiling pipeline should inc
 
 Also available for explicit import:
 ```js
-const reduce = require('doamrn/dist');
-```
-
-## Transpiled version
-Environments which exclude node_modules from the transpiling pipeline should include the "browser" entry instead of "main". This exposes an ES5 commonjs module.
-
-Also available for explicit import:
-```js
 const doamrn = require('doamrn/dist');
 ```
