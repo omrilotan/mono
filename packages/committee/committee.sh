@@ -10,14 +10,11 @@ message=${args[@]:1}
 
 if [[ -z $automate ]]; then
 	if [[ -z "$author" ]]; then
-		echo -n "username: "
-		read username
-		author=$username
+		read -r -p "$(tput bold)username:$(tput sgr0) (octocat) " author
 	fi
 
 	if [[ -z "$message" ]]; then
-		echo -n "commit message: "
-		read message
+		read -r -p "$(tput bold)commit message:$(tput sgr0) (random message) " message
 	fi
 fi
 
