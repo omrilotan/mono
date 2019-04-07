@@ -31,3 +31,4 @@ const git = require('async-git');
 | Function | Parameters | Description | Example
 | - | - | - | -
 | tag | {String} version | Create a tag using the last commit message | `await git.tag('1.2.3')`
+| reset | {String} State ID | Reset current HEAD to the specified state | `await git.reset('f5db755')`

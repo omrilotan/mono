@@ -3,6 +3,7 @@ const name = require('./lib/name');
 const branch = require('./lib/branch');
 const date = require('./lib/date');
 const tag = require('./lib/tag');
+const reset = require('./lib/reset');
 
 const formats = [
 	['author'  , 'an'],
@@ -28,6 +29,7 @@ const getters = Object.assign(
 
 const functions = {
 	tag,
+	reset,
 };
 
 /**
@@ -36,6 +38,7 @@ const functions = {
  * @type     {Object}
  * @property {Promise<String>} name     Project name
  * @property {Promise<String>} branch   Current branch name
+ * @property {Promise<String>} date     Get last author date
  * @property {Promise<String>} author   Author name of the last commit
  * @property {Promise<String>} comitter Comitter name of the last commit
  * @property {Promise<String>} email    Author email of the last commit
@@ -44,6 +47,8 @@ const functions = {
  * @property {Promise<String>} subject  Most recent commit subject
  * @property {Promise<String>} message  Most recent commit full message
  * @property {Promise<String>} body     Most recent commit message body
+ * @property {Function}        tag      Create and push a git tag with the last commit message
+ * @property {Function}        reset    Reset current HEAD to the specified state
  */
 Object.defineProperties(
 	module.exports,
