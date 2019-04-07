@@ -23,7 +23,7 @@ describe('selenium-chrome-clear-cache', async() => {
 			console.error(error); // eslint-disable-line no-console
 		}
 
-		await sleep(1000);
+		await wait(1000);
 	});
 
 	let i = TIMES;

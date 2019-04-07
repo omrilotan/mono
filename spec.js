@@ -1,16 +1,21 @@
 const chai = require('chai');
 chai.use(require('chai-string'));
 chai.use(require('chai-as-promised'));
+const assert = require('assert');
+const sinon = require('sinon');
+const wait = require('./packages/wait');
+const sleep = require('./packages/sleep');
 
 Object.assign(
 	global,
 	chai,
+	sinon,
 	{
-		sleep: (ttl = 80) => new Promise(resolve => setTimeout(resolve, ttl)),
-		freeze: (ms = 0) => {
-			const start = Date.now();
-			while(Date.now() - start < ms) {} // eslint-disable-line no-empty
-		},
+		chai,
+		assert,
+		sinon,
+		wait,
+		sleep,
 	}
 );
 

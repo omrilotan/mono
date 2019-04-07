@@ -2,7 +2,7 @@ const exec = require('async-execute');
 
 /**
  * Create and push a git tag with the last commit message
- * @param  {String} tag [description]
+ * @param  {String} tag
  * no return value
  */
 module.exports = async function(tag) {
