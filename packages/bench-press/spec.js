@@ -1,11 +1,5 @@
 const benchpress = require('.');
 
-function freeze(delay = 0) {
-	const end = Date.now() + delay;
-
-	while (Date.now() < end);
-}
-
 describe('bench-press', () => {
 	it('Has default message', () =>
 		assert(
@@ -30,7 +24,7 @@ describe('bench-press', () => {
 	it('bench pressing runs the functions', () =>
 		assert(
 			benchpress(() => {
-				freeze(10);
+				sleep(10);
 			}, {iterations: 10, message: '${duration}'}) > 99
 		)
 	);

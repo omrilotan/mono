@@ -39,7 +39,7 @@ describe('eslint-plugin-log/preprocess', () => {
 			expect(log).to.equal('3. /filename.js');
 		});
 		it('Should finish with total files linted', async() => {
-			await sleep(80);
+			await wait(80);
 			const [log] = logs;
 			expect(log).to.include('3 files linted.');
 		});

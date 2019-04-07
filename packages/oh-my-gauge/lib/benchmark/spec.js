@@ -27,7 +27,7 @@ describe('oh-my-gauge/Benchmark', () => {
 				},
 				ms => ms
 			);
-			benchmark(100, [() => { freeze(1); }, 'method_name']);
+			benchmark(100, [() => { sleep(1); }, 'method_name']);
 		});
 	});
 

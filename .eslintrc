@@ -11,10 +11,15 @@
 				"mocha": true
 			},
 			"globals": {
+				"chai": true,
 				"expect": true,
 				"assert": true,
-				"sleep": true,
-				"freeze": true
+				"sinon": true,
+				"spy": true,
+				"stub": true,
+				"fake": true,
+				"wait": true,
+				"sleep": true
 			},
 			"rules": {
 				"no-console": 0

@@ -52,7 +52,7 @@ describe('oh-my-gauge/Gauge', () => {
 				expect(number).to.be.below(110);
 				done();
 			}))(() => {
-				freeze(100);
+				sleep(100);
 			});
 
 			wrapped();

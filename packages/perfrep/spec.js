@@ -30,13 +30,13 @@ describe('notate', async() => {
 		expect(memory).to.not.be.a('number');
 		expect(heap).to.not.be.a('number');
 
-		await sleep(100);
+		await wait(100);
 
 		expect(cpu).to.not.be.a('number');
 		expect(memory).to.not.be.a('number');
 		expect(heap).to.not.be.a('number');
 
-		await sleep(1000);
+		await wait(1000);
 
 		expect(cpu).to.be.a('number');
 		expect(memory).to.be.a('number');
