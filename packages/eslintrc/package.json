@@ -14,6 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.com/mono/eslintrc/",
+  "homepage": "https://omrilotan.com/mono/eslint-config/",
   "main": "index.js"
 }
