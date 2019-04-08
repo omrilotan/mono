@@ -34,7 +34,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.1.2",
-    "@omrilotan/eslint-config-rc": "^0.1.0",
+    "@omrilotan/eslint-config": "^0.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "chai": "^4.2.0",

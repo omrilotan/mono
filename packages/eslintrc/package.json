@@ -1,6 +1,6 @@
 {
-  "name": "@omrilotan/eslint-config-rc",
-  "version": "0.1.0",
+  "name": "@omrilotan/eslint-config",
+  "version": "0.0.0",
   "description": "🔧 My usual eslint-config",
   "keywords": [
     "eslintrc",

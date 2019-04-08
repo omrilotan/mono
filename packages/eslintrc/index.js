@@ -37,5 +37,12 @@ module.exports = {
 				assert: true,
 			},
 		},
+		{
+			files: [ 'bin.js', '**/bin.js' ],
+			rules: {
+				'no-console': 0,
+				'no-octal': 0,
+			},
+		},
 	],
 };

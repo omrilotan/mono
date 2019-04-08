@@ -1,5 +1,5 @@
 {
-	"extends": "@omrilotan/rc",
+	"extends": "@omrilotan",
 	"parser": "babel-eslint",
   "plugins": [
     "log"
