@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>key-value-join | an npm package by omrilotan</title>
+		<meta name="description" content="⛓ Join object entries to create a string representation">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="../styles.css">
+		<link rel="prerender" href="../">
+	</head>
+	<body>
+		<a href="../">↩︎</a>
+		<h1 id="key-value-join">key-value-join <a href="https://www.npmjs.com/package/key-value-join"><img src="https://img.shields.io/npm/v/key-value-join.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/key-value-join"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
+<h2 id="⛓-join-object-entries-to-create-a-string-representation">⛓ Join object entries to create a string representation</h2>
+<pre><code class="language-js">const join = require(&#39;key-value-join&#39;);
+
+join({a: 1, b: 2}; // a:1,b:2
+
+join({a: 1, b: 2}, &#39;=&#39;, &#39;&amp;&#39;); // a=1&amp;b=2
+
+join({a: 1, b: 2, c: undefined, d: false}, &#39;=&#39;, &#39;&amp;&#39;, ([key, value]) =&gt; !!value); // a=1&amp;b=2</code></pre>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Object</td>
+<td>N/A</td>
+<td>The object to convert</td>
+</tr>
+<tr>
+<td>1</td>
+<td>String</td>
+<td><code>:</code></td>
+<td>Key-value delimiter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>String</td>
+<td><code>,</code></td>
+<td>List items delimiter</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Function</td>
+<td><code>()=&gt;true</code></td>
+<td>Function to filter object entries †</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>† Filter function receives one array containing <code>[key, value]</code></p>
+<pre><code class="language-js">const filter = ([key, value]) =&gt; Boolean(value)</code></pre>
+</blockquote>
+<h2 id="transpiled-version">Transpiled version</h2>
+<p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
+<p>Also available for explicit import:</p>
+<pre><code class="language-js">const join = require(&#39;join/dist&#39;);</code></pre>
+	</body>
+</html>
