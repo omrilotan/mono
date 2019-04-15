@@ -1,0 +1,23 @@
+{
+  "name": "bound-call",
+  "version": "0.0.0",
+  "description": "👔 Create a bound call where you can pass 'this' context as an argument",
+  "keywords": [
+    "bind",
+    "call",
+    "bound",
+    "👔"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/bound-call/",
+  "main": "index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; ../../node_modules/.bin/babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t packages/bound-call; cd -"
+  }
+}
