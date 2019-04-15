@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "👕 ESLint plugin: log the paths of all files being linted",
   "keywords": [
     "eslint",

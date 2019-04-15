@@ -9,6 +9,7 @@ const postprocess = require('./lib/postprocess');
 const processor = {
 	preprocess,
 	postprocess,
+	supportsAutofix: true,
 };
 
 const processors = Object.assign(

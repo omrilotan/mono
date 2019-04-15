@@ -30,9 +30,10 @@ describe('eslint-plugin-log', () => {
 	});
 	it('Should expose preprocess and postprocess function on each processor', () => {
 		Object.values(processors).forEach(processor => {
-			expect(processor).to.have.all.keys(['preprocess', 'postprocess']);
+			expect(processor).to.have.all.keys(['preprocess', 'postprocess', 'supportsAutofix']);
 			expect(processor.preprocess).to.be.a('function');
 			expect(processor.postprocess).to.be.a('function');
+			expect(processor.supportsAutofix).to.be.true;
 		});
 	});
 	it('Should expose log preprocess when "shouldSkip" is false', () => {
