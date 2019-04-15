@@ -54,5 +54,5 @@ Environments which exclude node_modules from the transpiling pipeline should inc
 
 Also available for explicit import:
 ```js
-const reduce = require('levelheaded/dist');
+const levelheaded = require('levelheaded/dist');
 ```
