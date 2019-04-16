@@ -1,0 +1,22 @@
+{
+  "name": "string-wrap",
+  "version": "1.0.0",
+  "description": "🥪 wrap a string from both sides",
+  "keywords": [
+    "string",
+    "wrap",
+    "🥪"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/string-wrap/",
+  "main": "index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; ../../node_modules/.bin/babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t packages/string-wrap; cd -"
+  }
+}
