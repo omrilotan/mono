@@ -1,6 +1,6 @@
 {
   "name": "@recursive/flatten",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🍳 Flatten arrays of arrays, as long as all the members are arrays",
   "keywords": [
     "array",

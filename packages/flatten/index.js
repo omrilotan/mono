@@ -1,3 +1,6 @@
 module.exports = function flatten(items) {
-	return items.every(Array.isArray) ? flatten([].concat(...items)) : items;
+	return items.length && items.every(Array.isArray)
+		? flatten([].concat(...items))
+		: items
+	;
 };

@@ -47,4 +47,10 @@ describe('flatten', () => {
 			]
 		);
 	});
+	it('Should avoid endless recursion', () => {
+		expect(() => flatten([])).to.not.throw();
+	});
+	it('Should flatten empty arrays', () => {
+		expect(flatten([[], []])).to.deep.equal([]);
+	});
 });
