@@ -1,6 +1,6 @@
 # flatten [![](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/flatten) [![](https://badgen.net/bundlephobia/minzip/@recursive/flatten)](https://bundlephobia.com/result?p=@recursive/flatten)
 
-## Flatten arrays of arrays, as long as all the members are arrays
+## 🍳 Flatten arrays of arrays, as long as all the members are arrays
 ```js
 const flatten = require('@recursive/flatten');
 

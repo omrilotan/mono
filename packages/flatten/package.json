@@ -1,24 +1,26 @@
 {
   "name": "@recursive/flatten",
-  "version": "0.0.0",
-  "description": "Flatten arrays of arrays, as long as all the members are arrays",
+  "version": "1.0.0",
+  "description": "🍳 Flatten arrays of arrays, as long as all the members are arrays",
   "keywords": [
     "array",
     "flatten",
     "recursive",
-    "deep"
+    "deep",
+    "🍳"
   ],
   "author": "omrilotan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omrilotan/mono.git"
+    "url": "git+https://github.com/omrilotan/mono.git",
+    "directory": "packages/flatten"
   },
   "homepage": "https://omrilotan.com/mono/flatten/",
   "main": "index.js",
   "browser": "dist/index.js",
   "scripts": {
-    "dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "dist": "mkdir -p dist; ../../node_modules/.bin/babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
     "test": "cd ../../; npm t flatten; cd -"
   }
 }
