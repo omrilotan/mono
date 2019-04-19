@@ -18,7 +18,7 @@ describe('eslint-plugin-log', () => {
 	before(() => {
 		mock('./lib/extensions', ['a', 'b', 'c']);
 		mock('./lib/skip', () => shouldSkip);
-		({processors} = require('.'));
+		({processors} = mock('.'));
 	});
 	beforeEach(() => {
 		shouldSkip = false;
