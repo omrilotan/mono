@@ -1,0 +1,29 @@
+{
+  "name": "@lets/count",
+  "version": "0.0.0",
+  "description": "🔢 Consistent counter",
+  "keywords": [
+    "count",
+    "consistent",
+    "ordinal",
+    "1st",
+    "2nd",
+    "🔢"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/count/",
+  "browser": "dist/index.js",
+  "main": "index.js",
+  "scripts": {
+    "dist": "mkdir -p dist; ../../node_modules/.bin/babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
+    "test": "cd ../../; npm t packages/count; cd -"
+  },
+  "dependencies": {
+    "ordinal": "^1.0.2"
+  }
+}
