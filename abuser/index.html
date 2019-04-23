@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-		<title>abuse-require | an npm package by omrilotan</title>
+		<title>abuser | an npm package by omrilotan</title>
 		<meta name="description" content="🤡 Create modifiers to require cache based on paths (e.g. __dirname)">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 		<link rel="stylesheet" href="../styles.css">
@@ -11,27 +11,27 @@
 	</head>
 	<body>
 		<a href="../">↩︎</a>
-		<h1 id="abuse-require">abuse-require <a href="https://www.npmjs.com/package/abuse-require"><img src="https://img.shields.io/npm/v/abuse-require.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/abuse-require"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
+		<h1 id="abuser">abuser <a href="https://www.npmjs.com/package/abuser"><img src="https://img.shields.io/npm/v/abuser.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/abuser"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <blockquote>
 <h1 id="alpha-version">[ALPHA VERSION]</h1>
 </blockquote>
 <h2 id="🤡-create-modifiers-to-require-cache-based-on-paths-eg-__dirname">🤡 Create modifiers to require cache based on paths (e.g. <code>__dirname</code>)</h2>
-<p>The <code>abuse</code> function accepts routes from which to resolve the modules as arguments</p>
-<pre><code class="language-js">const abuse = require(&#39;abuse-require&#39;);
-const {clean, mock, reset} = abuse(__dirname);</code></pre>
+<p>The <code>abuser</code> function accepts routes from which to resolve the modules as arguments</p>
+<pre><code class="language-js">const abuser = require(&#39;abuser&#39;);
+const {clean, mock, reset} = abuser(__dirname);</code></pre>
 <h3 id="override-override-module-exports-value-with-any-given-thing-other-than-undefined"><code>override</code>: Override module exports value with any given thing (other than <code>undefined</code>)</h3>
-<pre><code class="language-js">const {override} = require(&#39;abuse-require&#39;)(__dirname);
+<pre><code class="language-js">const {override} = require(&#39;abuser&#39;)(__dirname);
 
 override(&#39;modulename&#39;, () =&gt; &#39;return value&#39;);</code></pre>
 <h3 id="reset-reset-module-cache-to-intended-values-recursively"><code>reset</code>: Reset module cache to intended values, recursively</h3>
-<pre><code class="language-js">const {reset} = require(&#39;abuse-require&#39;)(__dirname);
+<pre><code class="language-js">const {reset} = require(&#39;abuser&#39;)(__dirname);
 
 const myThing = reset(&#39;.&#39;);</code></pre>
 <h3 id="clean-clean-module-and-its-dependencies-from-memory"><code>clean</code>: Clean module and its dependencies from memory</h3>
-<pre><code class="language-js">const {clean} = require(&#39;abuse-require&#39;)(__dirname);
+<pre><code class="language-js">const {clean} = require(&#39;abuser&#39;)(__dirname);
 
 clean(&#39;.&#39;);</code></pre>
-<pre><code class="language-js">const {override, clean} = require(&#39;abuse-require&#39;)(__dirname);
+<pre><code class="language-js">const {override, clean} = require(&#39;abuser&#39;)(__dirname);
 
 describe(&#39;my suite&#39;, () =&gt; {
     const dependency = stub();
