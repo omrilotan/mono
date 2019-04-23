@@ -6,7 +6,7 @@ Mono repo holding multiple packages
 | Name | Description | Link
 | --- | --- | ---
 | **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.71](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
-| **`abuser`** | [🤡 Create modifiers to require cache based on paths (e.g. )](./packages/abuser#readme) | [![0.0.0](https://img.shields.io/npm/v/abuser.svg)](https://www.npmjs.com/package/abuser)
+| **`abuser`** | [🤕 Create modifiers to require cache based on paths (e.g. )](./packages/abuser#readme) | [![1.0.0](https://img.shields.io/npm/v/abuser.svg)](https://www.npmjs.com/package/abuser)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.3](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [🦅 Execute command in a child process](./packages/async-execute#readme) | [![1.1.0](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`async-git`** | [👾 Get some git info](./packages/async-git#readme) | [![1.5.0](https://img.shields.io/npm/v/async-git.svg)](https://www.npmjs.com/package/async-git)
@@ -17,6 +17,7 @@ Mono repo holding multiple packages
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.2](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.5.1](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
 | **`committee`** | [🕶 Commit as someone else](./packages/committee#readme) | [![0.0.5](https://img.shields.io/npm/v/committee.svg)](https://www.npmjs.com/package/committee)
+| **`@lets/count`** | [🔢 Consistent counter](./packages/count#readme) | [![0.0.0](https://img.shields.io/npm/v/@lets/count.svg)](https://www.npmjs.com/package/@lets/count)
 | **`create-git-alias`** | [👨🏻 - interactively apply useful git aliases](./packages/create-git-alias#readme) | [![1.1.0](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.0](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.3](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
