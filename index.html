@@ -20,6 +20,7 @@
 <link rel="prerender" href="./boxt/">
 <link rel="prerender" href="./chunkalyse/">
 <link rel="prerender" href="./committee/">
+<link rel="prerender" href="./count/">
 <link rel="prerender" href="./create-git-alias/">
 <link rel="prerender" href="./create-npx/">
 <link rel="prerender" href="./doamrn/">
@@ -85,8 +86,8 @@
 
 <tr>
 	<td><a href="./abuser/">abuser</a></td>
-	<td>🤡 Create modifiers to require cache based on paths (e.g. )</td>
-	<td><a href="https://www.npmjs.com/package/abuser"><small>0.0.0</small></a></td>
+	<td>🤕 Create modifiers to require cache based on paths (e.g. )</td>
+	<td><a href="https://www.npmjs.com/package/abuser"><small>1.0.0</small></a></td>
 	<td id="downloadcountabuser"></td>
 </tr>
 
@@ -158,6 +159,13 @@
 	<td>🕶 Commit as someone else<i title="includes CLI program">🤖</i></td>
 	<td><a href="https://www.npmjs.com/package/committee"><small>0.0.5</small></a></td>
 	<td id="downloadcountcommittee"></td>
+</tr>
+
+<tr>
+	<td><a href="./count/">@lets/count</a></td>
+	<td>🔢 Consistent counter<i title="includes browser entry">🖥</i></td>
+	<td><a href="https://www.npmjs.com/package/@lets/count"><small>0.0.0</small></a></td>
+	<td id="downloadcount@lets/count"></td>
 </tr>
 
 <tr>
@@ -434,7 +442,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/d1a01e072737c34faa91aa64edc556f96f6f4bda"><b>I'm just a grunt. Don't blame me for this awful PoS.</b></a>" <small>on Tuesday, April 23rd, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/deee1a193e03d467d051baf96cc56e28b19f0ffe"><b>👕</b></a>" <small>on Tuesday, April 23rd, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
@@ -449,6 +457,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/bound-call').then(result=
 fetch('https://api.npmjs.org/downloads/point/last-week/boxt').then(result=>result.json()).then(({downloads}) => {window['downloadcountboxt'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/chunkalyse').then(result=>result.json()).then(({downloads}) => {window['downloadcountchunkalyse'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/committee').then(result=>result.json()).then(({downloads}) => {window['downloadcountcommittee'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/@lets/count').then(result=>result.json()).then(({downloads}) => {window['downloadcount@lets/count'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/create-git-alias').then(result=>result.json()).then(({downloads}) => {window['downloadcountcreate-git-alias'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/create-npx').then(result=>result.json()).then(({downloads}) => {window['downloadcountcreate-npx'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/doamrn').then(result=>result.json()).then(({downloads}) => {window['downloadcountdoamrn'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
