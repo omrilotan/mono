@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<link rel="prerender" href="../">
 		<link rel="prerender" href="./a1vy/">
+<link rel="prerender" href="./abuse-require/">
 <link rel="prerender" href="./assign/">
 <link rel="prerender" href="./async-execute/">
 <link rel="prerender" href="./async-git/">
@@ -80,6 +81,13 @@
 	<td>🤖 I help development by doing things<i title="includes CLI program">🤖</i></td>
 	<td><a href="https://www.npmjs.com/package/a1vy"><small>0.0.71</small></a></td>
 	<td id="downloadcounta1vy"></td>
+</tr>
+
+<tr>
+	<td><a href="./abuse-require/">abuse-require</a></td>
+	<td>🤡 Create modifiers to require cache based on paths (e.g. )</td>
+	<td><a href="https://www.npmjs.com/package/abuse-require"><small>0.0.0</small></a></td>
+	<td id="downloadcountabuse-require"></td>
 </tr>
 
 <tr>
@@ -426,10 +434,11 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/382c64e4a372586efce7d33c6b73b9052304511a"><b>abuse-require: 🤡 Create modifiers to require cache based on paths (e.g. )</b></a>" <small>on Tuesday, April 23rd, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/269221ca88a97ef222451aebbeb3719983965b08"><b>abuse-require: 🤡 Create modifiers to require cache based on paths (e.g. )</b></a>" <small>on Tuesday, April 23rd, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/abuse-require').then(result=>result.json()).then(({downloads}) => {window['downloadcountabuse-require'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@recursive/assign').then(result=>result.json()).then(({downloads}) => {window['downloadcount@recursive/assign'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/async-execute').then(result=>result.json()).then(({downloads}) => {window['downloadcountasync-execute'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/async-git').then(result=>result.json()).then(({downloads}) => {window['downloadcountasync-git'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
