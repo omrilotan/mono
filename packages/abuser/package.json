@@ -1,13 +1,16 @@
 {
   "name": "abuser",
-  "version": "0.0.0",
-  "description": "🤡 Create modifiers to require cache based on paths (e.g. `__dirname`)",
+  "version": "1.0.0",
+  "description": "🤕 Create modifiers to require cache based on paths (e.g. `__dirname`)",
   "keywords": [
     "require",
-    "mock",
+    "clean",
+    "cleanup",
     "override",
+    "mock",
+    "reset",
     "test",
-    "🤡"
+    "🤕"
   ],
   "author": "omrilotan",
   "license": "MIT",
@@ -19,5 +22,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t packages/abuser; cd -"
+  },
+  "devDependencies": {
+    "@lets/count": "0.0.0"
   }
 }
