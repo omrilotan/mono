@@ -1,0 +1,23 @@
+{
+  "name": "abuser",
+  "version": "0.0.0",
+  "description": "🤡 Create modifiers to require cache based on paths (e.g. `__dirname`)",
+  "keywords": [
+    "require",
+    "mock",
+    "override",
+    "test",
+    "🤡"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/abuser/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/abuser; cd -"
+  }
+}
