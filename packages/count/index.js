@@ -19,7 +19,7 @@ const count = () => ordinal(++current);
 count.set = number => {
 	current = number;
 	return count;
-}
+};
 
 /**
  * From

@@ -12,7 +12,6 @@ describe('abuser', () => {
 		ls.forEach(filename => {
 			delete require.cache[join(__dirname, './fixtures', filename)];
 		});
-		counter = 0;
 	});
 	it('Should use module from cache (baseline)', () => {
 		const path = './fixtures/closure.1';
