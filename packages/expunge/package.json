@@ -1,0 +1,17 @@
+{
+  "name": "expunge",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/expunge/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/expunge; cd -"
+  }
+}
