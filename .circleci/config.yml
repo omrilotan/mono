@@ -52,6 +52,17 @@ jobs:
       - run:
           name: Test
           command: npm run testes6
+  danger:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: install-cache-{{ .Branch }}-{{ .Revision }}
+      - run:
+          name: Code review conventions
+          command: npm run danger
   readme:
     <<: *defaults
     steps:
@@ -168,6 +179,14 @@ workflows:
       - dist:
           requires:
             - install
+      - danger:
+          context: globalenv
+          requires:
+            - install
+          filters:
+            branches:
+              ignore:
+                - master
       - readme:
           requires:
             - test
