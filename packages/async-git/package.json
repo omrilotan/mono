@@ -1,6 +1,6 @@
 {
 	"name": "async-git",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"description": "👾 Get some git info",
 	"keywords": [
 		"git",
@@ -28,6 +28,6 @@
 		"test": "cd ../../; npm t async-git; cd -"
 	},
 	"dependencies": {
-		"async-execute": "^1.0.1"
+		"async-execute": "^1.1.0"
 	}
 }

@@ -1,9 +1,12 @@
+const { createRequireFromPath } = require('module');
+
 /**
- * Create modifiers to require cache based on paths (e.g. `__dirname`)
- * @param  {...String} paths
+ * Create modifiers to require cache based on path (e.g. `__dirname`)
+ * @param  {String}   path
  * @return {Function}
  */
-module.exports = function abuser(...paths) {
+module.exports = function abuser(path) {
+	const _require = createRequireFromPath(require.resolve(path));
 
 	/**
 	 * Clean up a module from cache
@@ -11,12 +14,11 @@ module.exports = function abuser(...paths) {
 	 * @return {undefined}
 	 */
 	function clean(route) {
-
-		// Resolve module location from given paths
-		const filename = require.resolve(route, {paths});
+		// Resolve module location from given path
+		const filename = _require.resolve(route);
 
 		// Escape if this module is not present in cache
-		if (!require.cache[filename]) {
+		if (!_require.cache[filename]) {
 			return;
 		}
 
@@ -24,7 +26,7 @@ module.exports = function abuser(...paths) {
 		shidu(filename);
 
 		// Remove module from memory as well
-		delete require.cache[filename];
+		delete _require.cache[filename];
 	}
 
 	/**
@@ -35,17 +37,17 @@ module.exports = function abuser(...paths) {
 	 */
 	function override(route, thing) {
 
-		// Resolve module location from given paths
-		const filename = require.resolve(route, {paths});
+		// Resolve module location from given path
+		const filename = _require.resolve(route);
 
 		// Load it into memory
-		require(filename);
+		_require(filename);
 
 		// Override exports with new value
-		require.cache[filename].exports = thing;
+		_require.cache[filename].exports = thing;
 
 		// Return exports value
-		return require(filename);
+		return _require(filename);
 	}
 
 	/**
@@ -55,20 +57,20 @@ module.exports = function abuser(...paths) {
 	 */
 	function reset(route) {
 
-		// Resolve module location from given paths
-		const filename = require.resolve(route, {paths});
+		// Resolve module location from given path
+		const filename = _require.resolve(route);
 
 		// Load it into memory
-		require(filename);
+		_require(filename);
 
 		// Remove all children from memory, recursively
 		shidu(filename);
 
 		// Remove module from memory as well
-		delete require.cache[filename];
+		delete _require.cache[filename];
 
 		// Return exports value
-		return require(filename);
+		return _require(filename);
 	}
 
 	return {clean, override, reset};

@@ -32,8 +32,8 @@
     "autoupdate": "./scripts/foreach.sh 'npm update'"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.1.2",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
     "@omrilotan/eslint-config": "^0.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
@@ -42,17 +42,17 @@
     "chai-string": "^1.5.0",
     "dateformat": "^3.0.3",
     "dont-look-up": "^1.0.0",
-    "eslint": "^5.8.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-log": "1.1.0",
-    "esm": "^3.2.18",
-    "find": "^0.2.9",
-    "mocha": "^6.0.2",
-    "mocha-junit-reporter": "^1.18.0",
-    "node-sass": "^4.10.0",
+    "esm": "^3.2.22",
+    "find": "^0.3.0",
+    "mocha": "^6.1.4",
+    "mocha-junit-reporter": "^1.22.0",
+    "node-sass": "^4.12.0",
     "npm-check": "^5.9.0",
-    "sinon": "^7.3.1",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "sinon": "^7.3.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   },
   "private": true
 }
