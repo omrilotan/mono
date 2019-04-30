@@ -1,4 +1,4 @@
-import scope from '.';
+import scope from './index.mjs';
 
 const {__dirname, __filename} = scope(import.meta.url);
 const here = [process.cwd(), 'packages', 'module-scope'].join('/');
