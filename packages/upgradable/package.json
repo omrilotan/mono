@@ -1,6 +1,6 @@
 {
 	"name": "upgradable",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Interactive upgrade machine for NPM CLI tools",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -20,7 +20,7 @@
 	"dependencies": {
 		"boxt": "^0.3.2",
 		"colors": "^1.3.2",
-		"npm": "^6.4.1",
+		"npm": "^6.9.0",
 		"prompt-confirm": "^2.0.4",
 		"semver": "^5.6.0"
 	}
