@@ -32,8 +32,8 @@
     "autoupdate": "./scripts/foreach.sh 'npm update'"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
     "@omrilotan/eslint-config": "^0.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
@@ -48,7 +48,7 @@
     "find": "^0.3.0",
     "mocha": "^6.1.4",
     "mocha-junit-reporter": "^1.22.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.12.0",
     "npm-check": "^5.9.0",
     "sinon": "^7.3.2",
     "webpack": "^4.30.0",

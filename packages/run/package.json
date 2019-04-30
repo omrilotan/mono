@@ -1,6 +1,6 @@
 {
   "name": "@lets/run",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "👟 run npm scripts interactively",
   "keywords": [
     "npm",
@@ -26,6 +26,6 @@
   "dependencies": {
     "async-execute": "^1.1.0",
     "colors": "^1.3.3",
-    "inquirer": "^6.2.2"
+    "inquirer": "^6.3.1"
   }
 }

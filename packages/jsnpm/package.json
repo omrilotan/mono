@@ -1,6 +1,6 @@
 {
 	"name": "jsnpm",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"description": "Use NPM in Javascript runtime",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -15,6 +15,6 @@
 	},
 	"dependencies": {
 		"index-require": "^1.0.0",
-		"npm": "^6.4.1"
+		"npm": "^6.9.0"
 	}
 }
