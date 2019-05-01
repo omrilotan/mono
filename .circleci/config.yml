@@ -1,10 +1,18 @@
 defaults: &defaults
   working_directory: ~/app
   docker:
-    - image: circleci/node:12.0-browsers
+    - image: circleci/node:12-browsers
 
 version: 2.1
 jobs:
+  node10:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm t
   install:
     <<: *defaults
     steps:
@@ -158,6 +166,8 @@ workflows:
     jobs:
       - install:
           context: globalenv
+      - node10:
+          context: globalenv
       - lint:
           requires:
             - install
@@ -178,6 +188,7 @@ workflows:
             - test
             - lint
             - dist
+            - node10
       - docs:
           context: globalenv
           requires:
