@@ -41,7 +41,7 @@
     "mime-types": "^2.1.24",
     "npm-check": "^5.9.0",
     "stdline": "^0.1.0",
-    "upgradable": "0.0.7"
+    "upgradable": "0.0.8"
   },
   "preferGlobal": true
 }
