@@ -1,7 +1,4 @@
-const original = require('ordinal');
-const ordinal = num => num < 0
-	? ['-', original(Math.abs(num))].join('')
-	: original(num);
+const ordinal = require('ordinal');
 
 let current = 0;
 

@@ -1,6 +1,6 @@
 {
   "name": "@lets/count",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "🔢 Consistent counter",
   "keywords": [
     "count",
@@ -24,6 +24,6 @@
     "test": "cd ../../; npm t packages/count; cd -"
   },
   "dependencies": {
-    "ordinal": "^1.0.2"
+    "ordinal": "^1.0.3"
   }
 }
