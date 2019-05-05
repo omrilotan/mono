@@ -19,12 +19,13 @@ const FILENAME = 'dangerfile.js';
 	}
 
 	try {
-		await execute('danger ci', { pipe: true });
+		await execute('./node_modules/.bin/danger ci', { pipe: true });
 	} catch (error) {
-		if (error.code === 'MODULE_NOT_FOUND') {
-			await execute('npm i danger --no-save');
-			await execute('danger ci', { pipe: true });
-		} else {
+		try {
+			console.info('Installing danger');
+			await execute('npm i danger --no-save', { pipe: true });
+			await execute('./node_modules/.bin/danger ci', { pipe: true });
+		} catch (error) {
 			console.error(error);
 			process.exit(1);
 		}
