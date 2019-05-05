@@ -1,4 +1,4 @@
-const { danger, fail, warn, message } = require('danger'); // eslint-disable-line no-unused-vars
+// const { danger, fail, warn, message } = require('danger'); // Globally imported
 
 const {github: {pr: {body, base}}} = danger;
 let errors = 0;
