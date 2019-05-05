@@ -18,5 +18,10 @@ const FILENAME = 'dangerfile.js';
 		writeFile(target, content.toString());
 	}
 
-	await execute('npx danger ci', { pipe: true });
+	try {
+		await execute('danger ci', { pipe: true });
+	} catch (error) {
+		await execute('npm i -g danger');
+		await execute('danger ci', { pipe: true });
+	}
 })();
