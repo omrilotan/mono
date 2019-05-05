@@ -1,0 +1,23 @@
+{
+  "name": "dangerfile",
+  "version": "0.0.0",
+  "description": "🚨 Centralised Dangerfile",
+  "keywords": [
+    "danger",
+    "dangerfile",
+    "pull-request",
+    "comment",
+    "🚨"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/dangerfile/",
+  "bin": "bin.js",
+  "dependencies": {
+    "async-execute": "^1.1.0"
+  }
+}

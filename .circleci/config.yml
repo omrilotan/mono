@@ -70,7 +70,7 @@ jobs:
           key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Code review conventions
-          command: npm run danger
+          command: npx dangerfile
   readme:
     <<: *defaults
     steps:
