@@ -48,6 +48,15 @@
 			"rules": {
 				"no-console": 0
 			}
+		},
+		{
+			"files": [ "dangerfile.js", "**/dangerfile.js" ],
+			"globals": {
+				"danger": true,
+				"fail": true,
+				"warn": true,
+				"message": true
+			}
 		}
 	]
 }

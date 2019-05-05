@@ -60,6 +60,13 @@ jobs:
       - run:
           name: Test
           command: npm run testes6
+  danger:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Code review conventions (Danger)
+          command: npx dangerfile
   readme:
     <<: *defaults
     steps:
@@ -178,6 +185,14 @@ workflows:
       - dist:
           requires:
             - install
+      - danger:
+          context: globalenv
+          requires:
+            - install
+          filters:
+            branches:
+              ignore:
+                - master
       - readme:
           requires:
             - test
