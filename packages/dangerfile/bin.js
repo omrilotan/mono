@@ -21,7 +21,12 @@ const FILENAME = 'dangerfile.js';
 	try {
 		await execute('danger ci', { pipe: true });
 	} catch (error) {
-		await execute('npm i -g danger');
-		await execute('danger ci', { pipe: true });
+		if (error.code === 'MODULE_NOT_FOUND') {
+			await execute('npm i danger --no-save');
+			await execute('danger ci', { pipe: true });
+		} else {
+			console.error(error);
+			process.exit(1);
+		}
 	}
 })();
