@@ -64,12 +64,8 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - restore_cache:
-          key: install-cache-{{ .Branch }}-{{ .Revision }}
       - run:
-          name: Code review conventions
+          name: Code review conventions (Danger)
           command: npx dangerfile
   readme:
     <<: *defaults
