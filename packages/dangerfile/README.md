@@ -2,8 +2,33 @@
 
 ## 🚨 Centralised [Dangerfile](https://danger.systems/js/)
 
-Create a dangerfile and run it. (uses npx, [danger](https://www.npmjs.com/package/danger) does not need to be installed)
+### CLI
+Create a dangerfile and run it. (Installs [danger](https://www.npmjs.com/package/danger) if missing)
 
 ```
 npx dangerfile
+```
+
+### Create your own CLI using this as a module
+Add this bin right next to your dangerfile (dangerfile.js)
+```js
+#!/usr/bin/env node
+
+const dangerfile = require('dangerfile');
+
+(async() => {
+	try {
+		const message = await dangerfile(__dirname);
+		console.info(message);
+	} catch (error) {
+		console.error(error);
+		process.exit(1);
+	}
+})();
+```
+
+The script prioritises local dangerfile above introduced one, unless 'force' flag was passed
+
+```js
+await dangerfile(__dirname, {force: true});
 ```
