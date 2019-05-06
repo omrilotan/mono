@@ -13,7 +13,24 @@
 		<a href="../">↩︎</a>
 		<h1 id="dangerfile">dangerfile <a href="https://www.npmjs.com/package/dangerfile"><img src="https://img.shields.io/npm/v/dangerfile.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/dangerfile"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
 <h2 id="🚨-centralised-dangerfile">🚨 Centralised <a href="https://danger.systems/js/">Dangerfile</a></h2>
-<p>Create a dangerfile and run it. (uses npx, <a href="https://www.npmjs.com/package/danger">danger</a> does not need to be installed)</p>
-<pre><code>npx dangerfile</code></pre>
+<h3 id="cli">CLI</h3>
+<p>Create a dangerfile and run it. (Installs <a href="https://www.npmjs.com/package/danger">danger</a> if missing)</p>
+<pre><code>npx dangerfile</code></pre><h3 id="create-your-own-cli-using-this-as-a-module">Create your own CLI using this as a module</h3>
+<p>Add this bin right next to your dangerfile (dangerfile.js)</p>
+<pre><code class="language-js">#!/usr/bin/env node
+
+const dangerfile = require(&#39;dangerfile&#39;);
+
+(async() =&gt; {
+    try {
+        const message = await dangerfile(__dirname);
+        console.info(message);
+    } catch (error) {
+        console.error(error);
+        process.exit(1);
+    }
+})();</code></pre>
+<p>The script prioritises local dangerfile above introduced one, unless &#39;force&#39; flag was passed</p>
+<pre><code class="language-js">await dangerfile(__dirname, {force: true});</code></pre>
 	</body>
 </html>
