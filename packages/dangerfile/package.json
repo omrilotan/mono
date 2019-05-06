@@ -1,10 +1,11 @@
 {
   "name": "dangerfile",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "🚨 Centralised Dangerfile",
   "keywords": [
     "danger",
     "dangerfile",
+    "ci",
     "pull-request",
     "comment",
     "🚨"
@@ -17,6 +18,7 @@
   },
   "homepage": "https://omrilotan.com/mono/dangerfile/",
   "bin": "bin.js",
+  "main": "index.js",
   "dependencies": {
     "@does/exist": "^1.0.0",
     "async-execute": "^1.1.0"
