@@ -1,0 +1,24 @@
+repository:
+  name: mono
+  description: 🚝 Mono repo for several npm packages
+  homepage: https://omrilotan.com/mono/
+  topics: mono, repo, for, several, npm, packages
+  private: false
+  has_issues: true
+  has_projects: true
+  has_wiki: false
+  has_downloads: true
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+
+labels:
+  - name: bug
+    color: CC0000
+    description: An issue with the system 🐛.
+  - name: feature
+    color: 336699
+    description: New functionality.
+  - name: first-timers-only
+    oldname: Help Wanted
