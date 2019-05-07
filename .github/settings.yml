@@ -7,18 +7,21 @@ repository:
   has_issues: true
   has_projects: true
   has_wiki: false
-  has_downloads: true
+  has_downloads: false
   default_branch: master
   allow_squash_merge: true
   allow_merge_commit: false
   allow_rebase_merge: false
-
 labels:
   - name: bug
-    color: CC0000
-    description: An issue with the system 🐛.
+    color: C0392B
+    description: An issue with the system
   - name: feature
-    color: 336699
-    description: New functionality.
-  - name: first-timers-only
-    oldname: Help Wanted
+    color: 2980B9
+    description: New functionality
+  - name: help-wanted
+    description: More attention required
+    color: E67E22
+  - name: good-first-issue
+    description: Good issue for new contributors
+    color: 27AE60
