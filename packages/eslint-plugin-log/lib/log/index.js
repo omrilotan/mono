@@ -1,26 +1,42 @@
+const { red, green, yellow } = require('chalk');
 const base = process.cwd();
 let count = 0;
 let timer;
+const scanned = [];
 
 /**
  * Log each filename to console before processing
- * @param  {String} text     File content
- * @param  {String} filename File name
- * @return {Array}           Array of strings to lint
+ * @param  {Array[]} messages Lint error messages
+ * @param  {String}  filename File name
+ * @return {Array}           First messages array
  */
-module.exports = function(text, filename) {
+module.exports = function([messages = []] = [], filename) {
 	clearTimeout(timer);
+
+	if (scanned.includes(filename)) {
+		return messages;
+	}
+	scanned.push(filename);
+
+	const [color, check] = messages.length ? [red, '✘'] : [green, '✔︎'];
 
 	/* eslint-disable no-console */
 	count === 0 && console.log('Linting:');
 	console.log(
 		[
-			++count,
+			`${++count}.`,
+			color(check),
 			filename.replace(base, ''),
-		].join('. ')
+		].join(' ')
 	);
-	timer = setTimeout(() => console.log(`\n${count} files linted.`), 40);
+
+	timer = setTimeout(
+		() => console.log(
+			yellow.bold(`\n${count} files linted.`)
+		),
+		40
+	);
 	/* eslint-enable no-console */
 
-	return [text];
+	return messages;
 };

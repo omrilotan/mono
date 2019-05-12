@@ -8,7 +8,7 @@ Automatic updates and misconfiguration can easily lead to false positive results
 
 By including this plugin in an ESLint configuration, a full list of the files being linted will be output, regardless of (and additionally to) actual lint errors.
 
-![](https://user-images.githubusercontent.com/516342/55211043-5f5bbe80-51fb-11e9-90af-89ebc75779aa.gif)
+![](https://user-images.githubusercontent.com/516342/57578980-24a5a100-749e-11e9-96a8-4aa88ef8f67d.gif)
 
 #### Install
 ```

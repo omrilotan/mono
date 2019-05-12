@@ -1,10 +1,10 @@
 const extensions = require('./lib/extensions');
 const skip = require('./lib/skip');
-const preprocess = skip(process.argv)
-	? require('./lib/preprocess')
+const preprocess = require('./lib/preprocess');
+const postprocess = skip(process.argv)
+	? require('./lib/postprocess')
 	: require('./lib/log')
 ;
-const postprocess = require('./lib/postprocess');
 
 const processor = {
 	preprocess,

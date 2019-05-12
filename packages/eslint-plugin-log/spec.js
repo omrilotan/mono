@@ -39,11 +39,11 @@ describe('eslint-plugin-log', () => {
 	it('Should expose log preprocess when "shouldSkip" is false', () => {
 		shouldSkip = false;
 		const {processors} = mock('.');
-		expect(processors.a.preprocess).to.equal(require('./lib/log'));
+		expect(processors.a.postprocess).to.equal(require('./lib/log'));
 	});
 	it('Should expose noop preprocess when "shouldSkip" is true', () => {
 		shouldSkip = true;
 		const {processors} = mock('.');
-		expect(processors.a.preprocess).to.equal(require('./lib/preprocess'));
+		expect(processors.a.postprocess).to.equal(require('./lib/postprocess'));
 	});
 });

@@ -7,3 +7,6 @@ Added to [plugin specifications](https://eslint.org/docs/developer-guide/working
 
 # 1.1.0 - 2019-04-19
 ## Add file extensions via [common-js-file-extensions](https://github.com/luislobo/common-js-file-extensions)
+
+# 1.2.0 - 2019-05-12
+## Add green/red check marks to each file log

@@ -1,7 +1,7 @@
-let preprocess;
+let postprocess;
 const logs = [];
 
-describe('eslint-plugin-log/preprocess', () => {
+describe('eslint-plugin-log/log', () => {
 	const {log} = console;
 	const {cwd} = process;
 	before(() => {
@@ -11,7 +11,7 @@ describe('eslint-plugin-log/preprocess', () => {
 			return log.apply(this, args);
 		};
 		process.cwd = () => '/workspace/project';
-		preprocess = require('.');
+		postprocess = require('.');
 	});
 	beforeEach(() => {
 		logs.length = 0;
@@ -23,25 +23,42 @@ describe('eslint-plugin-log/preprocess', () => {
 	});
 	{
 		it('Should start with "Linting" title and first numbered file', () => {
-			preprocess('message', 'file name');
+			postprocess([ [] ], 'file name');
 			const [one, two] = logs;
 			expect(one).to.equal('Linting:');
-			expect(two).to.equal('1. file name');
+			expect(two).to.include('1');
+			expect(two).to.include('file name');
+		});
+		it('Should skip subsequent counts of same file', () => {
+			postprocess([ [ 'message' ] ], 'file name');
+			expect(logs).to.be.empty;
 		});
 		it('Should continue to count numbered filename', () => {
-			preprocess('message', 'file name');
+			postprocess([ [] ], 'file name 2');
 			const [log] = logs;
-			expect(log).to.equal('2. file name');
+			expect(log).to.include('2');
+			expect(log).to.include('file name');
 		});
 		it('Should omit the execution path from filename', async() => {
-			preprocess('message', '/workspace/project/filename.js');
+			postprocess([ [] ], '/workspace/project/filename.js');
 			const [log] = logs;
-			expect(log).to.equal('3. /filename.js');
+			expect(log).to.include(' /filename.js');
+			expect(log).to.not.include('workspace/project');
+		});
+		it('Should mark with V when there are no messages', async() => {
+			postprocess([ [] ], '/workspace/project/filename2.js');
+			const [log] = logs;
+			expect(log).to.include('✔︎');
+		});
+		it('Should mark with X when there are any messages', async() => {
+			postprocess([ [ 'something' ] ], '/workspace/project/filename3.js');
+			const [log] = logs;
+			expect(log).to.include('✘');
 		});
 		it('Should finish with total files linted', async() => {
 			await wait(80);
 			const [log] = logs;
-			expect(log).to.include('3 files linted.');
+			expect(log).to.include('5 files linted.');
 		});
 	}
 });
