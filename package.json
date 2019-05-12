@@ -17,7 +17,7 @@
     "new": "./scripts/new.js $@",
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
-    "testes6": "node --experimental-modules ./tests.mjs",
+    "testes6": "./packages/finjan/bin.sh ./packages/module-scope/spec.mjs --require finjan.mjs",
     "lint": "eslint '*.js' 'dists/*.js' '**/*.js' '**/*.mjs' -c .eslintrc",
     "dist": "./packages/run-all-the-things/bin/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
