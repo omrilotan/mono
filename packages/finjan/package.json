@@ -1,6 +1,6 @@
 {
   "name": "finjan",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2a",
   "description": "☕️ Just test harmony modules",
   "keywords": [
     "test",
@@ -19,9 +19,10 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "homepage": "https://omrilotan.com/mono/finjan/",
-  "bin": "bin.sh",
-  "type": "module",
+  "bin": "bin.js",
+  "type": "commonjs",
   "dependencies": {
+    "async-execute": "^1.1.0",
     "chalk": "^2.4.2",
     "errobj": "^2.0.0",
     "yargs-parser": "^13.1.0"
