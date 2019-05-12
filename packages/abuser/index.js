@@ -1,4 +1,5 @@
-const { createRequireFromPath } = require('module');
+const { createRequireFromPath, createRequire } = require('module');
+const create = createRequire || createRequireFromPath; // createRequire -> node >=12.2, createRequireFromPath -> node >=10.12
 
 /**
  * Create modifiers to require cache based on path (e.g. `__dirname`)
@@ -6,7 +7,7 @@ const { createRequireFromPath } = require('module');
  * @return {Function}
  */
 module.exports = function abuser(path) {
-	const _require = createRequireFromPath(require.resolve(path));
+	const _require = create(require.resolve(path));
 
 	/**
 	 * Clean up a module from cache

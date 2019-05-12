@@ -1,6 +1,6 @@
 {
   "name": "abuser",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "🤕 Create modifiers to require cache based on path (e.g. `__dirname`)",
   "keywords": [
     "require",
@@ -19,6 +19,9 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "homepage": "https://omrilotan.com/mono/abuser/",
+  "engines": {
+    "node": ">=10.12.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "cd ../../; npm t packages/abuser; cd -"

@@ -2,6 +2,8 @@
 
 ## 🤕 Create modifiers to require cache based on file path (e.g. `__filename`)
 
+> Supported from node 10.12.0
+
 The `abuser` function accepts routes from which to resolve the modules as arguments
 ```js
 const abuser = require('abuser');
