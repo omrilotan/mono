@@ -1,7 +1,7 @@
-/* eslint-disable no-console */
 import parser from 'yargs-parser';
 import chalk from 'chalk';
 import path from 'path';
+import errobj from 'errobj';
 
 const { join } = path;
 const [, , ...rest] = process.argv;
@@ -25,7 +25,7 @@ const get = files => {
 	);
 };
 
-const { green, red, bold } = chalk;
+const { green, red, bold, yellow } = chalk;
 const collection = [];
 const errors = [];
 
@@ -39,8 +39,9 @@ async function run(name, fn) {
 		console.log(green(` ✔︎ ${name}`));
 	} catch (error) {
 		console.log(red(` ✘ ${name}`));
-		console.log(error.message);
-		errors.push(error);
+		errors.push(
+			errobj(error, {origin: name})
+		);
 	}
 }
 
@@ -58,6 +59,18 @@ async function run(name, fn) {
 	const color = errors.length ? red : green;
 	console.log(color(`Finished with ${errors.length} errors`));
 
+	if (errors.length) {
+		console.log(
+			...errors.map(
+				({name, origin, message, fileName, lineNumber, columnNumber}) => `
+${red.bold(name)}
+  ${bold('in')}: ${red.bold(origin)}
+  ${bold('at')}: ${yellow([fileName, lineNumber, columnNumber].join(':'))}
+  ${message}
+`
+			)
+		);
+	}
+
 	process.exit(errors.length);
 })();
-/* eslint-enable no-console */

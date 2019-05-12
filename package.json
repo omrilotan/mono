@@ -44,7 +44,6 @@
     "dont-look-up": "^1.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-log": "1.1.0",
-    "esm": "^3.2.22",
     "find": "^0.3.0",
     "mocha": "^6.1.4",
     "mocha-junit-reporter": "^1.22.0",
