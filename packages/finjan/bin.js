@@ -11,8 +11,8 @@ execute([
 	'--es-module-specifier-resolution=node',
 	join(__dirname, 'bin.mjs'),
 	...rest,
-	'--color'
+	'--color',
 ].join(' '), {
 	pipe: true,
-	exit: true
+	exit: true,
 });
