@@ -1,6 +1,6 @@
 {
   "name": "sample-size",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🎲 pass/fail by sample size",
   "keywords": [
     "sample",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://omrilotan.com/mono/sample-size/",
   "main": "index.js",
+  "browser": "dist/index.js",
   "scripts": {
     "dist": "mkdir -p dist; babel index.js --out-file dist/index.js --config-file ../../.babelrc.js",
     "test": "cd ../../; npm t packages/sample-size; cd -"
