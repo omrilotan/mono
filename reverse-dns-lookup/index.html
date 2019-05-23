@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>reverse-dns-lookup | an npm package by omrilotan</title>
+		<meta name="description" content="🕵 Verify an IP is related to a certain domain">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="../styles.css">
+		<link rel="prerender" href="../">
+	</head>
+	<body>
+		<a href="../">↩︎</a>
+		<h1 id="reverse-dns-lookup">reverse-dns-lookup <a href="https://www.npmjs.com/package/reverse-dns-lookup"><img src="https://img.shields.io/npm/v/reverse-dns-lookup.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/reverse-dns-lookup"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
+<h2 id="🕵-verify-an-ip-is-related-to-a-certain-domain">🕵 Verify an IP is related to a certain domain</h2>
+<p>You can verify if a web crawler accessing your server really is who they claim they are. This is useful if you&#39;re concerned that spammers or other troublemakers are accessing your site while claiming to be known crawlers. Crawlers do not post public lists of IP addresses to whitelist. This is because these IP address ranges can change, causing problems for any systems who have hard-coded them, so you must run a DNS lookup as described next.</p>
+<pre><code>
+
+
+
+                                                                   🕷
+</code></pre><p>Example flow to verify Googlebot as the caller</p>
+<pre><code class="language-js">const reverseDNSLookup = require(&#39;reverse-dns-lookup&#39;);
+
+let googlebot = /googlebot/i.test(request.headers[&#39;user-agent&#39;]);
+
+if (googlebot) { // It says it&#39;s Googlebot
+    const ip = request.headers[&#39;x-forwarded-for&#39;];
+    googlebot = await reverseDNSLookup(ip, &#39;google.com&#39;, &#39;googlebot.com&#39;); // Okay, it&#39;s Googlebot
+}</code></pre>
+<h3 id="what-just-happened">What just happened?</h3>
+<ol>
+<li>Run a reverse DNS lookup on the accessing IP address.</li>
+<li>Verify that the domain name is in the supplied domain names.</li>
+<li>Run a forward DNS lookup on the retrieved domain name (from step 1).</li>
+<li>Verify that it is the same as the original accessing IP address from your logs.</li>
+</ol>
+<p>In case you want explicit details, use <code>.source</code> interface</p>
+<pre><code class="language-js">const ip = request.headers[&#39;x-forwarded-for&#39;];
+try {
+    await reverseDNSLookup.source(ip, &#39;google.com&#39;, &#39;googlebot.com&#39;)
+    googlebot = true;
+} catch (error) {
+    if (error.name === &#39;ReverseDNSLookupError&#39;) {
+        logger.info(`Googlebot imposter: ${error.message}`);
+        googlebot = false;
+    } else {
+        throw error;
+    }
+}</code></pre>
+<h3 id="cli">CLI</h3>
+<pre><code>reverse-dns-lookup 66.249.66.1 google.com googlebot.com</code></pre><table>
+<thead>
+<tr>
+<th>Checks out</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>66.249.66.1 checks up with google.com, googlebot.com</code></td>
+</tr>
+<tr>
+<td>Exit code 0</td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Does not check out okay</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ReverseDNSLookupError: 1.1.1.1 does not match domain google.com, googlebot.com. (resolves to one.one.one.one.)</code></td>
+</tr>
+<tr>
+<td>Exit code 1</td>
+</tr>
+</tbody></table>
+<p>                                        🕷</p>
+	</body>
+</html>
