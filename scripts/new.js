@@ -17,11 +17,11 @@ const {argv} = process;
 argv.shift();
 argv.shift();
 
-const [arg] = argv;
+const [...args] = argv;
 
 (async() => {
 	const packages = await readdir(resolve(__dirname, '../', 'packages'));
-	const [name, org] = arg.split('/').reverse();
+	const [name, org] = args.join('-').split('/').reverse();
 	const fullName = org ? [org, name].join('/') : name;
 
 	if (packages.includes(name)) {
