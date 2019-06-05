@@ -18,7 +18,10 @@ First: Author name (optional, default is octocat)
 Rest: Commit message (optional, default is a random message from [whatthecommit.com](https://whatthecommit.com/))
 
 ### Options
-`--automate`: Prevent prompts (use defaults when arguments are missing)
+`--help` `-h`: Tell me about committee
+`--automate` `-a`: Prevent prompts (use defaults when arguments are missing)
+
+Example
 ```
 committee --automate
 ```

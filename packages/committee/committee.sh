@@ -1,7 +1,23 @@
 args=$@
-if [[ $args == *"--automate"* ]]; then
+if [[ $args == *"--automate"* || $args == *"-a"* ]]; then
 	automate=true
 	args=${args/--automate}
+	args=${args/-a}
+fi
+
+if [[ $args == *"--help"* || $args == *"-h"* ]]; then
+	echo -e "committee: Commit as someone else
+
+Arguments:
+First: Author name (optional, default is octocat)
+Rest: Commit message (optional, default is a random message from whatthecommit.com
+
+Options:
+--help [-h]: Tell me about committee
+--automate [-a]: Prevent prompts (use defaults when arguments are missing)
+"
+
+	exit
 fi
 
 args=( $args )
