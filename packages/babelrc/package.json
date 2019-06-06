@@ -1,6 +1,6 @@
 {
   "name": "babelrc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🗼 My own babelrc file (=> ES5)",
   "keywords": [
     "babel",
@@ -26,6 +26,6 @@
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "@babel/plugin-transform-parameters": "^7.4.4",
     "@babel/plugin-transform-spread": "^7.2.2",
-    "@babel/preset-env": "^7.4.4"
+    "@babel/preset-env": "^7.4.5"
   }
 }

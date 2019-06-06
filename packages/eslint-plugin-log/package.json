@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-log",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "👕 ESLint plugin: log the paths of all files being linted",
   "keywords": [
     "eslint",
@@ -28,6 +28,6 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "common-js-file-extensions": "^1.0.3",
-    "yargs-parser": "^13.0.0"
+    "yargs-parser": "^13.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "a1vy",
-  "version": "0.0.72",
+  "version": "0.0.73",
   "description": "🤖 I help development by doing things",
   "keywords": [
     "bot",
@@ -36,7 +36,7 @@
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "doamrn": "^1.0.3",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "inquirer": "^6.3.1",
     "mime-types": "^2.1.24",
     "npm-check": "^5.9.0",
