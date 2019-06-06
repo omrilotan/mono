@@ -1,0 +1,22 @@
+{
+  "name": "dirdo",
+  "version": "0.1.0",
+  "description": "🗂 Execute command in all nested directories",
+  "keywords": [
+    "foreach",
+    "dir",
+    "exec",
+    "cli",
+    "directory",
+    "do",
+    "🗂"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/dirdo/",
+  "bin": "./bin.sh"
+}

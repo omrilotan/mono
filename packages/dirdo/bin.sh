@@ -1,8 +1,10 @@
 #!/bin/bash
 
-ACTION=$1
+DIRECTORY=$1
+shift
+ACTION=$@
 
-function search {
+function iterate {
 	for FILE in `ls -l ${1}`
 	do
 		if test -d "${1}/${FILE}"; then
@@ -12,12 +14,10 @@ function search {
 }
 
 function execute {
-	echo -e "\033[1mExecuting ${1}\033[0m"
+	echo -e "\033[1mExecuting in ${1}\033[0m"
 	cd $1
 	eval $ACTION
 	cd -
-	echo -e "\n"
 }
 
-
-search "packages"
+iterate $DIRECTORY

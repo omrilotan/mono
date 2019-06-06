@@ -21,15 +21,15 @@
     "lint": "eslint '*.js' 'dists/*.js' '**/*.js' '**/*.mjs' -c .eslintrc",
     "dist": "./packages/run-all-the-things/bin/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
-    "babel": "./scripts/foreach.sh '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",
+    "babel": "./packages/dirdo/bin.sh packages '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",
     "postdist": "mocha dists/test.js",
     "publish-packages": "./scripts/foreach.js \"published\"",
     "predoc": "./scripts/doc.sh",
     "doc": "node ./scripts/homepage.js",
     "postdoc": "cat ./src/styles.scss | node-sass --output-style compressed > ./docs/styles.css",
     "readme": "node ./scripts/readme.js",
-    "update": "./scripts/foreach.sh '../../node_modules/.bin/npm-check -u'",
-    "autoupdate": "./scripts/foreach.sh 'npm update'"
+    "update": "./packages/dirdo/bin.sh packages '../../node_modules/.bin/npm-check -u'",
+    "autoupdate": "./packages/dirdo/bin.sh packages 'npm update'"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
