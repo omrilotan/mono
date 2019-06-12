@@ -1,6 +1,6 @@
 {
   "name": "chunkalyse",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "🍰 Summarise webpack stats output file",
   "keywords": [
     "webpack",
@@ -41,6 +41,6 @@
     "byte-size": "^5.0.1",
     "index-require": "^1.0.0",
     "jsoncopy": "^1.0.0",
-    "yargs-parser": "^13.1.0"
+    "yargs-parser": "^13.1.1"
   }
 }

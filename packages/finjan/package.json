@@ -1,6 +1,6 @@
 {
   "name": "finjan",
-  "version": "0.0.0-alpha.2a",
+  "version": "0.0.0-alpha.3a",
   "description": "☕️ Just test harmony modules",
   "keywords": [
     "test",
@@ -25,6 +25,6 @@
     "async-execute": "^1.1.0",
     "chalk": "^2.4.2",
     "errobj": "^2.0.0",
-    "yargs-parser": "^13.1.0"
+    "yargs-parser": "^13.1.1"
   }
 }

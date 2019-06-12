@@ -1,6 +1,6 @@
 {
   "name": "a1vy",
-  "version": "0.0.73",
+  "version": "0.0.74",
   "description": "🤖 I help development by doing things",
   "keywords": [
     "bot",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@does/sortby": "^1.1.0",
     "@lets/wait": "^1.0.0",
-    "ansi-escapes": "^4.0.0",
+    "ansi-escapes": "^4.2.0",
     "async-execute": "^1.1.0",
     "boxt": "^0.3.2",
     "colors": "^1.3.3",
