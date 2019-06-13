@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>array-select | an npm package by omrilotan</title>
+		<meta name="description" content="🚬 Extract items from one array into two or more arrays by results of a provided function">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="../styles.css">
+		<link rel="prerender" href="../">
+	</head>
+	<body>
+		<a href="../">↩︎</a>
+		<h1 id="array-select">array-select <a href="https://www.npmjs.com/package/array-select"><img src="https://img.shields.io/npm/v/array-select.svg" alt=""></a> <a href="https://github.com/omrilotan/mono/tree/master/packages/array-select"><img src="https://img.shields.io/badge/source--000000.svg?logo=github&style=social" alt=""></a></h1>
+<h2 id="🚬-extract-items-from-one-array-into-two-or-more-arrays-by-results-of-a-provided-function">🚬 Extract items from one array into two or more arrays by results of a provided function</h2>
+<pre><code class="language-js">const arraySelect = require(&#39;array-select&#39;);
+
+const [odd, even] = arraySelect(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    i =&gt; i % 2
+);</code></pre>
+<h3 id="arguments">Arguments</h3>
+<pre><code>const results = arraySelect(Array, Function[, ...Functions]);</code></pre><p>Functions accept three parameters (just like all array iterator functions):</p>
+<ul>
+<li><code>element {Any}</code>: The current element being processed in the array</li>
+<li><code>index   {Number}</code> : The index of the current element being processed in the array.</li>
+<li><code>array   {Array}</code> The array being processed</li>
+</ul>
+<p>The function should return a truthy or falsy value (coerced into a boolean for testing purposes)</p>
+<p>Passing one function will create two arrays</p>
+<pre><code class="language-js">const [odd, even] = arraySelect(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    i =&gt; i % 2
+);
+
+odd  // [1, 3, 5, 7, 9]
+even // [2, 4, 6, 8, 10]</code></pre>
+<p>Passing more than one function will result in same number of arrays. Elements can be included in more than one result array</p>
+<pre><code class="language-js">const [adult, male] = arraySelect(
+    [
+        {gender: &#39;male&#39;, age: 8},
+        {gender: &#39;male&#39;, age: 64},
+        {gender: &#39;female&#39;, age: 14},
+        {gender: &#39;male&#39;, age: 21},
+        {gender: &#39;female&#39;, age: 32},
+    ],
+    ({age}) =&gt; age &gt; 18,
+    ({gender}) =&gt; gender === &#39;male&#39;,
+);
+
+adult // [{gender: &#39;male&#39;, age: 64}, {gender: &#39;male&#39;, age: 21}, {gender: &#39;female&#39;, age: 32}]
+male  // [{gender: &#39;male&#39;, age: 8}, {gender: &#39;male&#39;, age: 64}, {gender: &#39;male&#39;, age: 21}]</code></pre>
+<p>A callback function that uses more arguments</p>
+<pre><code class="language-js">const [original, duplicates] = split(
+    [1, 1, 2, 3, 4, 1, 3, 8],
+    (item, index, array) =&gt; index === array.indexOf(item)
+);
+
+original   // [1, 2, 3, 4, 8]
+duplicates // [1, 1, 3]</code></pre>
+<h2 id="transpiled-version">Transpiled version</h2>
+<p>Environments which exclude node_modules from the transpiling pipeline should include the &quot;browser&quot; entry instead of &quot;main&quot;. This exposes an ES5 commonjs module.</p>
+<p>Also available for explicit import:</p>
+<pre><code class="language-js">const arraySelect = require(&#39;array-select/dist&#39;);</code></pre>
+	</body>
+</html>
