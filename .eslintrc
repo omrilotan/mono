@@ -14,6 +14,7 @@
 				"chai": true,
 				"expect": true,
 				"assert": true,
+				"abuser": true,
 				"sinon": true,
 				"spy": true,
 				"stub": true,

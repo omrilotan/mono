@@ -1,0 +1,24 @@
+{
+  "name": "array-select",
+  "version": "0.0.0",
+  "description": "🚬 Extract items from one array into two or more arrays by results of a provided function",
+  "keywords": [
+    "array",
+    "select",
+    "extract",
+    "split",
+    "🚬"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/array-select/",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/array-select; cd -"
+  }
+}
