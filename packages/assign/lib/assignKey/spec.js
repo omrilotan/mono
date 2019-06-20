@@ -11,4 +11,11 @@ describe('assign/assignKey', () => {
 		assignKey(target, {a: {z: 3}}, 'a');
 		expect(target).to.deep.equal({a: {x: 1, y: 2, z: 3}});
 	});
+	it('Should not affect construct prototype', () => {
+		const target = {a: {x: 1, y: 2}};
+		const original = target.__proto__;
+		const attackObject = {prototype: {method: () => null}};
+		assignKey(target, {__proto__: attackObject}, '__proto__');
+		expect(target.__proto__).to.equal(original);
+	});
 });
