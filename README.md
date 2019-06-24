@@ -15,7 +15,7 @@ Mono repo holding multiple packages
 | **`babelrc`** | [🗼 My own babelrc file (=> ES5)](./packages/babelrc#readme) | [![0.0.2](https://img.shields.io/npm/v/babelrc.svg)](https://www.npmjs.com/package/babelrc)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
 | **`bound-call`** | [👔 Create a bound call where you can pass 'this' context as an argument](./packages/bound-call#readme) | [![0.0.0](https://img.shields.io/npm/v/bound-call.svg)](https://www.npmjs.com/package/bound-call)
-| **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.2](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
+| **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.3](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.5.3](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
 | **`committee`** | [🕶 Commit as someone else](./packages/committee#readme) | [![0.0.6](https://img.shields.io/npm/v/committee.svg)](https://www.npmjs.com/package/committee)
 | **`@lets/count`** | [🔢 Consistent counter](./packages/count#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/count.svg)](https://www.npmjs.com/package/@lets/count)
