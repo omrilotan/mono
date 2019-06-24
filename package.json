@@ -18,7 +18,7 @@
     "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
     "testes6": "finjan ./packages/module-scope/spec.mjs --require finjan.mjs",
-    "lint": "eslint '*.js' 'dists/*.js' '**/*.js' '**/*.mjs' -c .eslintrc",
+    "lint": "eslint '*.js' 'dists/*.js' '**/*.js' '**/*.mjs' -c .eslintrc.json",
     "dist": "./packages/run-all-the-things/bin/index.js webpack babel",
     "webpack": "webpack --config webpack.config.js",
     "babel": "./packages/dirdo/bin.sh packages '[ \"null\" == \"$(cat package.json | jq '.scripts.dist')\" ] && echo \"no dist script\" || npm run dist'",

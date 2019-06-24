@@ -1,0 +1,68 @@
+{
+  "extends": "@omrilotan",
+  "parser": "babel-eslint",
+  "plugins": [
+    "log"
+  ],
+  "rules": {
+    "no-useless-catch": 0,
+    "no-prototype-builtins": 0,
+    "require-atomic-updates": 0
+  },
+  "overrides": [
+    {
+      "files": [ "**/spec.js", "**/spec.mjs", "**/test.js" ],
+      "env": {
+        "mocha": true
+      },
+      "globals": {
+        "chai": true,
+        "expect": true,
+        "assert": true,
+        "abuser": true,
+        "sinon": true,
+        "spy": true,
+        "stub": true,
+        "fake": true,
+        "wait": true,
+        "sleep": true
+      },
+      "rules": {
+        "no-console": 0
+      }
+    },
+    {
+      "files": [ "**/selenium-chrome-clear-cache/*" ],
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "files": [ "scripts/**", "**/bin/**", "**/bin.*", "packages/a1vy/**/*" ],
+      "rules": {
+        "no-console": 0
+      }
+    },
+    {
+      "files": [ "**/example.js" ],
+      "rules": {
+        "no-console": 0
+      }
+    },
+    {
+      "files": [ "tests.mjs" ],
+      "rules": {
+        "no-console": 0
+      }
+    },
+    {
+      "files": [ "dangerfile.js", "**/dangerfile.js" ],
+      "globals": {
+        "danger": true,
+        "fail": true,
+        "warn": true,
+        "message": true
+      }
+    }
+  ]
+}
