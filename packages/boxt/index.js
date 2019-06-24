@@ -76,10 +76,10 @@ module.exports = function boxed(message, {
 	title,
 } = {}) {
 
-	if (!colors.hasOwnProperty(color)) {
+	if (!Object.prototype.hasOwnProperty.call(colors, color)) {
 		throw new Error(`colors does not support color "${color}"`);
 	}
-	if (!themes.hasOwnProperty(theme)) {
+	if (!Object.prototype.hasOwnProperty.call(themes, theme)) {
 		throw new Error(`themes do not include a "${theme}" theme`);
 	}
 
