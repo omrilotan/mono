@@ -82,7 +82,7 @@ module.exports = [
 	{
 		key: 'fix',
 		desc: 'add, ammend the current commit and push some fixes',
-		value: `!f() { git add . && git commit --amend --no-edit && git please && git push origin ${current_branch} --force-with-lease; }; f`,
+		value: `!f() { git add . && git commit --amend --no-edit && git push origin ${current_branch} --force-with-lease; }; f`,
 	},
 	{
 		key: 'far',
