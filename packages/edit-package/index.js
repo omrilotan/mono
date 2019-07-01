@@ -13,7 +13,7 @@ const {
 	packageData,
 } = require('./utils');
 
-const merge = require('lodash.merge');
+const assign = require('@recursive/assign');
 
 let _original;
 let _suffix;
@@ -49,7 +49,7 @@ module.exports.read = async () => await packageData();
 module.exports.write = async data => {
 	await original(); // make sure original is stored
 
-	const json = merge(
+	const json = assign(
 		{},
 		await module.exports.read(),
 		data

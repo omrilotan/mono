@@ -28,6 +28,7 @@
 		"test": "cd ../../; npm t async-git; cd -"
 	},
 	"dependencies": {
+		"@does/exist": "^1.0.0",
 		"async-execute": "^1.1.0"
 	}
 }

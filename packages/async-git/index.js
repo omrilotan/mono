@@ -2,8 +2,9 @@ const show = require('./lib/show');
 const name = require('./lib/name');
 const branch = require('./lib/branch');
 const date = require('./lib/date');
-const tag = require('./lib/tag');
+const modified = require('./lib/modified');
 const reset = require('./lib/reset');
+const tag = require('./lib/tag');
 
 const formats = [
 	['author'  , 'an'],
@@ -28,8 +29,9 @@ const getters = Object.assign(
 );
 
 const functions = {
-	tag,
+	modified,
 	reset,
+	tag,
 };
 
 /**

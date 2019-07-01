@@ -1,6 +1,6 @@
 {
 	"name": "edit-package",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Read, write and reset package.json",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -14,7 +14,7 @@
 		"test": "cd ../../; npm t edit-package; cd -"
 	},
 	"dependencies": {
-		"lodash.merge": "^4.6.1"
+		"@recursive/assign": "^1.2.4"
 	},
 	"devDependencies": {
 		"fs-extra": "^7.0.0"

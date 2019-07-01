@@ -32,3 +32,4 @@ const git = require('async-git');
 | - | - | - | -
 | tag | {String} version | Create a tag using the last commit message | `await git.tag('1.2.3')`
 | reset | {String} State ID | Reset current HEAD to the specified state | `await git.reset('f5db755')`
+| modified | {String} [Path to file] | Get the last modified date of a file |
