@@ -17,11 +17,15 @@
   "homepage": "https://omrilotan.com/mono/npxbin/",
   "bin": "bin.js",
   "scripts": {
-    "test": "cd ../../; npm t packages/npxbin; cd -"
+    "test": "cd ../../; npm t packages/npxbin; cd -",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@does/exist": "^1.0.0",
     "async-git": "^1.5.1",
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^6.3.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
