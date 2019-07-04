@@ -24,7 +24,7 @@
     "start": "./bin.js",
     "chmod": "find ./programs -type f -exec chmod +rx {} \\;",
     "prepare": "npm run chmod",
-    "prepublishOnly": "npm run chmod",
+    "prepublishOnly": "npm run chmod"
   },
   "dependencies": {
     "@does/sortby": "^1.1.0",
