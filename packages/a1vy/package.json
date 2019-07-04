@@ -24,7 +24,9 @@
     "start": "./bin.js",
     "chmod": "find ./programs -type f -exec chmod +rx {} \\;",
     "prepare": "npm run chmod",
-    "prepublishOnly": "npm run chmod"
+    "prepublishOnly": "npm run chmod",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@does/sortby": "^1.1.0",
@@ -41,7 +43,9 @@
     "mime-types": "^2.1.24",
     "npm-check": "^5.9.0",
     "stdline": "^0.1.0",
-    "upgradable": "0.0.9"
+    "upgradable": "0.0.9",
+    "snyk": "^1.189.0"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "snyk": true
 }
