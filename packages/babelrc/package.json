@@ -17,7 +17,9 @@
   "homepage": "https://omrilotan.com/mono/babelrc/",
   "main": "index.js",
   "scripts": {
-    "test": "cd ../../; npm t packages/babelrc; cd -"
+    "test": "cd ../../; npm t packages/babelrc; cd -",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -26,6 +28,8 @@
     "@babel/plugin-syntax-import-meta": "^7.2.0",
     "@babel/plugin-transform-parameters": "^7.4.4",
     "@babel/plugin-transform-spread": "^7.2.2",
-    "@babel/preset-env": "^7.4.5"
-  }
+    "@babel/preset-env": "^7.4.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
