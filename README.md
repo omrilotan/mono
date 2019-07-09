@@ -39,7 +39,7 @@ Mono repo holding multiple packages
 | **`key-value-join`** | [⛓ Join object entries to create a string representation](./packages/key-value-join#readme) | [![0.0.0](https://img.shields.io/npm/v/key-value-join.svg)](https://www.npmjs.com/package/key-value-join)
 | **`levelheaded`** | [⚖️ Generate object containing functions deemed operational by level](./packages/levelheaded#readme) | [![1.2.0](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded)
 | **`markdownise`** | [Represent data structures in markdown](./packages/markdownise#readme) | [![0.0.0](https://img.shields.io/npm/v/markdownise.svg)](https://www.npmjs.com/package/markdownise)
-| **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.3](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
+| **`markt`** | [Generate pages from markdown](./packages/markt#readme) | [![1.2.4](https://img.shields.io/npm/v/markt.svg)](https://www.npmjs.com/package/markt)
 | **`module-scope`** | [📍 '__dirname' and '__filename' in harmony modules](./packages/module-scope#readme) | [![1.0.0](https://img.shields.io/npm/v/module-scope.svg)](https://www.npmjs.com/package/module-scope)
 | **`notate`** | [Resolve dot notation strings](./packages/notate#readme) | [![1.1.2](https://img.shields.io/npm/v/notate.svg)](https://www.npmjs.com/package/notate)
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![1.0.1](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)

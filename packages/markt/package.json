@@ -1,6 +1,6 @@
 {
 	"name": "markt",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"description": "Generate pages from markdown",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"fs-extra": "^7.0.0",
-		"marked": "^0.6.2",
+		"marked": "^0.7.0",
 		"paraphrase": "^1.7.0"
 	},
 	"preferGlobal": true
