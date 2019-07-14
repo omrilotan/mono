@@ -158,9 +158,6 @@ jobs:
           name: Update all dependencies
           command: npm update && npm run autoupdate
       - run:
-          name: Stop if nothing has changed
-          command: git diff --exit-code && circleci step halt
-      - run:
           name: Create a new branch
           command: git checkout -b maintenance/$CIRCLE_BUILD_NUM
       - run:
