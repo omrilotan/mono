@@ -1,0 +1,4 @@
+---
+engines:
+exclude_paths:
+  - '**/*.md'
