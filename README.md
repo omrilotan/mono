@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.74](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.75](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`abuser`** | [🤕 Create modifiers to require cache based on path (e.g. )](./packages/abuser#readme) | [![2.0.1](https://img.shields.io/npm/v/abuser.svg)](https://www.npmjs.com/package/abuser)
 | **`array-select`** | [🚬 Extract items from one array into two or more arrays by results of a provided function](./packages/array-select#readme) | [![0.0.0](https://img.shields.io/npm/v/array-select.svg)](https://www.npmjs.com/package/array-select)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.4](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
