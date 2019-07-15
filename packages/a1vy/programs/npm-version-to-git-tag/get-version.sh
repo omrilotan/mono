@@ -1,1 +1,1 @@
-echo $(cat package.json | jq .version)
+echo $(jq .version package.json)
