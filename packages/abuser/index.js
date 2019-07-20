@@ -82,12 +82,19 @@ module.exports = function abuser(path) {
  * @param  {String} parent
  * @return {undefined}
  */
-function shidu(filename) {
+function shidu(filename, list = []) {
 	const parent = require.cache[filename];
 
 	if (!parent) {
 		return;
 	}
+
+	// We'll delete everything later
+	if (list.includes(parent)) {
+		return;
+	}
+
+	list.push(parent);
 
 	// If there are children - iterate over them
 	parent.children
@@ -101,7 +108,7 @@ function shidu(filename) {
 				require(child);
 
 				// Remove all of its children from memory, recursively
-				shidu(child);
+				shidu(child, list);
 
 				// Remove it from memory
 				delete require.cache[child];

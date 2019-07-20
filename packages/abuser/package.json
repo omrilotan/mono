@@ -1,6 +1,6 @@
 {
   "name": "abuser",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "🤕 Create modifiers to require cache based on path (e.g. `__dirname`)",
   "keywords": [
     "require",
