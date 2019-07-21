@@ -78,5 +78,9 @@ Object.entries({__dirname, __filename}).forEach(([name, source]) => {
 			expect(subject(), count()).to.equal(1);
 			expect(subject(), count()).to.equal(2);
 		});
+		it('Should avoid RangeError caused by circular requires', () => {
+			require('./fixtures/circular.2');
+			expect(() => clean('./fixtures/circular.1')).not.to.throw();
+		});
 	});
 });
