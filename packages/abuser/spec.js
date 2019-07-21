@@ -1,22 +1,22 @@
-const {join} = require('path');
-const {readdir} = require('fs').promises;
-const count = require('@lets/count');
+const { join } = require("path");
+const { readdir } = require("fs").promises;
+const count = require("@lets/count");
 
-Object.entries({__dirname, __filename}).forEach(([name, source]) => {
-	delete require.cache[require.resolve('.')];
-	const {clean, override, reset} = require('.')(source);
+Object.entries({ __dirname, __filename }).forEach(([name, source]) => {
+	delete require.cache[require.resolve(".")];
+	const { clean, override, reset } = require(".")(source);
 
 	let subject;
 
 	describe(`abuser (${name}: ${source})`, () => {
-		beforeEach(async() => {
-			const ls = await readdir(join(__dirname, './fixtures'));
+		beforeEach(async () => {
+			const ls = await readdir(join(__dirname, "./fixtures"));
 			ls.forEach(filename => {
-				delete require.cache[join(__dirname, './fixtures', filename)];
+				delete require.cache[join(__dirname, "./fixtures", filename)];
 			});
 		});
-		it('Should use module from cache (baseline)', () => {
-			const path = './fixtures/closure.1';
+		it("Should use module from cache (baseline)", () => {
+			const path = "./fixtures/closure.1";
 
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
@@ -25,8 +25,8 @@ Object.entries({__dirname, __filename}).forEach(([name, source]) => {
 			subject = require(path);
 			expect(subject(), count()).to.equal(3);
 		});
-		it('Should clean up module', () => {
-			const path = './fixtures/closure.1';
+		it("Should clean up module", () => {
+			const path = "./fixtures/closure.1";
 
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
@@ -36,8 +36,8 @@ Object.entries({__dirname, __filename}).forEach(([name, source]) => {
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
 		});
-		it('Should clean up modules recursively', () => {
-			const path = './fixtures/closure.2';
+		it("Should clean up modules recursively", () => {
+			const path = "./fixtures/closure.2";
 
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
@@ -51,36 +51,36 @@ Object.entries({__dirname, __filename}).forEach(([name, source]) => {
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
 		});
-		it('Should override module behaviour', () => {
-			const path = './fixtures/closure.1';
+		it("Should override module behaviour", () => {
+			const path = "./fixtures/closure.1";
 
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
 			expect(subject(), count()).to.equal(2);
 
-			override(path, () => 'X');
+			override(path, () => "X");
 			subject = require(path);
-			expect(subject(), count()).to.equal('X');
+			expect(subject(), count()).to.equal("X");
 		});
-		it('Should reset module behaviour', () => {
-			const path = './fixtures/closure.1';
+		it("Should reset module behaviour", () => {
+			const path = "./fixtures/closure.1";
 
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
 			expect(subject(), count()).to.equal(2);
 
-			override(path, () => 'X');
+			override(path, () => "X");
 			subject = require(path);
-			expect(subject(), count()).to.equal('X');
+			expect(subject(), count()).to.equal("X");
 
 			reset(path);
 			subject = require(path);
 			expect(subject(), count()).to.equal(1);
 			expect(subject(), count()).to.equal(2);
 		});
-		it('Should avoid RangeError caused by circular requires', () => {
-			require('./fixtures/circular.2');
-			expect(() => clean('./fixtures/circular.1')).not.to.throw();
+		it("Should avoid RangeError caused by circular requires", () => {
+			require("./fixtures/circular.2");
+			expect(() => clean("./fixtures/circular.1")).not.to.throw();
 		});
 	});
 });
