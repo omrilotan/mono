@@ -1,19 +1,12 @@
-const {
-	clearLine,
-	clearScreenDown,
-	cursorTo,
-} = require('readline');
+const { clearLine, clearScreenDown, cursorTo } = require("readline");
 
 const { stdout } = process;
 
-Object.assign(
-	exports,
-	{
-		clear,
-		end,
-		update,
-	}
-);
+Object.assign(exports, {
+	clear,
+	end,
+	update
+});
 
 /**
  * Update current STDOUT line
@@ -31,8 +24,8 @@ function update(message) {
  * @param  {String} message
  * no return value
  */
-function end(message = '') {
-	update([message.toString(), '\n'].join(''));
+function end(message = "") {
+	update([message.toString(), "\n"].join(""));
 }
 
 /**

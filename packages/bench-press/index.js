@@ -1,4 +1,4 @@
-const paraphrase = require('paraphrase');
+const paraphrase = require("paraphrase");
 
 const phraser = paraphrase(/\${([^{}]*)}/gm);
 
@@ -10,7 +10,13 @@ const phraser = paraphrase(/\${([^{}]*)}/gm);
  * @param  {Number}   [options.iterations=1000]
  * @return {String}
  */
-module.exports = function benchpress(fn, {message = 'Running ${iterations} times took ${duration}ms', iterations = 1e3} = {}) {
+module.exports = function benchpress(
+	fn,
+	{
+		message = "Running ${iterations} times took ${duration}ms",
+		iterations = 1e3
+	} = {}
+) {
 	const start = Date.now();
 	let count = iterations;
 
@@ -20,5 +26,5 @@ module.exports = function benchpress(fn, {message = 'Running ${iterations} times
 
 	const duration = Date.now() - start;
 
-	return phraser(message, {iterations, duration});
+	return phraser(message, { iterations, duration });
 };

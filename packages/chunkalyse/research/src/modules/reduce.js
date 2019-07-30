@@ -1,3 +1,3 @@
-import reduce from 'await-reduce';
+import reduce from "await-reduce";
 
 export default reduce;

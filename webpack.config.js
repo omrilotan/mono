@@ -1,24 +1,24 @@
-const {resolve} = require('path');
+const { resolve } = require("path");
 
-const entry = require(resolve(__dirname, 'dists', 'entries'));
+const entry = require(resolve(__dirname, "dists", "entries"));
 
 module.exports = {
-	mode: 'production',
+	mode: "production",
 	entry,
 	output: {
-		filename: '[name]',
-		path: resolve('/'),
-		libraryTarget: 'commonjs2',
+		filename: "[name]",
+		path: resolve("/"),
+		libraryTarget: "commonjs2"
 	},
 	module: {
 		rules: [
 			{
 				test: /\.m?js$/,
-				loader: 'babel-loader',
+				loader: "babel-loader",
 				include: __dirname,
 				sideEffects: false,
-				options: require('./.babelrc.js'),
-			},
-		],
-	},
+				options: require("./.babelrc.js")
+			}
+		]
+	}
 };

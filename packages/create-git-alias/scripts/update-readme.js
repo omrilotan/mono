@@ -1,15 +1,12 @@
-const {
-	readFile,
-	writeFile,
-} = require('fs').promises;
-const {join} = require('path');
+const { readFile, writeFile } = require("fs").promises;
+const { join } = require("path");
 
-const TITLE = '## aliases';
-const aliases = require('../aliases');
-const sortby = require('../../sortby');
+const TITLE = "## aliases";
+const aliases = require("../aliases");
+const sortby = require("../../sortby");
 
 (async () => {
-	const file = join(__dirname, '../README.md');
+	const file = join(__dirname, "../README.md");
 	const readme = (await readFile(file)).toString();
 	const content = readme.split(TITLE).shift();
 
@@ -17,13 +14,13 @@ const sortby = require('../../sortby');
 		file,
 		[
 			content.trim(),
-			'',
+			"",
 			TITLE,
-			'',
-			'| alias | Description',
-			'| - | -',
-			...sortby(aliases, 'key').map(({key, desc}) => `| ${key} | ${desc}`),
-			'',
-		].join('\n')
+			"",
+			"| alias | Description",
+			"| - | -",
+			...sortby(aliases, "key").map(({ key, desc }) => `| ${key} | ${desc}`),
+			""
+		].join("\n")
 	);
 })();

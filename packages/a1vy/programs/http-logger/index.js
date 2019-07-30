@@ -1,36 +1,35 @@
-const { prompt } = require('inquirer');
-const ip = require('../../lib/ip');
+const { prompt } = require("inquirer");
+const ip = require("../../lib/ip");
 
 const [LOWEST_STATUS, HIGHEST_STATUS] = [100, 599];
 
 module.exports = async function() {
-	const answers = await prompt(
-		[
-			{
-				name: 'host',
-				message: 'On which host should the server run?',
-				type: 'input',
-				default: ip(),
-			},
-			{
-				name: 'port',
-				message: 'On which port should the server run?',
-				type: 'input',
-				default: '1337',
-			},
-			{
-				name: 'code',
-				message: 'What status code should it return?',
-				type: 'input',
-				default: '201',
-				validate: value => value === '' || validCode(value)
+	const answers = await prompt([
+		{
+			name: "host",
+			message: "On which host should the server run?",
+			type: "input",
+			default: ip()
+		},
+		{
+			name: "port",
+			message: "On which port should the server run?",
+			type: "input",
+			default: "1337"
+		},
+		{
+			name: "code",
+			message: "What status code should it return?",
+			type: "input",
+			default: "201",
+			validate: value =>
+				value === "" || validCode(value)
 					? true
-					: `Please choose a number between ${LOWEST_STATUS} and ${HIGHEST_STATUS}`,
-			},
-		]
-	);
+					: `Please choose a number between ${LOWEST_STATUS} and ${HIGHEST_STATUS}`
+		}
+	]);
 
-	return await require('./service')(answers);
+	return await require("./service")(answers);
 };
 
 function validCode(value) {

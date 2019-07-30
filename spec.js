@@ -1,27 +1,24 @@
-const assert = require('assert');
-const chai = require('chai');
-chai.use(require('chai-string'));
-chai.use(require('chai-as-promised'));
-chai.use(require('sinon-chai'));
-const sinon = require('sinon');
-const wait = require('./packages/wait');
-const sleep = require('./packages/sleep');
-const abuser = require('./packages/abuser');
+const assert = require("assert");
+const chai = require("chai");
+chai.use(require("chai-string"));
+chai.use(require("chai-as-promised"));
+chai.use(require("sinon-chai"));
+const sinon = require("sinon");
+const wait = require("./packages/wait");
+const sleep = require("./packages/sleep");
+const abuser = require("./packages/abuser");
 
-Object.assign(
-	global,
+Object.assign(global, chai, sinon, {
 	chai,
+	assert,
 	sinon,
-	{
-		chai,
-		assert,
-		sinon,
-		wait,
-		sleep,
-		abuser,
-	}
-);
+	wait,
+	sleep,
+	abuser
+});
 
-require('dont-look-up')('./packages');
+require("dont-look-up")("./packages");
 
-process.on('unhandledRejection', error => { throw error; });
+process.on("unhandledRejection", error => {
+	throw error;
+});
