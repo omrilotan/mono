@@ -1,0 +1,8 @@
+---
+enabled: true
+pull_requests: true
+comments: true
+statuses: true
+request_review: none
+restylers:
+  - eslint
