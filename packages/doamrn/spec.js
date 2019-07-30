@@ -1,4 +1,5 @@
 const random = require('./');
+
 const NUMBERS = Array.from(Array(40)).map((_, i) => i);
 
 describe('doamrn', () => {

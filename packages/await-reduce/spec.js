@@ -1,4 +1,5 @@
 const reduce = require('.');
+
 const result = () => new Promise(resolve => setTimeout(() => resolve('A'), 40));
 
 describe('await-reduce', async() => {

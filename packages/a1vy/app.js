@@ -3,10 +3,11 @@
 require('colors');
 const { readdir } = require('fs').promises;
 const inquirer = require('inquirer');
-const greet = require('./lib/greet');
 const { clear } = require('stdline');
 const sortby = require('@does/sortby');
 const wait = require('@lets/wait');
+const greet = require('./lib/greet');
+
 const sortByNameCaseInsensitive = (...array) => sortby(
 	array,
 	'name',

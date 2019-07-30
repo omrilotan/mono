@@ -1,4 +1,5 @@
 const { createRequireFromPath, createRequire } = require('module');
+
 const create = createRequire || createRequireFromPath; // createRequire -> node >=12.2, createRequireFromPath -> node >=10.12
 
 /**

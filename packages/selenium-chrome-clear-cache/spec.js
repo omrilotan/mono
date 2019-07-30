@@ -1,4 +1,5 @@
 const webdriver = require('selenium-webdriver');
+
 const {Builder} = webdriver;
 const clearCache = require('.');
 

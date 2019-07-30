@@ -12,13 +12,8 @@
   "overrides": [
     {
       "files": [ "**/spec.js", "**/spec.mjs", "**/test.js" ],
-      "env": {
-        "mocha": true
-      },
       "globals": {
         "chai": true,
-        "expect": true,
-        "assert": true,
         "abuser": true,
         "sinon": true,
         "spy": true,

@@ -3,6 +3,7 @@ const read = promisify(require('fs').readFile);
 const {resolve} = require('path');
 const marked = promisify(require('marked'));
 const paraphrase = require('paraphrase');
+
 const DEFAULT_TEMPLATE = '{{content}}';
 
 const phrase = paraphrase(/{{([^{}]*)}}/gm, {clean: true});

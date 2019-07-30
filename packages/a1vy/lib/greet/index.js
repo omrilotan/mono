@@ -1,8 +1,8 @@
 const { readFile } = require('fs').promises;
 const { resolve } = require('path');
 const ansiEscapes = require('ansi-escapes');
-const { name, version } = require('../../package.json');
 const random = require('doamrn');
+const { name, version } = require('../../package.json');
 
 module.exports = async function greet() {
 	const useImage = process.env.TERM_PROGRAM === 'iTerm.app' && parseInt(process.env.TERM_PROGRAM_VERSION) >= 3;

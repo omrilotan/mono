@@ -1,11 +1,11 @@
-const percent = require('@does/percent');
-const wait = require('@lets/wait');
-
 const {
 	cpus,
 	freemem,
 	totalmem,
 } = require('os');
+const percent = require('@does/percent');
+const wait = require('@lets/wait');
+
 
 /**
 * Get CPU and memory usage in percent (async). Takes about a second

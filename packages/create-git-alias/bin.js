@@ -8,6 +8,7 @@ require('colors');
 
 const OPTION_SHOW_ALL = ['all', 'show-all'];
 const opts = require('./lib/opts')(process.argv);
+
 const hasOption = options => options.some(opt => opts.includes(opt));
 
 (

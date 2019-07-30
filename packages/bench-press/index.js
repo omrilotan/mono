@@ -1,4 +1,5 @@
 const paraphrase = require('paraphrase');
+
 const phraser = paraphrase(/\${([^{}]*)}/gm);
 
 /**

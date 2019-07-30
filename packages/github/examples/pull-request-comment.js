@@ -2,8 +2,8 @@
  * Use the GitHub instance to create automated comments on pull requests
  */
 
-const GitHub = require('../');
 const {join} = require('path');
+const GitHub = require('../');
 
 /**
  * Create a pull request with the file and bundle stats comparison

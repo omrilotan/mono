@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+
 let length = 7;
 
 module.exports = async () => {

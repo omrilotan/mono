@@ -6,6 +6,7 @@
  *
  */
 
+const assign = require('@recursive/assign');
 const {
 	writeFile,
 	readFile,
@@ -13,7 +14,6 @@ const {
 	packageData,
 } = require('./utils');
 
-const assign = require('@recursive/assign');
 
 let _original;
 let _suffix;

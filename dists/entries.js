@@ -1,5 +1,6 @@
 const {resolve} = require('path');
 const {readdirSync} = require('fs');
+
 const packageDir = (...args) => resolve(
 	__dirname,
 	'../packages',

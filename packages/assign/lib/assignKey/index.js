@@ -1,5 +1,6 @@
 const assignable = require('../assignable');
 const clone = require('../clone');
+
 const secureKeys = [
 	'__proto__',
 	'constructor',

@@ -1,10 +1,10 @@
-const editor = require('./');
 const {
 	readJsonSync,
 	readFileSync,
 } = require('fs-extra');
 
 const packageJson = require('../../package.json');
+const editor = require('./');
 
 describe('edit-package', () => {
 	afterEach(async () => {
