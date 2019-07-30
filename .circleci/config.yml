@@ -38,7 +38,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Check code syntax
-          command: npm run lint
+          command: npm run lint -- --fix; git add .; git commit -m "autolint"; git push origin $(git rev-parse --abbrev-ref HEAD) --force-with-lease
   test:
     <<: *defaults
     steps:
