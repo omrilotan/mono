@@ -1,11 +1,7 @@
-const assignable = require('../assignable');
-const clone = require('../clone');
+const assignable = require("../assignable");
+const clone = require("../clone");
 
-const secureKeys = [
-	'__proto__',
-	'constructor',
-	'prototype',
-];
+const secureKeys = ["__proto__", "constructor", "prototype"];
 
 /**
  * assign one key from one object to the target
@@ -17,13 +13,12 @@ const secureKeys = [
  */
 module.exports = function assignKey(target, source, key) {
 	if (secureKeys.includes(key)) {
-
 		// Ignore silently to avoid malicious construct prototype pollution
 		return;
 	}
 
-	target[key] = !target.hasOwnProperty(key) || !assignable(source[key])
-		? source[key]
-		: require('../assign')(clone(target[key]), source[key])
-	;
+	target[key] =
+		!target.hasOwnProperty(key) || !assignable(source[key])
+			? source[key]
+			: require("../assign")(clone(target[key]), source[key]);
 };

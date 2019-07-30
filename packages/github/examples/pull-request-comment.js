@@ -2,8 +2,8 @@
  * Use the GitHub instance to create automated comments on pull requests
  */
 
-const {join} = require('path');
-const GitHub = require('../');
+const { join } = require("path");
+const GitHub = require("../");
 
 /**
  * Create a pull request with the file and bundle stats comparison
@@ -24,40 +24,38 @@ const GitHub = require('../');
  * 	identifier: <{String, optional} UNIQUE_IDENTIFIER>, // For updating a previously created comment
  * });
  */
-module.exports = async function pull({token, owner, repo, pr, comment, identifier}) {
-	const {request} = new GitHub({token});
+module.exports = async function pull({
+	token,
+	owner,
+	repo,
+	pr,
+	comment,
+	identifier
+}) {
+	const { request } = new GitHub({ token });
 
 	const comments = await request(
-		safe('repos', owner, repo, 'issues', pr, 'comments')
+		safe("repos", owner, repo, "issues", pr, "comments")
 	);
 
 	const uniqueIdentifier = identifier ? identify(identifier) : null;
 
-	const {id = ''} = identifier ? comments.find(
-		comment => comment.body.includes(uniqueIdentifier)
-	) || {} : {};
+	const { id = "" } = identifier
+		? comments.find(comment => comment.body.includes(uniqueIdentifier)) || {}
+		: {};
 
-	const url = id ?
-		safe('repos', owner, repo, 'issues', 'comments', id) :
-		safe('repos', owner, repo, 'issues', pr, 'comments');
+	const url = id
+		? safe("repos", owner, repo, "issues", "comments", id)
+		: safe("repos", owner, repo, "issues", pr, "comments");
 
-	return await request(
-		url,
-		{
-			method: id ? 'PATCH' : 'POST',
-			body: JSON.stringify({
-				body: uniqueIdentifier
-					?
-					[
-						`<!-- ${uniqueIdentifier} -->`,
-						comment,
-					].join('\n')
-					:
-					comment
-				,
-			}),
-		}
-	);
+	return await request(url, {
+		method: id ? "PATCH" : "POST",
+		body: JSON.stringify({
+			body: uniqueIdentifier
+				? [`<!-- ${uniqueIdentifier} -->`, comment].join("\n")
+				: comment
+		})
+	});
 };
 
 /**
@@ -72,4 +70,4 @@ const safe = (...args) => join(...args.map(i => i.toString()));
  * @param  {String} identifier
  * @return {String}
  */
-const identify = identifier => Buffer.from(identifier).toString('base64');
+const identify = identifier => Buffer.from(identifier).toString("base64");

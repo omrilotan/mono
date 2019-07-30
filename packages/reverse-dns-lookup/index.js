@@ -1,8 +1,8 @@
-const execute = require('async-execute');
+const execute = require("async-execute");
 
 class ReverseDNSLookupError extends Error {
 	get name() {
-		return 'ReverseDNSLookupError';
+		return "ReverseDNSLookupError";
 	}
 }
 
@@ -14,13 +14,19 @@ class ReverseDNSLookupError extends Error {
  */
 async function source(ip, ...domains) {
 	const forward = await execute(`host ${ip}`);
-	if (!new RegExp(`(${domains.join('|')}).?$`).test(forward)) {
-		throw new ReverseDNSLookupError(`${ip} does not match domain ${domains.join(', ')}. (resolves to ${forward.split(' ').pop()})`);
+	if (!new RegExp(`(${domains.join("|")}).?$`).test(forward)) {
+		throw new ReverseDNSLookupError(
+			`${ip} does not match domain ${domains.join(
+				", "
+			)}. (resolves to ${forward.split(" ").pop()})`
+		);
 	}
 
-	const backward = await execute(`host ${forward.split(' ').pop()}`);
+	const backward = await execute(`host ${forward.split(" ").pop()}`);
 	if (!new RegExp(`${ip}.?$`).test(backward)) {
-		throw new ReverseDNSLookupError(`${backward} does not resolve back to ${ip}`);
+		throw new ReverseDNSLookupError(
+			`${backward} does not resolve back to ${ip}`
+		);
 	}
 }
 
