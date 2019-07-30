@@ -14,6 +14,7 @@ const {
 	CODES,
 } = require('./lib/names');
 const word = require('./lib/word');
+
 const NINETEEN_HUNDRED = 694039.09;
 const SUFFIX = 'Moon';
 

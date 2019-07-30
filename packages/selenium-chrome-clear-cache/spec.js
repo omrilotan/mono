@@ -1,4 +1,5 @@
 const webdriver = require('selenium-webdriver');
+
 const {Builder} = webdriver;
 const clearCache = require('.');
 
@@ -71,10 +72,6 @@ describe('selenium-chrome-clear-cache', async() => {
 	}
 
 	it('Should not try to click the disabled button when no checkboxes are marked', async() => {
-		try {
-			await clearCache({webdriver, driver}, {cache: false, history: false});
-		} catch (error) {
-			throw error;
-		}
+		await clearCache({webdriver, driver}, {cache: false, history: false});
 	});
 });

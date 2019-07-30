@@ -1,6 +1,6 @@
+const { resolve } = require('path');
 const exec = require('async-execute');
 const exist = require('@does/exist');
-const { resolve } = require('path');
 
 /**
  * Create and push a git tag with the last commit message

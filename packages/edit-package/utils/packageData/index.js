@@ -5,10 +5,7 @@ const { readFile } = require('../fs-async');
  * @return {Promise} resolve accepts the data object
  */
 module.exports.packageData = async function packageData() {
-	try {
-		const json = await readFile('package.json');
-		return JSON.parse(json.toString());
-	} catch (error) {
-		throw error;
-	}
+	const json = await readFile('package.json');
+
+	return JSON.parse(json.toString());
 };

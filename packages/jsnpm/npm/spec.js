@@ -1,4 +1,5 @@
 const npm = require('.');
+
 const util = process.binding('util');
 
 describe('jsnpm/npm', async() => {

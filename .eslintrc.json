@@ -4,21 +4,11 @@
   "plugins": [
     "log"
   ],
-  "rules": {
-    "no-useless-catch": 0,
-    "no-prototype-builtins": 0,
-    "require-atomic-updates": 0
-  },
   "overrides": [
     {
       "files": [ "**/spec.js", "**/spec.mjs", "**/test.js" ],
-      "env": {
-        "mocha": true
-      },
       "globals": {
         "chai": true,
-        "expect": true,
-        "assert": true,
         "abuser": true,
         "sinon": true,
         "spy": true,

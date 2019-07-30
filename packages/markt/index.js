@@ -3,6 +3,7 @@ const read = promisify(require('fs').readFile);
 const {resolve} = require('path');
 const marked = promisify(require('marked'));
 const paraphrase = require('paraphrase');
+
 const DEFAULT_TEMPLATE = '{{content}}';
 
 const phrase = paraphrase(/{{([^{}]*)}}/gm, {clean: true});
@@ -31,7 +32,7 @@ module.exports = async function(content, options = {}) {
 
 	const template = await getTemplate(options);
 
-	options.content = (await marked(content, {})).trim();
+	options.content = (await marked(content, {})).trim(); // eslint-disable-line require-atomic-updates
 
 	return phrase(template, options);
 };

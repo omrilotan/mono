@@ -3,6 +3,7 @@ const {
 	clearScreenDown,
 	cursorTo,
 } = require('readline');
+
 const { stdout } = process;
 
 Object.assign(

@@ -15,7 +15,7 @@ module.exports = stats => {
 		return analyseModules(entries[0], stats);
 	}
 
-	if (stats.hasOwnProperty('chunks')) {
+	if ('chunks' in stats) {
 		return analyseChunks(stats);
 	}
 

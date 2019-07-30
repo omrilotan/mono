@@ -1,5 +1,6 @@
 const { prompt } = require('inquirer');
 const ip = require('../../lib/ip');
+
 const [LOWEST_STATUS, HIGHEST_STATUS] = [100, 599];
 
 module.exports = async function() {

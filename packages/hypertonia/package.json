@@ -1,6 +1,6 @@
 {
 	"name": "hypertonia",
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"description": "A theme for Hyper.",
 	"author": "omrilotan",
 	"license": "MIT",
@@ -17,6 +17,6 @@
 		"node-sass": "^4.12.0"
 	},
 	"dependencies": {
-		"@recursive/assign": "^1.1.3"
+		"@recursive/assign": "^1.2.4"
 	}
 }

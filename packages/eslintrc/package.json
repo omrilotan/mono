@@ -1,6 +1,6 @@
 {
   "name": "@omrilotan/eslint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "🔧 My usual eslint-config",
   "keywords": [
     "eslintrc",
@@ -15,5 +15,8 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "homepage": "https://omrilotan.com/mono/eslint-config/",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-import": "^2.18.2"
+  }
 }

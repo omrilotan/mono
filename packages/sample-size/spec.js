@@ -1,4 +1,5 @@
 const sample = require('.');
+
 const samples = (n, l = 10) => new Array(l).fill(0).map(() => sample(n));
 
 describe('sample-size', () => {

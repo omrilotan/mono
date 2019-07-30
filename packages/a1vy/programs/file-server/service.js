@@ -1,4 +1,5 @@
 require('colors');
+
 const dd = num => num > 9 ? num : `0${num}`;
 
 module.exports = async ({host, port, base, page, delay = 0, cache} = {}) => {

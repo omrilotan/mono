@@ -7,9 +7,5 @@ module.exports = async function npm() {
 		return instance;
 	}
 
-	try {
-		return instance = load();
-	} catch (error) {
-		throw error;
-	}
+	return instance = load();
 };

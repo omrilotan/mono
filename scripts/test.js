@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const find = require('find');
 const {resolve} = require('path');
+const find = require('find');
 
 process.on('unhandledRejection', console.error);
 

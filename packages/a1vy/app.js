@@ -3,10 +3,11 @@
 require('colors');
 const { readdir } = require('fs').promises;
 const inquirer = require('inquirer');
-const greet = require('./lib/greet');
 const { clear } = require('stdline');
 const sortby = require('@does/sortby');
 const wait = require('@lets/wait');
+const greet = require('./lib/greet');
+
 const sortByNameCaseInsensitive = (...array) => sortby(
 	array,
 	'name',
@@ -18,11 +19,7 @@ const sortByNameCaseInsensitive = (...array) => sortby(
 module.exports = async function a1vy() {
 	process.on('unhandledRejection', console.error);
 
-	try {
-		init();
-	} catch (error) {
-		throw error;
-	}
+	init();
 
 	require('upgradable')(require('./package.json'));
 };
@@ -56,20 +53,16 @@ async function init() {
 		[]
 	).sort(sortByNameCaseInsensitive);
 
-	try {
-		const answers = await inquirer
-			.prompt([
-				{
-					name: 'service',
-					message: 'Select Service',
-					type: 'list',
-					pageSize: '20',
-					choices,
-				},
-			]);
+	const answers = await inquirer
+		.prompt([
+			{
+				name: 'service',
+				message: 'Select Service',
+				type: 'list',
+				pageSize: '20',
+				choices,
+			},
+		]);
 
-		await require(`./programs/${answers.service}`)();
-	} catch (error) {
-		throw error;
-	}
+	await require(`./programs/${answers.service}`)();
 }

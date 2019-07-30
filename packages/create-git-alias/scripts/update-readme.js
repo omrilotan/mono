@@ -3,6 +3,7 @@ const {
 	writeFile,
 } = require('fs').promises;
 const {join} = require('path');
+
 const TITLE = '## aliases';
 const aliases = require('../aliases');
 const sortby = require('../../sortby');

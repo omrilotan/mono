@@ -1,5 +1,6 @@
 const assignable = require('../assignable');
 const clone = require('../clone');
+
 const secureKeys = [
 	'__proto__',
 	'constructor',
@@ -21,7 +22,7 @@ module.exports = function assignKey(target, source, key) {
 		return;
 	}
 
-	target[key] = !target.hasOwnProperty(key) || !assignable(source[key])
+	target[key] = !(key in target) || !assignable(source[key])
 		? source[key]
 		: require('../assign')(clone(target[key]), source[key])
 	;

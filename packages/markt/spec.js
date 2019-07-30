@@ -1,5 +1,5 @@
-const markt = require('./');
 const assert = require('assert');
+const markt = require('./');
 
 describe('markt', async () => {
 	it('without a template, converts to markdown', async () => {

@@ -1,5 +1,6 @@
 const wait = require('@lets/wait');
 const { update } = require('stdline');
+
 let i = 0;
 
 module.exports = async({url, times_s, delay_s}) => {

@@ -8,6 +8,7 @@ require('colors');
 
 const OPTION_SHOW_ALL = ['all', 'show-all'];
 const opts = require('./lib/opts')(process.argv);
+
 const hasOption = options => options.some(opt => opts.includes(opt));
 
 (
@@ -88,13 +89,9 @@ async function app() {
 
 	const selected = [...answers.aliases];
 
-	try {
-		while (answers.aliases.length) {
-			const [key, value] = answers.aliases.shift();
-			await execute(`git config --global alias.${key} '${value}'`);
-		}
-	} catch (error) {
-		throw error;
+	while (answers.aliases.length) {
+		const [key, value] = answers.aliases.shift();
+		await execute(`git config --global alias.${key} '${value}'`);
 	}
 
 	switch (selected.length) {

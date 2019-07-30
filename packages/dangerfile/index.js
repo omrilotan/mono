@@ -2,6 +2,7 @@ const { promises: { readFile, writeFile } } = require('fs');
 const { join } = require('path');
 const execute = require('async-execute');
 const exist = require('@does/exist');
+
 const FILENAME = 'dangerfile.js';
 const primed = join(process.cwd(), FILENAME);
 

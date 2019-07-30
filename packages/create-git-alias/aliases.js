@@ -77,7 +77,7 @@ module.exports = [
 	{
 		key: 'yolt',
 		desc: 'amend commit with a random commit message from whatthecommit',
-		value: `!f() { git commit --amend -m "$(curl -s whatthecommit.com/index.txt)"; }; f`,
+		value: '!f() { git commit --amend -m "$(curl -s whatthecommit.com/index.txt)"; }; f',
 	},
 	{
 		key: 'wip',

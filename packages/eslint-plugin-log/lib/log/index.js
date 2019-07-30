@@ -1,5 +1,6 @@
 const { yellow } = require('chalk');
 const mark = require('../mark');
+
 const base = process.cwd();
 let count = 0;
 let timer;

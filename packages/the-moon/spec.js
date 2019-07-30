@@ -1,4 +1,5 @@
 const moon = require('.');
+
 const {
 	ICONS,
 	CODES,

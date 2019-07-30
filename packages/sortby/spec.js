@@ -1,4 +1,5 @@
 const sortby = require('.');
+
 const array = () => [
 	{key: 4},
 	{key: 3},

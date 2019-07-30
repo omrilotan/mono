@@ -6,6 +6,7 @@
  *
  */
 
+const assign = require('@recursive/assign');
 const {
 	writeFile,
 	readFile,
@@ -13,16 +14,15 @@ const {
 	packageData,
 } = require('./utils');
 
-const assign = require('@recursive/assign');
 
 let _original;
 let _suffix;
-const original = async () => _original = _original || jsonCopy(await packageData());
+const original = async () => _original = _original || jsonCopy(await packageData()); // eslint-disable-line require-atomic-updates
 const suffix = async () => {
 	if (typeof _suffix !== 'string') {
 		const contents = await readFile('package.json');
 
-		_suffix = contents.toString().endsWith('\n') ? '\n' : '';
+		_suffix = contents.toString().endsWith('\n') ? '\n' : ''; // eslint-disable-line require-atomic-updates
 	}
 	return _suffix;
 };
@@ -55,14 +55,10 @@ module.exports.write = async data => {
 		data
 	);
 
-	try {
-		await writeFile(
-			'package.json',
-			JSON.stringify(json, null, 2) + await suffix()
-		);
-	} catch (error) {
-		throw error;
-	}
+	await writeFile(
+		'package.json',
+		JSON.stringify(json, null, 2) + await suffix()
+	);
 
 	return json;
 };
@@ -71,13 +67,7 @@ module.exports.write = async data => {
  * Reset to the original package.json
  * @return {Objecy}
  */
-module.exports.reset = async () => {
-	try {
-		await writeFile(
-			'package.json',
-			JSON.stringify(await original(), null, 2) + await suffix()
-		);
-	} catch (error) {
-		throw error;
-	}
-};
+module.exports.reset = async () => await writeFile(
+	'package.json',
+	JSON.stringify(await original(), null, 2) + await suffix()
+);
