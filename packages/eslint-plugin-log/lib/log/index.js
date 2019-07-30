@@ -1,4 +1,5 @@
-const { red, green, yellow } = require('chalk');
+const { yellow } = require('chalk');
+const mark = require('../mark');
 const base = process.cwd();
 let count = 0;
 let timer;
@@ -18,7 +19,7 @@ module.exports = function([messages = []] = [], filename) {
 	}
 	scanned.push(filename);
 
-	const [color, check] = messages.length ? [red, '✘'] : [green, '✔︎'];
+	const [color, check] = mark(messages);
 
 	/* eslint-disable no-console */
 	count === 0 && console.log('Linting:');

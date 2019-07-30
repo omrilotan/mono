@@ -1,4 +1,5 @@
 let postprocess;
+let fakes = {};
 const logs = [];
 
 describe('eslint-plugin-log/log', () => {
@@ -6,6 +7,12 @@ describe('eslint-plugin-log/log', () => {
 	const {cwd} = process;
 	before(() => {
 		delete require.cache[require.resolve('.')];
+		delete require.cache[require.resolve('../mark')];
+		require('../mark');
+		require.cache[require.resolve('../mark')].exports = function(messages) {
+			fakes.mark = messages;
+			return [str => str, '•'];
+		};
 		console.log = function(...args) {
 			logs.push(...args);
 			return log.apply(this, args);
@@ -16,10 +23,14 @@ describe('eslint-plugin-log/log', () => {
 	beforeEach(() => {
 		logs.length = 0;
 	});
+	afterEach(() => {
+		delete fakes.mark;
+	});
 	after(() => {
 		console.log = log;
 		process.cwd = cwd;
 		delete require.cache[require.resolve('.')];
+		delete require.cache[require.resolve('../mark')];
 	});
 	{
 		it('Should start with "Linting" title and first numbered file', () => {
@@ -45,15 +56,14 @@ describe('eslint-plugin-log/log', () => {
 			expect(log).to.include(' /filename.js');
 			expect(log).to.not.include('workspace/project');
 		});
-		it('Should mark with V when there are no messages', async() => {
+		it('Should print the result of mark function', async() => {
 			postprocess([ [] ], '/workspace/project/filename2.js');
 			const [log] = logs;
-			expect(log).to.include('✔︎');
+			expect(log).to.include('•');
 		});
-		it('Should mark with X when there are any messages', async() => {
+		it('Should call mark with messages', async() => {
 			postprocess([ [ 'something' ] ], '/workspace/project/filename3.js');
-			const [log] = logs;
-			expect(log).to.include('✘');
+			expect(fakes.mark).to.deep.equal(['something']);
 		});
 		it('Should finish with total files linted', async() => {
 			await wait(80);
