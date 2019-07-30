@@ -1,5 +1,5 @@
-const { yellow } = require('chalk');
-const mark = require('../mark');
+const { yellow } = require("chalk");
+const mark = require("../mark");
 
 const base = process.cwd();
 let count = 0;
@@ -23,19 +23,13 @@ module.exports = function([messages = []] = [], filename) {
 	const [color, check] = mark(messages);
 
 	/* eslint-disable no-console */
-	count === 0 && console.log('Linting:');
+	count === 0 && console.log("Linting:");
 	console.log(
-		[
-			`${++count}.`,
-			color(check),
-			filename.replace(base, ''),
-		].join(' ')
+		[`${++count}.`, color(check), filename.replace(base, "")].join(" ")
 	);
 
 	timer = setTimeout(
-		() => console.log(
-			yellow.bold(`\n${count} files linted.`)
-		),
+		() => console.log(yellow.bold(`\n${count} files linted.`)),
 		40
 	);
 	/* eslint-enable no-console */

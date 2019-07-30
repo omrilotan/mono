@@ -6,28 +6,21 @@
  *
  */
 
-const assign = require('@recursive/assign');
-const {
-	writeFile,
-	readFile,
-	jsonCopy,
-	packageData,
-} = require('./utils');
-
+const assign = require("@recursive/assign");
+const { writeFile, readFile, jsonCopy, packageData } = require("./utils");
 
 let _original;
 let _suffix;
-const original = async () => _original = _original || jsonCopy(await packageData());
+const original = async () =>
+	(_original = _original || jsonCopy(await packageData()));
 const suffix = async () => {
-	if (typeof _suffix !== 'string') {
-		const contents = await readFile('package.json');
+	if (typeof _suffix !== "string") {
+		const contents = await readFile("package.json");
 
-		_suffix = contents.toString().endsWith('\n') ? '\n' : '';
+		_suffix = contents.toString().endsWith("\n") ? "\n" : "";
 	}
 	return _suffix;
 };
-
-
 
 /**
  * Read package
@@ -49,16 +42,12 @@ module.exports.read = async () => await packageData();
 module.exports.write = async data => {
 	await original(); // make sure original is stored
 
-	const json = assign(
-		{},
-		await module.exports.read(),
-		data
-	);
+	const json = assign({}, await module.exports.read(), data);
 
 	try {
 		await writeFile(
-			'package.json',
-			JSON.stringify(json, null, 2) + await suffix()
+			"package.json",
+			JSON.stringify(json, null, 2) + (await suffix())
 		);
 	} catch (error) {
 		throw error;
@@ -74,8 +63,8 @@ module.exports.write = async data => {
 module.exports.reset = async () => {
 	try {
 		await writeFile(
-			'package.json',
-			JSON.stringify(await original(), null, 2) + await suffix()
+			"package.json",
+			JSON.stringify(await original(), null, 2) + (await suffix())
 		);
 	} catch (error) {
 		throw error;

@@ -1,4 +1,4 @@
-const { createRequireFromPath, createRequire } = require('module');
+const { createRequireFromPath, createRequire } = require("module");
 
 const create = createRequire || createRequireFromPath; // createRequire -> node >=12.2, createRequireFromPath -> node >=10.12
 
@@ -38,7 +38,6 @@ module.exports = function abuser(path) {
 	 * @return {Any}             New exports of the module
 	 */
 	function override(route, thing) {
-
 		// Resolve module location from given path
 		const filename = _require.resolve(route);
 
@@ -58,7 +57,6 @@ module.exports = function abuser(path) {
 	 * @return {Any}
 	 */
 	function reset(route) {
-
 		// Resolve module location from given path
 		const filename = _require.resolve(route);
 
@@ -75,7 +73,7 @@ module.exports = function abuser(path) {
 		return _require(filename);
 	}
 
-	return {clean, override, reset};
+	return { clean, override, reset };
 };
 
 /**
@@ -98,21 +96,14 @@ function shidu(filename, list = []) {
 	list.push(parent);
 
 	// If there are children - iterate over them
-	parent.children
-		.map(
-			({filename}) => filename
-		)
-		.forEach(
-			child => {
+	parent.children.map(({ filename }) => filename).forEach(child => {
+		// Load child to memory
+		require(child);
 
-				// Load child to memory
-				require(child);
+		// Remove all of its children from memory, recursively
+		shidu(child, list);
 
-				// Remove all of its children from memory, recursively
-				shidu(child, list);
-
-				// Remove it from memory
-				delete require.cache[child];
-			}
-		);
+		// Remove it from memory
+		delete require.cache[child];
+	});
 }

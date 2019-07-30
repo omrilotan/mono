@@ -1,9 +1,11 @@
-const { promises: { readFile, writeFile } } = require('fs');
-const { join } = require('path');
-const execute = require('async-execute');
-const exist = require('@does/exist');
+const {
+	promises: { readFile, writeFile }
+} = require("fs");
+const { join } = require("path");
+const execute = require("async-execute");
+const exist = require("@does/exist");
 
-const FILENAME = 'dangerfile.js';
+const FILENAME = "dangerfile.js";
 const primed = join(process.cwd(), FILENAME);
 
 /**
@@ -12,14 +14,10 @@ const primed = join(process.cwd(), FILENAME);
  * @param  {Boolean} [optional.force=false] Prefer passed dir over process root
  * @return {String}
  */
-module.exports = async function dangerfile(sourcedir, {force = false} = {}) {
-
+module.exports = async function dangerfile(sourcedir, { force = false } = {}) {
 	// Check is a local file exists *unless* false flag is on
-	const exists = force
-		? false
-		: await exist(primed)
-	;
-	let message = 'Using the existing Dangerfile';
+	const exists = force ? false : await exist(primed);
+	let message = "Using the existing Dangerfile";
 
 	// Create dangerfile only if local one is not available
 	if (!exists) {
@@ -29,10 +27,7 @@ module.exports = async function dangerfile(sourcedir, {force = false} = {}) {
 	// Run danger
 	const installed = await run();
 
-	return installed
-		? ['Installed danger.', message].join(' ')
-		: message
-	;
+	return installed ? ["Installed danger.", message].join(" ") : message;
 };
 
 /**
@@ -44,18 +39,12 @@ async function create(sourcedir) {
 	const target = join(sourcedir, FILENAME);
 	const exists = await exist(target);
 
-	const source = exists
-		? target
-		: join(__dirname, FILENAME)
-	;
+	const source = exists ? target : join(__dirname, FILENAME);
 
 	const content = await readFile(source);
 	await writeFile(primed, content.toString());
 
-	return exists
-		?	'Creating a new Dangerfile'
-		: 'Creating a default Dangerfile'
-	;
+	return exists ? "Creating a new Dangerfile" : "Creating a default Dangerfile";
 }
 
 /**
@@ -64,13 +53,13 @@ async function create(sourcedir) {
  */
 async function run() {
 	try {
-		await execute('./node_modules/.bin/danger ci', { pipe: true });
+		await execute("./node_modules/.bin/danger ci", { pipe: true });
 		return false;
 	} catch (error) {
 		// don't throw yet
 	}
 
-	await execute('npm i danger --no-save', { pipe: true });
-	await execute('./node_modules/.bin/danger ci', { pipe: true });
+	await execute("npm i danger --no-save", { pipe: true });
+	await execute("./node_modules/.bin/danger ci", { pipe: true });
 	return true;
 }

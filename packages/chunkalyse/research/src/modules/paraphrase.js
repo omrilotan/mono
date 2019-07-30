@@ -1,3 +1,3 @@
-import paraphrase from 'paraphrase';
+import paraphrase from "paraphrase";
 
 export default paraphrase;
