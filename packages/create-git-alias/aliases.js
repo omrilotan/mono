@@ -75,13 +75,18 @@ module.exports = [
 		value: `!f() { ${what_the_commit}; }; f`,
 	},
 	{
+		key: 'yolt',
+		desc: 'amend commit with a random commit message from whatthecommit',
+		value: `!f() { git commit --amend -m "$(curl -s whatthecommit.com/index.txt)"; }; f`,
+	},
+	{
 		key: 'wip',
 		desc: 'add everything, commit with a random commit message and push to remote origin',
 		value: `!f() { git add . && ${what_the_commit} && git push origin ${current_branch}; }; f`,
 	},
 	{
 		key: 'fix',
-		desc: 'add, ammend the current commit and push some fixes',
+		desc: 'add, amend the current commit and push some fixes',
 		value: `!f() { git add . && git commit --amend --no-edit && git push origin ${current_branch} --force-with-lease; }; f`,
 	},
 	{
