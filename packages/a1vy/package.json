@@ -1,6 +1,6 @@
 {
   "name": "a1vy",
-  "version": "0.0.76",
+  "version": "0.0.77",
   "description": "🤖 I help development by doing things",
   "keywords": [
     "bot",
@@ -41,7 +41,7 @@
     "mime-types": "^2.1.24",
     "npm-check": "^5.9.0",
     "stdline": "^0.1.0",
-    "upgradable": "0.0.9"
+    "upgradable": "0.0.10"
   },
   "preferGlobal": true
 }
