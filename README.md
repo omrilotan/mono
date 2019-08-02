@@ -25,6 +25,7 @@ Mono repo holding multiple packages
 | **`dirdo`** | [🗂 Execute command in all nested directories](./packages/dirdo#readme) | [![0.1.0](https://img.shields.io/npm/v/dirdo.svg)](https://www.npmjs.com/package/dirdo)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.3](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
 | **`double-digit`** | [0️⃣ Add leading zero to positive numbers under 10](./packages/double-digit#readme) | [![0.0.0](https://img.shields.io/npm/v/double-digit.svg)](https://www.npmjs.com/package/double-digit)
+| **`ecma-webpack-plugin`** | [Verify your output code is compliant to the version you're targeting](./packages/ecma-webpack-plugin#readme) | [![0.0.0](https://img.shields.io/npm/v/ecma-webpack-plugin.svg)](https://www.npmjs.com/package/ecma-webpack-plugin)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.3](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`eslint-plugin-log`** | [👕 ESLint plugin: log the paths of all files being linted](./packages/eslint-plugin-log#readme) | [![1.2.3](https://img.shields.io/npm/v/eslint-plugin-log.svg)](https://www.npmjs.com/package/eslint-plugin-log)
