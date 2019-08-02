@@ -1,6 +1,7 @@
 const {resolve} = require('path');
 
 const entry = require(resolve(__dirname, 'dists', 'entries'));
+const EcmaPlugin = require('./packages/ecma-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
@@ -21,4 +22,10 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new EcmaPlugin({
+			extensions: ['js'],
+			parser: {ecmaVersion: '5'},
+		}),
+	],
 };

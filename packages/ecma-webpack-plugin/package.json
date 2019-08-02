@@ -1,0 +1,28 @@
+{
+  "name": "ecma-webpack-plugin",
+  "version": "0.0.0",
+  "description": "Verify your output code is compliant to the version you're targeting",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "ecmascript",
+    "verify",
+    "EcmaPlugin",
+    "🧳"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/ecma-webpack-plugin/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t packages/ecma-webpack-plugin; cd -"
+  },
+  "dependencies": {
+    "acorn": "^6.2.1",
+    "chalk": "^2.4.2"
+  }
+}
