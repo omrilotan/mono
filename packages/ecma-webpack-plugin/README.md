@@ -19,7 +19,7 @@ module.exports = {
 
 ### Options:
 
-| Options | Value | defaults
+| Options | Meaning | defaults
 | - | - | -
-| parser | [Acorn parser options](https://github.com/acornjs/acorn/tree/master/acorn#readme) | Acorn defaults
-| extensions | Array of file extensions | `['js', 'mjs']`
+| parser | [Parser options (Acorn)](https://github.com/acornjs/acorn/tree/master/acorn#readme) | [Acorn defaults](https://github.com/acornjs/acorn/tree/master/acorn#interface)
+| extensions | File extensions to verify | `['js', 'mjs']`
