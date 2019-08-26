@@ -11,11 +11,11 @@
   },
   "files": [],
   "scripts": {
+    "postinstall": "./packages/dirdo/bin.sh packages 'npm i'",
     "clean": "./scripts/foreach.js \"rm -rf dist\"",
     "prermodules": "rm -rf node_modules",
     "rmodules": "./scripts/foreach.js \"rm -rf node_modules\"",
     "new": "./scripts/new.js $@",
-    "postinstall": "./scripts/foreach.js \"npm i\"",
     "test": "./scripts/test.sh",
     "testes6": "finjan ./packages/module-scope/spec.mjs --require finjan.mjs",
     "lint": "eslint '*.js' 'dists/*.js' '**/*.js' '**/*.mjs' -c .eslintrc.json",
