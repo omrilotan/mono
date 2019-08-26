@@ -5,7 +5,7 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.77](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
+| **`a1vy`** | [🤖 I help development by doing things](./packages/a1vy#readme) | [![0.0.78](https://img.shields.io/npm/v/a1vy.svg)](https://www.npmjs.com/package/a1vy)
 | **`abuser`** | [🤕 Create modifiers to require cache based on path (e.g. )](./packages/abuser#readme) | [![2.0.2](https://img.shields.io/npm/v/abuser.svg)](https://www.npmjs.com/package/abuser)
 | **`array-select`** | [🚬 Extract items from one array into two or more arrays by results of a provided function](./packages/array-select#readme) | [![0.0.0](https://img.shields.io/npm/v/array-select.svg)](https://www.npmjs.com/package/array-select)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.5](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
@@ -19,8 +19,8 @@ Mono repo holding multiple packages
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.5.4](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
 | **`committee`** | [🕶 Commit as someone else](./packages/committee#readme) | [![0.0.6](https://img.shields.io/npm/v/committee.svg)](https://www.npmjs.com/package/committee)
 | **`@lets/count`** | [🔢 Consistent counter](./packages/count#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/count.svg)](https://www.npmjs.com/package/@lets/count)
-| **`create-git-alias`** | [👨🏻 - interactively apply useful git aliases](./packages/create-git-alias#readme) | [![1.1.5](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
-| **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.3](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
+| **`create-git-alias`** | [👨🏻 - interactively apply useful git aliases](./packages/create-git-alias#readme) | [![1.1.6](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
+| **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.4](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
 | **`dangerfile`** | [🚨 Centralised Dangerfile](./packages/dangerfile#readme) | [![0.2.1](https://img.shields.io/npm/v/dangerfile.svg)](https://www.npmjs.com/package/dangerfile)
 | **`dirdo`** | [🗂 Execute command in all nested directories](./packages/dirdo#readme) | [![0.1.0](https://img.shields.io/npm/v/dirdo.svg)](https://www.npmjs.com/package/dirdo)
 | **`doamrn`** | [Retrieve a random item from the arguments](./packages/doamrn#readme) | [![1.0.3](https://img.shields.io/npm/v/doamrn.svg)](https://www.npmjs.com/package/doamrn)
@@ -35,7 +35,7 @@ Mono repo holding multiple packages
 | **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
 | **`hypertonia`** | [A theme for Hyper.](./packages/hypertonia#readme) | [![0.2.8](https://img.shields.io/npm/v/hypertonia.svg)](https://www.npmjs.com/package/hypertonia)
 | **`index-require`** | [☝️ Create an index for a lib directory](./packages/index-require#readme) | [![1.0.0](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
-| **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.5](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
+| **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.6](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
 | **`jsoncopy`** | [Create a deep clone of an object using JSON functionalities.](./packages/jsoncopy#readme) | [![1.0.0](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy)
 | **`key-value-join`** | [⛓ Join object entries to create a string representation](./packages/key-value-join#readme) | [![0.0.0](https://img.shields.io/npm/v/key-value-join.svg)](https://www.npmjs.com/package/key-value-join)
 | **`levelheaded`** | [⚖️ Generate object containing functions deemed operational by level](./packages/levelheaded#readme) | [![1.2.0](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded)
@@ -49,7 +49,7 @@ Mono repo holding multiple packages
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.1](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
 | **`reverse-dns-lookup`** | [🕵 Verify an IP is related to a certain domain](./packages/reverse-dns-lookup#readme) | [![1.0.0](https://img.shields.io/npm/v/reverse-dns-lookup.svg)](https://www.npmjs.com/package/reverse-dns-lookup)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
-| **`@lets/run`** | [👟 run npm scripts interactively](./packages/run#readme) | [![1.0.1](https://img.shields.io/npm/v/@lets/run.svg)](https://www.npmjs.com/package/@lets/run)
+| **`@lets/run`** | [👟 run npm scripts interactively](./packages/run#readme) | [![1.0.2](https://img.shields.io/npm/v/@lets/run.svg)](https://www.npmjs.com/package/@lets/run)
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`sample-size`** | [🎲 pass/fail by sample size](./packages/sample-size#readme) | [![1.0.1](https://img.shields.io/npm/v/sample-size.svg)](https://www.npmjs.com/package/sample-size)
 | **`selenium-chrome-clear-cache`** | [🗑 Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.2.2](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
