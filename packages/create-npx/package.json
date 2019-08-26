@@ -22,6 +22,6 @@
   "dependencies": {
     "@does/exist": "^1.0.0",
     "async-git": "^1.6.0",
-    "inquirer": "^6.5.0"
+    "inquirer": "^7.0.0"
   }
 }
