@@ -53,5 +53,12 @@ module.exports = {
 				'no-octal': 0,
 			},
 		},
+		{
+			files: [ 'sw.js', 'serviceworker.js' ],
+			env: {
+				browser: true,
+				serviceworker: true,
+			},
+		},
 	],
 };
