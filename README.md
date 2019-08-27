@@ -29,7 +29,7 @@ Mono repo holding multiple packages
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.3](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
 | **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.0.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`eslint-plugin-log`** | [👕 ESLint plugin: log the paths of all files being linted](./packages/eslint-plugin-log#readme) | [![1.2.3](https://img.shields.io/npm/v/eslint-plugin-log.svg)](https://www.npmjs.com/package/eslint-plugin-log)
-| **`@omrilotan/eslint-config`** | [🔧 My usual eslint-config](./packages/eslintrc#readme) | [![1.0.0](https://img.shields.io/npm/v/@omrilotan/eslint-config.svg)](https://www.npmjs.com/package/@omrilotan/eslint-config)
+| **`@omrilotan/eslint-config`** | [🔧 My usual eslint-config](./packages/eslintrc#readme) | [![1.1.0](https://img.shields.io/npm/v/@omrilotan/eslint-config.svg)](https://www.npmjs.com/package/@omrilotan/eslint-config)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.0.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
 | **`@recursive/flatten`** | [🍳 Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![1.0.1](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
 | **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
