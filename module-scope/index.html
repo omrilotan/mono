@@ -18,5 +18,7 @@
 <pre><code class="language-js">import scope from &#39;module-scope&#39;;
 
 const {__dirname, __filename} = scope(import.meta.url);</code></pre>
+<p>Or get corresponding names without the underscores</p>
+<pre><code class="language-js">const {dirname, filename} = scope(import.meta.url);</code></pre>
 	</body>
 </html>
