@@ -2,10 +2,13 @@ import { dirname } from 'path';
 import { URL } from 'url';
 
 export default function(url) {
-	const {pathname} = new URL(url);
+	const { pathname: __filename } = new URL(url);
+	const __dirname = dirname(__filename);
 
 	return {
-		__dirname: dirname(pathname),
-		__filename: pathname,
+		__dirname,
+		__filename,
+		dirname: __dirname,
+		filename: __filename,
 	};
 }
