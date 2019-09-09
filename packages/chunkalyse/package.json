@@ -41,6 +41,6 @@
     "byte-size": "^5.0.1",
     "index-require": "^1.0.0",
     "jsoncopy": "^1.0.0",
-    "yargs-parser": "^13.1.1"
+    "yargs-parser": "^14.0.0"
   }
 }
