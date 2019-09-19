@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 args=$@
 if [[ $args == *"--automate"* || $args == *"-a"* ]]; then
 	automate=true
