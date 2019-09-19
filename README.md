@@ -17,7 +17,7 @@ Mono repo holding multiple packages
 | **`bound-call`** | [👔 Create a bound call where you can pass 'this' context as an argument](./packages/bound-call#readme) | [![0.0.0](https://img.shields.io/npm/v/bound-call.svg)](https://www.npmjs.com/package/bound-call)
 | **`boxt`** | [Create boxes around text](./packages/boxt#readme) | [![0.3.3](https://img.shields.io/npm/v/boxt.svg)](https://www.npmjs.com/package/boxt)
 | **`chunkalyse`** | [🍰 Summarise webpack stats output file](./packages/chunkalyse#readme) | [![0.5.5](https://img.shields.io/npm/v/chunkalyse.svg)](https://www.npmjs.com/package/chunkalyse)
-| **`committee`** | [🕶 Commit as someone else](./packages/committee#readme) | [![0.0.6](https://img.shields.io/npm/v/committee.svg)](https://www.npmjs.com/package/committee)
+| **`committee`** | [🕶 Commit as someone else](./packages/committee#readme) | [![0.0.7](https://img.shields.io/npm/v/committee.svg)](https://www.npmjs.com/package/committee)
 | **`@lets/count`** | [🔢 Consistent counter](./packages/count#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/count.svg)](https://www.npmjs.com/package/@lets/count)
 | **`create-git-alias`** | [👨🏻 - interactively apply useful git aliases](./packages/create-git-alias#readme) | [![1.1.6](https://img.shields.io/npm/v/create-git-alias.svg)](https://www.npmjs.com/package/create-git-alias)
 | **`create-npx`** | [🔢 bare bones bin wrapper for NPX](./packages/create-npx#readme) | [![0.1.4](https://img.shields.io/npm/v/create-npx.svg)](https://www.npmjs.com/package/create-npx)
