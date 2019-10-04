@@ -1,20 +1,24 @@
 {
-	"name": "jsnpm",
-	"version": "0.3.7",
-	"description": "Use NPM in Javascript runtime",
-	"author": "omrilotan",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/omrilotan/mono.git"
-	},
-	"homepage": "https://omrilotan.com/mono/jsnpm/",
-	"main": "index.js",
-	"scripts": {
-		"test": "cd ../../; npm t jsnpm; cd -"
-	},
-	"dependencies": {
-		"index-require": "^1.0.0",
-		"npm": "^6.11.3"
-	}
+  "name": "jsnpm",
+  "version": "0.3.7",
+  "description": "Use NPM in Javascript runtime",
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/jsnpm/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t jsnpm; cd -",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "index-require": "^1.0.0",
+    "npm": "^6.11.3",
+    "snyk": "^1.230.5"
+  },
+  "snyk": true
 }
