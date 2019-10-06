@@ -1,4 +1,5 @@
 const moon = require('.');
+const expected = require('./expected.json');
 
 const {
 	ICONS,
@@ -54,4 +55,12 @@ describe('moon', async() => {
 		`Should return a format:${format}`,
 		() => expect(moon({format})).to.be.oneOf(array)
 	));
+
+	it('Compare expected results', () => {
+		const actual = expected.map(
+			([year, month, date]) => [year, month, date, moon(year, month, date, {format: 'code'})]
+		);
+
+		expect(actual).to.deep.equal(expected);
+	});
 });
