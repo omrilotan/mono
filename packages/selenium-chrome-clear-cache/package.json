@@ -1,30 +1,33 @@
 {
-	"name": "selenium-chrome-clear-cache",
-	"version": "1.2.2",
-	"description": "🗑 Clear cache of Chrome in Selenium",
-	"keywords": [
-		"selenium",
-		"chrome",
-		"cache",
-		"clear",
-		"automation",
-		"browser",
-		"webdriver",
-		"cookies",
-		"history"
-	],
-	"author": "omrilotan",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/omrilotan/mono.git"
-	},
-	"homepage": "https://omrilotan.com/mono/selenium-chrome-clear-cache/",
-	"main": "index.js",
-	"scripts": {
-		"test": "cd ../../; npm t selenium-chrome-clear-cache; cd -"
-	},
-	"devDependencies": {
-		"selenium-webdriver": "^4.0.0-alpha.4"
-	}
+  "name": "selenium-chrome-clear-cache",
+  "version": "1.2.2",
+  "description": "🗑 Clear cache of Chrome in Selenium",
+  "keywords": [
+    "selenium",
+    "chrome",
+    "cache",
+    "clear",
+    "automation",
+    "browser",
+    "webdriver",
+    "cookies",
+    "history"
+  ],
+  "author": "omrilotan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/mono.git"
+  },
+  "homepage": "https://omrilotan.com/mono/selenium-chrome-clear-cache/",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ../../; npm t selenium-chrome-clear-cache; cd -"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  },
+  "peerDependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
 }
