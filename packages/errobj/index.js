@@ -28,12 +28,12 @@ module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStac
 				?
 				Object.assign(
 					accumulator,
-					{[key]: error[key]}
+					{[key]: error[key]},
 				)
 				:
 				accumulator,
-			{...parsed[0]}
+			{...parsed[0]},
 		),
-		enrichment
+		enrichment,
 	);
 };

@@ -52,12 +52,12 @@ module.exports.write = async data => {
 	const json = assign(
 		{},
 		await module.exports.read(),
-		data
+		data,
 	);
 
 	await writeFile(
 		'package.json',
-		JSON.stringify(json, null, 2) + await suffix()
+		JSON.stringify(json, null, 2) + await suffix(),
 	);
 
 	return json;
@@ -69,5 +69,5 @@ module.exports.write = async data => {
  */
 module.exports.reset = async () => await writeFile(
 	'package.json',
-	JSON.stringify(await original(), null, 2) + await suffix()
+	JSON.stringify(await original(), null, 2) + await suffix(),
 );

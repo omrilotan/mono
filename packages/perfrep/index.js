@@ -36,5 +36,5 @@ const info = () => cpus().reduce(
 	{
 		idle: 0,
 		total: 0,
-	}
+	},
 );

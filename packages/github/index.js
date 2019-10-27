@@ -32,7 +32,7 @@ module.exports = class GitHub {
 	async request(url, options = {}) {
 		const response = await this.gofor(
 			base(url),
-			options
+			options,
 		);
 
 		if (response.ok) {
@@ -44,7 +44,7 @@ module.exports = class GitHub {
 				`Error in request ${url}`,
 				options.body ? `Body: ${options.body}` : '',
 				JSON.stringify(await response.json(), null, 2),
-			].join('\n')
+			].join('\n'),
 		);
 	}
 
@@ -59,9 +59,9 @@ module.exports = class GitHub {
 			setParam(
 				base(url),
 				'page',
-				page
+				page,
 			),
-			options
+			options,
 		);
 		results.push(...result);
 

@@ -6,23 +6,23 @@ describe('jsnpm', async() => {
 
 		it('Should find if a package exists', async() =>
 			expect(
-				await exists('jsnpm')
-			).to.be.true
+				await exists('jsnpm'),
+			).to.be.true,
 		);
 		it('Should find that a package does not exists', async() =>
 			expect(
-				await exists('ljaslkjasdnkldjas-09u2398u23uhe')
-			).to.be.false
+				await exists('ljaslkjasdnkldjas-09u2398u23uhe'),
+			).to.be.false,
 		);
 		it('Should find if a tag exists', async() =>
 			expect(
-				await exists('jsnpm', 'latest')
-			).to.be.true
+				await exists('jsnpm', 'latest'),
+			).to.be.true,
 		);
 		it('Should find that a tag does not exists', async() =>
 			expect(
-				await exists('jsnpm', 'ljaslkjasdnkldjas')
-			).to.be.false
+				await exists('jsnpm', 'ljaslkjasdnkldjas'),
+			).to.be.false,
 		);
 	});
 
@@ -31,7 +31,7 @@ describe('jsnpm', async() => {
 
 		it('Should retrieve the latest version', async() => {
 			expect(
-				await latest('@(._.)/oooooo')
+				await latest('@(._.)/oooooo'),
 			).to.equal('3.3.3');
 		}).timeout(10000);
 	});
@@ -54,7 +54,7 @@ describe('jsnpm', async() => {
 
 		it('Should retrieve the latest version', async() => {
 			expect(
-				await versions('@(._.)/oooooo')
+				await versions('@(._.)/oooooo'),
 			).to.deep.equal([
 				'0.0.0',
 				'1.1.1',

@@ -37,9 +37,9 @@ module.exports = async ({host, port, code} = {}) => {
 		console.log(
 			`Message received on ${new Date()}\n`,
 			Object.entries(data).map(
-				([key, value]) => `> ${cap(key).bold}\n${printable(value)}`
+				([key, value]) => `> ${cap(key).bold}\n${printable(value)}`,
 			).join('\n\n'),
-			'\n======================================\n'
+			'\n======================================\n',
 		);
 
 		response.status(code).end();

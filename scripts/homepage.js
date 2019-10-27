@@ -8,8 +8,8 @@ const {
 	writeFile,
 } = require('fs').promises;
 const dateformat = require('dateformat');
-const phrase = require('../packages/paraphrase/double');
 const git = require('async-git');
+const phrase = require('../packages/paraphrase/double');
 
 const downloadcount = name => `fetch('https://api.npmjs.org/downloads/point/last-week/${name}').then(result=>result.json()).then(({downloads}) => {window['downloadcount${name}'].innerText = downloads || '0'}).catch(error => { /* ignore */ });`;
 
@@ -51,7 +51,7 @@ async function start() {
 				links.push(`<link rel="prerender" href="${link}">`);
 				scripts.push(downloadcount(name));
 
-			}
+			},
 		);
 
 	const { name, description } = require('../package.json');

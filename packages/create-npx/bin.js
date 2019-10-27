@@ -16,7 +16,7 @@ const get = new Proxy(
 				return undefined;
 			}
 		},
-	}
+	},
 );
 
 (async () => {
@@ -66,19 +66,19 @@ const get = new Proxy(
 				(accumulator, [key, value]) => value
 					? Object.assign(
 						accumulator,
-						{[key]: value}
+						{[key]: value},
 					)
 					: accumulator,
-				{}
+				{},
 			),
 			null,
-			2
-		)
+			2,
+		),
 	);
 
 	writeFile(
 		resolve('.npmignore'),
-		`.*\n*\n!${answers.bin}`
+		`.*\n*\n!${answers.bin}`,
 	);
 
 	if (!(await exist(resolve('readme.md')))) {
@@ -91,7 +91,7 @@ const get = new Proxy(
 				'```',
 				`npx ${answers.name}`,
 				'```',
-			].join('\n')
+			].join('\n'),
 		);
 	}
 })();

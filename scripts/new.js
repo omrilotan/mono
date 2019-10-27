@@ -56,7 +56,7 @@ const [...args] = argv;
 			},
 		},
 		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test'],
-		2
+		2,
 	);
 	files['.npmrc'] = 'package-lock=false';
 	files['.npmignore'] = '.*\n*.log\nspec.js';
@@ -65,8 +65,8 @@ const [...args] = argv;
 
 	Promise.all(
 		Object.entries(files).map(
-			([name, content]) => writeFile(resolve(base, name), `${content}\n`)
-		)
+			([name, content]) => writeFile(resolve(base, name), `${content}\n`),
+		),
 	);
 
 })();

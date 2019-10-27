@@ -17,7 +17,7 @@ const ranges = Object.values({
 
 const pattern = new RegExp(
 	ranges.map(range => `[${range.join('-')}]`).join('|'),
-	'g'
+	'g',
 );
 
 /**
@@ -36,6 +36,6 @@ module.exports = function length(string){
 	const split = string.strip.split(ZERO_WIDTH_JOINER);
 	return split.reduce(
 		(sum, part) => sum + len(part),
-		0
+		0,
 	) / split.length;
 };

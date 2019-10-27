@@ -19,9 +19,9 @@ module.exports = (script, {pipe = false, exit = false} = {}) => new Promise(
 
 				resolve(
 					stdout.trim(),
-					child.exitCode
+					child.exitCode,
 				);
-			}
+			},
 		);
 
 		pipe && child.stdout.on('data', (...args) => process.stdout.write(...args));

@@ -10,7 +10,7 @@ const args = process.argv.reduce(
 
 		return accumulator;
 	},
-	{}
+	{},
 );
 
 const {readdir} = require('fs').promises;

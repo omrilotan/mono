@@ -27,7 +27,7 @@ module.exports = async function() {
 					? true
 					: `Please choose a number between ${LOWEST_STATUS} and ${HIGHEST_STATUS}`,
 			},
-		]
+		],
 	);
 
 	return await require('./service')(answers);

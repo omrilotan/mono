@@ -30,14 +30,14 @@ async function app() {
 
 				return Object.assign(accumulator, {[key]: value.join('=')});
 			},
-			{}
+			{},
 		);
 
 	aliases = aliases
 
 		// Filter out existing and identical
 		.filter(
-			({key, value}) => showAll || existing[key] !== value
+			({key, value}) => showAll || existing[key] !== value,
 		)
 
 		// Warn about existing but different
@@ -53,7 +53,7 @@ async function app() {
 				}
 
 				return {key, desc, value, disabled};
-			}
+			},
 		)
 	;
 
@@ -68,7 +68,7 @@ async function app() {
 				value: [key, value],
 				checked: false,
 				disabled,
-			})
+			}),
 		);
 
 	const message = ['Which git aliases would you like me to set for you?'];

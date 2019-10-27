@@ -28,8 +28,8 @@ describe('eslint-plugin-log/skip', () => {
 				format,
 				'--plugin',
 				'log',
-			])
-		).to.be.true
+			]),
+		).to.be.true,
 	));
 	[
 		'compact',
@@ -45,8 +45,8 @@ describe('eslint-plugin-log/skip', () => {
 				format,
 				'--plugin',
 				'log',
-			])
-		).to.be.false
+			]),
+		).to.be.false,
 	));
 	it(
 		'Should skip when format is set with and without = sign, and for case insensitive value',
@@ -61,7 +61,7 @@ describe('eslint-plugin-log/skip', () => {
 				...format,
 				'--plugin',
 				'log',
-			])
-		).to.be.true)
+			]),
+		).to.be.true),
 	);
 });

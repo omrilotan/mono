@@ -15,8 +15,8 @@ module.exports = async ({length = 7}) => {
 
 		results.push(
 			use.charAt(
-				Math.floor(Math.random() * use.length)
-			)
+				Math.floor(Math.random() * use.length),
+			),
 		);
 	}
 

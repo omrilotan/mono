@@ -12,7 +12,7 @@ describe('edit-package/utils/jsonCopy', () => {
 
 	it('can only create JSONable items', () =>
 		expect(
-			() => jsonCopy({win: global})
-		).to.throw(SyntaxError)
+			() => jsonCopy({win: global}),
+		).to.throw(SyntaxError),
 	);
 });

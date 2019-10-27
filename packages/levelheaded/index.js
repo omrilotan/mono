@@ -33,8 +33,8 @@ module.exports = function levelheaded({
 	return levels.reduce(
 		(instance, level) => Object.assign(
 			instance,
-			{[level]: enough(level) ? (...args) => action.apply({level}, args) : noop}
+			{[level]: enough(level) ? (...args) => action.apply({level}, args) : noop},
 		),
-		object
+		object,
 	);
 };

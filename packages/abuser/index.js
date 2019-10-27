@@ -100,7 +100,7 @@ function shidu(filename, list = []) {
 	// If there are children - iterate over them
 	parent.children
 		.map(
-			({filename}) => filename
+			({filename}) => filename,
 		)
 		.forEach(
 			child => {
@@ -113,6 +113,6 @@ function shidu(filename, list = []) {
 
 				// Remove it from memory
 				delete require.cache[child];
-			}
+			},
 		);
 }

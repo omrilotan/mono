@@ -20,7 +20,7 @@ module.exports = async function greet() {
     ├┴┴┴┴┴┴┤
     ╰─╮  ╭─╯
     ╭─╯  ╰─╮  ${`${name} ${version}`.underline.yellow}
-    `
+    `,
 		);
 
 		return;
@@ -31,7 +31,7 @@ module.exports = async function greet() {
              ─────┬─${'─'.repeat(Math.max(message.length - 5, 1))}
                   ╯
    ${ansiEscapes.image(await readFile(resolve(__dirname, '../../a1vy.png')))}  ${`${name} ${version}`.underline.yellow}
-    `
+    `,
 	);
 };
 

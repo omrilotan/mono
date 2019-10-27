@@ -4,7 +4,7 @@ const {readdirSync} = require('fs');
 const packageDir = (...args) => resolve(
 	__dirname,
 	'../packages',
-	...args
+	...args,
 );
 
 module.exports = readdirSync(packageDir())
@@ -16,7 +16,7 @@ module.exports = readdirSync(packageDir())
 					main,
 					scripts,
 				} = require(
-					packageDir(pkg, 'package.json')
+					packageDir(pkg, 'package.json'),
 				);
 
 				if (scripts.dist) {
@@ -25,7 +25,7 @@ module.exports = readdirSync(packageDir())
 
 				browser && main && Object.assign(
 					accumulator,
-					{[packageDir(pkg, browser)]: packageDir(pkg, main)}
+					{[packageDir(pkg, browser)]: packageDir(pkg, main)},
 				);
 
 				return accumulator;
@@ -33,5 +33,5 @@ module.exports = readdirSync(packageDir())
 				return accumulator;
 			}
 		},
-		{}
+		{},
 	);

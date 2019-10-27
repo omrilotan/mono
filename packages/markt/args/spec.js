@@ -8,9 +8,9 @@ describe('markt/args', () => {
 				'there',
 				'markt',
 				'markt',
-				'sir'
-			).options
-		).to.be.empty
+				'sir',
+			).options,
+		).to.be.empty,
 	);
 
 	it('argumetns without -- are "rest"', () =>
@@ -20,9 +20,9 @@ describe('markt/args', () => {
 				'there',
 				'markt',
 				'markt',
-				'sir'
-			).rest
-		).to.deep.equal(['markt', 'sir'])
+				'sir',
+			).rest,
+		).to.deep.equal(['markt', 'sir']),
 	);
 
 	it('strips everything until first "markt"', () =>
@@ -33,10 +33,10 @@ describe('markt/args', () => {
 					'--there',
 					'--markt',
 					'--markt',
-					'--sir'
-				).options
-			)
-		).to.deep.equal(['markt', 'sir'])
+					'--sir',
+				).options,
+			),
+		).to.deep.equal(['markt', 'sir']),
 	);
 
 	it('includes all if there is no "markt"', () =>
@@ -45,10 +45,10 @@ describe('markt/args', () => {
 				args(
 					'--hello',
 					'--there',
-					'--sir'
-				).options
-			)
-		).to.deep.equal(['hello', 'there', 'sir'])
+					'--sir',
+				).options,
+			),
+		).to.deep.equal(['hello', 'there', 'sir']),
 	);
 
 	it('skips double minus', () =>
@@ -57,10 +57,10 @@ describe('markt/args', () => {
 				args(
 					'--hello',
 					'--',
-					'--sir'
-				).options
-			)
-		).to.deep.equal(['hello', 'sir'])
+					'--sir',
+				).options,
+			),
+		).to.deep.equal(['hello', 'sir']),
 	);
 
 	it('collects args', () =>
@@ -70,12 +70,12 @@ describe('markt/args', () => {
 				'markt',
 				'--destination',
 				'docs/index.html',
-				'--use-default'
-			).options
+				'--use-default',
+			).options,
 		).to.deep.equal({
 			destination: 'docs/index.html',
 			'use-default': true,
-		})
+		}),
 	);
 
 });

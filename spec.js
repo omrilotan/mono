@@ -19,7 +19,7 @@ Object.assign(
 		wait,
 		sleep,
 		abuser,
-	}
+	},
 );
 
 require('dont-look-up')('./packages');

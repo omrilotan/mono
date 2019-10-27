@@ -8,10 +8,10 @@ Object.assign(
 			accumulator,
 			{
 				[key]: async (...args) => await apply(key, args),
-			}
+			},
 		),
-		{}
-	)
+		{},
+	),
 );
 
 async function apply(key, args) {

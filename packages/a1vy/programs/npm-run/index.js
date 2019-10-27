@@ -10,7 +10,7 @@ module.exports = async() => {
 		([value, content]) => ({
 			name: `${value.yellow.bold}: ${content}`,
 			value,
-		})
+		}),
 	);
 
 	const {script, args} = await prompt([

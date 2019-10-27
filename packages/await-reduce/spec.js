@@ -16,7 +16,7 @@ describe('await-reduce', async() => {
 		expect(arr).to.have.lengthOf(3);
 		assert(
 			arr.every(i => (i instanceof Promise)),
-			'Should be an array of promises'
+			'Should be an array of promises',
 		);
 	}
 
@@ -33,20 +33,20 @@ describe('await-reduce', async() => {
 			(await reduce(
 				array,
 				async (results, result) => [...results, result],
-				[]
+				[],
 			)).every(item => (item === 'A')),
-			'Should be an array of results'
-		)
+			'Should be an array of results',
+		),
 	);
 
 	it('Should use first items value as default initial value', async() =>
 		expect(
 			await reduce(
 				array,
-				(collector, item) => [collector, item].join('')
+				(collector, item) => [collector, item].join(''),
 			),
-			'Should be an array of results'
-		).to.equal('AAA')
+			'Should be an array of results',
+		).to.equal('AAA'),
 	);
 
 	it('Should use passed initial value', async() =>
@@ -54,10 +54,10 @@ describe('await-reduce', async() => {
 			await reduce(
 				array,
 				(collector, item) => [collector, item].join(''),
-				'B'
+				'B',
 			),
-			'Should be an array of results'
-		).to.equal('BAAA')
+			'Should be an array of results',
+		).to.equal('BAAA'),
 	);
 
 	it('Should wait for async reducer functions as well', async() =>
@@ -67,13 +67,13 @@ describe('await-reduce', async() => {
 				(collector, item) => new Promise(
 					resolve => setTimeout(
 						() => resolve([collector, item].join('')),
-						40
-					)
+						40,
+					),
 				),
-				'B'
+				'B',
 			),
-			'Should be an array of results'
-		).to.equal('BAAA')
+			'Should be an array of results',
+		).to.equal('BAAA'),
 	);
 
 	it('Should pass the index as third argument to reducer', async() => {
@@ -82,7 +82,7 @@ describe('await-reduce', async() => {
 		await reduce(
 			array,
 			(collector, item, index) => results.push(index),
-			{}
+			{},
 		);
 
 		expect(results).to.include(0);
@@ -96,7 +96,7 @@ describe('await-reduce', async() => {
 
 		await reduce(
 			array,
-			(collector, item, index) => results.push(index)
+			(collector, item, index) => results.push(index),
 		);
 
 		expect(results).to.not.include(0);
@@ -108,16 +108,16 @@ describe('await-reduce', async() => {
 	it('Should pass the array of results as fourth argument to reducer', async() =>
 		await reduce(
 			array,
-			(collector, item, index, arr) => (arr === 'AAA')
-		)
+			(collector, item, index, arr) => (arr === 'AAA'),
+		),
 	);
 
 	it('Works on a normal array as well', async() =>
 		expect(await reduce(
 			['B', 'B', 'B'],
 			(collector, item) => [...collector, item],
-			[]
-		)).to.deep.equal(['B', 'B', 'B'])
+			[],
+		)).to.deep.equal(['B', 'B', 'B']),
 	);
 
 	it('Should resolve promises in the reduced array', async() => {
@@ -128,7 +128,7 @@ describe('await-reduce', async() => {
 				new Promise(resolve => resolve('C')),
 			],
 			(collector, item) => [...collector, item],
-			[]
+			[],
 		)).to.deep.equal(['A', 'B', 'C']);
 	});
 });

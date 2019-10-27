@@ -13,7 +13,7 @@ describe('errobj/verify', () => {
 		new Set(),
 	].forEach(value => it(
 		`Should throw error for ${value ? value.constructor.name : value}`,
-		() => expect(() => verify(value)).to.throw(RangeError)
+		() => expect(() => verify(value)).to.throw(RangeError),
 	));
 	[
 		new Error(),
@@ -32,6 +32,6 @@ describe('errobj/verify', () => {
 		})(),
 	].forEach(value => it(
 		`Should accept ${value ? value.constructor.name : value}`,
-		() => expect(() => verify(value)).to.not.throw()
+		() => expect(() => verify(value)).to.not.throw(),
 	));
 });

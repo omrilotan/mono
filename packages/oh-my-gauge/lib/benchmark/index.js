@@ -27,7 +27,7 @@ const Gauge = require('../gauge');
 module.exports = class Benchmark {
 	constructor(
 		callback = console.log, // eslint-disable-line no-console
-		formatter = (ms, name) => `${name} took ${ms}ms`
+		formatter = (ms, name) => `${name} took ${ms}ms`,
 	) {
 		this.gauge = new Gauge((...args) => callback(formatter(...args)));
 		return this.run.bind(this);

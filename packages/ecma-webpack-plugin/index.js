@@ -33,7 +33,7 @@ module.exports = class EcmaPlugin {
 					? reject(msg)
 					: resolve()
 				;
-			})
+			}),
 		);
 
 	}

@@ -8,7 +8,7 @@ describe('lib', () => {
 				error => {
 					expect(error).to.equal('ERROR_MESSAGE');
 					done();
-				}
+				},
 			);
 
 			callback('ERROR_MESSAGE');
@@ -23,7 +23,7 @@ describe('lib', () => {
 				() => {
 					assert(false);
 					done();
-				}
+				},
 			);
 
 			callback(null, 'Something good');

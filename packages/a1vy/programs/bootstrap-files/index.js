@@ -22,8 +22,8 @@ module.exports = async () => {
 					name: fixFilename(item),
 					value: item,
 					checked: false,
-				})
-			)
+				}),
+			),
 	);
 
 	const answers = await inquirer

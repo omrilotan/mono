@@ -19,11 +19,11 @@ module.exports = array => {
 					}
 					accumulator[index] = accumulator[index] || [];
 					accumulator[index][loc] = value;
-				}
+				},
 			);
 			return accumulator;
 		},
-		[]
+		[],
 	);
 
 	return [

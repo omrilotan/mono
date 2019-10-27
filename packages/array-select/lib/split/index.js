@@ -9,5 +9,5 @@ module.exports = (array, test) => array.reduce(
 		? [truths.concat([item]), falses]
 		: [truths, falses.concat([item])]
 	,
-	[[], []]
+	[[], []],
 );

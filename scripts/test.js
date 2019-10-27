@@ -38,6 +38,6 @@ const Mocha = require('mocha');
 
 			mocha.files = [file];
 			mocha.run();
-		})())
+		})()),
 	);
 })();

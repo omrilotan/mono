@@ -56,7 +56,7 @@ async function getTemplate({template, preset}) {
 						__dirname,
 						'templates',
 						[preset.toLowerCase(), 'html'].join('.'),
-					)
+					),
 				)
 			).toString();
 		} catch (error) {

@@ -6,7 +6,7 @@ describe('array-select/lib/distribute', () => {
 			[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 			i => i < 5,
 			i => i > 5,
-			i => i === 9
+			i => i === 9,
 		);
 
 		expect(smaller).to.deep.equal([1, 2, 3, 4]);
@@ -18,7 +18,7 @@ describe('array-select/lib/distribute', () => {
 		const [deduped, odd] = distribute(
 			[1, 1, 2, 3, 4, 1, 3, 8],
 			(item, index, array) => index === array.indexOf(item),
-			i => i % 2
+			i => i % 2,
 		);
 
 		expect(deduped).to.deep.equal([1, 2, 3, 4, 8]);

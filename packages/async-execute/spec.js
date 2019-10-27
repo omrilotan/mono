@@ -9,19 +9,19 @@ describe('execute', async () => {
 	});
 
 	it('Should return console output', async () =>
-		expect(await execute('echo "Hello"')).to.equal('Hello')
+		expect(await execute('echo "Hello"')).to.equal('Hello'),
 	);
 
 	it('Should return multi line answers', async () =>
-		expect(await execute('echo "Hello\nthere"')).to.equal('Hello\nthere')
+		expect(await execute('echo "Hello\nthere"')).to.equal('Hello\nthere'),
 	);
 
 	it('Should trim line breaks and white space from the edges', async () =>
-		expect(await execute('echo "\n\n    Hello		\n\n     	 "')).to.equal('Hello')
+		expect(await execute('echo "\n\n    Hello		\n\n     	 "')).to.equal('Hello'),
 	);
 
 	it('Should always return a string', async () =>
-		expect(await execute('echo "hello" > /dev/null')).to.be.a('string')
+		expect(await execute('echo "hello" > /dev/null')).to.be.a('string'),
 	);
 
 	it('Should pipe output', async () => {

@@ -38,7 +38,7 @@ describe('sample-size', () => {
 				expect(results)
 					.to.have.lengthOf.at.least(size * min).and
 					.to.have.lengthOf.at.most(size * max);
-			}
+			},
 		);
 	});
 	it('Should sample an array', function() {

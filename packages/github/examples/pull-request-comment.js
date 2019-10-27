@@ -28,13 +28,13 @@ module.exports = async function pull({token, owner, repo, pr, comment, identifie
 	const {request} = new GitHub({token});
 
 	const comments = await request(
-		safe('repos', owner, repo, 'issues', pr, 'comments')
+		safe('repos', owner, repo, 'issues', pr, 'comments'),
 	);
 
 	const uniqueIdentifier = identifier ? identify(identifier) : null;
 
 	const {id = ''} = identifier ? comments.find(
-		comment => comment.body.includes(uniqueIdentifier)
+		comment => comment.body.includes(uniqueIdentifier),
 	) || {} : {};
 
 	const url = id ?
@@ -56,7 +56,7 @@ module.exports = async function pull({token, owner, repo, pr, comment, identifie
 					comment
 				,
 			}),
-		}
+		},
 	);
 };
 

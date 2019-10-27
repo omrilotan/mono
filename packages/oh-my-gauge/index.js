@@ -3,5 +3,5 @@ Object.defineProperties(
 	{
 		Gauge: { get: () => require('./lib/gauge') },
 		Benchmark: {get: () => require('./lib/benchmark') },
-	}
+	},
 );

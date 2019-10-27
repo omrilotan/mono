@@ -6,5 +6,5 @@ module.exports = [
 	'readFile',
 ].reduce(
 	(exp, item) => Object.assign(exp, {[item]: promisify(fs[item])}),
-	{}
+	{},
 );

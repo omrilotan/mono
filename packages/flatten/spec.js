@@ -7,9 +7,9 @@ describe('flatten', () => {
 				[1, 2, 3],
 				[1, 2, 3],
 				[1, 2, 3],
-			]
+			],
 		)).to.deep.equal(
-			[1, 2, 3, 1, 2, 3, 1, 2, 3]
+			[1, 2, 3, 1, 2, 3, 1, 2, 3],
 		);
 	});
 	it('Should flatten nested array of arrays nested array', () => {
@@ -27,9 +27,9 @@ describe('flatten', () => {
 					[1, 2, 3],
 					[4, 5, 6],
 				],
-			]
+			],
 		)).to.deep.equal(
-			[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+			[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6],
 		);
 	});
 	it('Should leave an array of mixed items as is', () => {
@@ -38,13 +38,13 @@ describe('flatten', () => {
 				[1, 2, 3],
 				[1, 2, 3],
 				'a',
-			]
+			],
 		)).to.deep.equal(
 			[
 				[1, 2, 3],
 				[1, 2, 3],
 				'a',
-			]
+			],
 		);
 	});
 	it('Should avoid endless recursion', () => {

@@ -68,7 +68,7 @@ exports.decorateConfig = config => Object.assign(
 			readFileSync(resolve(__dirname, 'dist/term.css')).toString(),
 			config.css,
 		].join('\n'),
-	}
+	},
 );
 
 module.exports.onWindow = browserWindow => browserWindow.setVibrancy('ultra-dark');

@@ -11,30 +11,30 @@ describe('notate', () => {
 	};
 
 	it('Should throw an error when non string is supposed to be processed',
-		() => expect(notate.bind({}, null)).to.throw(TypeError)
+		() => expect(notate.bind({}, null)).to.throw(TypeError),
 	);
 
 	it('Resolves to nested data structure',
 		() => expect(
-			notate(dummy, 'top.middle')
+			notate(dummy, 'top.middle'),
 		).to.deep.equal(
-			{low: 'value'}
-		)
+			{low: 'value'},
+		),
 	);
 
 	it('Resolves to an object',
 		() => expect(
-			notate(dummy, 'top.middle.low')
+			notate(dummy, 'top.middle.low'),
 		).to.equal(
-			'value'
-		)
+			'value',
+		),
 	);
 
 	it('Resolves missing data to \'undefined\'',
 		() => expect(
-			notate(dummy, 'missing.data')
+			notate(dummy, 'missing.data'),
 		).to.equal(
-			undefined
-		)
+			undefined,
+		),
 	);
 });

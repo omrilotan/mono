@@ -21,7 +21,7 @@ describe('paraphrase', () => {
 			const phrase = paraphrase(
 				/\${([^{}]*)}/g,
 				/%{([^{}]*)}/g,
-				/{{([^{}]*)}}/g
+				/{{([^{}]*)}}/g,
 			);
 			const first = 'Martin';
 			const last = 'Prince';
@@ -143,9 +143,9 @@ describe('paraphrase', () => {
 		}).forEach(([key, value]) => {
 			it(key, () => {
 				expect(
-					require(`./${key}`)(value, {name: 'Martin'})
+					require(`./${key}`)(value, {name: 'Martin'}),
 				).to.equal(
-					'Hello, Martin'
+					'Hello, Martin',
 				);
 			});
 		});

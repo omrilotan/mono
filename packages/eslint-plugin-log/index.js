@@ -14,8 +14,8 @@ const processor = {
 
 const processors = Object.assign(
 	...extensions.map(
-		extension => ({[extension]: processor})
-	)
+		extension => ({[extension]: processor}),
+	),
 );
 
 module.exports = {processors};
