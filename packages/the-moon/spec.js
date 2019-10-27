@@ -1,5 +1,5 @@
-const moon = require('.');
 const expected = require('./expected.json');
+const moon = require('.');
 
 const {
 	ICONS,

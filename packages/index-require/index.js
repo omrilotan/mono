@@ -3,7 +3,7 @@ const {
 	lstatSync,
 	readdirSync,
 } = require('fs');
-const {resolve} = require('path');
+const { resolve } = require('path');
 
 const dir = name => existsSync(name) && lstatSync(name).isDirectory();
 const modules = dirname => readdirSync(dirname)
@@ -18,15 +18,17 @@ const modules = dirname => readdirSync(dirname)
 
 module.exports = (dirname, pattern = name => `./${name}`) => modules(dirname)
 	.reduce(
-		(accumulator, name) => Object.assign(
+		(accumulator, name) => Object.defineProperty(
 			accumulator,
+			name,
 			{
-				[name]: require(
+				get: () => require(
 					resolve(
 						dirname,
 						pattern(name)
 					)
 				),
+				enumerable: true,
 			}
 		),
 		{}
