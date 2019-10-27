@@ -19,5 +19,9 @@
   "bin": "committee.sh",
   "scripts": {
     "start": "./committee.sh octocat 🐙 just checking this out"
+  },
+  "devDependencies": {
+    "async-execute": "^1.1.0",
+    "async-git": "^1.8.0"
   }
 }

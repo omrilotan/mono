@@ -1,6 +1,6 @@
 const {join} = require('path');
-const git = require('../async-git');
-const exec = require('../async-execute');
+const git = require('async-git');
+const exec = require('async-execute');
 
 describe('committee', () => {
 	let sha;
