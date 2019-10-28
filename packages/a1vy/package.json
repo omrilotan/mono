@@ -1,6 +1,6 @@
 {
   "name": "a1vy",
-  "version": "0.0.79",
+  "version": "0.0.80",
   "description": "🤖 I help development by doing things",
   "keywords": [
     "bot",
@@ -27,6 +27,7 @@
     "prepublishOnly": "npm run chmod"
   },
   "dependencies": {
+    "@does/exist": "^1.0.0",
     "@does/sortby": "^1.1.0",
     "@lets/wait": "^1.0.0",
     "ansi-escapes": "^4.2.1",

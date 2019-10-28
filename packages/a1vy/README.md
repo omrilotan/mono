@@ -13,6 +13,7 @@ OR
 | Thing | Description
 | --- | ---
 | **Bootstrap Files** | Add the bootstrap files you choose
+| **CSV filter** | filter CSV file by fields
 | **File Server** | Run a static file server from current directory
 | **HTTP Logger** | Run an Express server, log headers and body
 | **HTTP(S) traffic** | Sustain cuncurrent open connections to http(s) URL
