@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src data:image/* https://*; child-src 'none';">
 		<title>mono | npm packages by omrilotan</title>
 		<meta name="description" content="Mono repo holding multiple packages">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
@@ -467,7 +467,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/8a3ff77dc8bf27729ade891a6c0d5a96ff640c18"><b>Add Sandbox</b></a>" <small>on Monday, October 28th, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/d0481248333fe84599bfb42203a95510f94d2b85"><b>CSP</b></a>" <small>on Monday, October 28th, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
