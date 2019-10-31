@@ -49,6 +49,7 @@
 <link rel="prerender" href="./oh-my-gauge/">
 <link rel="prerender" href="./percent/">
 <link rel="prerender" href="./perfrep/">
+<link rel="prerender" href="./publish/">
 <link rel="prerender" href="./reverse-dns-lookup/">
 <link rel="prerender" href="./rmext/">
 <link rel="prerender" href="./run-all-the-things/">
@@ -368,6 +369,13 @@
 </tr>
 
 <tr>
+	<td><a href="./publish/">@lets/publish</a></td>
+	<td>🛵 Publish only if this version was not already published<i title="includes CLI program">🤖</i></td>
+	<td><a href="https://www.npmjs.com/package/@lets/publish"><small>0.0.1</small></a></td>
+	<td id="downloadcount@lets/publish"></td>
+</tr>
+
+<tr>
 	<td><a href="./reverse-dns-lookup/">reverse-dns-lookup</a></td>
 	<td>🕵 Verify an IP is related to a certain domain<i title="includes CLI program">🤖</i></td>
 	<td><a href="https://www.npmjs.com/package/reverse-dns-lookup"><small>1.0.0</small></a></td>
@@ -466,7 +474,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/53eb6968b13971283ef46a5179ad8562268a1660"><b>Committing fixes in the dark, seriously, who killed my power!?</b></a>" <small>on Thursday, October 31st, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/efcb764c7790744e69cf47178be82672a0a818d6"><b>🛵 Publish only if this version was not already published</b></a>" <small>on Thursday, October 31st, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
@@ -510,6 +518,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/notate').then(result=>res
 fetch('https://api.npmjs.org/downloads/point/last-week/oh-my-gauge').then(result=>result.json()).then(({downloads}) => {window['downloadcountoh-my-gauge'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/percent').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/percent'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/perfrep').then(result=>result.json()).then(({downloads}) => {window['downloadcountperfrep'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/@lets/publish').then(result=>result.json()).then(({downloads}) => {window['downloadcount@lets/publish'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/reverse-dns-lookup').then(result=>result.json()).then(({downloads}) => {window['downloadcountreverse-dns-lookup'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/rmext').then(result=>result.json()).then(({downloads}) => {window['downloadcountrmext'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/run-all-the-things').then(result=>result.json()).then(({downloads}) => {window['downloadcountrun-all-the-things'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
