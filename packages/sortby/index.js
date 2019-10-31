@@ -13,5 +13,5 @@ module.exports = (array, by, {order = 'asc', modify = a => a} = {}) => array.sor
 		const direction = order.toLowerCase().substr(0, 4) === 'desc' ? -1 : 1;
 
 		return _a > _b ? (1 * direction) : _a < _b ? (-1 * direction) : 0;
-	}
+	},
 );

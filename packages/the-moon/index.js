@@ -63,7 +63,7 @@ module.exports = Object.defineProperties(
 		},
 		NAMES: {
 			get: () => CODES.map(
-				name => [word(name), SUFFIX].join(' ')
+				name => [word(name), SUFFIX].join(' '),
 			),
 			enumerable: true,
 		},

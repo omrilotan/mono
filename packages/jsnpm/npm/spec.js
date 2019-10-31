@@ -7,17 +7,17 @@ describe('jsnpm/npm', async() => {
 		const instance = npm();
 
 		expect(
-			util.getPromiseDetails(instance)[0]
+			util.getPromiseDetails(instance)[0],
 		).to.equal(
-			util.kPending
+			util.kPending,
 		);
 
 		await instance;
 
 		expect(
-			util.getPromiseDetails(instance)[0]
+			util.getPromiseDetails(instance)[0],
 		).to.equal(
-			util.kFulfilled
+			util.kFulfilled,
 		);
 	});
 });

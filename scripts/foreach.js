@@ -22,7 +22,7 @@ const [command] = argv;
 		(await Promise.all(
 			packages
 				.filter(item =>
-					!item.startsWith('.')
+					!item.startsWith('.'),
 				)
 				.map(pkg =>
 					execute(
@@ -34,9 +34,9 @@ const [command] = argv;
 						].join(' '),
 						{
 							pipe: true,
-						}
-					)
-				)
-		)).join('\n')
+						},
+					),
+				),
+		)).join('\n'),
 	);
 })();

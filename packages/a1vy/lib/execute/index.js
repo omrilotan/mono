@@ -19,8 +19,8 @@ module.exports = (script, args = []) => new Promise(
 
 				resolve(
 					stdout.trim(),
-					child.exitCode
+					child.exitCode,
 				);
-			}
+			},
 		);
 	});

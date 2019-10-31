@@ -14,5 +14,5 @@ Object.assign(
 	{
 		sinon,
 		abuser,
-	}
+	},
 );

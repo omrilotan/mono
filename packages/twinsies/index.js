@@ -87,7 +87,7 @@ module.exports = class Twinsies {
 	scout() {
 		recursiveReaddir(
 			this.source,
-			safe(this.copyList.bind(this), console.error) // eslint-disable-line no-console
+			safe(this.copyList.bind(this), console.error), // eslint-disable-line no-console
 		);
 
 		return this;
@@ -107,8 +107,8 @@ module.exports = class Twinsies {
 
 		[...list].forEach(
 			filename => this.copy(
-				filename, () => (--count || this.callback(list))
-			)
+				filename, () => (--count || this.callback(list)),
+			),
 		);
 
 		return this;
@@ -122,7 +122,7 @@ module.exports = class Twinsies {
 		this.watcher = fs.watch(
 			this.source,
 			{ encoding: 'buffer' },
-			this.respond.bind(this)
+			this.respond.bind(this),
 		);
 
 		return this;
@@ -170,7 +170,7 @@ module.exports = class Twinsies {
 				outputFile(
 					this.target + filename.replace(this.source, ''),
 					this.process(buffer.toString()),
-					safe(done, console.error) // eslint-disable-line no-console
+					safe(done, console.error), // eslint-disable-line no-console
 				);
 			})
 			.catch(error => {

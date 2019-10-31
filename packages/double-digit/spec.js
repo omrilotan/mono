@@ -10,11 +10,11 @@ describe('double-digit', () => {
 	].forEach(([n, r]) => {
 		it(
 			`Should convert ${n} to ${r}`,
-			() => expect(dd(n)).to.equal(r)
+			() => expect(dd(n)).to.equal(r),
 		);
 		it(
 			`${r} should represent ${n}`,
-			() => expect(Number(r)).to.equal(n)
+			() => expect(Number(r)).to.equal(n),
 		);
 	});
 	[
@@ -30,7 +30,7 @@ describe('double-digit', () => {
 	].forEach(([n, r]) => {
 		it(
 			`Should convert ${n} to ${r}`,
-			() => expect(dd(n)).to.equal(r)
+			() => expect(dd(n)).to.equal(r),
 		);
 	});
 	it('Should not convert NaN', () => {

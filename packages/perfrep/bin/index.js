@@ -8,7 +8,7 @@ const perfrep = require('../');
 	const perf = await perfrep();
 	console.log(
 		Object.entries(perf).map(
-			([key, value]) => `• ${key}: ${value}%`
-		).concat('').join('\n')
+			([key, value]) => `• ${key}: ${value}%`,
+		).concat('').join('\n'),
 	);
 })();

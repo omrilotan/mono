@@ -25,11 +25,11 @@ describe('jsoncopy', () => {
 		orig.s = orig;
 
 		expect(
-			() => jsoncopy(jsoncopy)
+			() => jsoncopy(jsoncopy),
 		).to.throw(SyntaxError);
 
 		expect(
-			() => jsoncopy({win: global})
+			() => jsoncopy({win: global}),
 		).to.throw(SyntaxError);
 	});
 

@@ -7,7 +7,7 @@ describe('markt', async () => {
 
 		assert.strictEqual(
 			res,
-			'<p><em>Hello</em></p>'
+			'<p><em>Hello</em></p>',
 		);
 	});
 
@@ -15,15 +15,15 @@ describe('markt', async () => {
 		const res = await markt('*Hello*', '{{content}}');
 
 		assert(
-			res.includes('<p><em>Hello</em></p>')
+			res.includes('<p><em>Hello</em></p>'),
 		);
 	});
 
 	it('pattern can be padded with white space', async () => {
 		expect(
-			await markt('*Hello*', '{{ content }}')
+			await markt('*Hello*', '{{ content }}'),
 		).to.equal(
-			'<p><em>Hello</em></p>'
+			'<p><em>Hello</em></p>',
 		);
 	});
 

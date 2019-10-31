@@ -108,12 +108,12 @@ async function start ({latest, message, name, version}) {
 			message,
 			name,
 			version,
-		})
+		}),
 	);
 
 	const Confirm = require('prompt-confirm');
 	const confirmed = await new Confirm(
-		`install ${name.yellow} version ${latest.yellow} globally?`
+		`install ${name.yellow} version ${latest.yellow} globally?`,
 	).run();
 
 	if (!confirmed) {
@@ -144,6 +144,6 @@ function box ({latest, message, name, version}) {
 		{
 			'align': 'left',
 			'theme': 'round',
-		}
+		},
 	);
 }

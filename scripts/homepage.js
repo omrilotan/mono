@@ -51,7 +51,7 @@ async function start() {
 				links.push(`<link rel="prerender" href="${link}">`);
 				scripts.push(downloadcount(name));
 
-			}
+			},
 		);
 
 	const { name, description } = require('../package.json');

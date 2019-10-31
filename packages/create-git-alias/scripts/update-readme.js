@@ -24,6 +24,6 @@ const sortby = require('../../sortby');
 			'| - | -',
 			...sortby(aliases, 'key').map(({key, desc}) => `| ${key} | ${desc}`),
 			'',
-		].join('\n')
+		].join('\n'),
 	);
 })();

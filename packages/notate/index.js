@@ -24,5 +24,5 @@ module.exports = (source, string = '') => string
 	.split('.')
 	.reduce(
 		(previous, current) => typeof previous === 'object' ? previous[current] : previous,
-		source
+		source,
 	);

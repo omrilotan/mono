@@ -9,7 +9,7 @@ module.exports = async function filterCSV() {
 			name: 'file',
 			message: 'Path to file (enter to get list of files in current directory)',
 			type: 'input',
-		}
+		},
 	]);
 
 	let path = file && resolve(file);
@@ -36,23 +36,23 @@ module.exports = async function filterCSV() {
 	const [ titles ] = lines;
 
 	const { fields } = await prompt([
-			{
-				name: 'fields',
-				message: 'Select fields to leave in',
-				type: 'checkbox',
-				pageSize: '20',
-				choices: titles.split(',').map((name, value) => ({name, value})),
-			},
-		]);
+		{
+			name: 'fields',
+			message: 'Select fields to leave in',
+			type: 'checkbox',
+			pageSize: '20',
+			choices: titles.split(',').map((name, value) => ({name, value})),
+		},
+	]);
 
 	const content = lines.map(
 		line => line.split(',').filter(
-			(_, index) => fields.includes(index)
-		).join(',')
+			(_, index) => fields.includes(index),
+		).join(','),
 	).join('\n');
 
 	await writeFile(
 		path,
-		content
+		content,
 	);
 };

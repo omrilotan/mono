@@ -44,6 +44,6 @@ describe('handle-rejection', async() => {
 		'throw',
 	].forEach(fn => it(
 		`Should expose built in function ${fn}`,
-		() => expect(handle[fn]).to.be.a('function')
+		() => expect(handle[fn]).to.be.a('function'),
 	));
 });

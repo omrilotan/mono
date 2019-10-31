@@ -11,9 +11,9 @@ const modules = dirname => readdirSync(dirname)
 		item => dir(
 			resolve(
 				dirname,
-				item
-			)
-		)
+				item,
+			),
+		),
 	);
 
 module.exports = (dirname, pattern = name => `./${name}`) => modules(dirname)
@@ -25,11 +25,11 @@ module.exports = (dirname, pattern = name => `./${name}`) => modules(dirname)
 				get: () => require(
 					resolve(
 						dirname,
-						pattern(name)
-					)
+						pattern(name),
+					),
 				),
 				enumerable: true,
-			}
+			},
 		),
-		{}
+		{},
 	);

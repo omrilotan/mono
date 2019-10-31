@@ -11,7 +11,7 @@ require('colors');
 		const {name, version} = JSON.parse(pkg.toString());
 
 		console.log( // eslint-disable-line no-console
-			`Checking for versions of ${name} that are newer than ${version}`
+			`Checking for versions of ${name} that are newer than ${version}`,
 		);
 
 		const required = await require('./lib/start')({
@@ -26,8 +26,8 @@ require('colors');
 
 		console.log( // eslint-disable-line no-console
 			boxt(
-				`${name.bold} already is the latest version (${version.dim})`
-			)
+				`${name.bold} already is the latest version (${version.dim})`,
+			),
 		);
 	} catch (error) {
 		console.error(error);  // eslint-disable-line no-console

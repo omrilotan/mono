@@ -10,8 +10,8 @@ module.exports = [
 		accumulator,
 		{
 			[`is${name}`]: item => item instanceof constructor || (item && typeof item.toString === 'function' && item.toString() === `[object ${name}]`),
-		}
+		},
 	),
-	{}
+	{},
 );
 

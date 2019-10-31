@@ -92,7 +92,7 @@ function click(type, selector) {
  */
 module.exports = async function clearCache(
 	{webdriver, driver},
-	{cookies = false, cache = true, history = true} = {}
+	{cookies = false, cache = true, history = true} = {},
 ) {
 	if (!(cookies || cache || history)) {
 		return;
@@ -104,9 +104,9 @@ module.exports = async function clearCache(
 
 	await driver.wait(
 		until.elementLocated(
-			By.js(find, 'settings-ui')
+			By.js(find, 'settings-ui'),
 		),
-		3000
+		3000,
 	);
 
 	await driver.sleep(400);
@@ -120,14 +120,14 @@ module.exports = async function clearCache(
 			async ([option, query]) => option || driver.executeScript(
 				click,
 				'checkbox',
-				query
-			)
-		)
+				query,
+			),
+		),
 	);
 
 	driver.executeScript(
 		click,
-		'button'
+		'button',
 	);
 
 	await driver.sleep(400);

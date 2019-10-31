@@ -61,9 +61,9 @@ describe('selenium-chrome-clear-cache', async() => {
 		expect(loadTimes[1]).to.be.below(loadTimes[0]);
 		expect(loadTimes[2]).to.be.below(loadTimes[0]);
 		expect(
-			Math.abs(loadTimes[2] - loadTimes[1])
+			Math.abs(loadTimes[2] - loadTimes[1]),
 		).to.be.below(
-			Math.abs(loadTimes[2] - loadTimes[0])
+			Math.abs(loadTimes[2] - loadTimes[0]),
 		);
 	}).timeout(TIMEOUT).retries(RETRIES);
 

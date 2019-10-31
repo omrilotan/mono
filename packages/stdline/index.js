@@ -12,7 +12,7 @@ Object.assign(
 		clear,
 		end,
 		update,
-	}
+	},
 );
 
 /**

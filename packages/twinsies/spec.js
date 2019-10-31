@@ -63,7 +63,7 @@ describe('Twinsies', async() => {
 
 		function verify() {
 			expect(
-				readFileSync(`${target}another/example.json`).toString()
+				readFileSync(`${target}another/example.json`).toString(),
 			).to.include('NESTED_FILE');
 			done();
 		}

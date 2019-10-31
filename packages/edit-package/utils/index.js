@@ -9,5 +9,5 @@ Object.assign(
 	module.exports,
 	require('./fs-async'),
 	require('./jsonCopy'),
-	require('./packageData')
+	require('./packageData'),
 );

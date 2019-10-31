@@ -10,6 +10,6 @@ module.exports = (target, key_value_delimiter = ':', list_delimiter, filter = ()
 	Object.entries(target)
 		.filter(filter)
 		.map(
-			entry => entry.map(i => `${i}`).join(key_value_delimiter)
+			entry => entry.map(i => `${i}`).join(key_value_delimiter),
 		)
 		.join(list_delimiter);

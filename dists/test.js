@@ -15,7 +15,7 @@ describe(
 					if (typeof require(pkg) !== 'function') {
 						throw new TypeError(`${pkg} module should expose a function`);
 					}
-				}
-			)
-		)
+				},
+			),
+		),
 );

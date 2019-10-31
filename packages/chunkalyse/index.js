@@ -22,9 +22,9 @@ module.exports = stats => {
 	return stats.children.reduce(
 		(accumulator, child) => Object.assign(
 			accumulator,
-			analyseChunks(child)
+			analyseChunks(child),
 		),
-		{}
+		{},
 	);
 };
 
@@ -46,10 +46,10 @@ const analyseChunks = ({chunks}) => jsoncopy(chunks)
 								accumulator,
 								{
 									[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
-								}
+								},
 							),
-							{}
-						)
+							{},
+						),
 					).reduce(
 						(accumulator, [name, _size]) => Object.assign(
 							accumulator,
@@ -58,14 +58,14 @@ const analyseChunks = ({chunks}) => jsoncopy(chunks)
 									size: _size,
 									percent: percent(_size, size),
 								},
-							}
+							},
 						),
-						{}
+						{},
 					),
 				},
-			}
+			},
 		),
-		{}
+		{},
 	);
 
 /**
@@ -82,10 +82,10 @@ const analyseModules = (name, {modules}, total = 0) => ({
 					accumulator,
 					{
 						[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
-					}
+					},
 				),
-				{}
-			)
+				{},
+			),
 		).reduce(
 			(accumulator, [name, size]) => typeof size === 'number' ? Object.assign(
 				accumulator,
@@ -94,9 +94,9 @@ const analyseModules = (name, {modules}, total = 0) => ({
 						size,
 						percent: percent(size, total),
 					},
-				}
+				},
 			) : accumulator,
-			{}
+			{},
 		),
 		size: total,
 	},

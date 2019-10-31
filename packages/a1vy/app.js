@@ -13,7 +13,7 @@ const sortByNameCaseInsensitive = (...array) => sortby(
 	'name',
 	{
 		modify: a => a.toLowerCase(),
-	}
+	},
 );
 
 module.exports = async function a1vy() {
@@ -50,7 +50,7 @@ async function init() {
 
 			return choices;
 		},
-		[]
+		[],
 	).sort(sortByNameCaseInsensitive);
 
 	const answers = await inquirer

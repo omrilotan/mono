@@ -6,7 +6,7 @@ module.exports = function ip(fallback = '0.0.0.0') {
 	try {
 		return Object.values(networkInterfaces())
 			.filter(
-				array => array.some(extipv4)
+				array => array.some(extipv4),
 			)
 			.pop()
 			.filter(extipv4)

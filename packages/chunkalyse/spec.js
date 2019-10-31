@@ -21,12 +21,12 @@ describe('chunkalyse fixtures', () => {
 		fixture => {
 			it(`[Degregation] Should match fixture stats with expected result for "${fixture}"`, () => {
 				expect(
-					chunkalyse(require(`./fixtures/${fixture}.json`))
+					chunkalyse(require(`./fixtures/${fixture}.json`)),
 				).to.deep.equal(
-					require(`./fixtures/${fixture}.chunkalised.json`)
+					require(`./fixtures/${fixture}.chunkalised.json`),
 				);
 			});
-		}
+		},
 	);
 
 	FIXTURES.forEach(lib => {
@@ -40,11 +40,11 @@ describe('chunkalyse fixtures', () => {
 						const sum = Object.values(modules)
 							.map(({size}) => size).reduce(
 								(sum, i) => sum + i,
-								0
+								0,
 							);
 						expect(sum).to.equal(size);
 					});
-				}
+				},
 			);
 
 		});

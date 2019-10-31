@@ -24,6 +24,6 @@ module.exports = error => Array.from(
 	new Set(
 		Object
 			.getOwnPropertyNames(error)
-			.concat(FIELDS)
-	)
+			.concat(FIELDS),
+	),
 );

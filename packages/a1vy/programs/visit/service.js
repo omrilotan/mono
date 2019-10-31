@@ -21,8 +21,8 @@ module.exports = async({url, times_s, delay_s}) => {
 				continuous.bind(
 					null,
 					visit.bind(null, url),
-					delay
-				)
+					delay,
+				),
 			);
 		await Promise.all(concurrents.map(async c => await c()));
 	} catch (error) {
@@ -58,7 +58,7 @@ function visit(url) {
 			res => {
 				res.on('data', () => null);
 				res.on('end', resolve);
-			}
-		).on('error', reject)
+			},
+		).on('error', reject),
 	);
 }

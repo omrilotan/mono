@@ -20,14 +20,14 @@ function bundle(...handlers) {
 					}
 					break;
 			}
-		})
+		}),
 	);
 }
 
 module.exports = BUILT_IN.reduce(
 	(accumulator, key) => Object.assign(
 		accumulator,
-		{[key]: () => handle(require(`./handlers/${key}`))}
+		{[key]: () => handle(require(`./handlers/${key}`))},
 	),
-	bundle
+	bundle,
 );

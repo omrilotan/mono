@@ -12,7 +12,7 @@ module.exports = struct => Object.entries(struct)
 			...Object.entries(modules)
 				.sort(([, {size: a}], [, {size: b}]) => b - a)
 				.map(
-					([name, {size, percent}]) => ` • ${name}: ${bytes(size)} (${percent}%)`
+					([name, {size, percent}]) => ` • ${name}: ${bytes(size)} (${percent}%)`,
 				),
-		].join('\n')
+		].join('\n'),
 	).join('\n------\n');

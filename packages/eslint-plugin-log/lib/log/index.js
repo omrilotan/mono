@@ -29,14 +29,14 @@ module.exports = function([messages = []] = [], filename) {
 			`${++count}.`,
 			color(check),
 			filename.replace(base, ''),
-		].join(' ')
+		].join(' '),
 	);
 
 	timer = setTimeout(
 		() => console.log(
-			yellow.bold(`\n${count} files linted.`)
+			yellow.bold(`\n${count} files linted.`),
 		),
-		40
+		40,
 	);
 	/* eslint-enable no-console */
 

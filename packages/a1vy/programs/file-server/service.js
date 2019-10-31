@@ -49,7 +49,7 @@ module.exports = async ({host, port, base, page, delay = 0, cache} = {}) => {
 						?  ` (~${delay}ms delay)`.dim
 						: ''
 					,
-				].join('')
+				].join(''),
 			);
 
 			readFile(filename, 'binary', respond);

@@ -9,7 +9,7 @@ const extension = require('../extension');
  */
 module.exports = (
 	{ assets } = {},
-	{ extensions, parser } = {}
+	{ extensions, parser } = {},
 ) => Object.entries(assets)
 	.reduce(
 		(accumulator, [name, {_value: content}]) => {
@@ -25,5 +25,5 @@ module.exports = (
 
 			return accumulator;
 		},
-		[]
+		[],
 	);

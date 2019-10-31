@@ -6,12 +6,12 @@ describe('key-value-join', () => {
 	});
 	it('Should map using custom delimiters', () => {
 		expect(
-			join({a: 1, b: 2}, '=', '&')
+			join({a: 1, b: 2}, '=', '&'),
 		).to.equal('a=1&b=2');
 	});
 	it('Should be able to filter entries', () => {
 		expect(
-			join({a: 1, b: 2, c: 3, d: undefined, e: 0}, '=', '&', ([, value]) => Boolean(value) && value !== 2)
+			join({a: 1, b: 2, c: 3, d: undefined, e: 0}, '=', '&', ([, value]) => Boolean(value) && value !== 2),
 		).to.equal('a=1&c=3');
 	});
 	it('Should convert keys and values to string', () => {
