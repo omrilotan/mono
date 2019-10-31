@@ -1,6 +1,6 @@
 {
   "name": "@lets/publish",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🛵 Publish only if this version was not already published",
   "keywords": [
     "publish",

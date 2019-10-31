@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function publish {
 	local NAME=$(cat package.json | jq -r ".name")
 	local VERSION=$(cat package.json | jq -r ".version")
