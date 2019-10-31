@@ -43,10 +43,10 @@
 <link rel="prerender" href="./levelheaded/">
 <link rel="prerender" href="./markdownise/">
 <link rel="prerender" href="./markt/">
+<link rel="prerender" href="./mocha-setup/">
 <link rel="prerender" href="./module-scope/">
 <link rel="prerender" href="./notate/">
 <link rel="prerender" href="./oh-my-gauge/">
-<link rel="prerender" href="./paraphrase/">
 <link rel="prerender" href="./percent/">
 <link rel="prerender" href="./perfrep/">
 <link rel="prerender" href="./reverse-dns-lookup/">
@@ -125,7 +125,7 @@
 <tr>
 	<td><a href="./babelrc/">babelrc</a></td>
 	<td>🗼 My own babelrc file (=> ES5)</td>
-	<td><a href="https://www.npmjs.com/package/babelrc"><small>0.0.4</small></a></td>
+	<td><a href="https://www.npmjs.com/package/babelrc"><small>0.0.5</small></a></td>
 	<td id="downloadcountbabelrc"></td>
 </tr>
 
@@ -326,6 +326,13 @@
 </tr>
 
 <tr>
+	<td><a href="./mocha-setup/">mocha-setup</a></td>
+	<td>🚨 A mocha require file including some basic things I usually use</td>
+	<td><a href="https://www.npmjs.com/package/mocha-setup"><small>0.0.2</small></a></td>
+	<td id="downloadcountmocha-setup"></td>
+</tr>
+
+<tr>
 	<td><a href="./module-scope/">module-scope</a></td>
 	<td>📍 '__dirname' and '__filename' in harmony modules</td>
 	<td><a href="https://www.npmjs.com/package/module-scope"><small>1.1.0</small></a></td>
@@ -344,13 +351,6 @@
 	<td>Gauge and Benchmark - time Javascript operations</td>
 	<td><a href="https://www.npmjs.com/package/oh-my-gauge"><small>1.0.1</small></a></td>
 	<td id="downloadcountoh-my-gauge"></td>
-</tr>
-
-<tr>
-	<td><a href="./paraphrase/">paraphrase</a></td>
-	<td>Create flavoured string phraser<i title="includes browser entry">🖥</i></td>
-	<td><a href="https://www.npmjs.com/package/paraphrase"><small>1.7.0</small></a></td>
-	<td id="downloadcountparaphrase"></td>
 </tr>
 
 <tr>
@@ -466,7 +466,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/311312aefc08f2218a34b97a646b934b68b343ba"><b>Future self, please forgive me and don't hit me with the baseball bat again!</b></a>" <small>on Tuesday, October 29th, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/f66bac3b08b63d7d44c49beff475069e4b020cc6"><b>We'll figure it out on Monday</b></a>" <small>on Thursday, October 31st, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
@@ -504,10 +504,10 @@ fetch('https://api.npmjs.org/downloads/point/last-week/key-value-join').then(res
 fetch('https://api.npmjs.org/downloads/point/last-week/levelheaded').then(result=>result.json()).then(({downloads}) => {window['downloadcountlevelheaded'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/markdownise').then(result=>result.json()).then(({downloads}) => {window['downloadcountmarkdownise'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/markt').then(result=>result.json()).then(({downloads}) => {window['downloadcountmarkt'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/mocha-setup').then(result=>result.json()).then(({downloads}) => {window['downloadcountmocha-setup'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/module-scope').then(result=>result.json()).then(({downloads}) => {window['downloadcountmodule-scope'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/notate').then(result=>result.json()).then(({downloads}) => {window['downloadcountnotate'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/oh-my-gauge').then(result=>result.json()).then(({downloads}) => {window['downloadcountoh-my-gauge'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
-fetch('https://api.npmjs.org/downloads/point/last-week/paraphrase').then(result=>result.json()).then(({downloads}) => {window['downloadcountparaphrase'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/percent').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/percent'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/perfrep').then(result=>result.json()).then(({downloads}) => {window['downloadcountperfrep'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/reverse-dns-lookup').then(result=>result.json()).then(({downloads}) => {window['downloadcountreverse-dns-lookup'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
