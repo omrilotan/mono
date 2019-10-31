@@ -8,7 +8,7 @@ const {
 	writeFile,
 } = require('fs').promises;
 const dateformat = require('dateformat');
-const phrase = require('../packages/paraphrase/double');
+const phrase = require('paraphrase/double');
 const git = require('async-git');
 
 const downloadcount = name => `fetch('https://api.npmjs.org/downloads/point/last-week/${name}').then(result=>result.json()).then(({downloads}) => {window['downloadcount${name}'].innerText = downloads || '0'}).catch(error => { /* ignore */ });`;

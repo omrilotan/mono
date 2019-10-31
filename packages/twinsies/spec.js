@@ -3,7 +3,7 @@ const {
 	readFileSync,
 } = require('fs');
 
-const interpolate = require('../paraphrase')(/\${([^{}]*)}/g);
+const interpolate = require('paraphrase')(/\${([^{}]*)}/g);
 const execute = require('../async-execute');
 const Twinsies = require('./');
 

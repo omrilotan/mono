@@ -1,0 +1,36 @@
+{
+  "name": "mocha-setup",
+  "version": "0.0.2",
+  "description": "🚨 A mocha require file including some basic things I usually use",
+  "keywords": [
+    "mocha",
+    "setup",
+    "require",
+    "🚨"
+  ],
+  "license": "MIT",
+  "author": "omrilotan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omrilotan/package.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint '**/*.js' -c .eslintrc"
+  },
+  "dependencies": {
+    "abuser": "^2.0.2",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-string": "^1.5.0",
+    "deep-equal-in-any-order": "^1.0.21",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0"
+  },
+  "devDependencies": {
+    "@omrilotan/eslint-config": "^1.1.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-log": "^1.2.3"
+  }
+}
