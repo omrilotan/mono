@@ -46,7 +46,7 @@ Mono repo holding multiple packages
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![1.0.1](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.1](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
-| **`@lets/publish`** | [🛵 Publish only if this version was not already published](./packages/publish#readme) | [![0.0.2](https://img.shields.io/npm/v/@lets/publish.svg)](https://www.npmjs.com/package/@lets/publish)
+| **`@lets/publish`** | [🛵 Publish only if this version was not already published](./packages/publish#readme) | [![0.0.3](https://img.shields.io/npm/v/@lets/publish.svg)](https://www.npmjs.com/package/@lets/publish)
 | **`reverse-dns-lookup`** | [🕵 Verify an IP is related to a certain domain](./packages/reverse-dns-lookup#readme) | [![1.0.0](https://img.shields.io/npm/v/reverse-dns-lookup.svg)](https://www.npmjs.com/package/reverse-dns-lookup)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
