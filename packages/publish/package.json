@@ -1,6 +1,6 @@
 {
   "name": "@lets/publish",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "🛵 Publish only if this version was not already published",
   "keywords": [
     "publish",
@@ -14,5 +14,8 @@
     "url": "git+https://github.com/omrilotan/mono.git"
   },
   "homepage": "https://omrilotan.com/mono/publish/",
-  "bin": "bin.sh"
+  "bin": "bin.js",
+  "dependencies": {
+    "async-execute": "^1.1.0"
+  }
 }
