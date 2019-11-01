@@ -1,0 +1,5 @@
+[
+  "@omrilotan/eslint-config",
+  "eslint",
+  "eslint-plugin-log"
+]

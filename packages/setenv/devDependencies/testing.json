@@ -1,0 +1,10 @@
+[
+  "abuser",
+  "chai",
+  "chai-as-promised",
+  "chai-string",
+  "deep-equal-in-any-order",
+  "mocha",
+  "sinon",
+  "sinon-chai"
+]
