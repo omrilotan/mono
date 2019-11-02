@@ -1,6 +1,6 @@
 {
   "name": "@omrilotan/setenv",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "🔩 Set up a new nodejs development environment",
   "keywords": [
     "development",

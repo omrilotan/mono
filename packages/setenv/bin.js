@@ -28,7 +28,7 @@ async function dependencies() {
 			)),
 		}]);
 
-		await exec(
+		dependencies.length && await exec(
 			`npm i -D ${dependencies.map(d => [d, 'latest'].join('@')).join(' ')}`,
 			{ pipe: true },
 		);
