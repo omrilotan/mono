@@ -30,7 +30,7 @@ async function dependencies() {
 
 		await exec(
 			`npm i -D ${dependencies.map(d => [d, 'latest'].join('@')).join(' ')}`,
-			{ pipe: true }
+			{ pipe: true },
 		);
 	}
 }
