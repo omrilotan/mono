@@ -21,5 +21,17 @@ const commit_message = await execute(&#39;git log -1 --pretty=%B&#39;); // Commi
 <pre><code class="language-js">await execute(&#39;npm t&#39;, {pipe: true});</code></pre>
 <h3 id="exit-process-with-childs-exit-code-default-false">Exit process with child&#39;s exit code (default: false)</h3>
 <pre><code class="language-js">await execute(&#39;npm t&#39;, {pipe: true, exit: true});</code></pre>
+<h3 id="check-a-script-exits-properly">Check a script exits properly</h3>
+<pre><code class="language-js">let code = 0;
+
+try {
+    await execute(&#39;exit 2&#39;);
+} catch (error) {
+    code = error.code;
+}
+
+if (code &gt; 0) {
+    // something must have gone wrong
+}</code></pre>
 	</body>
 </html>
