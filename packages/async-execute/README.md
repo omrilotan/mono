@@ -19,3 +19,18 @@ await execute('npm t', {pipe: true});
 ```js
 await execute('npm t', {pipe: true, exit: true});
 ```
+
+### Check a script exits properly
+```js
+let code = 0;
+
+try {
+	await execute('exit 2');
+} catch (error) {
+	code = error.code;
+}
+
+if (code > 0) {
+	// something must have gone wrong
+}
+```

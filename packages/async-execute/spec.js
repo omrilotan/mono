@@ -24,6 +24,18 @@ describe('execute', async () => {
 		expect(await execute('echo "hello" > /dev/null')).to.be.a('string'),
 	);
 
+	it('Should pass the exit code', async() => {
+		let code = 0;
+
+		try {
+			await execute('exit 14');
+		} catch (error) {
+			code = error.code;
+		}
+
+		expect(code).to.equal(14);
+	});
+
 	it('Should pipe output', async () => {
 		let called = 0;
 		process.stdout.write = function(...args) {
