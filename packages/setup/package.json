@@ -1,6 +1,6 @@
 {
-  "name": "@omrilotan/setenv",
-  "version": "0.0.1",
+  "name": "@omrilotan/setup",
+  "version": "0.0.0",
   "description": "🔩 Set up a new nodejs development environment",
   "keywords": [
     "development",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/omrilotan/mono.git"
   },
-  "homepage": "https://omrilotan.com/mono/setenv/",
+  "homepage": "https://omrilotan.com/mono/setup/",
   "bin": "bin.js",
   "dependencies": {
     "@does/exist": "^1.0.0",
