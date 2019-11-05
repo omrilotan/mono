@@ -5,7 +5,7 @@ const sources = ['a', 'A', '1', 'wij', 'wiJ', 'WIJ', '*', '^', '😀', '😃'];
 describe('stringerprint', () => {
 	it('should create consistent hashes for same string', () => {
 		['a', 'r4g', 'hello'].forEach(
-			string => expect(stringerprint(string)).to.equal(stringerprint(string))
+			string => expect(stringerprint(string)).to.equal(stringerprint(string)),
 		);
 	});
 	it('should create unique hashes for different strings', () => {
@@ -16,10 +16,10 @@ describe('stringerprint', () => {
 		const sources = ['a', 'A', '1', 'wij', 'wiJ', 'WIJ', '*', '^', '😀', '😃'].map(stringerprint);
 		assert(
 			sources.map(
-				value => value.length
+				value => value.length,
 			).every(
-				number => number === 32
-			)
+				number => number === 32,
+			),
 		);
 	});
 });
