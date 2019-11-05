@@ -60,6 +60,7 @@
 <link rel="prerender" href="./sortby/">
 <link rel="prerender" href="./stdline/">
 <link rel="prerender" href="./string-wrap/">
+<link rel="prerender" href="./stringerprint/">
 <link rel="prerender" href="./the-moon/">
 <link rel="prerender" href="./transparent-pixel/">
 <link rel="prerender" href="./upgradable/">
@@ -447,6 +448,13 @@
 </tr>
 
 <tr>
+	<td><a href="./stringerprint/">stringerprint</a></td>
+	<td>🧬 Create a unique, consistent, 32 char digest for a given string</td>
+	<td><a href="https://www.npmjs.com/package/stringerprint"><small>0.0.0</small></a></td>
+	<td id="downloadcountstringerprint"></td>
+</tr>
+
+<tr>
 	<td><a href="./the-moon/">the-moon</a></td>
 	<td>🌕 Show me the moon<i title="includes browser entry">🖥</i> <i title="includes CLI program">🤖</i></td>
 	<td><a href="https://www.npmjs.com/package/the-moon"><small>1.1.0</small></a></td>
@@ -482,7 +490,7 @@
 		</blockquote>
 		<blockquote>
 			<h5>Last change</h5>
-			<sup>a1vy: "<a href="https://github.com/omrilotan/mono/commit/42fbedf88e5319d4387ccbdf0156119639f15dda"><b>whatthecommit.com’s server IP address could not be found.</b></a>" <small>on Sunday, November 3rd, 2019</small></sup>
+			<sup>Omri: "<a href="https://github.com/omrilotan/mono/commit/f4d25cfe50dd3ddcf5378626f0bc9bd10c5a0e1f"><b>stringerprint: digest for a string</b></a>" <small>on Tuesday, November 5th, 2019</small></sup>
 		</blockquote>
 		<script defer>
 fetch('https://api.npmjs.org/downloads/point/last-week/a1vy').then(result=>result.json()).then(({downloads}) => {window['downloadcounta1vy'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
@@ -537,6 +545,7 @@ fetch('https://api.npmjs.org/downloads/point/last-week/@lets/sleep').then(result
 fetch('https://api.npmjs.org/downloads/point/last-week/@does/sortby').then(result=>result.json()).then(({downloads}) => {window['downloadcount@does/sortby'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/stdline').then(result=>result.json()).then(({downloads}) => {window['downloadcountstdline'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/string-wrap').then(result=>result.json()).then(({downloads}) => {window['downloadcountstring-wrap'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
+fetch('https://api.npmjs.org/downloads/point/last-week/stringerprint').then(result=>result.json()).then(({downloads}) => {window['downloadcountstringerprint'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/the-moon').then(result=>result.json()).then(({downloads}) => {window['downloadcountthe-moon'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/transparent-pixel').then(result=>result.json()).then(({downloads}) => {window['downloadcounttransparent-pixel'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
 fetch('https://api.npmjs.org/downloads/point/last-week/upgradable').then(result=>result.json()).then(({downloads}) => {window['downloadcountupgradable'].innerText = downloads || '0'}).catch(error => { /* ignore */ });
