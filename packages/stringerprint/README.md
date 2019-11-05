@@ -5,3 +5,19 @@
 ```js
 stringerprint('Troll') // 922a511f02d148e4c9390526d85ca519
 ```
+
+**Use case**: Create a file fingerprint
+```js
+const { promises: { readFile, writeFile } } = require('fs');
+const stringerprint = require('stringerprint');
+
+const contents = (await readFile(filename)).toString();
+const fingerprint = stringerprint(contents);
+const path = filename.split('.');
+path.splice(array.length - 1, 0, fingerprint);
+
+await writeFile(path.join('.'), contents);
+
+```
+- In: `/path/to/file.js`
+- Out: `/path/to/file.922a511f02d148e4c9390526d85ca519.js`
