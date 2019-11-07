@@ -1,4 +1,0 @@
-{
-  "name": "TCP Logger",
-  "desc": "Log incoming messages on a TCP socket"
-}

@@ -1,4 +1,0 @@
-{
-  "name": "NPM Update",
-  "desc": "Check for updates in NPM dependencies, interactively suggest to update"
-}

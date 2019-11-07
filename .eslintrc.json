@@ -28,7 +28,7 @@
       }
     },
     {
-      "files": [ "scripts/**", "**/bin/**", "**/bin.*", "packages/a1vy/**/*" ],
+      "files": [ "scripts/**", "**/bin/**", "**/bin.*" ],
       "rules": {
         "no-console": 0
       }
