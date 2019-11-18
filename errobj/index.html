@@ -36,7 +36,7 @@ try {
 <li><code>{Object}</code> (enrichment) [_optional_] - This object&#39;s field values will be assigned to the serialised error</li>
 <li><code>{Object}</code> (options) [<em>optional</em>, _nullable_] - See details below<ul>
 <li><code>{Number}</code> offset [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.</li>
-<li><code>{Boolean}</code> parsedStack [_optional_] - Add a parsed stack of the error</li>
+<li><code>{Number}</code> parsedStack [_optional_] - Add a parsed stack of the error with a certain depth</li>
 </ul>
 </li>
 </ol>
@@ -78,7 +78,7 @@ window.onerror = function(message, url, lineNumber, columnNumber, error) {
     send(errobj(error, null, {offset: 1}));
 }</code></pre>
 <h3 id="option-parsedstack">option: parsedStack</h3>
-<pre><code class="language-js">errobj(error, null, {parsedStack: true});
+<pre><code class="language-js">errobj(error, null, {parsedStack: Infinity});
 
 {
     ...
