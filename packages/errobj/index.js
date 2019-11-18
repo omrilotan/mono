@@ -9,9 +9,10 @@ const parse = errorStackParser.parse.bind(errorStackParser);
  * @param  {Error}  error
  * @param  {Object} [enrichment={}]
  * @param  {Number} [options.offset=0] Number of rows to remove from stack top
+ * @param  {Number} [options.parsedStack=0] Add a parsed stack of the error with a certain depth
  * @return {Object}
  */
-module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStack = false} = {}) {
+module.exports = function errobj(error, enrichment = {}, { offset = 0, parsedStack = 0 } = {}) {
 	verify(error);
 
 	const parsed = parse(error);
@@ -20,7 +21,16 @@ module.exports = function errobj(error, enrichment = {}, {offset = 0, parsedStac
 		parsed.splice(0, offset);
 	}
 
-	parsedStack && Object.assign(error, {parsedStack: parsed});
+	if (parsedStack) {
+		parsedStack = parsedStack === true
+			?	Infinity
+			: parsedStack
+		;
+
+		parsed.length = Math.min(parsed.length, parsedStack);
+		Object.assign(error, {parsedStack: parsed});
+	}
+
 
 	return Object.assign(
 		props(error).reduce(

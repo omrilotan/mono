@@ -27,7 +27,7 @@ try {
 2. `{Object}` (enrichment) [_optional_] - This object's field values will be assigned to the serialised error
 3. `{Object}` (options) [_optional_, _nullable_] - See details below
 	- `{Number}` offset [_optional_] - Offset the parsed stack, and error position details. Good for middleware created error objects.
-	- `{Boolean}` parsedStack [_optional_] - Add a parsed stack of the error
+	- `{Number}` parsedStack [_optional_] - Add a parsed stack of the error with a certain depth
 
 ### Example: Sending uncaught error to an HTTP error logger
 
@@ -82,7 +82,7 @@ function verboseLog(message) {
 
 ### option: parsedStack
 ```js
-errobj(error, null, {parsedStack: true});
+errobj(error, null, {parsedStack: Infinity});
 
 {
 	...

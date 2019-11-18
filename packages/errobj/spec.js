@@ -58,14 +58,19 @@ at index.html:56`;
 		expect(parsedStack).to.be.undefined;
 	});
 
-	it('Should attach parsedStack to the details', () => {
-		const error = new RangeError('Nothing');
-		error.stack = `ReferenceError: something is not defined
+	it('Should attach specific lines to parsedStack to the details', () => {
+		const error = () => {
+			const err = new RangeError('Nothing');
+			err.stack = `ReferenceError: something is not defined
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
-		const {parsedStack} = errobj(error, null, {parsedStack: true});
-		expect(parsedStack).to.be.an('array');
+			return err;
+		};
+		expect(errobj(error(), null, {parsedStack: true}).parsedStack).to.have.lengthOf(3);
+		expect(errobj(error(), null, {parsedStack: Infinity}).parsedStack).to.have.lengthOf(3);
+		expect(errobj(error(), null, {parsedStack: 2}).parsedStack).to.have.lengthOf(2);
+		expect(errobj(error(), null, {parsedStack: false}).parsedStack).to.be.undefined;
 	});
 
 	it('Should find line and column from nodejs error stack', () => {
