@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@does/exist": "^1.0.0",
-    "async-git": "^1.6.1",
+    "async-git": "^1.10.1",
     "inquirer": "^7.0.0"
   }
 }
