@@ -15,7 +15,7 @@
 	},
 	"dependencies": {
 		"fs-readfile-promise": "^3.0.0",
-		"output-file": "^1.1.1",
+		"output-file": "^2.0.2",
 		"recursive-readdir": "^2.2.1"
 	},
 	"devDependencies": {
