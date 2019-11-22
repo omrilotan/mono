@@ -24,6 +24,6 @@
     "test": "cd ../../; npm t packages/errobj; cd -"
   },
   "dependencies": {
-    "error-stack-parser": "^2.0.2"
+    "error-stack-parser": "^2.0.4"
   }
 }
