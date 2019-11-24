@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const fsReadfilePromise = require('fs-readfile-promise');
+const { readFile } = fs.promises;
 const recursiveReaddir = require('recursive-readdir');
 const outputFile = require('output-file');
 const safe = require('./lib/safe');
@@ -165,14 +165,16 @@ module.exports = class Twinsies {
 	 * @return self
 	 */
 	copy(filename, done = () => {}) {
-		fsReadfilePromise(filename)
-			.then(buffer => {
-				outputFile(
+		readFile(filename)
+			.then(
+				buffer => outputFile(
 					this.target + filename.replace(this.source, ''),
-					this.process(buffer.toString()),
-					safe(done, console.error), // eslint-disable-line no-console
-				);
-			})
+					this.process(buffer.toString())
+				)
+			)
+			.then(
+				() => safe(done, console.error), // eslint-disable-line no-console
+			)
 			.catch(error => {
 				console.error(error); // eslint-disable-line no-console
 				done();
