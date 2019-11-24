@@ -3,6 +3,7 @@
  */
 
 const fs = require('fs');
+
 const { readFile } = fs.promises;
 const recursiveReaddir = require('recursive-readdir');
 const outputFile = require('output-file');
@@ -169,8 +170,8 @@ module.exports = class Twinsies {
 			.then(
 				buffer => outputFile(
 					this.target + filename.replace(this.source, ''),
-					this.process(buffer.toString())
-				)
+					this.process(buffer.toString()),
+				),
 			)
 			.then(
 				() => safe(done, console.error), // eslint-disable-line no-console
