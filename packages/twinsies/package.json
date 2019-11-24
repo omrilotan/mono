@@ -14,9 +14,9 @@
 		"test": "cd ../../; npm t twinsies; cd -"
 	},
 	"dependencies": {
-		"fs-readfile-promise": "^3.0.0",
+		"fs-readfile-promise": "^3.0.1",
 		"output-file": "^2.0.2",
-		"recursive-readdir": "^2.2.1"
+		"recursive-readdir": "^2.2.2"
 	},
 	"devDependencies": {
 		"paraphrase": "^1.7.0"
