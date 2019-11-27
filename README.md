@@ -33,7 +33,7 @@ Mono repo holding multiple packages
 | **`handle-rejection`** | [💀 Handle unhandled rejections](./packages/handle-rejection#readme) | [![0.1.1](https://img.shields.io/npm/v/handle-rejection.svg)](https://www.npmjs.com/package/handle-rejection)
 | **`hypertonia`** | [A theme for Hyper.](./packages/hypertonia#readme) | [![0.2.8](https://img.shields.io/npm/v/hypertonia.svg)](https://www.npmjs.com/package/hypertonia)
 | **`index-require`** | [☝️ Create an index for a lib directory](./packages/index-require#readme) | [![1.0.1](https://img.shields.io/npm/v/index-require.svg)](https://www.npmjs.com/package/index-require)
-| **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.8](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
+| **`jsnpm`** | [Use NPM in Javascript runtime](./packages/jsnpm#readme) | [![0.3.9](https://img.shields.io/npm/v/jsnpm.svg)](https://www.npmjs.com/package/jsnpm)
 | **`jsoncopy`** | [Create a deep clone of an object using JSON functionalities.](./packages/jsoncopy#readme) | [![1.0.0](https://img.shields.io/npm/v/jsoncopy.svg)](https://www.npmjs.com/package/jsoncopy)
 | **`key-value-join`** | [⛓ Join object entries to create a string representation](./packages/key-value-join#readme) | [![0.0.0](https://img.shields.io/npm/v/key-value-join.svg)](https://www.npmjs.com/package/key-value-join)
 | **`levelheaded`** | [⚖️ Generate object containing functions deemed operational by level](./packages/levelheaded#readme) | [![1.2.0](https://img.shields.io/npm/v/levelheaded.svg)](https://www.npmjs.com/package/levelheaded)
