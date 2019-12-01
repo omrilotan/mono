@@ -1,6 +1,6 @@
 {
   "name": "babelrc",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "🗼 My own babelrc file (=> ES5)",
   "keywords": [
     "babel",
@@ -20,9 +20,9 @@
     "test": "cd ../../; npm t packages/babelrc; cd -"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-syntax-import-meta": "^7.2.0",
-    "@babel/preset-env": "^7.7.1"
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-syntax-import-meta": "^7.7.4",
+    "@babel/preset-env": "^7.7.4"
   }
 }
