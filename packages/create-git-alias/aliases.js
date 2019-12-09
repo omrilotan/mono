@@ -94,4 +94,9 @@ module.exports = [
 		desc: 'fetch from remote master and rebase',
 		value: '!f() { git checkout master && git pull origin master && git checkout - && git rebase master; }; f',
 	},
+	{
+		key: 'back',
+		desc: 'Reset to previous commit',
+		value: 'reset HEAD^',
+	},
 ];

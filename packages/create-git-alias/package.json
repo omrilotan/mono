@@ -1,6 +1,6 @@
 {
   "name": "create-git-alias",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "👨🏻 `npm create git-alias` - interactively apply useful git aliases",
   "keywords": [
     "git",
