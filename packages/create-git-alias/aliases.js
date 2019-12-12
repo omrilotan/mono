@@ -99,4 +99,9 @@ module.exports = [
 		desc: 'Reset to previous commit',
 		value: 'reset HEAD^',
 	},
+	{
+		key: 'mend',
+		desc: 'commit amend with no edits',
+		value: 'commit --amend --no-edit',
+	},
 ];
