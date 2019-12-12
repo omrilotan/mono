@@ -1,6 +1,6 @@
 # @does/exist [![](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist) [![](https://img.shields.io/badge/source--000000.svg?logo=github&style=social)](https://github.com/omrilotan/mono/tree/master/packages/exist)
 
-## Check if a file exists
+## Check if a file exists and is writeable
 
 ```js
 const exist = require('@does/exist');
