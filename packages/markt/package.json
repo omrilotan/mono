@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"fs-extra": "^7.0.0",
-		"marked": "^0.7.0",
+		"marked": "^0.8.0",
 		"paraphrase": "^1.7.0"
 	},
 	"preferGlobal": true
