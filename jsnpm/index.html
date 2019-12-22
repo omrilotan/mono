@@ -39,6 +39,16 @@ try {
 } catch (error) {
     console.error(error)
 }</code></pre>
+<h2 id="unpublish">unpublish</h2>
+<p>{String} Unpublish an existing package. Optionally add a versioe to unpublish. Returns unpublished version.</p>
+<pre><code class="language-js">const {unpublish} = require(&#39;jsnpm&#39;);
+
+try {
+    async unpublish(&#39;@me/my-package&#39;, &#39;1.1.1&#39;) // - @me/my-package@1.1.1
+    console.log(&#39;Unpublished successfully&#39;)
+} catch (error) {
+    console.error(error)
+}</code></pre>
 <h2 id="settag">setTag</h2>
 <p>{void} Set a version to a tag</p>
 <pre><code class="language-js">const {setTag} = require(&#39;jsnpm&#39;);
