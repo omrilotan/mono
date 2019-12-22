@@ -40,6 +40,19 @@ try {
 }
 ```
 
+## unpublish
+{String} Unpublish an existing package. Optionally add a versioe to unpublish. Returns unpublished version.
+```js
+const {unpublish} = require('jsnpm');
+
+try {
+	async unpublish('@me/my-package', '1.1.1') // - @me/my-package@1.1.1
+	console.log('Unpublished successfully')
+} catch (error) {
+	console.error(error)
+}
+```
+
 ## setTag
 {void} Set a version to a tag
 ```js
