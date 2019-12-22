@@ -7,8 +7,8 @@ NPM API for application workflow
 ```js
 const {exists} = require('jsnpm');
 
-async exists('@me/my-package') // true | false
-async exists('@me/my-package', 'next') // true | false
+await exists('@me/my-package') // true | false
+await exists('@me/my-package', 'next') // true | false
 ```
 
 ## getVersion
@@ -16,7 +16,7 @@ async exists('@me/my-package', 'next') // true | false
 ```js
 const {getVersion} = require('jsnpm');
 
-async getVersion('@me/my-package', 'next') // '1.7.9-rc-5fca53d'
+await getVersion('@me/my-package', 'next') // '1.7.9-rc-5fca53d'
 ```
 
 ## latest
@@ -24,7 +24,7 @@ async getVersion('@me/my-package', 'next') // '1.7.9-rc-5fca53d'
 ```js
 const {latest} = require('jsnpm');
 
-async latest('@me/my-package') // '3.3.3'
+await latest('@me/my-package') // '3.3.3'
 ```
 
 ## publish
@@ -33,7 +33,7 @@ async latest('@me/my-package') // '3.3.3'
 const {publish} = require('jsnpm');
 
 try {
-	async publish()
+	await publish()
 	console.log('Published successfully')
 } catch (error) {
 	console.error(error)
@@ -45,7 +45,7 @@ try {
 ```js
 const {setTag} = require('jsnpm');
 
-async setTag('@me/my-package', '2.2.2', 'latest') // ['0.0.0', '1.1.1', '2.2.2', '3.3.3']
+await setTag('@me/my-package', '2.2.2', 'latest') // ['0.0.0', '1.1.1', '2.2.2', '3.3.3']
 ```
 
 ## versions
@@ -53,7 +53,7 @@ async setTag('@me/my-package', '2.2.2', 'latest') // ['0.0.0', '1.1.1', '2.2.2',
 ```js
 const {latest} = require('jsnpm');
 
-async latest('@me/my-package') // ['0.0.0', '1.1.1', '2.2.2', '3.3.3']
+await latest('@me/my-package') // ['0.0.0', '1.1.1', '2.2.2', '3.3.3']
 ```
 
 ## config
