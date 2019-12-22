@@ -17,24 +17,24 @@
 <p>{Boolean} Does this package exist?</p>
 <pre><code class="language-js">const {exists} = require(&#39;jsnpm&#39;);
 
-async exists(&#39;@me/my-package&#39;) // true | false
-async exists(&#39;@me/my-package&#39;, &#39;next&#39;) // true | false</code></pre>
+await exists(&#39;@me/my-package&#39;) // true | false
+await exists(&#39;@me/my-package&#39;, &#39;next&#39;) // true | false</code></pre>
 <h2 id="getversion">getVersion</h2>
 <p>{String} Get the version of a tag in a package</p>
 <pre><code class="language-js">const {getVersion} = require(&#39;jsnpm&#39;);
 
-async getVersion(&#39;@me/my-package&#39;, &#39;next&#39;) // &#39;1.7.9-rc-5fca53d&#39;</code></pre>
+await getVersion(&#39;@me/my-package&#39;, &#39;next&#39;) // &#39;1.7.9-rc-5fca53d&#39;</code></pre>
 <h2 id="latest">latest</h2>
 <p>{String} Get the latest version of a package</p>
 <pre><code class="language-js">const {latest} = require(&#39;jsnpm&#39;);
 
-async latest(&#39;@me/my-package&#39;) // &#39;3.3.3&#39;</code></pre>
+await latest(&#39;@me/my-package&#39;) // &#39;3.3.3&#39;</code></pre>
 <h2 id="publish">publish</h2>
 <p>{void} Publish the hosting package we&#39;re running in (runtime directory). Throws error when publish fails</p>
 <pre><code class="language-js">const {publish} = require(&#39;jsnpm&#39;);
 
 try {
-    async publish()
+    await publish()
     console.log(&#39;Published successfully&#39;)
 } catch (error) {
     console.error(error)
@@ -43,12 +43,12 @@ try {
 <p>{void} Set a version to a tag</p>
 <pre><code class="language-js">const {setTag} = require(&#39;jsnpm&#39;);
 
-async setTag(&#39;@me/my-package&#39;, &#39;2.2.2&#39;, &#39;latest&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]</code></pre>
+await setTag(&#39;@me/my-package&#39;, &#39;2.2.2&#39;, &#39;latest&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]</code></pre>
 <h2 id="versions">versions</h2>
 <p>{Array} Get all published versions of a package</p>
 <pre><code class="language-js">const {latest} = require(&#39;jsnpm&#39;);
 
-async latest(&#39;@me/my-package&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]</code></pre>
+await latest(&#39;@me/my-package&#39;) // [&#39;0.0.0&#39;, &#39;1.1.1&#39;, &#39;2.2.2&#39;, &#39;3.3.3&#39;]</code></pre>
 <h2 id="config">config</h2>
 <p>{void} Set a configuration for the &quot;npm&quot; instance we&#39;re working on</p>
 <pre><code class="language-js">const {config} = require(&#39;jsnpm&#39;);
