@@ -47,7 +47,7 @@
     "eslint-plugin-log": "1.2.3",
     "find": "^0.3.0",
     "finjan": "0.0.0-alpha.2a",
-    "mocha": "^6.1.4",
+    "mocha": "^7.0.0",
     "mocha-junit-reporter": "^1.22.0",
     "node-sass": "^4.12.0",
     "npm-check": "^5.9.0",
