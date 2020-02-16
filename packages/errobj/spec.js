@@ -138,8 +138,8 @@ at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`
 			toJSON() {
 				return {
 					message: 'Custom wrong thing',
-					stack: this.stack
-				}
+					stack: this.stack,
+				};
 			}
 		}
 
