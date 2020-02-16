@@ -132,4 +132,28 @@ at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`
 		expect(lineNumber).to.equal(25);
 		expect(columnNumber).to.equal(21849);
 	});
+
+	it('Should support errors with a toJSON function', () => {
+		class CustomError extends Error {
+			toJSON() {
+				return {
+					message: 'Custom wrong thing',
+					stack: this.stack
+				}
+			}
+		}
+
+		const error = new CustomError('Something must have gone terribly wrong');
+		error.stack = `TypeError: Cannot read property 'gf' of undefined
+at t.r.getPageLoadTime (https://cdn.website.com/assets/application.js:1:284663)
+at d (https://cdn.website.com/assets/business-logic.js:1:286145)
+at https://connect.facebook.net/en_US/fbevents.js:25:21849
+at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
+
+		const { message, lineNumber, columnNumber, extra } = errobj(error, { extra: 'additional info' });
+		expect(message).to.equal('Custom wrong thing');
+		expect(lineNumber).to.equal(1);
+		expect(columnNumber).to.equal(284663);
+		expect(extra).to.equal('additional info');
+	});
 });

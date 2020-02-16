@@ -15,6 +15,10 @@ const parse = errorStackParser.parse.bind(errorStackParser);
 module.exports = function errobj(error, enrichment = {}, { offset = 0, parsedStack = 0 } = {}) {
 	verify(error);
 
+	if (typeof error.toJSON === 'function') {
+		error = error.toJSON();
+	}
+
 	const parsed = parse(error);
 
 	if (typeof offset === 'number' && offset > 0) {
