@@ -8,7 +8,7 @@ Mono repo holding multiple packages
 | **`abuser`** | [🤕 Create modifiers to require cache based on path (e.g. )](./packages/abuser#readme) | [![2.0.2](https://img.shields.io/npm/v/abuser.svg)](https://www.npmjs.com/package/abuser)
 | **`array-select`** | [🚬 Extract items from one array into two or more arrays by results of a provided function](./packages/array-select#readme) | [![0.0.0](https://img.shields.io/npm/v/array-select.svg)](https://www.npmjs.com/package/array-select)
 | **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![1.2.5](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
-| **`async-execute`** | [🦅 Execute command in a child process](./packages/async-execute#readme) | [![1.1.0](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
+| **`async-execute`** | [🦅 Execute command in a child process](./packages/async-execute#readme) | [![1.2.0](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![1.2.3](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`babelrc`** | [🗼 My own babelrc file (=> ES5)](./packages/babelrc#readme) | [![0.0.7](https://img.shields.io/npm/v/babelrc.svg)](https://www.npmjs.com/package/babelrc)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
