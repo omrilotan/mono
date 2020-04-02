@@ -26,10 +26,10 @@ assign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:
 </ul>
 <p>Array</p>
 <pre><code class="language-js">assign(
-    {array: [1, 2]},
+    {array: [1, 2, 3]},
     {array: [3, 4]}
 )
-// {array: [1, 2, 3, 4]}</code></pre>
+// {array: [3, 4, 3]}</code></pre>
 <p>Array of assignable members</p>
 <pre><code class="language-js">assign(
     [{firstName: &#39;Omri&#39;}, {firstName: &#39;Tom&#39;}],
