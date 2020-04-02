@@ -25,7 +25,8 @@ await execute('npm t', {pipe: true, exit: true});
 let code = 0;
 
 try {
-	await execute('exit 2');
+	const result = await execute('exit 2');
+	code = result.code;
 } catch (error) {
 	code = error.code;
 }

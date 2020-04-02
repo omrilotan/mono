@@ -17,10 +17,11 @@ module.exports = (script, {pipe = false, exit = false} = {}) => new Promise(
 					return;
 				}
 
-				resolve(
-					stdout.trim(),
-					child.exitCode,
-				);
+				const result = stdout.trim();
+				result.exitCode = child.exitCode;
+				result.code = child.exitCode;
+
+				resolve(result);
 			},
 		);
 
