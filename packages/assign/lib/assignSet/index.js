@@ -13,6 +13,6 @@ module.exports = function assignSet(target, source) {
 
 	target.clear();
 	array.forEach(
-		item => target.add(item)
+		item => target.add(item),
 	);
 };
