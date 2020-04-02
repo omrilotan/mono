@@ -25,7 +25,8 @@ const commit_message = await execute(&#39;git log -1 --pretty=%B&#39;); // Commi
 <pre><code class="language-js">let code = 0;
 
 try {
-    await execute(&#39;exit 2&#39;);
+    const result = await execute(&#39;exit 2&#39;);
+    code = result.code;
 } catch (error) {
     code = error.code;
 }
