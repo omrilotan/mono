@@ -7,12 +7,12 @@ const assignable = require('../assignable');
  * @param {Array} source	The array from which to assign respective values
  * no return value
  */
-module.exports = (target, source) => source.forEach(
-	(item, index) => assignable(target[index]) && assignable(item)
-		?
-		require('../assign')(target[index], item)
-		:
-		target[index] = item === undefined
-			? target[index]
-			: item,
-);
+module.exports = function assignArray(target, source) {
+	source.forEach(
+		(item, index) => assignable(target[index]) && assignable(item)
+			? require('../assign')(target[index], item)
+			: target[index] = item === undefined
+				? target[index]
+				: item,
+	);
+};
