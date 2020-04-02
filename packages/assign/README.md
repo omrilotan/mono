@@ -18,10 +18,10 @@ I will merge:
 Array
 ```js
 assign(
-	{array: [1, 2]},
+	{array: [1, 2, 3]},
 	{array: [3, 4]}
 )
-// {array: [1, 2, 3, 4]}
+// {array: [3, 4, 3]}
 ```
 
 Array of assignable members

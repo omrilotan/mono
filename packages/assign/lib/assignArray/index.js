@@ -12,5 +12,7 @@ module.exports = (target, source) => source.forEach(
 		?
 		require('../assign')(target[index], item)
 		:
-		target.push(item),
+		target[index] = item === undefined
+			? target[index]
+			: item,
 );

@@ -12,14 +12,14 @@ describe('assign/assign', () => {
 		const x = [1];
 		const y = [2];
 		assign(x, y);
-		expect(x).to.deep.equal([1, 2]);
+		expect(x).to.deep.equal([2]);
 	});
 
 	it('merges nested arrays', () => {
-		const x = {a: 1, x: [1]};
+		const x = {a: 1, x: [1, 1]};
 		const y = {x: [2]};
 		assign(x, y);
-		expect(x).to.deep.equal({a: 1, x: [1, 2]});
+		expect(x).to.deep.equal({a: 1, x: [2, 1]});
 	});
 
 	it('merges arrays with objects', () => {
