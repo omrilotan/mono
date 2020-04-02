@@ -8,11 +8,9 @@ const assignable = require('../assignable');
  * no return value
  */
 module.exports = function assignArray(target, source) {
-	source.forEach(
-		(item, index) => assignable(target[index]) && assignable(item)
-			? require('../assign')(target[index], item)
-			: target[index] = item === undefined
-				? target[index]
-				: item,
-	);
+	source.forEach((item, index) => assignable(target[index]) && assignable(item)
+		? require('../assign')(target[index], item)
+		: target[index] = item === undefined
+			? target[index]
+			: item);
 };

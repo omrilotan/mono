@@ -1,11 +1,7 @@
 const assignable = require('../assignable');
 const clone = require('../clone');
 
-const secureKeys = [
-	'__proto__',
-	'constructor',
-	'prototype',
-];
+const secureKeys = [ '__proto__', 'constructor', 'prototype' ];
 
 /**
  * assign one key from one object to the target

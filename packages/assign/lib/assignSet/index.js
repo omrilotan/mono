@@ -12,7 +12,5 @@ module.exports = function assignSet(target, source) {
 	assignArray(array, Array.from(source));
 
 	target.clear();
-	array.forEach(
-		item => target.add(item),
-	);
+	array.forEach(item => target.add(item));
 };

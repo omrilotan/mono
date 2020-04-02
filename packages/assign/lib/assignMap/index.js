@@ -5,4 +5,4 @@
  * @param {Map} source	The Map from which to assign respective values
  * no return value
  */
-module.exports = (target, source) => source.forEach((key,value) => target.set(value,key));
+module.exports = (target, source) => source.forEach((key, value) => target.set(value, key));
