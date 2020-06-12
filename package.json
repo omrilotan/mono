@@ -48,7 +48,7 @@
     "find": "^0.3.0",
     "finjan": "0.0.0-alpha.2a",
     "mocha": "^8.0.1",
-    "mocha-junit-reporter": "^1.22.0",
+    "mocha-junit-reporter": "^2.0.0",
     "node-sass": "^4.12.0",
     "npm-check": "^5.9.0",
     "paraphrase": "^1.7.0",
