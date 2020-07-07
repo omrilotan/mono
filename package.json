@@ -34,6 +34,8 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.5.0",
+    "@lets/sleep": "^1.0.0",
+    "@lets/wait": "^2.0.2",
     "@omrilotan/eslint-config": "^1.0.0",
     "abuser": "^2.0.2",
     "async-git": "^1.8.0",

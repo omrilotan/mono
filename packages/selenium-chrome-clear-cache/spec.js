@@ -9,7 +9,7 @@ const RETRIES = process.env.CI ? 2 : 1;
 const LINK = 'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching';
 const MEASURE = 'return performance.timing.loadEventEnd - performance.timing.navigationStart;';
 
-describe('selenium-chrome-clear-cache', async() => {
+xdescribe('selenium-chrome-clear-cache', async() => {
 	let driver;
 
 	beforeEach(async() => {
@@ -26,7 +26,7 @@ describe('selenium-chrome-clear-cache', async() => {
 		await wait(1000);
 	});
 
-	xit('Load times should decrease with cache and increase after clearing it', async() => {
+	it('Load times should decrease with cache and increase after clearing it', async() => {
 		const loadTimes = [];
 
 		await driver.get(LINK);
@@ -44,7 +44,7 @@ describe('selenium-chrome-clear-cache', async() => {
 		expect(loadTimes[2]).not.to.be.below(loadTimes[1]);
 	}).timeout(TIMEOUT).retries(RETRIES);
 
-	xit('Load times should decrease with cache and stay low after de-selecting history and cache', async() => {
+	it('Load times should decrease with cache and stay low after de-selecting history and cache', async() => {
 		const loadTimes = [];
 
 		await driver.get(LINK);

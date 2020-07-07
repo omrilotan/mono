@@ -5,8 +5,8 @@ chai.use(require('chai-as-promised'));
 chai.use(require('sinon-chai'));
 const sinon = require('sinon');
 const abuser = require('abuser');
-const wait = require('./packages/wait');
-const sleep = require('./packages/sleep');
+const wait = require('@lets/wait');
+const sleep = require('@lets/sleep');
 
 Object.assign(
 	global,
