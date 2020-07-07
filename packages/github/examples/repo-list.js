@@ -13,8 +13,10 @@ const GitHub = require('../');
  * const repos = await myRepos(process.env.GITHUB_API_TOKEN);
  */
 module.exports = async function myRepos(token) {
-	const {paged} = new GitHub({token});
+	const { paged } = new GitHub({ token });
 	const result = await paged('user/repos?sort=updated');
 
-	return result.map(({name}) => name);
+	return result.map(
+		({ name }) => name
+	);
 };
