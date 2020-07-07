@@ -9,7 +9,7 @@ module.exports = function setParam(url, key, value) {
 		key,
 		typeof value === 'undefined'
 			? url.searchParams.get(key)
-			: value
+			: value,
 	);
 	return url.toString();
 };
