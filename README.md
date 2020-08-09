@@ -55,8 +55,6 @@ Mono repo holding multiple packages
 | **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
 | **`stdline`** | [💬 Update current STDOUT stream](./packages/stdline#readme) | [![0.1.0](https://img.shields.io/npm/v/stdline.svg)](https://www.npmjs.com/package/stdline)
 | **`string-wrap`** | [🥪 wrap a string from both sides](./packages/string-wrap#readme) | [![1.0.0](https://img.shields.io/npm/v/string-wrap.svg)](https://www.npmjs.com/package/string-wrap)
-| **`stringerprint`** | [🧬 Create a unique, consistent, 32 char digest for a given string](./packages/stringerprint#readme) | [![0.0.0](https://img.shields.io/npm/v/stringerprint.svg)](https://www.npmjs.com/package/stringerprint)
 | **`the-moon`** | [🌕 Show me the moon](./packages/the-moon#readme) | [![1.1.0](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon)
 | **`transparent-pixel`** | [One transparent pixel](./packages/transparent-pixel#readme) | [![1.0.0](https://img.shields.io/npm/v/transparent-pixel.svg)](https://www.npmjs.com/package/transparent-pixel)
 | **`upgradable`** | [Interactive upgrade machine for NPM CLI tools](./packages/upgradable#readme) | [![0.0.11](https://img.shields.io/npm/v/upgradable.svg)](https://www.npmjs.com/package/upgradable)
-| **`@lets/wait`** | [⏲ A promising wait function](./packages/wait#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/wait.svg)](https://www.npmjs.com/package/@lets/wait)
