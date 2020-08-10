@@ -1,8 +1,8 @@
 const execute = require('./');
 
 describe('execute', async () => {
-	const {write: stdout} = process.stdout;
-	const {write: stderr} = process.stderr;
+	const { write: stdout } = process.stdout;
+	const { write: stderr } = process.stderr;
 	afterEach(() => {
 		process.stdout.write = stdout;
 		process.stderr.write = stderr;
@@ -44,7 +44,7 @@ describe('execute', async () => {
 		};
 
 		const code = 'node -p "console.log(\'one\'); setTimeout(console.log, 100, \'two\'); \'end\'"';
-		const result = await execute(code, {pipe: true});
+		const result = await execute(code, { pipe: true });
 		expect(called).to.be.at.least(2).and.at.most(3);
 		expect(result).to.equal('one\nend\ntwo');
 	});
@@ -59,9 +59,9 @@ describe('execute', async () => {
 		};
 
 		const code = 'node -p "process.stderr.write(\'one\'); \'end\'"';
-		const result = await execute(code, {pipe: true});
+		const result = await execute(code, { pipe: true });
 		expect(called).to.equal(1);
-		expect(outputs).to.deep.equal(['one']);
+		expect(outputs).to.deep.equal([ 'one' ]);
 		expect(result).to.equal('end');
 	});
 

@@ -8,7 +8,7 @@ process.on('unhandledRejection', error => {
 	process.exit(1);
 });
 
-const args = [...process.argv];
+const args = [ ...process.argv ];
 
 const names = [
 	...Object.keys(bin),

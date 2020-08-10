@@ -25,8 +25,8 @@ xdescribe('Twinsies', async() => {
 		twinsies = new Twinsies({
 			source,
 			target,
-			matches: [/.*\.json/],
-			process: string => interpolate(string, {name: 'My Name', version: '1.2.3', testScript: 'npm test'}),
+			matches: [ /.*\.json/ ],
+			process: string => interpolate(string, { name: 'My Name', version: '1.2.3', testScript: 'npm test' }),
 		});
 	});
 
@@ -58,7 +58,7 @@ xdescribe('Twinsies', async() => {
 	});
 
 	it('Copies the contents of the files', done => {
-		assert(!['example.json'].some(file => existsSync(`${target}${file}`)));
+		assert(![ 'example.json' ].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 
 		function verify() {
@@ -70,7 +70,7 @@ xdescribe('Twinsies', async() => {
 	});
 
 	it('processes the content of the files', done => {
-		assert(!['example.json'].some(file => existsSync(`${target}${file}`)));
+		assert(![ 'example.json' ].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 
 		function verify() {
@@ -85,7 +85,7 @@ xdescribe('Twinsies', async() => {
 	});
 
 	it('watches for file changes', done => {
-		assert(!['changing.json'].some(file => existsSync(`${target}${file}`)));
+		assert(![ 'changing.json' ].some(file => existsSync(`${target}${file}`)));
 		twinsies.register(verify).start();
 
 		function verify() {

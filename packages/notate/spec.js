@@ -18,7 +18,7 @@ describe('notate', () => {
 		() => expect(
 			notate(dummy, 'top.middle'),
 		).to.deep.equal(
-			{low: 'value'},
+			{ low: 'value' },
 		),
 	);
 

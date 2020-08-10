@@ -1,7 +1,7 @@
-const {resolve, extname} = require('path');
-const {readdirSync} = require('fs');
+const { resolve, extname } = require('path');
+const { readdirSync } = require('fs');
 
-const config = ({entry}) => ({
+const config = ({ entry }) => ({
 	entry,
 	output: {
 		path: resolve(__dirname, './dist'),
@@ -20,7 +20,7 @@ module.exports = [
 		entry: readdirSync(resolve(__dirname, './src/modules/')).reduce(
 			(accumulator, file) => Object.assign(
 				accumulator,
-				{[file.replace(extname(file), '')]: resolve(__dirname, './src/modules/', file)},
+				{ [file.replace(extname(file), '')]: resolve(__dirname, './src/modules/', file) },
 			),
 			{},
 		),

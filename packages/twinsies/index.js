@@ -48,10 +48,10 @@ module.exports = class Twinsies {
 	constructor({
 		source = './',
 		target = './',
-		matches = [/.*/],
+		matches = [ /.*/ ],
 		process = data => data,
 	} = {}) {
-		Object.assign(this, {source, target, matches, process});
+		Object.assign(this, { source, target, matches, process });
 		this.watcher = null;
 		this.callbacks = [];
 	}
@@ -106,7 +106,7 @@ module.exports = class Twinsies {
 
 		count || this.callback(...list);
 
-		[...list].forEach(
+		[ ...list ].forEach(
 			filename => this.copy(
 				filename, () => (--count || this.callback(list)),
 			),

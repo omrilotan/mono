@@ -1,4 +1,4 @@
-const {promisify} = require('util');
+const { promisify } = require('util');
 
 module.exports = async function exists(field, value) {
 	try {

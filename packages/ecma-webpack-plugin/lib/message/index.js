@@ -7,7 +7,7 @@ const { red, yellow } = require('chalk');
  */
 module.exports = errors => errors
 	.map(
-		({name, message}) => [
+		({ name, message }) => [
 			red('Found parsing errors in '),
 			yellow(name),
 			':\n- ',

@@ -9,14 +9,14 @@ describe('bench-press', () => {
 
 	it('Accepts different messages', () =>
 		assert.equal(
-			benchpress(() => {}, {message: 'something else'}),
+			benchpress(() => {}, { message: 'something else' }),
 			'something else',
 		),
 	);
 
 	it('Accepts a different number of iterations', () =>
 		assert.equal(
-			benchpress(() => {}, {iterations: 10, message: '${iterations}'}),
+			benchpress(() => {}, { iterations: 10, message: '${iterations}' }),
 			'10',
 		),
 	);
@@ -25,7 +25,7 @@ describe('bench-press', () => {
 		assert(
 			benchpress(() => {
 				sleep(10);
-			}, {iterations: 10, message: '${duration}'}) > 99,
+			}, { iterations: 10, message: '${duration}' }) > 99,
 		),
 	);
 });

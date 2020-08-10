@@ -1,12 +1,12 @@
-const {promisify} = require('util');
+const { promisify } = require('util');
 const read = promisify(require('fs').readFile);
-const {resolve} = require('path');
+const { resolve } = require('path');
 const marked = promisify(require('marked'));
 const paraphrase = require('paraphrase');
 
 const DEFAULT_TEMPLATE = '{{content}}';
 
-const phrase = paraphrase(/{{([^{}]*)}}/gm, {clean: true});
+const phrase = paraphrase(/{{([^{}]*)}}/gm, { clean: true });
 
 /**
  * [description]
@@ -27,7 +27,7 @@ const phrase = paraphrase(/{{([^{}]*)}}/gm, {clean: true});
  */
 module.exports = async function(content, options = {}) {
 	if (typeof options === 'string') {
-		options = {template: options};
+		options = { template: options };
 	}
 
 	const template = await getTemplate(options);
@@ -43,7 +43,7 @@ module.exports = async function(content, options = {}) {
  * @param  {String} [options.preset]   File name
  * @return {String}
  */
-async function getTemplate({template, preset}) {
+async function getTemplate({ template, preset }) {
 	if (typeof template === 'string') {
 		return template;
 	}
@@ -55,7 +55,7 @@ async function getTemplate({template, preset}) {
 					resolve(
 						__dirname,
 						'templates',
-						[preset.toLowerCase(), 'html'].join('.'),
+						[ preset.toLowerCase(), 'html' ].join('.'),
 					),
 				)
 			).toString();

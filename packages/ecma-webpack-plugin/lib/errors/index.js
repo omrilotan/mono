@@ -12,7 +12,7 @@ module.exports = (
 	{ extensions, parser } = {},
 ) => Object.entries(assets)
 	.reduce(
-		(accumulator, [name, {_value: content}]) => {
+		(accumulator, [ name, { _value: content } ]) => {
 			if (!extensions.includes(extension(name))) {
 				return accumulator;
 			}
@@ -20,7 +20,7 @@ module.exports = (
 			try {
 				parse(content, parser);
 			} catch ({ message }) {
-				accumulator.push({name, message});
+				accumulator.push({ name, message });
 			}
 
 			return accumulator;

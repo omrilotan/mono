@@ -1,4 +1,4 @@
-const {promisify} = require('util');
+const { promisify } = require('util');
 
 /**
  * Check if a package or a tag of a package exists in the registry
@@ -8,7 +8,7 @@ const {promisify} = require('util');
  */
 module.exports = async function getVersion(module, tag = 'latest') {
 	try {
-		const results = await promisify(this.view)([module, tag].join('@'), 'version');
+		const results = await promisify(this.view)([ module, tag ].join('@'), 'version');
 		const version = Object.values(results).shift();
 
 		return version && version.version;

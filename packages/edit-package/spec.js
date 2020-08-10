@@ -16,17 +16,17 @@ describe('edit-package', () => {
 	});
 
 	it('should edit package.json file', async () => {
-		await editor.write({name: 'NOT_THE_PACKAGE_NAME'});
+		await editor.write({ name: 'NOT_THE_PACKAGE_NAME' });
 		expect(readJsonSync('package.json').name).to.equal('NOT_THE_PACKAGE_NAME');
 	});
 
 	it('should merge with existing package.json info', async () => {
-		await editor.write({name: 'NOT_THE_PACKAGE_NAME'});
+		await editor.write({ name: 'NOT_THE_PACKAGE_NAME' });
 		expect(readJsonSync('package.json').version).to.equal(packageJson.version);
 	});
 
 	it('reset restores original package.json', async () => {
-		await editor.write({name: 'NOT_THE_PACKAGE_NAME', newkey: 'THIS WAS NOT HERE BEFORE'});
+		await editor.write({ name: 'NOT_THE_PACKAGE_NAME', newkey: 'THIS WAS NOT HERE BEFORE' });
 		await editor.reset();
 
 		const {
@@ -40,8 +40,8 @@ describe('edit-package', () => {
 	});
 
 	it('continues from saved package file', async () => {
-		await editor.write({name: 'HAIM MISPARAIM'});
-		await editor.write({version: '0.0.0-test'});
+		await editor.write({ name: 'HAIM MISPARAIM' });
+		await editor.write({ version: '0.0.0-test' });
 		expect(readJsonSync('package.json').name).to.equal('HAIM MISPARAIM');
 	});
 

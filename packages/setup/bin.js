@@ -19,17 +19,17 @@ async function dependencies() {
 	while(devDependencies.length) {
 		const dependency = devDependencies.pop();
 		const list = require(join(dir, dependency));
-		const { dependencies } = await prompt([{
+		const { dependencies } = await prompt([ {
 			name: 'dependencies',
 			type: 'checkbox',
 			message: `Pick devDependencies to install for ${dependency.split('.').shift()}`,
 			choices: list.map(name => (
 				{ name, value: name, checked: true }
 			)),
-		}]);
+		} ]);
 
 		dependencies.length && await exec(
-			`npm i -D ${dependencies.map(d => [d, 'latest'].join('@')).join(' ')}`,
+			`npm i -D ${dependencies.map(d => [ d, 'latest' ].join('@')).join(' ')}`,
 			{ pipe: true },
 		);
 	}
@@ -47,7 +47,7 @@ async function fixtures() {
 
 		const exists = await exist(destination);
 
-		const { answer } = await prompt([{
+		const { answer } = await prompt([ {
 			name: 'answer',
 			type: 'confirm',
 			message: [
@@ -56,7 +56,7 @@ async function fixtures() {
 				'?',
 			].join(' '),
 			default: !exists,
-		}]);
+		} ]);
 
 		answer && await copyFile(source, destination);
 	}

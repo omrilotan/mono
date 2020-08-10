@@ -2,7 +2,7 @@ const {
 	readFile,
 	writeFile,
 } = require('fs').promises;
-const {join} = require('path');
+const { join } = require('path');
 
 const TITLE = '## aliases';
 const aliases = require('../aliases');
@@ -22,7 +22,7 @@ const sortby = require('../../sortby');
 			'',
 			'| alias | Description',
 			'| - | -',
-			...sortby(aliases, 'key').map(({key, desc}) => `| ${key} | ${desc}`),
+			...sortby(aliases, 'key').map(({ key, desc }) => `| ${key} | ${desc}`),
 			'',
 		].join('\n'),
 	);

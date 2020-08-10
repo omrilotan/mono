@@ -2,7 +2,7 @@ const perfrep = require('.');
 
 describe('notate', async() => {
 	it('Should return numeric results in percent (between 0 and 100)', async() => {
-		const {cpu, memory, heap} = await perfrep();
+		const { cpu, memory, heap } = await perfrep();
 
 		expect(cpu).to.be.at.least(0);
 		expect(cpu).to.be.at.most(100);

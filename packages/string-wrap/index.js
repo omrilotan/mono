@@ -5,4 +5,4 @@
  * @param  {String} [after]
  * @return {String}
  */
-module.exports = (string, before = '', after = before) => [before, string, after].join('');
+module.exports = (string, before = '', after = before) => [ before, string, after ].join('');

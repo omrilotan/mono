@@ -9,7 +9,7 @@ describe('error-notation', () => {
 	});
 	it('Should include all error fields', () => {
 		const error = new TypeError('Nothing');
-		error.details = {answer: 42};
+		error.details = { answer: 42 };
 		error.code = 'UNKNERR';
 		const obj = errobj(error);
 		expect(obj.message).to.equal('Nothing');
@@ -22,17 +22,17 @@ describe('error-notation', () => {
 	it('Should include any custom property attached to the error', () => {
 		const error = new RangeError('Nothing');
 		error.extra = 'information';
-		const {extra} = errobj(error);
+		const { extra } = errobj(error);
 		expect(extra).to.equal('information');
 	});
 	it('Should include enrichment fields', () => {
 		const error = new RangeError('Nothing');
-		const {extra} = errobj(error, {extra: 'information'});
+		const { extra } = errobj(error, { extra: 'information' });
 		expect(extra).to.equal('information');
 	});
 	it('Should give precedence to enrichment fields over the native ones', () => {
 		const error = new RangeError('Nothing');
-		const {message} = errobj(error, {message: 'Something'});
+		const { message } = errobj(error, { message: 'Something' });
 		expect(message).to.equal('Something');
 	});
 
@@ -42,7 +42,7 @@ describe('error-notation', () => {
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
-		const {fileName, lineNumber, columnNumber} = errobj(error);
+		const { fileName, lineNumber, columnNumber } = errobj(error);
 		expect(fileName).to.equal('index.html');
 		expect(lineNumber).to.equal(46);
 		expect(columnNumber).to.be.undefined;
@@ -54,7 +54,7 @@ at index.html:56`;
 at change (index.html:46)
 at index.html:53
 at index.html:56`;
-		const {parsedStack} = errobj(error);
+		const { parsedStack } = errobj(error);
 		expect(parsedStack).to.be.undefined;
 	});
 
@@ -67,10 +67,10 @@ at index.html:53
 at index.html:56`;
 			return err;
 		};
-		expect(errobj(error(), null, {parsedStack: true}).parsedStack).to.have.lengthOf(3);
-		expect(errobj(error(), null, {parsedStack: Infinity}).parsedStack).to.have.lengthOf(3);
-		expect(errobj(error(), null, {parsedStack: 2}).parsedStack).to.have.lengthOf(2);
-		expect(errobj(error(), null, {parsedStack: false}).parsedStack).to.be.undefined;
+		expect(errobj(error(), null, { parsedStack: true }).parsedStack).to.have.lengthOf(3);
+		expect(errobj(error(), null, { parsedStack: Infinity }).parsedStack).to.have.lengthOf(3);
+		expect(errobj(error(), null, { parsedStack: 2 }).parsedStack).to.have.lengthOf(2);
+		expect(errobj(error(), null, { parsedStack: false }).parsedStack).to.be.undefined;
 	});
 
 	it('Should find line and column from nodejs error stack', () => {
@@ -83,7 +83,7 @@ at buildAppFilters (/app/dist/apps/listings/server.js:40145:18)
 at Object.listingsResult (/app/dist/apps/listings/server.js:29813:22)
 at /app/dist/apps/listings/server.js:27177:21
 at process._tickCallback (internal/process/next_tick.js:68:7)`;
-		const {fileName, lineNumber, columnNumber} = errobj(error);
+		const { fileName, lineNumber, columnNumber } = errobj(error);
 		expect(fileName).to.equal('/app/dist/apps/listings/server.js');
 		expect(lineNumber).to.equal(1329);
 		expect(columnNumber).to.equal(40);
@@ -96,7 +96,7 @@ at t.r.getPageLoadTime (https://cdn.website.com/assets/application.js:1:284663)
 at d (https://cdn.website.com/assets/business-logic.js:1:286145)
 at https://connect.facebook.net/en_US/fbevents.js:25:21849
 at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
-		const {fileName, lineNumber, columnNumber} = errobj(error);
+		const { fileName, lineNumber, columnNumber } = errobj(error);
 		expect(fileName).to.equal('https://cdn.website.com/assets/application.js');
 		expect(lineNumber).to.equal(1);
 		expect(columnNumber).to.equal(284663);
@@ -111,7 +111,7 @@ at t.r.getPageLoadTime (https://cdn.website.com/assets/application.js:1:284663)
 at d (https://cdn.website.com/assets/business-logic.js:1:286145)
 at https://connect.facebook.net/en_US/fbevents.js:25:21849
 at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
-		const {lineNumber, columnNumber} = errobj(error);
+		const { lineNumber, columnNumber } = errobj(error);
 		expect(lineNumber).to.equal(2);
 		expect(columnNumber).to.equal(4);
 	});
@@ -124,11 +124,11 @@ at d (https://cdn.website.com/assets/business-logic.js:4:286145)
 at https://connect.facebook.net/en_US/fbevents.js:25:21849
 at HTMLIFrameElement.b (https://connect.facebook.net/en_US/fbevents.js:24:3061)`;
 		let lineNumber, columnNumber;
-		({lineNumber, columnNumber} = errobj(error, null, {offset: 1}));
+		({ lineNumber, columnNumber } = errobj(error, null, { offset: 1 }));
 		expect(lineNumber).to.equal(4);
 		expect(columnNumber).to.equal(286145);
 
-		({lineNumber, columnNumber} = errobj(error, null, {offset: 2}));
+		({ lineNumber, columnNumber } = errobj(error, null, { offset: 2 }));
 		expect(lineNumber).to.equal(25);
 		expect(columnNumber).to.equal(21849);
 	});

@@ -10,7 +10,7 @@ describe('oh-my-gauge/Gauge', () => {
 		});
 
 		it('Receives the arguments', () => {
-			const wrapped = gauge((one, two, three) => [three, two, one].join(', '));
+			const wrapped = gauge((one, two, three) => [ three, two, one ].join(', '));
 			expect(wrapped('one', 'two', 'three')).to.equal('three, two, one');
 		});
 

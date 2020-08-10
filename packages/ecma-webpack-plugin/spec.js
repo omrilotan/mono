@@ -1,4 +1,4 @@
-const {clean, override} = abuser(__filename);
+const { clean, override } = abuser(__filename);
 
 const compiler = {
 	hooks: {
@@ -31,13 +31,13 @@ describe('ecma-webpack-plugin', () => {
 	it('Should set default options', () => {
 		const plugin = new EcmaPlugin();
 
-		expect(plugin.options.extensions).to.deep.equal(['js', 'mjs']);
+		expect(plugin.options.extensions).to.deep.equal([ 'js', 'mjs' ]);
 	});
 	it('Should register with tapPromise', () => {
 		const plugin = new EcmaPlugin();
 		plugin.apply(compiler);
 
-		const [[name, callback]] = compiler.hooks.emit.tapPromise.args;
+		const [ [ name, callback ] ] = compiler.hooks.emit.tapPromise.args;
 
 		expect(name).to.equal('EcmaPlugin');
 		expect(callback).to.be.a('function');
@@ -46,7 +46,7 @@ describe('ecma-webpack-plugin', () => {
 		const plugin = new EcmaPlugin();
 		plugin.apply(compiler);
 
-		const [[, callback]] = compiler.hooks.emit.tapPromise.args;
+		const [ [ , callback ] ] = compiler.hooks.emit.tapPromise.args;
 
 		expect(callback(compilation)).to.be.an.instanceof(Promise);
 	});
@@ -54,7 +54,7 @@ describe('ecma-webpack-plugin', () => {
 		const plugin = new EcmaPlugin();
 		plugin.apply(compiler);
 
-		const [[, callback]] = compiler.hooks.emit.tapPromise.args;
+		const [ [ , callback ] ] = compiler.hooks.emit.tapPromise.args;
 		await callback(compilation);
 
 		expect(errors).to.have.been.calledOnce;

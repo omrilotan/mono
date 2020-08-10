@@ -1,4 +1,4 @@
-const OBJECT_TYPES = ['object', 'function'];
+const OBJECT_TYPES = [ 'object', 'function' ];
 
 /**
  * Checks this object is an assignable object

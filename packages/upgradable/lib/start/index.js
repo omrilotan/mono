@@ -44,7 +44,7 @@ module.exports = async function init ({
 		return false;
 	}
 
-	const latest = await fork('latest-version', {name});
+	const latest = await fork('latest-version', { name });
 
 	if (!semver.gt(latest, version)) {
 		return false;
@@ -95,7 +95,7 @@ function later (info) {
  * @param   {Info} info Information about the package
  * @returns {undefined} No return value
  */
-async function start ({latest, message, name, version}) {
+async function start ({ latest, message, name, version }) {
 	if (beenthere) {
 		return;
 	}
@@ -129,7 +129,7 @@ async function start ({latest, message, name, version}) {
  * @param  {Info}   info Information about the package
  * @return {String}      Message to user
  */
-function box ({latest, message, name, version}) {
+function box ({ latest, message, name, version }) {
 	const lines = [
 		`You are running ${name.yellow} version ${version.yellow}`,
 		`The latest version is ${latest.green}`,

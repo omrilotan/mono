@@ -4,7 +4,7 @@
  * @return {String}      Version
  */
 module.exports = async function getLatest (name) {
-	const {promisify} = require('util');
+	const { promisify } = require('util');
 	const npm = await promisify(require('npm').load)();
 	const result = await promisify(npm.view)(`${name}@latest`, 'version');
 	const latest = Object.values(result).shift();

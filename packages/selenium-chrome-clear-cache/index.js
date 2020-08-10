@@ -36,7 +36,7 @@ function click(type, selector) {
 	 * @param  {String}        name       uppercase tag name
 	 * @return {DOMElement}
 	 */
-	const findTag = (collection, name) => [...collection].find(i => i.tagName && i.tagName.toUpperCase() === name);
+	const findTag = (collection, name) => [ ...collection ].find(i => i.tagName && i.tagName.toUpperCase() === name);
 
 	/**
 	 * Find UI "slot"
@@ -47,7 +47,7 @@ function click(type, selector) {
 		const main = document.querySelector('settings-ui').shadowRoot.children.container.children.main;
 		const settings = findTag(main.shadowRoot.children, 'SETTINGS-BASIC-PAGE');
 		const advancedPage = settings.shadowRoot.children.advancedPage;
-		const [page] = [...advancedPage.children].find(i => i.section === 'privacy').children;
+		const [ page ] = [ ...advancedPage.children ].find(i => i.section === 'privacy').children;
 		const dialog = findTag(page.shadowRoot.children, 'SETTINGS-CLEAR-BROWSING-DATA-DIALOG');
 
 		return dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector(`[slot="${name}"]`);
@@ -91,8 +91,8 @@ function click(type, selector) {
  * await clearCache({webdriver, driver});
  */
 module.exports = async function clearCache(
-	{webdriver, driver},
-	{cookies = false, cache = true, history = true} = {},
+	{ webdriver, driver },
+	{ cookies = false, cache = true, history = true } = {},
 ) {
 	if (!(cookies || cache || history)) {
 		return;
@@ -113,11 +113,11 @@ module.exports = async function clearCache(
 
 	await Promise.all(
 		[
-			[cookies, COOKIES],
-			[cache, CACHE],
-			[history, HISTORY],
+			[ cookies, COOKIES ],
+			[ cache, CACHE ],
+			[ history, HISTORY ],
 		].map(
-			async ([option, query]) => option || driver.executeScript(
+			async ([ option, query ]) => option || driver.executeScript(
 				click,
 				'checkbox',
 				query,

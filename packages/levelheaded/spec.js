@@ -8,17 +8,17 @@ describe('levelheaded', () => {
 	it('Should execute "action" by level', () => {
 		let result;
 		const tester = levelheaded({
-			levels: ['a', 'b', 'c'],
+			levels: [ 'a', 'b', 'c' ],
 			minimal: 'b',
 			action: (...args) => { result = args; },
 		});
 
 		tester.a('A');
-		expect(result).not.to.deep.equal(['A']);
+		expect(result).not.to.deep.equal([ 'A' ]);
 		tester.b('B');
-		expect(result).to.deep.equal(['B']);
+		expect(result).to.deep.equal([ 'B' ]);
 		tester.c('C');
-		expect(result).to.deep.equal(['C']);
+		expect(result).to.deep.equal([ 'C' ]);
 	});
 	it('Should use log levels by default', () => {
 		let result;
@@ -29,13 +29,13 @@ describe('levelheaded', () => {
 
 		const tester = levelheaded();
 		tester.info('done');
-		expect(result).to.deep.equal(['done']);
+		expect(result).to.deep.equal([ 'done' ]);
 	});
 	it('Should run on an object context containing current log level', () => {
 		let result;
-		const tester = levelheaded({action: function() {
+		const tester = levelheaded({ action: function() {
 			result = this;
-		}});
+		} });
 		tester.warn('somwthing');
 		expect(result.level).to.equal('warn');
 	});
@@ -51,8 +51,8 @@ describe('levelheaded', () => {
 		].forEach(fn => expect(fn).to.be.a('function'));
 	});
 	it('Should extend existing object', () => {
-		const object = {nolevel: () => null};
-		levelheaded({object});
+		const object = { nolevel: () => null };
+		levelheaded({ object });
 
 		expect(object.nolevel).to.be.a('function');
 		expect(object.debug).to.be.a('function');
@@ -65,8 +65,8 @@ describe('levelheaded', () => {
 		});
 
 		tester.error('B');
-		expect(result).to.not.deep.equal(['B']);
+		expect(result).to.not.deep.equal([ 'B' ]);
 		tester.info('A');
-		expect(result).to.deep.equal(['A']);
+		expect(result).to.deep.equal([ 'A' ]);
 	});
 });

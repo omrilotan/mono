@@ -20,7 +20,7 @@ const SUFFIX = 'Moon';
 
 function moon(...args) {
 	const options = typeof args[args.length - 1] === 'object' ? args.pop() : {};
-	const {format = FORMAT_ICON} = options;
+	const { format = FORMAT_ICON } = options;
 	const now = new Date();
 	let [
 		year = now.getFullYear(),
@@ -44,7 +44,7 @@ function moon(...args) {
 		case FORMAT_CODE:
 			return CODES[phase];
 		case FORMAT_NAME:
-			return [word(CODES[phase]), SUFFIX].join(' ');
+			return [ word(CODES[phase]), SUFFIX ].join(' ');
 		default:
 			return ICONS[phase];
 	}
@@ -63,7 +63,7 @@ module.exports = Object.defineProperties(
 		},
 		NAMES: {
 			get: () => CODES.map(
-				name => [word(name), SUFFIX].join(' '),
+				name => [ word(name), SUFFIX ].join(' '),
 			),
 			enumerable: true,
 		},

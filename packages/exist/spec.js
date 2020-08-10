@@ -1,4 +1,4 @@
-const {join} = require('path');
+const { join } = require('path');
 const exist = require('.');
 
 describe('@does/exist', async () => {

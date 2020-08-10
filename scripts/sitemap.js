@@ -13,8 +13,8 @@ const args = process.argv.reduce(
 	{},
 );
 
-const {readdir} = require('fs').promises;
-const {resolve} = require('path');
+const { readdir } = require('fs').promises;
+const { resolve } = require('path');
 
 // Use:
 // node scripts/sitemap.js --base "https://omrilotan.com"
@@ -28,7 +28,7 @@ const {resolve} = require('path');
 	].map(dd).join('-');
 
 	const packages = (await readdir(resolve(__dirname, '../packages'))).filter(item => !item.startsWith('.'));
-	const {base} = args;
+	const { base } = args;
 	const urls = packages.map(item => `
 	<url>
 		<loc>${ base }/mono/${ item }/</loc>

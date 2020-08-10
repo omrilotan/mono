@@ -1,4 +1,4 @@
-const {sep} = require('path');
+const { sep } = require('path');
 
 /**
  * node modules directory name
@@ -32,7 +32,7 @@ const LITERNAL_NAME_SELF = 'self';
  * @param  {String} name
  * @return {String}
  */
-const clean =  name => name.replace(/.*!|\s.*/, '');
+const clean = name => name.replace(/.*!|\s.*/, '');
 
 // Org module name consists of two parts: '@org-name/module-name'
 /**

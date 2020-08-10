@@ -11,8 +11,8 @@ const ZERO_WIDTH_JOINER = '\u{200D}';
  * @type {Array}
  */
 const ranges = Object.values({
-	'Variation Selectors': ['\ufe00', '\ufe0f'],
-	'Hebrew punctuation': ['\u0591', '\u05C7'],
+	'Variation Selectors': [ '\ufe00', '\ufe0f' ],
+	'Hebrew punctuation': [ '\u0591', '\u05C7' ],
 });
 
 const pattern = new RegExp(

@@ -1,6 +1,6 @@
 // const { danger, fail, warn, message } = require('danger'); // Globally imported
 
-const {github: {pr: {body, base}}} = danger;
+const { github: { pr: { body, base } } } = danger;
 
 if (!body || body.length < 2) {
 	fail('Please add a description to your pull request.');

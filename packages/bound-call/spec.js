@@ -7,6 +7,6 @@ describe('bound-call', () => {
 	});
 	it('Should bind array join from instance', () => {
 		const join = bound([], 'join');
-		expect(join([1, 2, 3], '+')).to.equal('1+2+3');
+		expect(join([ 1, 2, 3 ], '+')).to.equal('1+2+3');
 	});
 });

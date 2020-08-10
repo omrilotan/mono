@@ -59,7 +59,7 @@ ${description}
 | Name | Description | Link
 | --- | --- | ---
 ${packages.map(
-		([dir, pkg, description, version]) => `| **\`${pkg}\`** | [${description.replace(/`[^`]+`/g, '').replace(/\s{2,}/g, ' ').trim()}](./packages/${dir}#readme) | [![${version}](https://img.shields.io/npm/v/${pkg}.svg)](https://www.npmjs.com/package/${pkg})`,
+		([ dir, pkg, description, version ]) => `| **\`${pkg}\`** | [${description.replace(/`[^`]+`/g, '').replace(/\s{2,}/g, ' ').trim()}](./packages/${dir}#readme) | [![${version}](https://img.shields.io/npm/v/${pkg}.svg)](https://www.npmjs.com/package/${pkg})`,
 	).join('\n')}
 `;
 }

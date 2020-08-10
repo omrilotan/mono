@@ -3,8 +3,8 @@ const assignable = require('.');
 describe('assign/assignable', () => {
 	[
 		() => {},
-		{a: 1},
-		[1, 2],
+		{ a: 1 },
+		[ 1, 2 ],
 		new Object(),
 		new Array(),
 		/\w/g,

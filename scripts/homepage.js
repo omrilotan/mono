@@ -15,7 +15,7 @@ const downloadcount = name => `fetch('https://api.npmjs.org/downloads/point/last
 
 start();
 async function start() {
-	const [rows, links, scripts] = [[], [], []];
+	const [ rows, links, scripts ] = [ [], [], [] ];
 
 	(await readdir('packages'))
 		.forEach(
