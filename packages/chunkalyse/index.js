@@ -1,6 +1,6 @@
 const percent = require('@does/percent');
 const jsoncopy = require('jsoncopy');
-const {moduleName} = require('./lib');
+const { moduleName } = require('./lib');
 
 /**
  * Chunkalyse stats file. for multiple entries fallback to children
@@ -33,16 +33,16 @@ module.exports = stats => {
  * @param  {Array} data.chunks
  * @return {Object}
  */
-const analyseChunks = ({chunks}) => jsoncopy(chunks)
+const analyseChunks = ({ chunks }) => jsoncopy(chunks)
 	.reduce(
-		(accumulator, {names, size, modules}) => Object.assign(
+		(accumulator, { names, size, modules }) => Object.assign(
 			accumulator,
 			{
 				[names.shift()]: {
 					size,
 					modules: Object.entries(
 						modules.reduce(
-							(accumulator, {name, size}) => Object.assign(
+							(accumulator, { name, size }) => Object.assign(
 								accumulator,
 								{
 									[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
@@ -51,7 +51,7 @@ const analyseChunks = ({chunks}) => jsoncopy(chunks)
 							{},
 						),
 					).reduce(
-						(accumulator, [name, _size]) => Object.assign(
+						(accumulator, [ name, _size ]) => Object.assign(
 							accumulator,
 							{
 								[name]: {
@@ -74,11 +74,11 @@ const analyseChunks = ({chunks}) => jsoncopy(chunks)
  * @param  {Array}  data.modules
  * @return {Object}
  */
-const analyseModules = (name, {modules}, total = 0) => ({
+const analyseModules = (name, { modules }, total = 0) => ({
 	[name]: {
 		modules: Object.entries(
 			jsoncopy(modules).reduce(
-				(accumulator, {name, size}) => (total = total + size) && Object.assign(
+				(accumulator, { name, size }) => (total = total + size) && Object.assign(
 					accumulator,
 					{
 						[moduleName(name)]: (accumulator[moduleName(name)] || 0) + size,
@@ -87,7 +87,7 @@ const analyseModules = (name, {modules}, total = 0) => ({
 				{},
 			),
 		).reduce(
-			(accumulator, [name, size]) => typeof size === 'number' ? Object.assign(
+			(accumulator, [ name, size ]) => typeof size === 'number' ? Object.assign(
 				accumulator,
 				{
 					[name]: {

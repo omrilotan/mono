@@ -137,19 +137,19 @@ module.exports = function boxed(message, {
 
 	const titleLines = title ? [
 		lineMap(title),
-		[v, times(' '), v],
-		[ml, times(h), mr],
-		[v, times(' '), v],
+		[ v, times(' '), v ],
+		[ ml, times(h), mr ],
+		[ v, times(' '), v ],
 	] : [];
 
 	return [
-		[''],
-		[tl, times(h), tr],
-		[v, times(' '), v],
+		[ '' ],
+		[ tl, times(h), tr ],
+		[ v, times(' '), v ],
 		...titleLines,
 		...lines.map(lineMap),
-		[v, times(' '), v],
-		[bl, times(h), br],
-		[''],
+		[ v, times(' '), v ],
+		[ bl, times(h), br ],
+		[ '' ],
 	].map(item => item.join('')).join('\n');
 };

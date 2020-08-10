@@ -13,7 +13,7 @@ describe('boxt/length', () => {
 		// 'Compound Emojis': [ '🏃‍♀️', '👩‍❤️‍💋‍👩' ]
 		// 'flags': [ '🇧🇷' ],
 		// 'modifiers': [ '🙌🏾' ]
-	})).forEach(([name, values]) => {
+	})).forEach(([ name, values ]) => {
 		describe(`${name}: ${values.join(', ')}`, () => {
 			it('are single characters', () => {
 				values.forEach($ => {

@@ -1,4 +1,4 @@
-const {fork} = require('child_process');
+const { fork } = require('child_process');
 const path = require('path');
 
 /**
@@ -9,7 +9,7 @@ const SILENT_EXIT_CODE = 0;
 
 module.exports = (name, data) => {
 	const file = path.join(__dirname, '../', name);
-	const forked = fork(file, {'stdio': 'ignore'});
+	const forked = fork(file, { 'stdio': 'ignore' });
 
 	return new Promise((resolve, reject) => {
 		forked

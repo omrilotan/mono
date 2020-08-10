@@ -32,7 +32,7 @@ module.exports = function errobj(error, enrichment = {}, { offset = 0, parsedSta
 		;
 
 		parsed.length = Math.min(parsed.length, parsedStack);
-		Object.assign(error, {parsedStack: parsed});
+		Object.assign(error, { parsedStack: parsed });
 	}
 
 
@@ -42,11 +42,11 @@ module.exports = function errobj(error, enrichment = {}, { offset = 0, parsedSta
 				?
 				Object.assign(
 					accumulator,
-					{[key]: error[key]},
+					{ [key]: error[key] },
 				)
 				:
 				accumulator,
-			{...parsed[0]},
+			{ ...parsed[0] },
 		),
 		enrichment,
 	);

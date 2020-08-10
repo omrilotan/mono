@@ -34,11 +34,11 @@ describe('chunkalyse fixtures', () => {
 			const results = chunkalyse(require(`./fixtures/${lib}.json`));
 
 			Object.entries(results).forEach(
-				([name, {size, modules}]) =>
+				([ name, { size, modules } ]) =>
 				{
 					it(`Should reach full application size by modules sizes (${lib}/${name})`, () => {
 						const sum = Object.values(modules)
-							.map(({size}) => size).reduce(
+							.map(({ size }) => size).reduce(
 								(sum, i) => sum + i,
 								0,
 							);

@@ -1,5 +1,5 @@
-const {resolve} = require('path');
-const {readFileSync} = require('fs');
+const { resolve } = require('path');
+const { readFileSync } = require('fs');
 const assign = require('@recursive/assign');
 
 const {

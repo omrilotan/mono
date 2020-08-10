@@ -1,4 +1,4 @@
-const {promisify} = require('util');
+const { promisify } = require('util');
 
 module.exports = async name => {
 	const npm = await promisify(require('npm').load)();

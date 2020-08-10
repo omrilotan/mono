@@ -5,7 +5,7 @@ process.on('unhandledRejection', console.error);
 const moon = require('.');
 
 const str = (content, length) => new Array(length + 1).join(content);
-const name = moon({format: 'name'});
+const name = moon({ format: 'name' });
 const icon = moon();
 const length = name.length;
 const half1 = Math.floor(length / 2);

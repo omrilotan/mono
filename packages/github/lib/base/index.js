@@ -1,4 +1,4 @@
-const {join} = require('path');
+const { join } = require('path');
 
 /**
  * Github's API domain
@@ -21,5 +21,5 @@ module.exports = url => url.toString().startsWith(PROTOCOL)
 	?
 	url
 	:
-	[PROTOCOL, join(GITHUB_API_BASE, url)].join('')
+	[ PROTOCOL, join(GITHUB_API_BASE, url) ].join('')
 ;

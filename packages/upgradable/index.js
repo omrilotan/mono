@@ -8,7 +8,7 @@ require('colors');
 (async () => {
 	try {
 		const pkg = await promisify(fs.readFile)('./package.json');
-		const {name, version} = JSON.parse(pkg.toString());
+		const { name, version } = JSON.parse(pkg.toString());
 
 		console.log( // eslint-disable-line no-console
 			`Checking for versions of ${name} that are newer than ${version}`,
@@ -30,7 +30,7 @@ require('colors');
 			),
 		);
 	} catch (error) {
-		console.error(error);  // eslint-disable-line no-console
+		console.error(error); // eslint-disable-line no-console
 		throw error;
 	}
 })();

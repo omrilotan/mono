@@ -63,10 +63,10 @@ const get = new Proxy(
 		resolve('package.json'),
 		JSON.stringify(
 			Object.entries(answers).reduce(
-				(accumulator, [key, value]) => value
+				(accumulator, [ key, value ]) => value
 					? Object.assign(
 						accumulator,
-						{[key]: value},
+						{ [key]: value },
 					)
 					: accumulator,
 				{},

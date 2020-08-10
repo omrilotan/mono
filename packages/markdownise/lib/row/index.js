@@ -8,4 +8,4 @@ const EMPTY = [
  * @param  {String[]} cells
  * @return {String}
  */
-module.exports = cells => ['', ...cells].map(i => EMPTY.includes(i) ? '' : `${i} `).join('| ').trim();
+module.exports = cells => [ '', ...cells ].map(i => EMPTY.includes(i) ? '' : `${i} `).join('| ').trim();

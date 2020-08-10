@@ -2,7 +2,7 @@ const jsnpm = require('.');
 
 describe('jsnpm', async() => {
 	describe('exists', async() => {
-		const {exists} = jsnpm;
+		const { exists } = jsnpm;
 
 		it('Should find if a package exists', async() =>
 			expect(
@@ -27,7 +27,7 @@ describe('jsnpm', async() => {
 	});
 
 	describe('latest', async() => {
-		const {latest} = jsnpm;
+		const { latest } = jsnpm;
 
 		it('Should retrieve the latest version', async() => {
 			expect(
@@ -37,7 +37,7 @@ describe('jsnpm', async() => {
 	});
 
 	describe('publish', async() => {
-		const {publish} = jsnpm;
+		const { publish } = jsnpm;
 
 		it('Should throw error when trying to publish', async() => {
 			try {
@@ -50,7 +50,7 @@ describe('jsnpm', async() => {
 	});
 
 	describe('versions', async() => {
-		const {versions} = jsnpm;
+		const { versions } = jsnpm;
 
 		it('Should retrieve the latest version', async() => {
 			expect(

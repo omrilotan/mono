@@ -12,7 +12,7 @@ const primed = join(process.cwd(), FILENAME);
  * @param  {Boolean} [optional.force=false] Prefer passed dir over process root
  * @return {String}
  */
-module.exports = async function dangerfile(sourcedir, {force = false} = {}) {
+module.exports = async function dangerfile(sourcedir, { force = false } = {}) {
 
 	// Check is a local file exists *unless* false flag is on
 	const exists = force
@@ -30,7 +30,7 @@ module.exports = async function dangerfile(sourcedir, {force = false} = {}) {
 	const installed = await run();
 
 	return installed
-		? ['Installed danger.', message].join(' ')
+		? [ 'Installed danger.', message ].join(' ')
 		: message
 	;
 };

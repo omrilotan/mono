@@ -24,7 +24,7 @@ describe('assign/getOwnPropertySymbols', () => {
 		delete Object.getOwnPropertySymbols;
 
 		const key = Symbol();
-		const obj = {[key]: 'value'};
+		const obj = { [key]: 'value' };
 		const symbols = getOwnPropertySymbols(obj);
 		expect(symbols).to.have.lengthOf(0);
 	});

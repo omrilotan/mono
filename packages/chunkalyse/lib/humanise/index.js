@@ -7,12 +7,12 @@ const bytes = require('byte-size');
  */
 module.exports = struct => Object.entries(struct)
 	.map(
-		([name, {size, modules}]) => [
+		([ name, { size, modules } ]) => [
 			`${name} (${bytes(size)})`,
 			...Object.entries(modules)
-				.sort(([, {size: a}], [, {size: b}]) => b - a)
+				.sort(([ , { size: a } ], [ , { size: b } ]) => b - a)
 				.map(
-					([name, {size, percent}]) => ` • ${name}: ${bytes(size)} (${percent}%)`,
+					([ name, { size, percent } ]) => ` • ${name}: ${bytes(size)} (${percent}%)`,
 				),
 		].join('\n'),
 	).join('\n------\n');

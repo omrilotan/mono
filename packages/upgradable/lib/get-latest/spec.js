@@ -1,4 +1,4 @@
-const {version} = require('../../../oooooo/package.json');
+const { version } = require('../../../oooooo/package.json');
 const getLatest = require('.');
 
 describe('latest-version', async() => {

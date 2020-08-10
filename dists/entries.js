@@ -1,5 +1,5 @@
-const {resolve} = require('path');
-const {readdirSync} = require('fs');
+const { resolve } = require('path');
+const { readdirSync } = require('fs');
 
 const packageDir = (...args) => resolve(
 	__dirname,
@@ -25,7 +25,7 @@ module.exports = readdirSync(packageDir())
 
 				browser && main && Object.assign(
 					accumulator,
-					{[packageDir(pkg, browser)]: packageDir(pkg, main)},
+					{ [packageDir(pkg, browser)]: packageDir(pkg, main) },
 				);
 
 				return accumulator;

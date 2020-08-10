@@ -17,10 +17,10 @@ describe('ecma-webpack-plugin/lib/errors', () => {
 
 	it('Should call on parse function', () => {
 		errors({
-			assets: { 'filename.js': {_value: ES5} },
+			assets: { 'filename.js': { _value: ES5 } },
 		}, {
-			parser: {ecmaVersion: '5'},
-			extensions: ['js'],
+			parser: { ecmaVersion: '5' },
+			extensions: [ 'js' ],
 		});
 
 		expect(acorn.parse).to.have.been.calledWith(ES5, { ecmaVersion: '5' });
@@ -28,13 +28,13 @@ describe('ecma-webpack-plugin/lib/errors', () => {
 	it('Should try to parse for each file', () => {
 		errors({
 			assets: {
-				'filename.js': {_value: ES5},
-				'filename2.js': {_value: ES5},
-				'filename3.js': {_value: ES5},
+				'filename.js': { _value: ES5 },
+				'filename2.js': { _value: ES5 },
+				'filename3.js': { _value: ES5 },
 			},
 		}, {
-			parser: {ecmaVersion: '5'},
-			extensions: ['js'],
+			parser: { ecmaVersion: '5' },
+			extensions: [ 'js' ],
 		});
 
 		expect(acorn.parse).to.have.been.calledThrice;
@@ -42,13 +42,13 @@ describe('ecma-webpack-plugin/lib/errors', () => {
 	it('Should not call on parse for irrelevant files', () => {
 		errors({
 			assets: {
-				'filename.js': {_value: ES5},
-				'filename2.js': {_value: ES5},
-				'filename3.svg': {_value: '<svg/>'},
+				'filename.js': { _value: ES5 },
+				'filename2.js': { _value: ES5 },
+				'filename3.svg': { _value: '<svg/>' },
 			},
 		}, {
-			parser: {ecmaVersion: '5'},
-			extensions: ['js'],
+			parser: { ecmaVersion: '5' },
+			extensions: [ 'js' ],
 		});
 
 		expect(acorn.parse).to.have.callCount(2);
@@ -56,27 +56,27 @@ describe('ecma-webpack-plugin/lib/errors', () => {
 	it('Should collect errors', () => {
 		const results = errors({
 			assets: {
-				'filename.js': {_value: ES6},
-				'filename1.js': {_value: ES6},
-				'filename2.js': {_value: ES6},
-				'filename3.js': {_value: ES6},
+				'filename.js': { _value: ES6 },
+				'filename1.js': { _value: ES6 },
+				'filename2.js': { _value: ES6 },
+				'filename3.js': { _value: ES6 },
 			},
 		}, {
-			parser: {ecmaVersion: '5'},
-			extensions: ['js'],
+			parser: { ecmaVersion: '5' },
+			extensions: [ 'js' ],
 		});
 
 		expect(results).to.have.lengthOf(4);
 	});
 	it('Should inform messages for each file', () => {
-		const [first, second] = errors({
+		const [ first, second ] = errors({
 			assets: {
-				'filename.js': {_value: ES6},
-				'filename1.js': {_value: 'var fn = () => null;'},
+				'filename.js': { _value: ES6 },
+				'filename1.js': { _value: 'var fn = () => null;' },
 			},
 		}, {
-			parser: {ecmaVersion: '5'},
-			extensions: ['js'],
+			parser: { ecmaVersion: '5' },
+			extensions: [ 'js' ],
 		});
 
 		expect(first.name).to.equal('filename.js');

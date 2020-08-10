@@ -32,7 +32,7 @@ describe('await-reduce', async() => {
 		assert(
 			(await reduce(
 				array,
-				async (results, result) => [...results, result],
+				async (results, result) => [ ...results, result ],
 				[],
 			)).every(item => (item === 'A')),
 			'Should be an array of results',
@@ -43,7 +43,7 @@ describe('await-reduce', async() => {
 		expect(
 			await reduce(
 				array,
-				(collector, item) => [collector, item].join(''),
+				(collector, item) => [ collector, item ].join(''),
 			),
 			'Should be an array of results',
 		).to.equal('AAA'),
@@ -53,7 +53,7 @@ describe('await-reduce', async() => {
 		expect(
 			await reduce(
 				array,
-				(collector, item) => [collector, item].join(''),
+				(collector, item) => [ collector, item ].join(''),
 				'B',
 			),
 			'Should be an array of results',
@@ -66,7 +66,7 @@ describe('await-reduce', async() => {
 				array,
 				(collector, item) => new Promise(
 					resolve => setTimeout(
-						() => resolve([collector, item].join('')),
+						() => resolve([ collector, item ].join('')),
 						40,
 					),
 				),
@@ -114,10 +114,10 @@ describe('await-reduce', async() => {
 
 	it('Works on a normal array as well', async() =>
 		expect(await reduce(
-			['B', 'B', 'B'],
-			(collector, item) => [...collector, item],
+			[ 'B', 'B', 'B' ],
+			(collector, item) => [ ...collector, item ],
 			[],
-		)).to.deep.equal(['B', 'B', 'B']),
+		)).to.deep.equal([ 'B', 'B', 'B' ]),
 	);
 
 	it('Should resolve promises in the reduced array', async() => {
@@ -127,8 +127,8 @@ describe('await-reduce', async() => {
 				new Promise(resolve => resolve('B')),
 				new Promise(resolve => resolve('C')),
 			],
-			(collector, item) => [...collector, item],
+			(collector, item) => [ ...collector, item ],
 			[],
-		)).to.deep.equal(['A', 'B', 'C']);
+		)).to.deep.equal([ 'A', 'B', 'C' ]);
 	});
 });

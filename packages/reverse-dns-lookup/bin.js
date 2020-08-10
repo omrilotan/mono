@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const {argv: [,,ip,...domains]} = process;
+const { argv: [ ,, ip, ...domains ] } = process;
 const reverseDNSLookup = require('.');
 
 (async() => {

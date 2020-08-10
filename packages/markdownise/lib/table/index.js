@@ -11,7 +11,7 @@ module.exports = array => {
 	const body = array.reduce(
 		(accumulator, item, index) => {
 			Object.entries(item).forEach(
-				([key, value]) => {
+				([ key, value ]) => {
 					let loc = titles.indexOf(key);
 
 					if (loc === -1) {

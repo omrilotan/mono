@@ -8,7 +8,7 @@
 
 process.on('unhandledRejection', console.error);
 
-const {resolve} = require('path');
+const { resolve } = require('path');
 const yargsParser = require('yargs-parser');
 const chunkalyse = require('..');
 
@@ -17,8 +17,8 @@ const chunkalyse = require('..');
  */
 (() => {
 	if (process.stdin.isTTY) {
-		const {argv: [,, ...args]} = process;
-		const argv = yargsParser(args) || {_: []};
+		const { argv: [ ,, ...args ] } = process;
+		const argv = yargsParser(args) || { _: [] };
 
 		sendHelp(argv);
 		start(getStats(argv), argv);
@@ -36,7 +36,7 @@ const chunkalyse = require('..');
  * @param  {String[]} options._[file] stats file
  * @return {Boolean}  Should the program continue
  */
-function sendHelp({h, help, _: [file]} = {}) {
+function sendHelp({ h, help, _: [ file ] } = {}) {
 	if (h || help || !file) {
 		require('./help');
 	}
@@ -47,7 +47,7 @@ function sendHelp({h, help, _: [file]} = {}) {
  * @param  {String[]} options._[file] stats file
  * @return {Object}
  */
-function getStats({_: [file]} = {}) {
+function getStats({ _: [ file ] } = {}) {
 	const route = resolve(process.cwd(), file);
 
 	try {
@@ -63,7 +63,7 @@ function getStats({_: [file]} = {}) {
  * @param  {Object} stats
  * no return value
  */
-function start(stats, {f, format = 'human'} = {}) {
+function start(stats, { f, format = 'human' } = {}) {
 	try {
 		const result = chunkalyse(stats);
 		let output;

@@ -1,4 +1,4 @@
-const {promisify} = require('util');
+const { promisify } = require('util');
 const load = promisify(require('npm').load);
 
 let instance;

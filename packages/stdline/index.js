@@ -32,7 +32,7 @@ function update(message) {
  * no return value
  */
 function end(message = '') {
-	update([message.toString(), '\n'].join(''));
+	update([ message.toString(), '\n' ].join(''));
 }
 
 /**

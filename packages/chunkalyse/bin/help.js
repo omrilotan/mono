@@ -1,6 +1,6 @@
-const {name: [capital, ...rest], description} = require('../package.json');
+const { name: [ capital, ...rest ], description } = require('../package.json');
 
-console.log([capital.toUpperCase(), ...rest, ': ', description].join(''));
+console.log([ capital.toUpperCase(), ...rest, ': ', description ].join(''));
 
 console.log(`
 Generate stats:   webpack --profile --json > stats.json

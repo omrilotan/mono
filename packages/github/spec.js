@@ -18,16 +18,16 @@ describe('github (path)', () => {
 				fetch(...args) {
 					const result = dummy.gofor(...args);
 					return result ?
-						{ok: true, json: async() => JSON.stringify(result)}
+						{ ok: true, json: async() => JSON.stringify(result) }
 						:
-						{ok: false, json: async() => null}
+						{ ok: false, json: async() => null }
 					;
 				}
 			},
 		};
 
 		const GitHub = require('.');
-		request = new GitHub({token: 'FAKE_TOKEN'}).request;
+		request = new GitHub({ token: 'FAKE_TOKEN' }).request;
 	});
 	afterEach(() => {
 		dummy.gofor = () => {
@@ -59,16 +59,16 @@ describe('github (defaults)', () => {
 		const fetch = (...args) => {
 			const result = dummy.fetch(...args);
 			return result ?
-				{ok: true, json: async() => JSON.stringify(result)}
+				{ ok: true, json: async() => JSON.stringify(result) }
 				:
-				{ok: false, json: async() => null}
+				{ ok: false, json: async() => null }
 			;
 		};
 		Object.assign(fetch, require('node-fetch'));
 		require.cache[require.resolve('node-fetch')].exports = fetch;
 
 		const GitHub = require('.');
-		request = new GitHub({token: 'FAKE_TOKEN'}).request;
+		request = new GitHub({ token: 'FAKE_TOKEN' }).request;
 	});
 	afterEach(() => {
 		dummy.fetch = () => {

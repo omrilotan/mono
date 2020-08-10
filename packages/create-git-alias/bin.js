@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const execute = require('async-execute');
 require('colors');
 
-const OPTION_SHOW_ALL = ['all', 'show-all'];
+const OPTION_SHOW_ALL = [ 'all', 'show-all' ];
 const opts = require('./lib/opts')(process.argv);
 
 const hasOption = options => options.some(opt => opts.includes(opt));
@@ -26,9 +26,9 @@ async function app() {
 		.filter(Boolean)
 		.reduce(
 			(accumulator, line) => {
-				const [key, ...value] = line.split('=');
+				const [ key, ...value ] = line.split('=');
 
-				return Object.assign(accumulator, {[key]: value.join('=')});
+				return Object.assign(accumulator, { [key]: value.join('=') });
 			},
 			{},
 		);
@@ -37,12 +37,12 @@ async function app() {
 
 		// Filter out existing and identical
 		.filter(
-			({key, value}) => showAll || existing[key] !== value,
+			({ key, value }) => showAll || existing[key] !== value,
 		)
 
 		// Warn about existing but different
 		.map(
-			({key, desc, value, disabled = false}) => {
+			({ key, desc, value, disabled = false }) => {
 				if (existing[key] === value) {
 					match = true;
 					disabled = true;
@@ -52,7 +52,7 @@ async function app() {
 					desc = `[☠️ ] ${desc}`;
 				}
 
-				return {key, desc, value, disabled};
+				return { key, desc, value, disabled };
 			},
 		)
 	;
@@ -63,15 +63,15 @@ async function app() {
 
 	const choices = aliases
 		.map(
-			({key, desc, value, disabled}) => ({
+			({ key, desc, value, disabled }) => ({
 				name: `${key.yellow.bold}: ${desc}`,
-				value: [key, value],
+				value: [ key, value ],
 				checked: false,
 				disabled,
 			}),
 		);
 
-	const message = ['Which git aliases would you like me to set for you?'];
+	const message = [ 'Which git aliases would you like me to set for you?' ];
 	hazard && message.push('[☠️ ] marks an alias you have with a different value'.dim);
 	match && message.push('[🎀️ ] marks an alias you have with the same value'.dim);
 	message.push('\t');
@@ -87,10 +87,10 @@ async function app() {
 			},
 		]);
 
-	const selected = [...answers.aliases];
+	const selected = [ ...answers.aliases ];
 
 	while (answers.aliases.length) {
-		const [key, value] = answers.aliases.shift();
+		const [ key, value ] = answers.aliases.shift();
 		await execute(`git config --global alias.${key} '${value}'`);
 	}
 
@@ -100,6 +100,6 @@ async function app() {
 		case 1:
 			return `I've set up the alias "${selected[0][0].bold}" for you 😉`;
 		default:
-			return `I've set up these aliases for you: ${selected.map(([key]) => `"${key.bold}"`).join(', ')} 😃`;
+			return `I've set up these aliases for you: ${selected.map(([ key ]) => `"${key.bold}"`).join(', ')} 😃`;
 	}
 }

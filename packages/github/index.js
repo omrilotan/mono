@@ -11,7 +11,7 @@ const {
  * @property {Function} request
  */
 module.exports = class GitHub {
-	constructor({token} = {}) {
+	constructor({ token } = {}) {
 		this.token = token;
 		this.gofor = new Gofor({
 			headers: {
@@ -54,7 +54,7 @@ module.exports = class GitHub {
 	 * @param  {Object} options         Request options
 	 * @return {Any}
 	 */
-	async paged(url, options = {}, {results = [], page = 1} = {}) {
+	async paged(url, options = {}, { results = [], page = 1 } = {}) {
 		const result = await this.request(
 			setParam(
 				base(url),
@@ -66,7 +66,7 @@ module.exports = class GitHub {
 		results.push(...result);
 
 		if (result.length === 30) {
-			return await this.paged(url, options, {results, page: page + 1});
+			return await this.paged(url, options, { results, page: page + 1 });
 		}
 
 		return results;

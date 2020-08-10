@@ -18,6 +18,6 @@ describe('create-git-alias/opts', () => {
 			'----argument',
 			'--argument-two',
 		];
-		expect(opts(argv)).to.deep.equal(['option', 'o', 'argument', 'argument-two']);
+		expect(opts(argv)).to.deep.equal([ 'option', 'o', 'argument', 'argument-two' ]);
 	});
 });

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const {resolve} = require('path');
+const { resolve } = require('path');
 const find = require('find');
 
 process.on('unhandledRejection', console.error);
@@ -19,8 +19,8 @@ const Mocha = require('mocha');
 		constructor(...args) {
 			super(...args);
 
-			this._runner.on('pass', ({title, file}) => console.log(`✔ ${title}\n- ${file}\n`));
-			this._runner.on('fail', ({title, file}) => console.log(`✘ ${title}\n- ${file}\n`));
+			this._runner.on('pass', ({ title, file }) => console.log(`✔ ${title}\n- ${file}\n`));
+			this._runner.on('fail', ({ title, file }) => console.log(`✘ ${title}\n- ${file}\n`));
 		}
 	}
 
@@ -33,10 +33,10 @@ const Mocha = require('mocha');
 				timeout: 60000,
 				useColors: true,
 				reporter,
-				reporterOptions: {mochaFile: './junit/test-results.xml'},
+				reporterOptions: { mochaFile: './junit/test-results.xml' },
 			});
 
-			mocha.files = [file];
+			mocha.files = [ file ];
 			mocha.run();
 		})()),
 	);

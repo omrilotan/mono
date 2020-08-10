@@ -5,7 +5,7 @@ const {
 } = require('fs');
 const asyncAccess = require('util').promisify(access);
 
-module.exports = async function exists(file, {quiet = true} = {}) {
+module.exports = async function exists(file, { quiet = true } = {}) {
 	try {
 		await asyncAccess(file, F_OK | W_OK);
 		return true;

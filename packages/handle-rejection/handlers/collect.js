@@ -7,7 +7,7 @@ process.on('beforeExit', () => {
 		return;
 	}
 
-	const {log, error} = console;
+	const { log, error } = console;
 
 	log('╭─────────────────────────────╮');
 	log('│ Unhandled Rejection Summary │');

@@ -1,6 +1,6 @@
 const webdriver = require('selenium-webdriver');
 
-const {Builder} = webdriver;
+const { Builder } = webdriver;
 const clearCache = require('.');
 
 const TIMEOUT = 30 * 1e3;
@@ -35,7 +35,7 @@ xdescribe('selenium-chrome-clear-cache', async() => {
 		await driver.get(LINK);
 		loadTimes.push(await driver.executeScript(MEASURE));
 
-		await clearCache({webdriver, driver});
+		await clearCache({ webdriver, driver });
 
 		await driver.get(LINK);
 		loadTimes.push(await driver.executeScript(MEASURE));
@@ -53,7 +53,7 @@ xdescribe('selenium-chrome-clear-cache', async() => {
 		await driver.get(LINK);
 		loadTimes.push(await driver.executeScript(MEASURE));
 
-		await clearCache({webdriver, driver}, {cache: false, history: false, cookies: true});
+		await clearCache({ webdriver, driver }, { cache: false, history: false, cookies: true });
 
 		await driver.get(LINK);
 		loadTimes.push(await driver.executeScript(MEASURE));
@@ -68,6 +68,6 @@ xdescribe('selenium-chrome-clear-cache', async() => {
 	}).timeout(TIMEOUT).retries(RETRIES);
 
 	it('Should not try to click the disabled button when no checkboxes are marked', async() => {
-		await clearCache({webdriver, driver}, {cache: false, history: false});
+		await clearCache({ webdriver, driver }, { cache: false, history: false });
 	});
 });

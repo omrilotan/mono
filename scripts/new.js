@@ -11,18 +11,18 @@ const {
 	readdir,
 	writeFile,
 } = require('fs').promises;
-const {resolve} = require('path');
+const { resolve } = require('path');
 
-const {argv} = process;
+const { argv } = process;
 argv.shift();
 argv.shift();
 
-const [...args] = argv;
+const [ ...args ] = argv;
 
 (async() => {
 	const packages = await readdir(resolve(__dirname, '../', 'packages'));
-	const [name, org] = args.join('-').split('/').reverse();
-	const fullName = org ? [org, name].join('/') : name;
+	const [ name, org ] = args.join('-').split('/').reverse();
+	const fullName = org ? [ org, name ].join('/') : name;
 
 	if (packages.includes(name)) {
 		throw new Error(`Package "${name}" already exists`);
@@ -55,7 +55,7 @@ const [...args] = argv;
 				test: `cd ../../; npm t packages/${name}; cd -`,
 			},
 		},
-		['name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test'],
+		[ 'name', 'version', 'description', 'keywords', 'author', 'license', 'repository', 'type', 'url', 'homepage', 'main', 'scripts', 'test' ],
 		2,
 	);
 	files['.npmrc'] = 'package-lock=false';
@@ -65,7 +65,7 @@ const [...args] = argv;
 
 	Promise.all(
 		Object.entries(files).map(
-			([name, content]) => writeFile(resolve(base, name), `${content}\n`),
+			([ name, content ]) => writeFile(resolve(base, name), `${content}\n`),
 		),
 	);
 

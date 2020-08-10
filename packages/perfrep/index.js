@@ -15,7 +15,7 @@ module.exports = async function usage(){
 	const before = info();
 	await wait(1000);
 	const after = info();
-	const {heapUsed, heapTotal} = process.memoryUsage();
+	const { heapUsed, heapTotal } = process.memoryUsage();
 
 	return {
 		cpu: percent(after.idle - before.idle, after.total - before.total),
@@ -29,7 +29,7 @@ module.exports = async function usage(){
 * @return {Object} {idle: Integer, total: Integer}
 */
 const info = () => cpus().reduce(
-	(accumulator, {times: {user, nice, sys, irq, idle}}) => ({
+	(accumulator, { times: { user, nice, sys, irq, idle } }) => ({
 		idle: accumulator.idle + idle,
 		total: accumulator.total + user + nice + sys + irq + idle,
 	}),
