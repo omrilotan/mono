@@ -24,7 +24,6 @@ Mono repo holding multiple packages
 | **`double-digit`** | [0️⃣ Add leading zero to positive numbers under 10](./packages/double-digit#readme) | [![0.0.0](https://img.shields.io/npm/v/double-digit.svg)](https://www.npmjs.com/package/double-digit)
 | **`ecma-webpack-plugin`** | [Verify your output code is compliant to the version you're targeting](./packages/ecma-webpack-plugin#readme) | [![0.0.0](https://img.shields.io/npm/v/ecma-webpack-plugin.svg)](https://www.npmjs.com/package/ecma-webpack-plugin)
 | **`edit-package`** | [Read, write and reset package.json](./packages/edit-package#readme) | [![1.0.3](https://img.shields.io/npm/v/edit-package.svg)](https://www.npmjs.com/package/edit-package)
-| **`errobj`** | [☠️ Serialise errors to literal (JSONable) object](./packages/errobj#readme) | [![2.2.0](https://img.shields.io/npm/v/errobj.svg)](https://www.npmjs.com/package/errobj)
 | **`@omrilotan/eslint-config`** | [🔧 My usual eslint-config](./packages/eslintrc#readme) | [![1.3.0](https://img.shields.io/npm/v/@omrilotan/eslint-config.svg)](https://www.npmjs.com/package/@omrilotan/eslint-config)
 | **`@does/exist`** | [🗄 Check if a file exists](./packages/exist#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/exist.svg)](https://www.npmjs.com/package/@does/exist)
 | **`@recursive/flatten`** | [🍳 Flatten arrays of arrays, as long as all the members are arrays](./packages/flatten#readme) | [![1.0.1](https://img.shields.io/npm/v/@recursive/flatten.svg)](https://www.npmjs.com/package/@recursive/flatten)
