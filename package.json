@@ -47,7 +47,7 @@
     "dateformat": "^3.0.3",
     "dont-look-up": "^1.0.0",
     "eslint": "^7.0.0",
-    "eslint-plugin-log": "1.2.4",
+    "eslint-plugin-log": "1.2.6",
     "find": "^0.3.0",
     "finjan": "0.0.0-alpha.2a",
     "mocha": "^8.0.1",
