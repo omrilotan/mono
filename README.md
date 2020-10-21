@@ -50,7 +50,6 @@ Mono repo holding multiple packages
 | **`@omrilotan/setup`** | [🔩 Set up a new nodejs development environment](./packages/setup#readme) | [![0.0.0](https://img.shields.io/npm/v/@omrilotan/setup.svg)](https://www.npmjs.com/package/@omrilotan/setup)
 | **`@lets/sleep`** | [🛌 Block the runtime for n milliseconds](./packages/sleep#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/sleep.svg)](https://www.npmjs.com/package/@lets/sleep)
 | **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
-| **`stdline`** | [💬 Update current STDOUT stream](./packages/stdline#readme) | [![0.1.0](https://img.shields.io/npm/v/stdline.svg)](https://www.npmjs.com/package/stdline)
 | **`string-wrap`** | [🥪 wrap a string from both sides](./packages/string-wrap#readme) | [![1.0.0](https://img.shields.io/npm/v/string-wrap.svg)](https://www.npmjs.com/package/string-wrap)
 | **`the-moon`** | [🌕 Show me the moon](./packages/the-moon#readme) | [![1.1.0](https://img.shields.io/npm/v/the-moon.svg)](https://www.npmjs.com/package/the-moon)
 | **`transparent-pixel`** | [One transparent pixel](./packages/transparent-pixel#readme) | [![1.0.0](https://img.shields.io/npm/v/transparent-pixel.svg)](https://www.npmjs.com/package/transparent-pixel)
