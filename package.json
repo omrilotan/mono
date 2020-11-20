@@ -44,7 +44,7 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-string": "^1.5.0",
-    "dateformat": "^3.0.3",
+    "dateformat": "^4.0.0",
     "dont-look-up": "^1.0.0",
     "ecma-webpack-plugin": "^1.0.0",
     "eslint": "^7.0.0",
