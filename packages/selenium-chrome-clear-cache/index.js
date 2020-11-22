@@ -46,8 +46,8 @@ function click(type, selector) {
 	function getSlot(name) {
 		const main = document.querySelector('settings-ui').shadowRoot.children.container.children.main;
 		const settings = findTag(main.shadowRoot.children, 'SETTINGS-BASIC-PAGE');
-		const advancedPage = settings.shadowRoot.children.advancedPage;
-		const [ page ] = [ ...advancedPage.children ].find(i => i.section === 'privacy').children;
+		const basicPage = settings.shadowRoot.children.basicPage;
+		const [ page ] = [ ...basicPage.children ].find(i => i.section === 'privacy').children;
 		const dialog = findTag(page.shadowRoot.children, 'SETTINGS-CLEAR-BROWSING-DATA-DIALOG');
 
 		return dialog.shadowRoot.children.clearBrowsingDataDialog.querySelector(`[slot="${name}"]`);
