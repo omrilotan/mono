@@ -46,7 +46,7 @@ Mono repo holding multiple packages
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`sample-size`** | [🎲 pass/fail by sample size](./packages/sample-size#readme) | [![1.0.1](https://img.shields.io/npm/v/sample-size.svg)](https://www.npmjs.com/package/sample-size)
-| **`selenium-chrome-clear-cache`** | [🗑 Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.2.2](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
+| **`selenium-chrome-clear-cache`** | [🗑 Clear cache of Chrome in Selenium](./packages/selenium-chrome-clear-cache#readme) | [![1.2.3](https://img.shields.io/npm/v/selenium-chrome-clear-cache.svg)](https://www.npmjs.com/package/selenium-chrome-clear-cache)
 | **`@omrilotan/setup`** | [🔩 Set up a new nodejs development environment](./packages/setup#readme) | [![0.0.0](https://img.shields.io/npm/v/@omrilotan/setup.svg)](https://www.npmjs.com/package/@omrilotan/setup)
 | **`@lets/sleep`** | [🛌 Block the runtime for n milliseconds](./packages/sleep#readme) | [![1.0.0](https://img.shields.io/npm/v/@lets/sleep.svg)](https://www.npmjs.com/package/@lets/sleep)
 | **`@does/sortby`** | [⚔️ Sort array of objects by key or function](./packages/sortby#readme) | [![1.1.0](https://img.shields.io/npm/v/@does/sortby.svg)](https://www.npmjs.com/package/@does/sortby)
