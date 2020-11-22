@@ -1,6 +1,6 @@
 {
   "name": "selenium-chrome-clear-cache",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "🗑 Clear cache of Chrome in Selenium",
   "keywords": [
     "selenium",
