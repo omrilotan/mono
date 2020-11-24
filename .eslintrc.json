@@ -22,12 +22,6 @@
       }
     },
     {
-      "files": [ "**/selenium-chrome-clear-cache/*" ],
-      "env": {
-        "browser": true
-      }
-    },
-    {
       "files": [ "scripts/**", "**/bin/**", "**/bin.*" ],
       "rules": {
         "no-console": 0
