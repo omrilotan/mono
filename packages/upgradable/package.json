@@ -18,7 +18,7 @@
 		"test": "cd ../../; npm t upgradable; cd -"
 	},
 	"dependencies": {
-		"boxt": "^0.3.3",
+		"boxt": "^0.4.0",
 		"colors": "^1.3.2",
 		"npm": "^6.10.2",
 		"prompt-confirm": "^2.0.4",
