@@ -15,6 +15,6 @@
 	},
 	"dependencies": {
 		"index-require": "^1.0.0",
-		"npm": "^6.11.3"
+		"npm": "^7.0.0"
 	}
 }
