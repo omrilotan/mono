@@ -1,0 +1,90 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - omrilotan
+  ignore:
+  - dependency-name: sinon
+    versions:
+    - 10.0.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+- package-ecosystem: npm
+  directory: "/packages/assign"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/async-execute"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/await-reduce"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/bench-press"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/boxt"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/chunkalyse"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/create-npx"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/github"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/jsnpm"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: npm
+    versions:
+    - 7.10.0
+    - 7.5.2
+    - 7.5.3
+    - 7.5.4
+    - 7.5.6
+    - 7.6.0
+    - 7.6.1
+    - 7.6.2
+    - 7.6.3
+    - 7.7.0
+    - 7.7.4
+    - 7.7.5
+    - 7.7.6
+    - 7.8.0
+    - 7.9.0
