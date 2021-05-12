@@ -55,7 +55,7 @@
     "mocha-junit-reporter": "^1.22.0",
     "node-sass": "^4.12.0",
     "npm-check": "^5.9.0",
-    "paraphrase": "^1.7.0",
+    "paraphrase": "^2.0.0",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.3.0",
     "webpack": "^4.30.0",
