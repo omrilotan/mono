@@ -7,7 +7,9 @@ const exec = require('async-execute');
 	const { name, version } = require(resolve('./package.json'));
 
 	process.stdout.write(`Check if ${name}@${version} was already published...`);
-	const exists = await exec(`npm view ${name}@${version} version`);
+	const versions = await exec(`npm view ${name} versions`);
+	const list = versions ? eval(versions) : [];
+	const exists = list.includes(version);
 
 	if (exists) {
 		process.stdout.write(' ...yup\n');
