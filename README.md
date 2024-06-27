@@ -6,7 +6,6 @@ Mono repo holding multiple packages
 | Name | Description | Link
 | --- | --- | ---
 | **`array-select`** | [🚬 Extract items from one array into two or more arrays by results of a provided function](./packages/array-select#readme) | [![0.0.0](https://img.shields.io/npm/v/array-select.svg)](https://www.npmjs.com/package/array-select)
-| **`@recursive/assign`** | [Recursive assign for objects, arrays and more](./packages/assign#readme) | [![2.0.2](https://img.shields.io/npm/v/@recursive/assign.svg)](https://www.npmjs.com/package/@recursive/assign)
 | **`async-execute`** | [🦅 Execute command in a child process](./packages/async-execute#readme) | [![1.2.0](https://img.shields.io/npm/v/async-execute.svg)](https://www.npmjs.com/package/async-execute)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![1.2.3](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`babelrc`** | [🗼 My own babelrc file (=> ES5)](./packages/babelrc#readme) | [![0.0.7](https://img.shields.io/npm/v/babelrc.svg)](https://www.npmjs.com/package/babelrc)
@@ -37,7 +36,6 @@ Mono repo holding multiple packages
 | **`oh-my-gauge`** | [Gauge and Benchmark - time Javascript operations](./packages/oh-my-gauge#readme) | [![1.0.1](https://img.shields.io/npm/v/oh-my-gauge.svg)](https://www.npmjs.com/package/oh-my-gauge)
 | **`@does/percent`** | [Calculate one part's percentage of the whole](./packages/percent#readme) | [![0.0.2](https://img.shields.io/npm/v/@does/percent.svg)](https://www.npmjs.com/package/@does/percent)
 | **`perfrep`** | [🐎 Host Performance Report in Percent](./packages/perfrep#readme) | [![0.2.1](https://img.shields.io/npm/v/perfrep.svg)](https://www.npmjs.com/package/perfrep)
-| **`@lets/publish`** | [🛵 Publish only if this version was not already published](./packages/publish#readme) | [![0.0.4](https://img.shields.io/npm/v/@lets/publish.svg)](https://www.npmjs.com/package/@lets/publish)
 | **`rmext`** | [✂️ Remove file extension](./packages/rmext#readme) | [![0.0.1](https://img.shields.io/npm/v/rmext.svg)](https://www.npmjs.com/package/rmext)
 | **`run-all-the-things`** | [👟 Run NPM scripts in parallel](./packages/run-all-the-things#readme) | [![0.2.0](https://img.shields.io/npm/v/run-all-the-things.svg)](https://www.npmjs.com/package/run-all-the-things)
 | **`sample-size`** | [🎲 pass/fail by sample size](./packages/sample-size#readme) | [![1.0.1](https://img.shields.io/npm/v/sample-size.svg)](https://www.npmjs.com/package/sample-size)
