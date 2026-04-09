@@ -5,7 +5,6 @@ Mono repo holding multiple packages
 
 | Name | Description | Link
 | --- | --- | ---
-| **`array-select`** | [🚬 Extract items from one array into two or more arrays by results of a provided function](./packages/array-select#readme) | [![0.0.0](https://img.shields.io/npm/v/array-select.svg)](https://www.npmjs.com/package/array-select)
 | **`await-reduce`** | [Resolve and reduce an array of promises](./packages/await-reduce#readme) | [![1.2.3](https://img.shields.io/npm/v/await-reduce.svg)](https://www.npmjs.com/package/await-reduce)
 | **`babelrc`** | [🗼 My own babelrc file (=> ES5)](./packages/babelrc#readme) | [![0.0.7](https://img.shields.io/npm/v/babelrc.svg)](https://www.npmjs.com/package/babelrc)
 | **`bench-press`** | [Benchmark operations](./packages/bench-press#readme) | [![1.0.0](https://img.shields.io/npm/v/bench-press.svg)](https://www.npmjs.com/package/bench-press)
